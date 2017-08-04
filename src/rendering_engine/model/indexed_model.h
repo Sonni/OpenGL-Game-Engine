@@ -1,7 +1,7 @@
 #ifndef ___D_rendering_engine__indexedModel__
 #define ___D_rendering_engine__indexedModel__
 
-#include "../../core/math/math_lib.h"
+#include "../../core_engine/math/math_lib.h"
 #include <vector>
 
 class indexed_model

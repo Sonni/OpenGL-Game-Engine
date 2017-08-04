@@ -4,10 +4,10 @@
 #include "io/window.h"
 #include "../rendering_engine/rendering_engine.h"
 
-class core
+class core_engine
 {
 public:
-    core(window* Window, rendering_engine* renderingEngine);
+    core_engine(window* Window, rendering_engine* renderingEngine);
     bool run();
 private:
     window* Window;

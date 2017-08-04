@@ -57,321 +57,345 @@ include CMakeFiles/Game_Engine.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Game_Engine.dir/flags.make
 
-CMakeFiles/Game_Engine.dir/src/core/camera.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
-CMakeFiles/Game_Engine.dir/src/core/camera.cpp.o: ../src/core/camera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Game_Engine.dir/src/core/camera.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core/camera.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/camera.cpp
+CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
+CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.o: ../src/core_engine/camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/camera.cpp
 
-CMakeFiles/Game_Engine.dir/src/core/camera.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core/camera.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/camera.cpp > CMakeFiles/Game_Engine.dir/src/core/camera.cpp.i
+CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/camera.cpp > CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.i
 
-CMakeFiles/Game_Engine.dir/src/core/camera.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core/camera.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/camera.cpp -o CMakeFiles/Game_Engine.dir/src/core/camera.cpp.s
+CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/camera.cpp -o CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.s
 
-CMakeFiles/Game_Engine.dir/src/core/camera.cpp.o.requires:
+CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.o.requires:
 
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/camera.cpp.o.requires
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.o.requires
 
-CMakeFiles/Game_Engine.dir/src/core/camera.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core/camera.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core/camera.cpp.o.provides.build
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/camera.cpp.o.provides
+CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.o.provides.build
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.o.provides
 
-CMakeFiles/Game_Engine.dir/src/core/camera.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core/camera.cpp.o
+CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.o
 
 
-CMakeFiles/Game_Engine.dir/src/core/component/components.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
-CMakeFiles/Game_Engine.dir/src/core/component/components.cpp.o: ../src/core/component/components.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Game_Engine.dir/src/core/component/components.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core/component/components.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/component/components.cpp
+CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
+CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.o: ../src/core_engine/component/components.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/components.cpp
 
-CMakeFiles/Game_Engine.dir/src/core/component/components.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core/component/components.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/component/components.cpp > CMakeFiles/Game_Engine.dir/src/core/component/components.cpp.i
+CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/components.cpp > CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.i
 
-CMakeFiles/Game_Engine.dir/src/core/component/components.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core/component/components.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/component/components.cpp -o CMakeFiles/Game_Engine.dir/src/core/component/components.cpp.s
+CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/components.cpp -o CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.s
 
-CMakeFiles/Game_Engine.dir/src/core/component/components.cpp.o.requires:
+CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.o.requires:
 
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/component/components.cpp.o.requires
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.o.requires
 
-CMakeFiles/Game_Engine.dir/src/core/component/components.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core/component/components.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core/component/components.cpp.o.provides.build
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/component/components.cpp.o.provides
+CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.o.provides.build
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.o.provides
 
-CMakeFiles/Game_Engine.dir/src/core/component/components.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core/component/components.cpp.o
+CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.o
 
 
-CMakeFiles/Game_Engine.dir/src/core/component/movement.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
-CMakeFiles/Game_Engine.dir/src/core/component/movement.cpp.o: ../src/core/component/movement.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Game_Engine.dir/src/core/component/movement.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core/component/movement.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/component/movement.cpp
+CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
+CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.o: ../src/core_engine/component/movement.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/movement.cpp
 
-CMakeFiles/Game_Engine.dir/src/core/component/movement.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core/component/movement.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/component/movement.cpp > CMakeFiles/Game_Engine.dir/src/core/component/movement.cpp.i
+CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/movement.cpp > CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.i
 
-CMakeFiles/Game_Engine.dir/src/core/component/movement.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core/component/movement.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/component/movement.cpp -o CMakeFiles/Game_Engine.dir/src/core/component/movement.cpp.s
+CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/movement.cpp -o CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.s
 
-CMakeFiles/Game_Engine.dir/src/core/component/movement.cpp.o.requires:
+CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.o.requires:
 
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/component/movement.cpp.o.requires
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.o.requires
 
-CMakeFiles/Game_Engine.dir/src/core/component/movement.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core/component/movement.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core/component/movement.cpp.o.provides.build
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/component/movement.cpp.o.provides
+CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.o.provides.build
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.o.provides
 
-CMakeFiles/Game_Engine.dir/src/core/component/movement.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core/component/movement.cpp.o
+CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.o
 
 
-CMakeFiles/Game_Engine.dir/src/core/component/shadow/shadow.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
-CMakeFiles/Game_Engine.dir/src/core/component/shadow/shadow.cpp.o: ../src/core/component/shadow/shadow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Game_Engine.dir/src/core/component/shadow/shadow.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core/component/shadow/shadow.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/component/shadow/shadow.cpp
+CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
+CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.o: ../src/core_engine/component/shadow/shadow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/shadow/shadow.cpp
 
-CMakeFiles/Game_Engine.dir/src/core/component/shadow/shadow.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core/component/shadow/shadow.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/component/shadow/shadow.cpp > CMakeFiles/Game_Engine.dir/src/core/component/shadow/shadow.cpp.i
+CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/shadow/shadow.cpp > CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.i
 
-CMakeFiles/Game_Engine.dir/src/core/component/shadow/shadow.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core/component/shadow/shadow.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/component/shadow/shadow.cpp -o CMakeFiles/Game_Engine.dir/src/core/component/shadow/shadow.cpp.s
+CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/shadow/shadow.cpp -o CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.s
 
-CMakeFiles/Game_Engine.dir/src/core/component/shadow/shadow.cpp.o.requires:
+CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.o.requires:
 
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/component/shadow/shadow.cpp.o.requires
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.o.requires
 
-CMakeFiles/Game_Engine.dir/src/core/component/shadow/shadow.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core/component/shadow/shadow.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core/component/shadow/shadow.cpp.o.provides.build
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/component/shadow/shadow.cpp.o.provides
+CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.o.provides.build
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.o.provides
 
-CMakeFiles/Game_Engine.dir/src/core/component/shadow/shadow.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core/component/shadow/shadow.cpp.o
+CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.o
 
 
-CMakeFiles/Game_Engine.dir/src/core/component/terrain.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
-CMakeFiles/Game_Engine.dir/src/core/component/terrain.cpp.o: ../src/core/component/terrain.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Game_Engine.dir/src/core/component/terrain.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core/component/terrain.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/component/terrain.cpp
+CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
+CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.o: ../src/core_engine/component/terrain.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/terrain.cpp
 
-CMakeFiles/Game_Engine.dir/src/core/component/terrain.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core/component/terrain.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/component/terrain.cpp > CMakeFiles/Game_Engine.dir/src/core/component/terrain.cpp.i
+CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/terrain.cpp > CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.i
 
-CMakeFiles/Game_Engine.dir/src/core/component/terrain.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core/component/terrain.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/component/terrain.cpp -o CMakeFiles/Game_Engine.dir/src/core/component/terrain.cpp.s
+CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/terrain.cpp -o CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.s
 
-CMakeFiles/Game_Engine.dir/src/core/component/terrain.cpp.o.requires:
+CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.o.requires:
 
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/component/terrain.cpp.o.requires
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.o.requires
 
-CMakeFiles/Game_Engine.dir/src/core/component/terrain.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core/component/terrain.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core/component/terrain.cpp.o.provides.build
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/component/terrain.cpp.o.provides
+CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.o.provides.build
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.o.provides
 
-CMakeFiles/Game_Engine.dir/src/core/component/terrain.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core/component/terrain.cpp.o
+CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.o
 
 
-CMakeFiles/Game_Engine.dir/src/core/component/water/water.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
-CMakeFiles/Game_Engine.dir/src/core/component/water/water.cpp.o: ../src/core/component/water/water.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Game_Engine.dir/src/core/component/water/water.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core/component/water/water.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/component/water/water.cpp
+CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
+CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.o: ../src/core_engine/component/water/water.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/water/water.cpp
 
-CMakeFiles/Game_Engine.dir/src/core/component/water/water.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core/component/water/water.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/component/water/water.cpp > CMakeFiles/Game_Engine.dir/src/core/component/water/water.cpp.i
+CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/water/water.cpp > CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.i
 
-CMakeFiles/Game_Engine.dir/src/core/component/water/water.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core/component/water/water.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/component/water/water.cpp -o CMakeFiles/Game_Engine.dir/src/core/component/water/water.cpp.s
+CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/water/water.cpp -o CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.s
 
-CMakeFiles/Game_Engine.dir/src/core/component/water/water.cpp.o.requires:
+CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.o.requires:
 
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/component/water/water.cpp.o.requires
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.o.requires
 
-CMakeFiles/Game_Engine.dir/src/core/component/water/water.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core/component/water/water.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core/component/water/water.cpp.o.provides.build
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/component/water/water.cpp.o.provides
+CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.o.provides.build
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.o.provides
 
-CMakeFiles/Game_Engine.dir/src/core/component/water/water.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core/component/water/water.cpp.o
+CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.o
 
 
-CMakeFiles/Game_Engine.dir/src/core/component/water/water_fbo.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
-CMakeFiles/Game_Engine.dir/src/core/component/water/water_fbo.cpp.o: ../src/core/component/water/water_fbo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Game_Engine.dir/src/core/component/water/water_fbo.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core/component/water/water_fbo.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/component/water/water_fbo.cpp
+CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
+CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.o: ../src/core_engine/component/water/water_fbo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/water/water_fbo.cpp
 
-CMakeFiles/Game_Engine.dir/src/core/component/water/water_fbo.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core/component/water/water_fbo.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/component/water/water_fbo.cpp > CMakeFiles/Game_Engine.dir/src/core/component/water/water_fbo.cpp.i
+CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/water/water_fbo.cpp > CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.i
 
-CMakeFiles/Game_Engine.dir/src/core/component/water/water_fbo.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core/component/water/water_fbo.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/component/water/water_fbo.cpp -o CMakeFiles/Game_Engine.dir/src/core/component/water/water_fbo.cpp.s
+CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/water/water_fbo.cpp -o CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.s
 
-CMakeFiles/Game_Engine.dir/src/core/component/water/water_fbo.cpp.o.requires:
+CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.o.requires:
 
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/component/water/water_fbo.cpp.o.requires
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.o.requires
 
-CMakeFiles/Game_Engine.dir/src/core/component/water/water_fbo.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core/component/water/water_fbo.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core/component/water/water_fbo.cpp.o.provides.build
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/component/water/water_fbo.cpp.o.provides
+CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.o.provides.build
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.o.provides
 
-CMakeFiles/Game_Engine.dir/src/core/component/water/water_fbo.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core/component/water/water_fbo.cpp.o
+CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.o
 
 
-CMakeFiles/Game_Engine.dir/src/core/core.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
-CMakeFiles/Game_Engine.dir/src/core/core.cpp.o: ../src/core/core.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Game_Engine.dir/src/core/core.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core/core.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/core.cpp
+CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
+CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o: ../src/core_engine/core_engine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/core_engine.cpp
 
-CMakeFiles/Game_Engine.dir/src/core/core.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core/core.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/core.cpp > CMakeFiles/Game_Engine.dir/src/core/core.cpp.i
+CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/core_engine.cpp > CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.i
 
-CMakeFiles/Game_Engine.dir/src/core/core.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core/core.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/core.cpp -o CMakeFiles/Game_Engine.dir/src/core/core.cpp.s
+CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/core_engine.cpp -o CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.s
 
-CMakeFiles/Game_Engine.dir/src/core/core.cpp.o.requires:
+CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o.requires:
 
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/core.cpp.o.requires
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o.requires
 
-CMakeFiles/Game_Engine.dir/src/core/core.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core/core.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core/core.cpp.o.provides.build
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/core.cpp.o.provides
+CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o.provides.build
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o.provides
 
-CMakeFiles/Game_Engine.dir/src/core/core.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core/core.cpp.o
+CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o
 
 
-CMakeFiles/Game_Engine.dir/src/core/entity.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
-CMakeFiles/Game_Engine.dir/src/core/entity.cpp.o: ../src/core/entity.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Game_Engine.dir/src/core/entity.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core/entity.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/entity.cpp
+CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
+CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.o: ../src/core_engine/entity.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity.cpp
 
-CMakeFiles/Game_Engine.dir/src/core/entity.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core/entity.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/entity.cpp > CMakeFiles/Game_Engine.dir/src/core/entity.cpp.i
+CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity.cpp > CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.i
 
-CMakeFiles/Game_Engine.dir/src/core/entity.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core/entity.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/entity.cpp -o CMakeFiles/Game_Engine.dir/src/core/entity.cpp.s
+CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity.cpp -o CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.s
 
-CMakeFiles/Game_Engine.dir/src/core/entity.cpp.o.requires:
+CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.o.requires:
 
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/entity.cpp.o.requires
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.o.requires
 
-CMakeFiles/Game_Engine.dir/src/core/entity.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core/entity.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core/entity.cpp.o.provides.build
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/entity.cpp.o.provides
+CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.o.provides.build
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.o.provides
 
-CMakeFiles/Game_Engine.dir/src/core/entity.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core/entity.cpp.o
+CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.o
 
 
-CMakeFiles/Game_Engine.dir/src/core/io/input.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
-CMakeFiles/Game_Engine.dir/src/core/io/input.cpp.o: ../src/core/io/input.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Game_Engine.dir/src/core/io/input.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core/io/input.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/io/input.cpp
+CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
+CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.o: ../src/core_engine/io/input.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.cpp
 
-CMakeFiles/Game_Engine.dir/src/core/io/input.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core/io/input.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/io/input.cpp > CMakeFiles/Game_Engine.dir/src/core/io/input.cpp.i
+CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.cpp > CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.i
 
-CMakeFiles/Game_Engine.dir/src/core/io/input.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core/io/input.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/io/input.cpp -o CMakeFiles/Game_Engine.dir/src/core/io/input.cpp.s
+CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.cpp -o CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.s
 
-CMakeFiles/Game_Engine.dir/src/core/io/input.cpp.o.requires:
+CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.o.requires:
 
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/io/input.cpp.o.requires
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.o.requires
 
-CMakeFiles/Game_Engine.dir/src/core/io/input.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core/io/input.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core/io/input.cpp.o.provides.build
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/io/input.cpp.o.provides
+CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.o.provides.build
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.o.provides
 
-CMakeFiles/Game_Engine.dir/src/core/io/input.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core/io/input.cpp.o
+CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.o
 
 
-CMakeFiles/Game_Engine.dir/src/core/io/window.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
-CMakeFiles/Game_Engine.dir/src/core/io/window.cpp.o: ../src/core/io/window.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Game_Engine.dir/src/core/io/window.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core/io/window.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/io/window.cpp
+CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
+CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.o: ../src/core_engine/io/sound.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/sound.cpp
 
-CMakeFiles/Game_Engine.dir/src/core/io/window.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core/io/window.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/io/window.cpp > CMakeFiles/Game_Engine.dir/src/core/io/window.cpp.i
+CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/sound.cpp > CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.i
 
-CMakeFiles/Game_Engine.dir/src/core/io/window.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core/io/window.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/io/window.cpp -o CMakeFiles/Game_Engine.dir/src/core/io/window.cpp.s
+CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/sound.cpp -o CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.s
 
-CMakeFiles/Game_Engine.dir/src/core/io/window.cpp.o.requires:
+CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.o.requires:
 
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/io/window.cpp.o.requires
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.o.requires
 
-CMakeFiles/Game_Engine.dir/src/core/io/window.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core/io/window.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core/io/window.cpp.o.provides.build
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/io/window.cpp.o.provides
+CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.o.provides.build
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.o.provides
 
-CMakeFiles/Game_Engine.dir/src/core/io/window.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core/io/window.cpp.o
+CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.o
 
 
-CMakeFiles/Game_Engine.dir/src/core/math/math_lib.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
-CMakeFiles/Game_Engine.dir/src/core/math/math_lib.cpp.o: ../src/core/math/math_lib.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Game_Engine.dir/src/core/math/math_lib.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core/math/math_lib.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/math/math_lib.cpp
+CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
+CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.o: ../src/core_engine/io/window.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/window.cpp
 
-CMakeFiles/Game_Engine.dir/src/core/math/math_lib.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core/math/math_lib.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/math/math_lib.cpp > CMakeFiles/Game_Engine.dir/src/core/math/math_lib.cpp.i
+CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/window.cpp > CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.i
 
-CMakeFiles/Game_Engine.dir/src/core/math/math_lib.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core/math/math_lib.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/math/math_lib.cpp -o CMakeFiles/Game_Engine.dir/src/core/math/math_lib.cpp.s
+CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/window.cpp -o CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.s
 
-CMakeFiles/Game_Engine.dir/src/core/math/math_lib.cpp.o.requires:
+CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.o.requires:
 
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/math/math_lib.cpp.o.requires
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.o.requires
 
-CMakeFiles/Game_Engine.dir/src/core/math/math_lib.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core/math/math_lib.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core/math/math_lib.cpp.o.provides.build
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/math/math_lib.cpp.o.provides
+CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.o.provides.build
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.o.provides
 
-CMakeFiles/Game_Engine.dir/src/core/math/math_lib.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core/math/math_lib.cpp.o
+CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.o
 
 
-CMakeFiles/Game_Engine.dir/src/core/transform.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
-CMakeFiles/Game_Engine.dir/src/core/transform.cpp.o: ../src/core/transform.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Game_Engine.dir/src/core/transform.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core/transform.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/transform.cpp
+CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
+CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.o: ../src/core_engine/math/math_lib.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.cpp
 
-CMakeFiles/Game_Engine.dir/src/core/transform.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core/transform.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/transform.cpp > CMakeFiles/Game_Engine.dir/src/core/transform.cpp.i
+CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.cpp > CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.i
 
-CMakeFiles/Game_Engine.dir/src/core/transform.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core/transform.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core/transform.cpp -o CMakeFiles/Game_Engine.dir/src/core/transform.cpp.s
+CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.cpp -o CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.s
 
-CMakeFiles/Game_Engine.dir/src/core/transform.cpp.o.requires:
+CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.o.requires:
 
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/transform.cpp.o.requires
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.o.requires
 
-CMakeFiles/Game_Engine.dir/src/core/transform.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core/transform.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core/transform.cpp.o.provides.build
-.PHONY : CMakeFiles/Game_Engine.dir/src/core/transform.cpp.o.provides
+CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.o.provides.build
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.o.provides
 
-CMakeFiles/Game_Engine.dir/src/core/transform.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core/transform.cpp.o
+CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.o
+
+
+CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
+CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.o: ../src/core_engine/transform.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.cpp
+
+CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.cpp > CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.i
+
+CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.cpp -o CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.s
+
+CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.o.requires:
+
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.o.requires
+
+CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.o.provides.build
+.PHONY : CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.o.provides
+
+CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.o
 
 
 CMakeFiles/Game_Engine.dir/src/main.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
 CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Game_Engine.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Game_Engine.dir/src/main.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/main.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/main.cpp
 
 CMakeFiles/Game_Engine.dir/src/main.cpp.i: cmake_force
@@ -393,9 +417,105 @@ CMakeFiles/Game_Engine.dir/src/main.cpp.o.provides: CMakeFiles/Game_Engine.dir/s
 CMakeFiles/Game_Engine.dir/src/main.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/main.cpp.o
 
 
+CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
+CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.o: ../src/physics_engine/aabb.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/aabb.cpp
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/aabb.cpp > CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.i
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/aabb.cpp -o CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.s
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.o.requires:
+
+.PHONY : CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.o.requires
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.o.provides.build
+.PHONY : CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.o.provides
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.o
+
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: ../src/physics_engine/physics_engine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/physics_engine.cpp
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/physics_engine.cpp > CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.i
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/physics_engine.cpp -o CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.s
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o.requires:
+
+.PHONY : CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o.requires
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o.provides.build
+.PHONY : CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o.provides
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o
+
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
+CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.o: ../src/physics_engine/plane.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/plane.cpp
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/plane.cpp > CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.i
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/plane.cpp -o CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.s
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.o.requires:
+
+.PHONY : CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.o.requires
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.o.provides.build
+.PHONY : CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.o.provides
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.o
+
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
+CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.o: ../src/physics_engine/sphere.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/sphere.cpp
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/sphere.cpp > CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.i
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/sphere.cpp -o CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.s
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.o.requires:
+
+.PHONY : CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.o.requires
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.o.provides: CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.o.provides.build
+.PHONY : CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.o.provides
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.o.provides.build: CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.o
+
+
 CMakeFiles/Game_Engine.dir/src/rendering_engine/model/indexed_model.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
 CMakeFiles/Game_Engine.dir/src/rendering_engine/model/indexed_model.cpp.o: ../src/rendering_engine/model/indexed_model.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Game_Engine.dir/src/rendering_engine/model/indexed_model.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/Game_Engine.dir/src/rendering_engine/model/indexed_model.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/rendering_engine/model/indexed_model.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/indexed_model.cpp
 
 CMakeFiles/Game_Engine.dir/src/rendering_engine/model/indexed_model.cpp.i: cmake_force
@@ -419,7 +539,7 @@ CMakeFiles/Game_Engine.dir/src/rendering_engine/model/indexed_model.cpp.o.provid
 
 CMakeFiles/Game_Engine.dir/src/rendering_engine/model/loader.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
 CMakeFiles/Game_Engine.dir/src/rendering_engine/model/loader.cpp.o: ../src/rendering_engine/model/loader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Game_Engine.dir/src/rendering_engine/model/loader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/Game_Engine.dir/src/rendering_engine/model/loader.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/rendering_engine/model/loader.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/loader.cpp
 
 CMakeFiles/Game_Engine.dir/src/rendering_engine/model/loader.cpp.i: cmake_force
@@ -443,7 +563,7 @@ CMakeFiles/Game_Engine.dir/src/rendering_engine/model/loader.cpp.o.provides.buil
 
 CMakeFiles/Game_Engine.dir/src/rendering_engine/model/mesh.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
 CMakeFiles/Game_Engine.dir/src/rendering_engine/model/mesh.cpp.o: ../src/rendering_engine/model/mesh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Game_Engine.dir/src/rendering_engine/model/mesh.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Game_Engine.dir/src/rendering_engine/model/mesh.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/rendering_engine/model/mesh.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/mesh.cpp
 
 CMakeFiles/Game_Engine.dir/src/rendering_engine/model/mesh.cpp.i: cmake_force
@@ -467,7 +587,7 @@ CMakeFiles/Game_Engine.dir/src/rendering_engine/model/mesh.cpp.o.provides.build:
 
 CMakeFiles/Game_Engine.dir/src/rendering_engine/model/tnaLoader.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
 CMakeFiles/Game_Engine.dir/src/rendering_engine/model/tnaLoader.cpp.o: ../src/rendering_engine/model/tnaLoader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Game_Engine.dir/src/rendering_engine/model/tnaLoader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/Game_Engine.dir/src/rendering_engine/model/tnaLoader.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/rendering_engine/model/tnaLoader.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/tnaLoader.cpp
 
 CMakeFiles/Game_Engine.dir/src/rendering_engine/model/tnaLoader.cpp.i: cmake_force
@@ -491,7 +611,7 @@ CMakeFiles/Game_Engine.dir/src/rendering_engine/model/tnaLoader.cpp.o.provides.b
 
 CMakeFiles/Game_Engine.dir/src/rendering_engine/rendering_engine.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
 CMakeFiles/Game_Engine.dir/src/rendering_engine/rendering_engine.cpp.o: ../src/rendering_engine/rendering_engine.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Game_Engine.dir/src/rendering_engine/rendering_engine.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/Game_Engine.dir/src/rendering_engine/rendering_engine.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/rendering_engine/rendering_engine.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/rendering_engine.cpp
 
 CMakeFiles/Game_Engine.dir/src/rendering_engine/rendering_engine.cpp.i: cmake_force
@@ -515,7 +635,7 @@ CMakeFiles/Game_Engine.dir/src/rendering_engine/rendering_engine.cpp.o.provides.
 
 CMakeFiles/Game_Engine.dir/src/rendering_engine/stb_image.c.o: CMakeFiles/Game_Engine.dir/flags.make
 CMakeFiles/Game_Engine.dir/src/rendering_engine/stb_image.c.o: ../src/rendering_engine/stb_image.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/Game_Engine.dir/src/rendering_engine/stb_image.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/Game_Engine.dir/src/rendering_engine/stb_image.c.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Game_Engine.dir/src/rendering_engine/stb_image.c.o   -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/stb_image.c
 
 CMakeFiles/Game_Engine.dir/src/rendering_engine/stb_image.c.i: cmake_force
@@ -539,7 +659,7 @@ CMakeFiles/Game_Engine.dir/src/rendering_engine/stb_image.c.o.provides.build: CM
 
 CMakeFiles/Game_Engine.dir/src/rendering_engine/texture.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
 CMakeFiles/Game_Engine.dir/src/rendering_engine/texture.cpp.o: ../src/rendering_engine/texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/Game_Engine.dir/src/rendering_engine/texture.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/Game_Engine.dir/src/rendering_engine/texture.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/rendering_engine/texture.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/texture.cpp
 
 CMakeFiles/Game_Engine.dir/src/rendering_engine/texture.cpp.i: cmake_force
@@ -563,7 +683,7 @@ CMakeFiles/Game_Engine.dir/src/rendering_engine/texture.cpp.o.provides.build: CM
 
 CMakeFiles/Game_Engine.dir/src/shader/shader.cpp.o: CMakeFiles/Game_Engine.dir/flags.make
 CMakeFiles/Game_Engine.dir/src/shader/shader.cpp.o: ../src/shader/shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/Game_Engine.dir/src/shader/shader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/Game_Engine.dir/src/shader/shader.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Game_Engine.dir/src/shader/shader.cpp.o -c /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/shader/shader.cpp
 
 CMakeFiles/Game_Engine.dir/src/shader/shader.cpp.i: cmake_force
@@ -587,20 +707,25 @@ CMakeFiles/Game_Engine.dir/src/shader/shader.cpp.o.provides.build: CMakeFiles/Ga
 
 # Object files for target Game_Engine
 Game_Engine_OBJECTS = \
-"CMakeFiles/Game_Engine.dir/src/core/camera.cpp.o" \
-"CMakeFiles/Game_Engine.dir/src/core/component/components.cpp.o" \
-"CMakeFiles/Game_Engine.dir/src/core/component/movement.cpp.o" \
-"CMakeFiles/Game_Engine.dir/src/core/component/shadow/shadow.cpp.o" \
-"CMakeFiles/Game_Engine.dir/src/core/component/terrain.cpp.o" \
-"CMakeFiles/Game_Engine.dir/src/core/component/water/water.cpp.o" \
-"CMakeFiles/Game_Engine.dir/src/core/component/water/water_fbo.cpp.o" \
-"CMakeFiles/Game_Engine.dir/src/core/core.cpp.o" \
-"CMakeFiles/Game_Engine.dir/src/core/entity.cpp.o" \
-"CMakeFiles/Game_Engine.dir/src/core/io/input.cpp.o" \
-"CMakeFiles/Game_Engine.dir/src/core/io/window.cpp.o" \
-"CMakeFiles/Game_Engine.dir/src/core/math/math_lib.cpp.o" \
-"CMakeFiles/Game_Engine.dir/src/core/transform.cpp.o" \
+"CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.o" \
+"CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.o" \
+"CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.o" \
+"CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.o" \
+"CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.o" \
+"CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.o" \
+"CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.o" \
+"CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o" \
+"CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.o" \
+"CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.o" \
+"CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.o" \
+"CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.o" \
+"CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.o" \
+"CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.o" \
 "CMakeFiles/Game_Engine.dir/src/main.cpp.o" \
+"CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.o" \
+"CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o" \
+"CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.o" \
+"CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.o" \
 "CMakeFiles/Game_Engine.dir/src/rendering_engine/model/indexed_model.cpp.o" \
 "CMakeFiles/Game_Engine.dir/src/rendering_engine/model/loader.cpp.o" \
 "CMakeFiles/Game_Engine.dir/src/rendering_engine/model/mesh.cpp.o" \
@@ -613,20 +738,25 @@ Game_Engine_OBJECTS = \
 # External object files for target Game_Engine
 Game_Engine_EXTERNAL_OBJECTS =
 
-Game_Engine: CMakeFiles/Game_Engine.dir/src/core/camera.cpp.o
-Game_Engine: CMakeFiles/Game_Engine.dir/src/core/component/components.cpp.o
-Game_Engine: CMakeFiles/Game_Engine.dir/src/core/component/movement.cpp.o
-Game_Engine: CMakeFiles/Game_Engine.dir/src/core/component/shadow/shadow.cpp.o
-Game_Engine: CMakeFiles/Game_Engine.dir/src/core/component/terrain.cpp.o
-Game_Engine: CMakeFiles/Game_Engine.dir/src/core/component/water/water.cpp.o
-Game_Engine: CMakeFiles/Game_Engine.dir/src/core/component/water/water_fbo.cpp.o
-Game_Engine: CMakeFiles/Game_Engine.dir/src/core/core.cpp.o
-Game_Engine: CMakeFiles/Game_Engine.dir/src/core/entity.cpp.o
-Game_Engine: CMakeFiles/Game_Engine.dir/src/core/io/input.cpp.o
-Game_Engine: CMakeFiles/Game_Engine.dir/src/core/io/window.cpp.o
-Game_Engine: CMakeFiles/Game_Engine.dir/src/core/math/math_lib.cpp.o
-Game_Engine: CMakeFiles/Game_Engine.dir/src/core/transform.cpp.o
+Game_Engine: CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.o
+Game_Engine: CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.o
+Game_Engine: CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.o
+Game_Engine: CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.o
+Game_Engine: CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.o
+Game_Engine: CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.o
+Game_Engine: CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.o
+Game_Engine: CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o
+Game_Engine: CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.o
+Game_Engine: CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.o
+Game_Engine: CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.o
+Game_Engine: CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.o
+Game_Engine: CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.o
+Game_Engine: CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.o
 Game_Engine: CMakeFiles/Game_Engine.dir/src/main.cpp.o
+Game_Engine: CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.o
+Game_Engine: CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o
+Game_Engine: CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.o
+Game_Engine: CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.o
 Game_Engine: CMakeFiles/Game_Engine.dir/src/rendering_engine/model/indexed_model.cpp.o
 Game_Engine: CMakeFiles/Game_Engine.dir/src/rendering_engine/model/loader.cpp.o
 Game_Engine: CMakeFiles/Game_Engine.dir/src/rendering_engine/model/mesh.cpp.o
@@ -637,7 +767,7 @@ Game_Engine: CMakeFiles/Game_Engine.dir/src/rendering_engine/texture.cpp.o
 Game_Engine: CMakeFiles/Game_Engine.dir/src/shader/shader.cpp.o
 Game_Engine: CMakeFiles/Game_Engine.dir/build.make
 Game_Engine: CMakeFiles/Game_Engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable Game_Engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Linking CXX executable Game_Engine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Game_Engine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -645,20 +775,25 @@ CMakeFiles/Game_Engine.dir/build: Game_Engine
 
 .PHONY : CMakeFiles/Game_Engine.dir/build
 
-CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core/camera.cpp.o.requires
-CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core/component/components.cpp.o.requires
-CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core/component/movement.cpp.o.requires
-CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core/component/shadow/shadow.cpp.o.requires
-CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core/component/terrain.cpp.o.requires
-CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core/component/water/water.cpp.o.requires
-CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core/component/water/water_fbo.cpp.o.requires
-CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core/core.cpp.o.requires
-CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core/entity.cpp.o.requires
-CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core/io/input.cpp.o.requires
-CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core/io/window.cpp.o.requires
-CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core/math/math_lib.cpp.o.requires
-CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core/transform.cpp.o.requires
+CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.o.requires
+CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.o.requires
+CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.o.requires
+CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.o.requires
+CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.o.requires
+CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.o.requires
+CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.o.requires
+CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o.requires
+CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.o.requires
+CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.o.requires
+CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.o.requires
+CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.o.requires
+CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.o.requires
+CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.o.requires
 CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/main.cpp.o.requires
+CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.o.requires
+CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o.requires
+CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.o.requires
+CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.o.requires
 CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/rendering_engine/model/indexed_model.cpp.o.requires
 CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/rendering_engine/model/loader.cpp.o.requires
 CMakeFiles/Game_Engine.dir/requires: CMakeFiles/Game_Engine.dir/src/rendering_engine/model/mesh.cpp.o.requires

@@ -1,17 +1,17 @@
-#include "core.h"
+#include "core_engine.h"
 #include "component/components.h"
 #include "component/terrain.h"
 #include "component/movement.h"
 #include "component/water/water.h"
 #include "component/shadow/shadow.h"
 
-core::core(window* Window, rendering_engine* renderingEngine)
+core_engine::core_engine(window* Window, rendering_engine* renderingEngine)
 {
     this->Window = Window;
     this->renderingEngine = renderingEngine;
 }
 
-bool core::run()
+bool core_engine::run()
 {
     float frameRate = 60;
     float m_frameTime = (float) (1.0 / frameRate);
@@ -27,8 +27,6 @@ bool core::run()
     std::vector<entity*> waterDraws;
     std::vector<entity*> shadowDraws;
     std::vector<entity*> shadowTmp;
-
-
 
 
     mat4f* perspective = new mat4f();
@@ -59,7 +57,7 @@ bool core::run()
     mesh* hud_mesh = new mesh("squre", hud_square.finalize());
 
     vec2f blur;
-    entity* post_p = new entity(new shader("post_processing.glsl"));
+    entity* post_p = new entity(new shader("gaussian_blur.glsl"));
     post_p->add_component(new blur_component(&post_processing, hud_mesh, &blur));
 
 

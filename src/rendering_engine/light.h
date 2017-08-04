@@ -2,7 +2,7 @@
 #define GAME_ENGINE_LIGHT_H
 
 
-#include "../core/math/math_lib.h"
+#include "../core_engine/math/math_lib.h"
 
 class light
 {

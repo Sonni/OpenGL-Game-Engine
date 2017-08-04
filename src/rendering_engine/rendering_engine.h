@@ -1,7 +1,7 @@
 #ifndef GAME_ENGINE_RENDERINGENGINE_H
 #define GAME_ENGINE_RENDERINGENGINE_H
 
-#include "../core/entity.h"
+#include "../core_engine/entity.h"
 
 
 class rendering_engine

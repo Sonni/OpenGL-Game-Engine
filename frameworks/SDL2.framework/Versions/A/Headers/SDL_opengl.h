@@ -960,7 +960,7 @@ extern "C" {
 /* reuse GL_MAX_COLOR_TEXTURE_SAMPLES */
 /* reuse GL_MAX_DEPTH_TEXTURE_SAMPLES */
 /* reuse GL_MAX_INTEGER_SAMPLES */
-/* Don't need to reuse tokens from ARB_vertex_array_bgra since they're already in 1.2 core */
+/* Don't need to reuse tokens from ARB_vertex_array_bgra since they're already in 1.2 core_engine */
 #endif
 
 #ifndef GL_VERSION_3_3
@@ -1839,7 +1839,7 @@ extern "C" {
 #endif
 
 #ifndef GL_ARB_compatibility
-/* ARB_compatibility just defines tokens from core 3.0 */
+/* ARB_compatibility just defines tokens from core_engine 3.0 */
 #endif
 
 #ifndef GL_ARB_copy_buffer

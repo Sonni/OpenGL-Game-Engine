@@ -18,17 +18,18 @@ Feature:
 - Skinning animation
 - Skybox
 - Post processing
+- 3D Sound (wav only)
 
 
 Upcoming:
 - Particle system
 - Physics
-- Sound
 - Mouse picking
 
 3rd party libraries used by the engine is a follows:
 - SDL2 window and input handling.
 - stb_image.h JPG and PNG decoder.
 - OpenGL with glsl version 330.
+- OpenAL sound lib
 - GLEW extension loading.
 - Math lib

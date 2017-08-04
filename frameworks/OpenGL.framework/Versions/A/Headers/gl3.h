@@ -48,7 +48,7 @@
 */
 
 /* This is a draft release of gl3.h, a header for use with OpenGL 3.1, and
- * 3.2 and later core profile implementations. The current version is
+ * 3.2 and later core_engine profile implementations. The current version is
  * available at http://www.opengl.org/registry/ . Please don't package
  * gl3.h for release with other software until it's out of draft status.
  * The structure of the file may change significantly, and the details
@@ -63,10 +63,10 @@
  * '<GL3/gl3.h>'.
  *
  * gl3.h is supposed to only include APIs in a OpenGL 3.1 (without
- * GL_ARB_compatibility) or OpenGL 3.2 or later core profile
+ * GL_ARB_compatibility) or OpenGL 3.2 or later core_engine profile
  * implementation, as well as interfaces for newer ARB extensions which
- * can be supported by the core profile. It does not, and never will
- * include functionality removed from the core profile, such as
+ * can be supported by the core_engine profile. It does not, and never will
+ * include functionality removed from the core_engine profile, such as
  * fixed-function vertex and fragment processing.
  *
  * Implementations of OpenGL 3.1 supporting the optional
@@ -974,7 +974,7 @@ extern "C" {
 /* reuse GL_MAX_COLOR_TEXTURE_SAMPLES */
 /* reuse GL_MAX_DEPTH_TEXTURE_SAMPLES */
 /* reuse GL_MAX_INTEGER_SAMPLES */
-/* Don't need to reuse tokens from ARB_vertex_array_bgra since they're already in 1.2 core */
+/* Don't need to reuse tokens from ARB_vertex_array_bgra since they're already in 1.2 core_engine */
 #endif
 
 #ifndef GL_VERSION_3_3

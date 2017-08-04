@@ -3,8 +3,8 @@
 
 #include <GL/glew.h>
 #include <fstream>
-#include "../core/transform.h"
-#include "../core/camera.h"
+#include "../core_engine/transform.h"
+#include "../core_engine/camera.h"
 #include "../rendering_engine/light.h"
 
 
