@@ -17,6 +17,7 @@ Feature:
 - GUI and billboards
 - Skinning animation
 - Skybox
+- Post processing
 
 
 Upcoming:
