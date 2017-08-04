@@ -1,0 +1,11 @@
+/Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine
+CMake Error at /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.7/Modules/FindPackageHandleStandardArgs.cmake:138 (message):
+  Could NOT find GLEW (missing: GLEW_INCLUDE_DIR GLEW_LIBRARY)
+Call Stack (most recent call first):
+  /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.7/Modules/FindPackageHandleStandardArgs.cmake:378 (_FPHSA_FAILURE_MESSAGE)
+  /Applications/CLion.app/Contents/bin/cmake/share/cmake-3.7/Modules/FindGLEW.cmake:38 (find_package_handle_standard_args)
+  CMakeLists.txt:11 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles/CMakeOutput.log".

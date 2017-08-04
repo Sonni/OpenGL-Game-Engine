@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/stb_image.c
+stb_image.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/stb_image.h
+math.h
+-
+string.h
+-
+stdio.h
+-
+stdlib.h
+-
+memory.h
+-
+assert.h
+-
+stdarg.h
+-
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/stb_image.h
+stdio.h
+-
+
