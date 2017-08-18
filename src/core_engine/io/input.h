@@ -1,6 +1,7 @@
 #ifndef GAME_ENGINE_INPUT_H
 #define GAME_ENGINE_INPUT_H
-#include "../math/math_lib.h"
+
+#include "../math/vector.h"
 
 class window;
 

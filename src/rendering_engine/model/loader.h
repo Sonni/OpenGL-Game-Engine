@@ -2,8 +2,9 @@
 #define ___D_rendering_engine__loader__
 
 #include "util.h"
+#include "../../core_engine/math/matrix.h"
+#include "../../core_engine/math/quaternion.h"
 #include <string>
-#include "../../core_engine/math/math_lib.h"
 #include <vector>
 
 

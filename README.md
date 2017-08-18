@@ -19,6 +19,7 @@ Feature:
 - Skybox
 - Post processing
 - 3D Sound (wav only)
+- Text
 
 
 Upcoming:

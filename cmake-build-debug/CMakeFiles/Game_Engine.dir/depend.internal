@@ -10,7 +10,10 @@ CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.o
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity_component.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.h
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/light.h
 CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.o
@@ -23,7 +26,10 @@ CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.o
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity_component.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/window.h
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/light.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/indexed_model.h
@@ -39,7 +45,10 @@ CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.o
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity_component.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.h
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/light.h
 CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.o
@@ -53,7 +62,10 @@ CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.o
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity_component.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/window.h
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/light.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/indexed_model.h
@@ -70,12 +82,44 @@ CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.o
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity_component.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.h
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/light.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/indexed_model.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/mesh.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/stb_image.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/texture.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/shader/shader.h
+CMakeFiles/Game_Engine.dir/src/core_engine/component/text/meta_file.cpp.o
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/meta_file.cpp
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/meta_file.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/window.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/util/util.h
+CMakeFiles/Game_Engine.dir/src/core_engine/component/text/text.cpp.o
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/meta_file.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text.cpp
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text.h
+CMakeFiles/Game_Engine.dir/src/core_engine/component/text/text_component.cpp.o
+ ../include/GL/glew.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/camera.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/meta_file.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text_component.cpp
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text_component.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity_component.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/light.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/texture.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/shader/shader.h
 CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.o
@@ -89,7 +133,10 @@ CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.o
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity_component.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/window.h
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/light.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/indexed_model.h
@@ -104,7 +151,7 @@ CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.o
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/water/water_fbo.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/window.h
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
 CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o
  ../include/GL/glew.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/camera.h
@@ -112,6 +159,9 @@ CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/movement.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/shadow/shadow.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/terrain.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/meta_file.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text_component.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/water/water.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/water/water_fbo.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/core_engine.cpp
@@ -120,7 +170,10 @@ CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity_component.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/window.h
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/light.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/indexed_model.h
@@ -135,38 +188,69 @@ CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.o
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity_component.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.h
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/light.h
 CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.o
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.cpp
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/window.h
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
 CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.o
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/sound.cpp
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/sound.h
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
 CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.o
  ../include/GL/glew.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/window.cpp
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/window.h
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
-CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.o
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.cpp
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
+CMakeFiles/Game_Engine.dir/src/core_engine/math/math.cpp.o
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.cpp
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
+CMakeFiles/Game_Engine.dir/src/core_engine/math/matrix.cpp.o
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.cpp
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
+CMakeFiles/Game_Engine.dir/src/core_engine/math/quaternion.cpp.o
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.cpp
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
+CMakeFiles/Game_Engine.dir/src/core_engine/math/vector.cpp.o
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.cpp
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
 CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.o
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.cpp
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.h
+CMakeFiles/Game_Engine.dir/src/core_engine/util/util.cpp.o
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/util/util.cpp
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/util/util.h
 CMakeFiles/Game_Engine.dir/src/main.cpp.o
+ ../include/GL/glew.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/water/water_fbo.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/core_engine.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/sound.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/window.h
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/main.cpp
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/light.h
@@ -184,24 +268,30 @@ CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.o
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/sphere.cpp
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/sphere.h
 CMakeFiles/Game_Engine.dir/src/rendering_engine/model/indexed_model.cpp.o
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/indexed_model.cpp
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/indexed_model.h
 CMakeFiles/Game_Engine.dir/src/rendering_engine/model/loader.cpp.o
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/loader.cpp
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/loader.h
 CMakeFiles/Game_Engine.dir/src/rendering_engine/model/mesh.cpp.o
  ../include/GL/glew.h
  /Users/sonni/Documents/JetBrains/CLion/Game-Engine/src/profiling.h
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/indexed_model.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/loader.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/mesh.cpp
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/mesh.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/tnaLoader.h
 CMakeFiles/Game_Engine.dir/src/rendering_engine/model/tnaLoader.cpp.o
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/indexed_model.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/loader.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/tnaLoader.cpp
@@ -212,7 +302,10 @@ CMakeFiles/Game_Engine.dir/src/rendering_engine/rendering_engine.cpp.o
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity_component.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.h
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/light.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/rendering_engine.cpp
@@ -220,7 +313,10 @@ CMakeFiles/Game_Engine.dir/src/rendering_engine/rendering_engine.cpp.o
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/shader/shader.h
 CMakeFiles/Game_Engine.dir/src/rendering_engine/texture.cpp.o
  ../include/GL/glew.h
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/stb_image.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/texture.cpp
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/texture.h
@@ -230,7 +326,10 @@ CMakeFiles/Game_Engine.dir/src/shader/shader.cpp.o
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity_component.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.h
- /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+ /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/light.h
  /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/shader/shader.cpp

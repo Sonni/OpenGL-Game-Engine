@@ -1,8 +1,8 @@
 #include <cassert>
 #include "texture.h"
 #include "stb_image.h"
-#include "../core_engine/math/math_lib.h"
-
+#include "../core_engine/math/math.h"
+#include <iostream>
 
 std::map<std::string, texture_data*> texture::s_resourceMap;
 
@@ -82,7 +82,7 @@ void texture_data::init_textures(unsigned char **data, GLfloat *filters, GLenum 
             glGenerateMipmap(m_textureTarget);
             GLfloat maxAnisotropy;
             glGetFloatv(GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT, &maxAnisotropy);
-            glTexParameterf(m_textureTarget, GL_TEXTURE_MAX_ANISOTROPY_EXT, Clamp(0.0f, 8.0f, maxAnisotropy));
+            glTexParameterf(m_textureTarget, GL_TEXTURE_MAX_ANISOTROPY_EXT, _clamp(0.0f, 8.0f, maxAnisotropy));
         }
         else
         {

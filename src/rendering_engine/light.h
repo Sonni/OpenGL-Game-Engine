@@ -2,8 +2,6 @@
 #define GAME_ENGINE_LIGHT_H
 
 
-#include "../core_engine/math/math_lib.h"
-
 class light
 {
 public:

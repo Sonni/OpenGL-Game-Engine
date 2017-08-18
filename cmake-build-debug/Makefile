@@ -258,6 +258,87 @@ src/core_engine/component/terrain.cpp.s:
 	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.s
 .PHONY : src/core_engine/component/terrain.cpp.s
 
+src/core_engine/component/text/meta_file.o: src/core_engine/component/text/meta_file.cpp.o
+
+.PHONY : src/core_engine/component/text/meta_file.o
+
+# target to build an object file
+src/core_engine/component/text/meta_file.cpp.o:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/text/meta_file.cpp.o
+.PHONY : src/core_engine/component/text/meta_file.cpp.o
+
+src/core_engine/component/text/meta_file.i: src/core_engine/component/text/meta_file.cpp.i
+
+.PHONY : src/core_engine/component/text/meta_file.i
+
+# target to preprocess a source file
+src/core_engine/component/text/meta_file.cpp.i:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/text/meta_file.cpp.i
+.PHONY : src/core_engine/component/text/meta_file.cpp.i
+
+src/core_engine/component/text/meta_file.s: src/core_engine/component/text/meta_file.cpp.s
+
+.PHONY : src/core_engine/component/text/meta_file.s
+
+# target to generate assembly for a file
+src/core_engine/component/text/meta_file.cpp.s:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/text/meta_file.cpp.s
+.PHONY : src/core_engine/component/text/meta_file.cpp.s
+
+src/core_engine/component/text/text.o: src/core_engine/component/text/text.cpp.o
+
+.PHONY : src/core_engine/component/text/text.o
+
+# target to build an object file
+src/core_engine/component/text/text.cpp.o:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/text/text.cpp.o
+.PHONY : src/core_engine/component/text/text.cpp.o
+
+src/core_engine/component/text/text.i: src/core_engine/component/text/text.cpp.i
+
+.PHONY : src/core_engine/component/text/text.i
+
+# target to preprocess a source file
+src/core_engine/component/text/text.cpp.i:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/text/text.cpp.i
+.PHONY : src/core_engine/component/text/text.cpp.i
+
+src/core_engine/component/text/text.s: src/core_engine/component/text/text.cpp.s
+
+.PHONY : src/core_engine/component/text/text.s
+
+# target to generate assembly for a file
+src/core_engine/component/text/text.cpp.s:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/text/text.cpp.s
+.PHONY : src/core_engine/component/text/text.cpp.s
+
+src/core_engine/component/text/text_component.o: src/core_engine/component/text/text_component.cpp.o
+
+.PHONY : src/core_engine/component/text/text_component.o
+
+# target to build an object file
+src/core_engine/component/text/text_component.cpp.o:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/text/text_component.cpp.o
+.PHONY : src/core_engine/component/text/text_component.cpp.o
+
+src/core_engine/component/text/text_component.i: src/core_engine/component/text/text_component.cpp.i
+
+.PHONY : src/core_engine/component/text/text_component.i
+
+# target to preprocess a source file
+src/core_engine/component/text/text_component.cpp.i:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/text/text_component.cpp.i
+.PHONY : src/core_engine/component/text/text_component.cpp.i
+
+src/core_engine/component/text/text_component.s: src/core_engine/component/text/text_component.cpp.s
+
+.PHONY : src/core_engine/component/text/text_component.s
+
+# target to generate assembly for a file
+src/core_engine/component/text/text_component.cpp.s:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/text/text_component.cpp.s
+.PHONY : src/core_engine/component/text/text_component.cpp.s
+
 src/core_engine/component/water/water.o: src/core_engine/component/water/water.cpp.o
 
 .PHONY : src/core_engine/component/water/water.o
@@ -447,32 +528,113 @@ src/core_engine/io/window.cpp.s:
 	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.s
 .PHONY : src/core_engine/io/window.cpp.s
 
-src/core_engine/math/math_lib.o: src/core_engine/math/math_lib.cpp.o
+src/core_engine/math/math.o: src/core_engine/math/math.cpp.o
 
-.PHONY : src/core_engine/math/math_lib.o
+.PHONY : src/core_engine/math/math.o
 
 # target to build an object file
-src/core_engine/math/math_lib.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.o
-.PHONY : src/core_engine/math/math_lib.cpp.o
+src/core_engine/math/math.cpp.o:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/math.cpp.o
+.PHONY : src/core_engine/math/math.cpp.o
 
-src/core_engine/math/math_lib.i: src/core_engine/math/math_lib.cpp.i
+src/core_engine/math/math.i: src/core_engine/math/math.cpp.i
 
-.PHONY : src/core_engine/math/math_lib.i
+.PHONY : src/core_engine/math/math.i
 
 # target to preprocess a source file
-src/core_engine/math/math_lib.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.i
-.PHONY : src/core_engine/math/math_lib.cpp.i
+src/core_engine/math/math.cpp.i:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/math.cpp.i
+.PHONY : src/core_engine/math/math.cpp.i
 
-src/core_engine/math/math_lib.s: src/core_engine/math/math_lib.cpp.s
+src/core_engine/math/math.s: src/core_engine/math/math.cpp.s
 
-.PHONY : src/core_engine/math/math_lib.s
+.PHONY : src/core_engine/math/math.s
 
 # target to generate assembly for a file
-src/core_engine/math/math_lib.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/math_lib.cpp.s
-.PHONY : src/core_engine/math/math_lib.cpp.s
+src/core_engine/math/math.cpp.s:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/math.cpp.s
+.PHONY : src/core_engine/math/math.cpp.s
+
+src/core_engine/math/matrix.o: src/core_engine/math/matrix.cpp.o
+
+.PHONY : src/core_engine/math/matrix.o
+
+# target to build an object file
+src/core_engine/math/matrix.cpp.o:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/matrix.cpp.o
+.PHONY : src/core_engine/math/matrix.cpp.o
+
+src/core_engine/math/matrix.i: src/core_engine/math/matrix.cpp.i
+
+.PHONY : src/core_engine/math/matrix.i
+
+# target to preprocess a source file
+src/core_engine/math/matrix.cpp.i:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/matrix.cpp.i
+.PHONY : src/core_engine/math/matrix.cpp.i
+
+src/core_engine/math/matrix.s: src/core_engine/math/matrix.cpp.s
+
+.PHONY : src/core_engine/math/matrix.s
+
+# target to generate assembly for a file
+src/core_engine/math/matrix.cpp.s:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/matrix.cpp.s
+.PHONY : src/core_engine/math/matrix.cpp.s
+
+src/core_engine/math/quaternion.o: src/core_engine/math/quaternion.cpp.o
+
+.PHONY : src/core_engine/math/quaternion.o
+
+# target to build an object file
+src/core_engine/math/quaternion.cpp.o:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/quaternion.cpp.o
+.PHONY : src/core_engine/math/quaternion.cpp.o
+
+src/core_engine/math/quaternion.i: src/core_engine/math/quaternion.cpp.i
+
+.PHONY : src/core_engine/math/quaternion.i
+
+# target to preprocess a source file
+src/core_engine/math/quaternion.cpp.i:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/quaternion.cpp.i
+.PHONY : src/core_engine/math/quaternion.cpp.i
+
+src/core_engine/math/quaternion.s: src/core_engine/math/quaternion.cpp.s
+
+.PHONY : src/core_engine/math/quaternion.s
+
+# target to generate assembly for a file
+src/core_engine/math/quaternion.cpp.s:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/quaternion.cpp.s
+.PHONY : src/core_engine/math/quaternion.cpp.s
+
+src/core_engine/math/vector.o: src/core_engine/math/vector.cpp.o
+
+.PHONY : src/core_engine/math/vector.o
+
+# target to build an object file
+src/core_engine/math/vector.cpp.o:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/vector.cpp.o
+.PHONY : src/core_engine/math/vector.cpp.o
+
+src/core_engine/math/vector.i: src/core_engine/math/vector.cpp.i
+
+.PHONY : src/core_engine/math/vector.i
+
+# target to preprocess a source file
+src/core_engine/math/vector.cpp.i:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/vector.cpp.i
+.PHONY : src/core_engine/math/vector.cpp.i
+
+src/core_engine/math/vector.s: src/core_engine/math/vector.cpp.s
+
+.PHONY : src/core_engine/math/vector.s
+
+# target to generate assembly for a file
+src/core_engine/math/vector.cpp.s:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/vector.cpp.s
+.PHONY : src/core_engine/math/vector.cpp.s
 
 src/core_engine/transform.o: src/core_engine/transform.cpp.o
 
@@ -500,6 +662,33 @@ src/core_engine/transform.s: src/core_engine/transform.cpp.s
 src/core_engine/transform.cpp.s:
 	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.s
 .PHONY : src/core_engine/transform.cpp.s
+
+src/core_engine/util/util.o: src/core_engine/util/util.cpp.o
+
+.PHONY : src/core_engine/util/util.o
+
+# target to build an object file
+src/core_engine/util/util.cpp.o:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/util/util.cpp.o
+.PHONY : src/core_engine/util/util.cpp.o
+
+src/core_engine/util/util.i: src/core_engine/util/util.cpp.i
+
+.PHONY : src/core_engine/util/util.i
+
+# target to preprocess a source file
+src/core_engine/util/util.cpp.i:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/util/util.cpp.i
+.PHONY : src/core_engine/util/util.cpp.i
+
+src/core_engine/util/util.s: src/core_engine/util/util.cpp.s
+
+.PHONY : src/core_engine/util/util.s
+
+# target to generate assembly for a file
+src/core_engine/util/util.cpp.s:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/util/util.cpp.s
+.PHONY : src/core_engine/util/util.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -876,6 +1065,15 @@ help:
 	@echo "... src/core_engine/component/terrain.o"
 	@echo "... src/core_engine/component/terrain.i"
 	@echo "... src/core_engine/component/terrain.s"
+	@echo "... src/core_engine/component/text/meta_file.o"
+	@echo "... src/core_engine/component/text/meta_file.i"
+	@echo "... src/core_engine/component/text/meta_file.s"
+	@echo "... src/core_engine/component/text/text.o"
+	@echo "... src/core_engine/component/text/text.i"
+	@echo "... src/core_engine/component/text/text.s"
+	@echo "... src/core_engine/component/text/text_component.o"
+	@echo "... src/core_engine/component/text/text_component.i"
+	@echo "... src/core_engine/component/text/text_component.s"
 	@echo "... src/core_engine/component/water/water.o"
 	@echo "... src/core_engine/component/water/water.i"
 	@echo "... src/core_engine/component/water/water.s"
@@ -897,12 +1095,24 @@ help:
 	@echo "... src/core_engine/io/window.o"
 	@echo "... src/core_engine/io/window.i"
 	@echo "... src/core_engine/io/window.s"
-	@echo "... src/core_engine/math/math_lib.o"
-	@echo "... src/core_engine/math/math_lib.i"
-	@echo "... src/core_engine/math/math_lib.s"
+	@echo "... src/core_engine/math/math.o"
+	@echo "... src/core_engine/math/math.i"
+	@echo "... src/core_engine/math/math.s"
+	@echo "... src/core_engine/math/matrix.o"
+	@echo "... src/core_engine/math/matrix.i"
+	@echo "... src/core_engine/math/matrix.s"
+	@echo "... src/core_engine/math/quaternion.o"
+	@echo "... src/core_engine/math/quaternion.i"
+	@echo "... src/core_engine/math/quaternion.s"
+	@echo "... src/core_engine/math/vector.o"
+	@echo "... src/core_engine/math/vector.i"
+	@echo "... src/core_engine/math/vector.s"
 	@echo "... src/core_engine/transform.o"
 	@echo "... src/core_engine/transform.i"
 	@echo "... src/core_engine/transform.s"
+	@echo "... src/core_engine/util/util.o"
+	@echo "... src/core_engine/util/util.i"
+	@echo "... src/core_engine/util/util.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

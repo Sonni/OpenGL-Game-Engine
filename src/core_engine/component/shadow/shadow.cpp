@@ -22,7 +22,7 @@ void shadow_component::set_all_uni(camera& cam)
 {
     transform shadowCameraTransform = get_shadow_transform(*cam.get_transform());
 
-    mat4f conj_rot = shadowCameraTransform.get_rot()->conjugate().to_rotation_matrix();
+    mat4f conj_rot = shadowCameraTransform.get_rot()->negate().to_rotation_matrix();
     mat4f neg_translate;
     neg_translate.init_translation(*shadowCameraTransform.get_pos() * -1);
 
@@ -58,7 +58,7 @@ transform shadow_component::get_shadow_transform(const transform &cam_transform)
 
     float worldTexelSize = (half_shadow_area*2)/((float)(1 << shadow_map_power_2));
 
-    vec3f light_cam_pos = resultPos.rotate(resultRot.conjugate());
+    vec3f light_cam_pos = resultPos.rotate(resultRot.negate());
 
     light_cam_pos.set_x(worldTexelSize * floor(light_cam_pos.get_x() / worldTexelSize));
     light_cam_pos.set_y(worldTexelSize * floor(light_cam_pos.get_y() / worldTexelSize));

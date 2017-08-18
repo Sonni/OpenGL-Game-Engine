@@ -110,6 +110,24 @@
 		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/terrain.h">
 			<Option target="Game_Engine"/>
 		</Unit>
+		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/meta_file.cpp">
+			<Option target="Game_Engine"/>
+		</Unit>
+		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/meta_file.h">
+			<Option target="Game_Engine"/>
+		</Unit>
+		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text.cpp">
+			<Option target="Game_Engine"/>
+		</Unit>
+		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text.h">
+			<Option target="Game_Engine"/>
+		</Unit>
+		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text_component.cpp">
+			<Option target="Game_Engine"/>
+		</Unit>
+		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text_component.h">
+			<Option target="Game_Engine"/>
+		</Unit>
 		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/water/water.cpp">
 			<Option target="Game_Engine"/>
 		</Unit>
@@ -152,16 +170,40 @@
 		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/window.h">
 			<Option target="Game_Engine"/>
 		</Unit>
-		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.cpp">
+		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.cpp">
 			<Option target="Game_Engine"/>
 		</Unit>
-		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h">
+		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.h">
+			<Option target="Game_Engine"/>
+		</Unit>
+		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.cpp">
+			<Option target="Game_Engine"/>
+		</Unit>
+		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h">
+			<Option target="Game_Engine"/>
+		</Unit>
+		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.cpp">
+			<Option target="Game_Engine"/>
+		</Unit>
+		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h">
+			<Option target="Game_Engine"/>
+		</Unit>
+		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.cpp">
+			<Option target="Game_Engine"/>
+		</Unit>
+		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h">
 			<Option target="Game_Engine"/>
 		</Unit>
 		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.cpp">
 			<Option target="Game_Engine"/>
 		</Unit>
 		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.h">
+			<Option target="Game_Engine"/>
+		</Unit>
+		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/util/util.cpp">
+			<Option target="Game_Engine"/>
+		</Unit>
+		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/util/util.h">
 			<Option target="Game_Engine"/>
 		</Unit>
 		<Unit filename="/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/main.cpp">

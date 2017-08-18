@@ -4,6 +4,7 @@
 #include "component/movement.h"
 #include "component/water/water.h"
 #include "component/shadow/shadow.h"
+#include "component/text/text_component.h"
 
 core_engine::core_engine(window* Window, rendering_engine* renderingEngine)
 {
@@ -59,6 +60,10 @@ bool core_engine::run()
     vec2f blur;
     entity* post_p = new entity(new shader("gaussian_blur.glsl"));
     post_p->add_component(new blur_component(&post_processing, hud_mesh, &blur));
+
+
+    entity* game_text = new entity(new shader("text.glsl"));
+    game_text->add_component(new text_component("3D Game Engine", "arial", 3.0f, vec2f(0.0f, 0.0f), 1.0f, true));
 
 
     entity* _particle = new entity(new shader("particle.glsl"), vec3f(40, 80, 40));
@@ -130,6 +135,7 @@ bool core_engine::run()
 
     entities.push_back(_particle);
     entities.push_back(health_bar);
+    entities.push_back(game_text);
 
 
     waterDraws.push_back(terrain_mesh);
@@ -166,23 +172,6 @@ bool core_engine::run()
                 m_isRunning = false;
             }
 
-            if(Window->get_input().get_key_down(Window->get_input().KEY_4) && !wait)
-            {
-                Camera->delete_component(FL);
-                Camera->delete_component(FM);
-
-                Camera->add_component(TP);
-                wait = true;
-            }
-            if(Window->get_input().get_key_down(Window->get_input().KEY_5) && wait)
-            {
-                Camera->delete_component(TP);
-
-                Camera->add_component(FM);
-                Camera->add_component(FL);
-                wait = false;
-            }
-
             //update logic and input
             for (entity* e : entities)
             {
@@ -190,14 +179,14 @@ bool core_engine::run()
                 e->update(m_frameTime);
             }
 
-
+            /// day / night
             vec3f tmp = lights.at(0).get_color();
             tmp.set(tmp.get_x() + s, tmp.get_y() + s, tmp.get_z() + s);
             lights.at(0).set_color(tmp);
 
             if (tmp.get_y() > 2) s = -0.001;
             if (tmp.get_y() < 0.2) s = 0.001;
-
+            ///////////////////////
 
             render = true;
             unprocessedTime -= m_frameTime;
@@ -207,47 +196,31 @@ bool core_engine::run()
         if(render)
         {
             post_processing.bind_as_render_target();
-            /////////////////
-
-
+            /// Render shadows
             shadow->set_all_uni(*cam);
             shadow->render();
-
             ///////////////////
 
-            float waterHeight = water->get_transform()->get_pos()->get_y();
-            glEnable(GL_CLIP_DISTANCE0);
+            /// Render water
+            float height_of_water = water->get_transform()->get_pos()->get_y();
+            float y_distance = 2 * (cam->get_transform()->get_pos()->get_y() - height_of_water);
+            quaternion old_cam_rot = cam->invert_pitch(*cam->get_transform()->get_rot());
 
-            cam->set_cutting_plane(vec4f(0, 1, 0, -waterHeight+1));
-
-            wfb.bind_reflect_fbo();
-            glClearColor(0.0f,0.0f,0.0f,0.0f);
-            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-            camera tmpCam = *cam;
-            float tmpDistance = 2 * (tmpCam.get_transform()->get_pos()->get_y() - waterHeight);
-            tmpCam.get_transform()->get_pos()->set_y(tmpCam.get_transform()->get_pos()->get_y() - tmpDistance);
-
-            quaternion oldPitch = tmpCam.invert_pitch(*cam->get_transform()->get_rot());
+            setup_reflection(cam, &wfb, height_of_water, y_distance);
             renderingEngine->render(cam, waterDraws);
 
-            tmpCam.get_transform()->get_pos()->set_y(tmpCam.get_transform()->get_pos()->get_y() + tmpDistance);
-            tmpCam.reverse_pitch(oldPitch);
-
-            cam->set_cutting_plane(vec4f(0, -1, 0, waterHeight));
-
-            wfb.bind_refract_fbo();
-            glClearColor(0.0f,0.0f,0.0f,0.0f);
-            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+            setup_refraction(cam, &wfb, height_of_water, y_distance, old_cam_rot);
             renderingEngine->render(cam, waterDraws);
             glDisable(GL_CLIP_DISTANCE0);
-
             cam->set_cutting_plane(vec4f(0, -1, 0, 10000000));
+            /////////////////////////////////////////////////////////////////////////////
 
+            /// Render scene
             post_processing.bind_as_render_target();
-
             renderingEngine->render(cam, entities);
+            ////////////
 
+            ///Render post processed tex to window
             Window->bind_as_render_targets();
 
             glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
@@ -256,13 +229,10 @@ bool core_engine::run()
 
             post_p->get_shader()->use_shader();
 
-            blur.set(0.0/Window->WIN_WIDTH, 0.0);
+            blur.set(0.0 / Window->WIN_WIDTH, 0.0);
             post_p->set_all_uni(*cam);
             post_p->render();
-
-            /*blur.set(0.0, 4.0/Window->WIN_HEIGHT);
-            post_p->set_all_uni(*cam);
-            post_p->render();*/
+            ////////////////////////////////////
 
             Window->swap_buffers();
             frames++;
@@ -290,3 +260,49 @@ bool core_engine::run()
 }
 
 
+void core_engine::setup_reflection(camera* cam, water_fbo* wfb, float height_of_water, float y_distance)
+{
+    glEnable(GL_CLIP_DISTANCE0);
+
+    cam->set_cutting_plane(vec4f(0, 1, 0, -height_of_water + 1));
+
+    wfb->bind_reflect_fbo();
+    glClearColor(0.0f,0.0f,0.0f,0.0f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+
+
+    cam->get_transform()->get_pos()->set_y(cam->get_transform()->get_pos()->get_y() - y_distance);
+}
+
+void core_engine::setup_refraction(camera* cam, water_fbo* wfb, float height_of_water, float y_distance, quaternion old_cam_rot)
+{
+    cam->get_transform()->get_pos()->set_y(cam->get_transform()->get_pos()->get_y() + y_distance);
+    cam->reverse_pitch(old_cam_rot);
+
+    cam->set_cutting_plane(vec4f(0, -1, 0, height_of_water));
+
+    wfb->bind_refract_fbo();
+    glClearColor(0.0f,0.0f,0.0f,0.0f);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+}
+
+
+/*
+ * if(Window->get_input().get_key_down(Window->get_input().KEY_4) && !wait)
+            {
+                Camera->delete_component(FL);
+                Camera->delete_component(FM);
+
+                Camera->add_component(TP);
+                wait = true;
+            }
+            if(Window->get_input().get_key_down(Window->get_input().KEY_5) && wait)
+            {
+                Camera->delete_component(TP);
+
+                Camera->add_component(FM);
+                Camera->add_component(FL);
+                wait = false;
+            }
+ */

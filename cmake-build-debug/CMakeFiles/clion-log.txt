@@ -1,8 +1,4 @@
 /Applications/CLion.app/Contents/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine
--- Framework SDL2 found at /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/frameworks/SDL2.framework
--- Framework OpenGL found at /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/frameworks/OpenGL.framework
--- Framework OpenAL found at /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/frameworks/OpenAL.framework
--- Framework GLEW found at /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/frameworks/GLEW.framework
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug

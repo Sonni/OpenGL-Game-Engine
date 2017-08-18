@@ -3,6 +3,7 @@
 
 #include "io/window.h"
 #include "../rendering_engine/rendering_engine.h"
+#include "component/water/water_fbo.h"
 
 class core_engine
 {
@@ -13,6 +14,8 @@ private:
     window* Window;
     rendering_engine* renderingEngine;
 
+    void setup_reflection(camera* cam, water_fbo* wfb, float height_of_water, float y_distance);
+    void setup_refraction(camera* cam, water_fbo* wfb, float height_of_water, float y_distance, quaternion old_cam_rot);
 
 
 

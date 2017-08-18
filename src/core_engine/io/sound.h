@@ -7,7 +7,7 @@
 #include <cstring>
 #include <string>
 #include <vector>
-#include "../math/math_lib.h"
+#include "../math/vector.h"
 
 class sound
 {

@@ -3,7 +3,7 @@
 mat4f camera::get_view_projection() const
 {
     //Get the conjugate of the rot matrix to simulate the the world is rotating the other direction
-    mat4f cam_conj_rot_matrix = get_transform().get_rot().conjugate().to_rotation_matrix();
+    mat4f cam_conj_rot_matrix = get_transform().get_rot().negate().to_rotation_matrix();
     mat4f cam_translation_matrix;
     
     //*-1 to invert, because the world should appear to move

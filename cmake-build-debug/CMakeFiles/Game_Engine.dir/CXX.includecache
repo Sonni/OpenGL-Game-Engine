@@ -94,6 +94,46 @@ sstream
 ../../rendering_engine/model/mesh.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/mesh.h
 
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/meta_file.cpp
+meta_file.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/meta_file.h
+../../util/util.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/util/util.h
+../../io/window.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/window.h
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/meta_file.h
+vector
+-
+map
+-
+fstream
+-
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text.cpp
+text.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text.h
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text.h
+vector
+-
+meta_file.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/meta_file.h
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text_component.cpp
+text_component.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text_component.h
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text_component.h
+../../../shader/shader.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/shader/shader.h
+../../../rendering_engine/texture.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/texture.h
+meta_file.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/meta_file.h
+text.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text.h
+
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/water/water.cpp
 water.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/water/water.h
@@ -127,12 +167,16 @@ component/water/water.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/water/water.h
 component/shadow/shadow.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/shadow/shadow.h
+component/text/text_component.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text_component.h
 
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/core_engine.h
 io/window.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/window.h
 ../rendering_engine/rendering_engine.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/rendering_engine.h
+component/water/water_fbo.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/water/water_fbo.h
 
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity.cpp
 entity.h
@@ -163,8 +207,8 @@ window.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/window.h
 
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.h
-../math/math_lib.h
-/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+../math/vector.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
 
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/sound.cpp
 sound.h
@@ -185,8 +229,8 @@ string
 -
 vector
 -
-../math/math_lib.h
-/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+../math/vector.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
 
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/window.cpp
 window.h
@@ -202,11 +246,39 @@ string
 input.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.h
 
-/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.cpp
-math_lib.h
-/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.cpp
+math.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.h
 
-/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.h
+quaternion.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.cpp
+matrix.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+vector.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.cpp
+quaternion.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+vector.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
+matrix.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.cpp
+vector.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
+quaternion.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
 math.h
 -
 iostream
@@ -217,8 +289,18 @@ transform.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.h
 
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.h
-math/math_lib.h
-/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+math/math.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.h
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/util/util.cpp
+util.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/util/util.h
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/util/util.h
+string
+-
+vector
+-
 
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/main.cpp
 iostream
@@ -253,18 +335,16 @@ sphere.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/sphere.h
 
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/light.h
-../core_engine/math/math_lib.h
-/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
 
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/indexed_model.cpp
 indexed_model.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/indexed_model.h
 
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/indexed_model.h
-../../core_engine/math/math_lib.h
-/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
 vector
 -
+../../core_engine/math/vector.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
 
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/loader.cpp
 loader.h
@@ -273,10 +353,12 @@ loader.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/loader.h
 util.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/util.h
+../../core_engine/math/matrix.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h
+../../core_engine/math/quaternion.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h
 string
 -
-../../core_engine/math/math_lib.h
-/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
 vector
 -
 
@@ -331,8 +413,10 @@ texture.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/texture.h
 stb_image.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/stb_image.h
-../core_engine/math/math_lib.h
-/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math_lib.h
+../core_engine/math/math.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.h
+iostream
+-
 
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/texture.h
 GL/glew.h

@@ -1,8 +1,8 @@
 #ifndef GAME_ENGINE_RENDERING_ENGINE_H
 #define GAME_ENGINE_RENDERING_ENGINE_H
 
-#include "math/math_lib.h"
 
+#include "math/math.h"
 class transform
 {
 public:
