@@ -14,6 +14,12 @@
 # EXTERNAL cache entries
 ########################
 
+//Value Computed by CMake
+3D_Engine_BINARY_DIR:STATIC=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug
+
+//Value Computed by CMake
+3D_Engine_SOURCE_DIR:STATIC=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine
+
 //Path to a program.
 CMAKE_AR:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar
 
@@ -135,7 +141,7 @@ CMAKE_OSX_DEPLOYMENT_TARGET:STRING=
 CMAKE_OSX_SYSROOT:PATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=Game_Engine
+CMAKE_PROJECT_NAME:STATIC=3D_Engine
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib
@@ -212,6 +218,12 @@ Game_Engine_BINARY_DIR:STATIC=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game
 
 //Value Computed by CMake
 Game_Engine_SOURCE_DIR:STATIC=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine
+
+//Value Computed by CMake
+NAME_BINARY_DIR:STATIC=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug
+
+//Value Computed by CMake
+NAME_SOURCE_DIR:STATIC=/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine
 
 //Path to a library.
 OPENAL_LIBRARY:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/openal.framework

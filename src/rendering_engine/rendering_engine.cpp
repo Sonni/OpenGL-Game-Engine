@@ -4,7 +4,15 @@
 
 rendering_engine::rendering_engine()
 {
-
+    indexed_model hud_square;
+    {
+        hud_square.add_vertex(1.0f, -1.0f, 0.0f);  hud_square.add_tex_coord(vec2f(1.0f, 1.0f));
+        hud_square.add_vertex(1.0f, 1.0f, 0.0f);   hud_square.add_tex_coord(vec2f(1.0f, 0.0f));
+        hud_square.add_vertex(-1.0f, -1.0f, 0.0f); hud_square.add_tex_coord(vec2f(0.0f, 1.0f));
+        hud_square.add_vertex(-1.0f, 1.0f, 0.0f);  hud_square.add_tex_coord(vec2f(0.0f, 0.0f));
+        hud_square.add_face(0, 1, 2); hud_square.add_face(2, 1, 3);
+    }
+    hud_mesh = new mesh("squre", hud_square.finalize());
 }
 
 void rendering_engine::render(camera* cam, std::vector<entity*> e) {

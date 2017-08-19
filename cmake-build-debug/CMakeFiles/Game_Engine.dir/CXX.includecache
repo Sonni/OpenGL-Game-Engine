@@ -451,6 +451,8 @@ rendering_engine.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/rendering_engine.h
 ../core_engine/entity.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity.h
+model/mesh.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/mesh.h
 
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/stb_image.h
 stdio.h

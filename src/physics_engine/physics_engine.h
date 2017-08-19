@@ -14,6 +14,14 @@ public:
 
     }
 
+    void update_gravity(std::vector<entity*> objs, float delta)
+    {
+        for (entity* o : objs)
+        {
+            o->get_transform()->get_pos()->set_y(o->get_transform()->get_pos()->get_y() - (10.0f * delta));
+        }
+    }
+
     void update_objs(physics_obj* obj, std::vector<physics_obj*> objs)
     {
         for (physics_obj* o : objs)
@@ -35,8 +43,9 @@ public:
         for (entity* e : objs)
         {
             vec3f pos = *e->get_transform()->get_pos();
-            float y = terrain->getHeightOfTerrain(e->get_transform()->get_pos()->get_x(), e->get_transform()->get_pos()->get_z());
-            if (y > 0)
+            float y = terrain->get_terrain_y(e->get_transform()->get_pos()->get_x(),
+                                             e->get_transform()->get_pos()->get_z());
+            if (y > 0 && y+5 > pos.get_y())
             {
                 e->get_transform()->get_pos()->set(pos.get_x(), y+5, pos.get_z());
             }

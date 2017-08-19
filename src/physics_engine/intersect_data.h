@@ -13,7 +13,7 @@ public:
     {}
 
     inline bool get_does_intersect() const { return does_intersect; }
-    inline float get_distance()     const { return direction.Length(); }
+    inline float get_distance() const { return direction.Length(); }
     inline const vec3f& get_direction() const { return direction; }
 private:
     const bool does_intersect;

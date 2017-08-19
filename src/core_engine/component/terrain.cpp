@@ -11,9 +11,9 @@ terrain_component::terrain_component(mat4f* shadowMap, texture* depth_map, int g
     this->depth_map = depth_map;
 
     this->background = new texture(background);
-    rTexture = new texture(r);
-    gTexture = new texture(g);
-    bTexture = new texture(b);
+    r_tex = new texture(r);
+    g_tex = new texture(g);
+    b_tex = new texture(b);
     blend_map = new texture(blendmap);
 
     grid_x = gridX;
@@ -53,9 +53,9 @@ void terrain_component::init() {
     get_shader()->use_shader();
 
     background_loc = get_shader()->get_uni_location("background_tex");
-    rTexture_loc = get_shader()->get_uni_location("r_tex");
-    gTexture_loc = get_shader()->get_uni_location("g_tex");
-    bTexture_loc = get_shader()->get_uni_location("b_tex");
+    r_tex_loc = get_shader()->get_uni_location("r_tex");
+    g_tex_loc = get_shader()->get_uni_location("g_tex");
+    b_tex_loc = get_shader()->get_uni_location("b_tex");
     blendmap_loc = get_shader()->get_uni_location("blend_tex");
 
     view_projection_loc = get_shader()->get_uni_location("view_projection");
@@ -111,14 +111,14 @@ void terrain_component::render() const
     background->bind(0);
     glUniform1i(background_loc, 0);
 
-    rTexture->bind(1);
-    glUniform1i(rTexture_loc, 1);
+    r_tex->bind(1);
+    glUniform1i(r_tex_loc, 1);
 
-    gTexture->bind(2);
-    glUniform1i(gTexture_loc, 2);
+    g_tex->bind(2);
+    glUniform1i(g_tex_loc, 2);
 
-    bTexture->bind(3);
-    glUniform1i(bTexture_loc, 3);
+    b_tex->bind(3);
+    glUniform1i(b_tex_loc, 3);
 
     blend_map->bind(4);
     glUniform1i(blendmap_loc, 4);
@@ -174,8 +174,8 @@ void terrain_component::load_mesh()
         {
             float tmpHeight = rgba[j][i];
 
-            tmpHeight += MAX_PIXEL_COLOUR/2.0;
-            tmpHeight /= MAX_PIXEL_COLOUR/2.0;
+            tmpHeight += MAX_PIXEL_COLOR/2.0;
+            tmpHeight /= MAX_PIXEL_COLOR/2.0;
             tmpHeight *= MAX_HEIGHT;
            
             heights[j][i] = tmpHeight;

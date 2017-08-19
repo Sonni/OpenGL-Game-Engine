@@ -371,6 +371,8 @@ CMakeFiles/Game_Engine.dir/src/rendering_engine/rendering_engine.cpp.o: ../src/c
 CMakeFiles/Game_Engine.dir/src/rendering_engine/rendering_engine.cpp.o: ../src/core_engine/math/vector.h
 CMakeFiles/Game_Engine.dir/src/rendering_engine/rendering_engine.cpp.o: ../src/core_engine/transform.h
 CMakeFiles/Game_Engine.dir/src/rendering_engine/rendering_engine.cpp.o: ../src/rendering_engine/light.h
+CMakeFiles/Game_Engine.dir/src/rendering_engine/rendering_engine.cpp.o: ../src/rendering_engine/model/indexed_model.h
+CMakeFiles/Game_Engine.dir/src/rendering_engine/rendering_engine.cpp.o: ../src/rendering_engine/model/mesh.h
 CMakeFiles/Game_Engine.dir/src/rendering_engine/rendering_engine.cpp.o: ../src/rendering_engine/rendering_engine.cpp
 CMakeFiles/Game_Engine.dir/src/rendering_engine/rendering_engine.cpp.o: ../src/rendering_engine/rendering_engine.h
 CMakeFiles/Game_Engine.dir/src/rendering_engine/rendering_engine.cpp.o: ../src/shader/shader.h

@@ -8,7 +8,6 @@ physics_obj::physics_obj(const physics_obj& other) :
 
 void physics_obj::operator=(physics_obj other)
 {
-    //Implemented using the copy/swap idiom.
     char* temp[sizeof(physics_obj)/sizeof(char)];
     memcpy(temp, this, sizeof(physics_obj));
     memcpy(this, &other, sizeof(physics_obj));

@@ -24,7 +24,9 @@ public:
     virtual void set_all_uni(camera& cam);
     
     float heights[256][256];
-    float barryCentric(vec3f p1, vec3f p2, vec3f p3, vec2f pos) {
+
+    float barry_centric(const vec3f& p1, const vec3f& p2, const vec3f& p3, const vec2f& pos)
+    {
         float det = (p2.get_z() - p3.get_z()) * (p1.get_x() - p3.get_x()) + (p3.get_x() - p2.get_x()) * (p1.get_z() - p3.get_z());
         float l1 = ((p2.get_z() - p3.get_z()) * (pos.get_x() - p3.get_x()) + (p3.get_x() - p2.get_x()) * (pos.get_y() - p3.get_z())) / det;
         float l2 = ((p3.get_z() - p1.get_z()) * (pos.get_x() - p3.get_x()) + (p1.get_x() - p3.get_x()) * (pos.get_y() - p3.get_z())) / det;
@@ -33,108 +35,65 @@ public:
     }
 
 
-    float getHeightOfTerrain(float worldX, float worldZ)
+    float get_terrain_y(float world_x, float world_z)
     {
-        float terrainX = worldX - get_transform()->get_pos()->get_x();
-        float terrainZ = worldZ - get_transform()->get_pos()->get_y(); // get_y = get_z in this case
-        float gridSquareSize = SIZE / ((float) sizeof(heights)/sizeof(heights[0]) - 1);
-        int gridX = (int) floor(terrainX / gridSquareSize);
-        int gridZ = (int) floor(terrainZ / gridSquareSize);
+        float terrain_x = world_x - get_transform()->get_pos()->get_x();
+        float terrain_z = world_z - get_transform()->get_pos()->get_y(); // get_y = get_z in this case
+        float grid_size = SIZE / ((float) sizeof(heights) / sizeof(heights[0]) - 1);
+        int grid_x = (int) floor(terrain_x / grid_size);
+        int grid_z = (int) floor(terrain_z / grid_size);
 
 
-        if (gridX >=  sizeof(heights)/sizeof(heights[0]) - 1 || gridZ >=  sizeof(heights)/sizeof(heights[0]) - 1 | gridX < 0 || gridZ < 0) {
+        if (grid_x >= sizeof(heights) / sizeof(heights[0]) - 1 || grid_z >=  sizeof(heights) / sizeof(heights[0]) - 1 | grid_x < 0 || grid_z < 0)
+        {
             return -1;
         }
 
-        float xCoord = fmod(terrainX, gridSquareSize) / gridSquareSize;
-        float zCoord = fmod(terrainZ, gridSquareSize) / gridSquareSize;
-        float answer;
+        float x = (float) fmod(terrain_x, grid_size) / grid_size;
+        float z = (float) fmod(terrain_z, grid_size) / grid_size;
+        float terrain_y;
 
-        if (xCoord <= (1-zCoord))
+        if (x <= (1 - z))
         {
-            answer = barryCentric(vec3f(0, heights[gridX][gridZ], 0), vec3f(1, heights[gridX + 1][gridZ], 0),
-                                  vec3f(0, heights[gridX][gridZ + 1], 1), vec2f(xCoord, zCoord));
+            terrain_y = barry_centric(vec3f(0, heights[grid_x][grid_z], 0), vec3f(1, heights[grid_x + 1][grid_z], 0),
+                                      vec3f(0, heights[grid_x][grid_z + 1], 1), vec2f(x, z));
         }
         else
         {
-            answer = barryCentric(vec3f(1, heights[gridX + 1][gridZ], 0), vec3f(1, heights[gridX + 1][gridZ + 1], 1),
-                                  vec3f(0, heights[gridX][gridZ + 1], 1), vec2f(xCoord, zCoord));
+            terrain_y = barry_centric(vec3f(1, heights[grid_x + 1][grid_z], 0),
+                                      vec3f(1, heights[grid_x + 1][grid_z + 1], 1),
+                                      vec3f(0, heights[grid_x][grid_z + 1], 1), vec2f(x, z));
         }
-        return answer;
+        return terrain_y;
     }
 private:
-    
-    void load_mesh();
+
+    const int SIZE = 500;
+    const float MAX_HEIGHT = 10; //35;
+    const float MAX_PIXEL_COLOR = 256;
     std::vector<texture*> shadows;
     texture* cur;
 
     int grid_x;
     int grid_y;
-    const int SIZE = 500;
-    const float MAX_HEIGHT = 1; //35;
-    const float MAX_PIXEL_COLOUR = 256;
 
     mesh* _mesh;
 
     texture* background;
-    texture* rTexture;
-    texture* gTexture;
-    texture* bTexture;
+    texture* r_tex;
+    texture* g_tex;
+    texture* b_tex;
     texture* blend_map;
 
     texture* depth_map;
     mat4f* shadow_mvp;
 
-    GLint background_loc, rTexture_loc, gTexture_loc, bTexture_loc, blendmap_loc;
+    GLint background_loc, r_tex_loc, g_tex_loc, b_tex_loc, blendmap_loc;
     GLint model_loc, view_loc, view_projection_loc;
     GLint cut_plane_loc;
     GLint shadow_mvp_loc, shadow_tex_loc, shadow_tex_loc2;
+
+    void load_mesh();
 };
 
 #endif
-
-/*
- * float barryCentric(vec3f p1, vec3f p2, vec3f p3, vec2f pos) {
-        float det = (p2.get_z() - p3.get_z()) * (p1.get_x() - p3.get_x()) + (p3.get_x() - p2.get_x()) * (p1.get_z() - p3.get_z());
-        float l1 = ((p2.get_z() - p3.get_z()) * (pos.get_x() - p3.get_x()) + (p3.get_x() - p2.get_x()) * (pos.get_y() - p3.get_z())) / det;
-        float l2 = ((p3.get_z() - p1.get_z()) * (pos.get_x() - p3.get_x()) + (p1.get_x() - p3.get_x()) * (pos.get_y() - p3.get_z())) / det;
-        float l3 = 1.0f - l1 - l2;
-        return l1 * p1.get_y() + l2 * p2.get_y() + l3 * p3.get_y();
-    }
-
-
-    float getHeightOfTerrain(float worldX, float worldZ)
-    {
-        float terrainX = worldX - get_transform()->get_pos()->get_x();
-        float terrainZ = worldZ - get_transform()->get_pos()->get_y(); // get_y = get_z in this case
-        float gridSquareSize = SIZE / ((float) sizeof(heights)/sizeof(heights[0]) - 1);
-        int gridX = (int) floor(terrainX / gridSquareSize);
-        int gridZ = (int) floor(terrainZ / gridSquareSize);
-
-
-        if (gridX >=  sizeof(heights)/sizeof(heights[0]) - 1 || gridZ >=  sizeof(heights)/sizeof(heights[0]) - 1 | gridX < 0 || gridZ < 0) {
-            return -1;
-        }
-
-        float xCoord = fmod(terrainX, gridSquareSize) / gridSquareSize;
-        float zCoord = fmod(terrainZ, gridSquareSize) / gridSquareSize;
-        float answer;
-
-        if (xCoord <= (1-zCoord))
-        {
-            answer = barryCentric(vec3f(0, heights[gridX][gridZ], 0), vec3f(1, heights[gridX + 1][gridZ], 0),
-                                  vec3f(0, heights[gridX][gridZ + 1], 1), vec2f(xCoord, zCoord));
-        }
-        else
-        {
-            answer = barryCentric(vec3f(1, heights[gridX + 1][gridZ], 0), vec3f(1, heights[gridX + 1][gridZ + 1], 1),
-                                  vec3f(0, heights[gridX][gridZ + 1], 1), vec2f(xCoord, zCoord));
-        }
-        return answer;
-    }
-
-    float cam_height = getHeightOfTerrain(cam.get_transform()->get_pos()->get_x(), cam.get_transform()->get_pos()->get_z());
-
-    if (cam_height > 0 && cam.get_transform()->get_pos()->get_y() < cam_height)
-    cam.get_transform()->get_pos()->set_y(cam_height);
- */
