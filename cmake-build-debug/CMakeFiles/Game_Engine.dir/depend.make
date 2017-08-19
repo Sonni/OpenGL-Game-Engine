@@ -174,6 +174,12 @@ CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o: ../src/core_engine
 CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o: ../src/core_engine/math/quaternion.h
 CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o: ../src/core_engine/math/vector.h
 CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o: ../src/core_engine/transform.h
+CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o: ../src/physics_engine/collider/aabb.h
+CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o: ../src/physics_engine/collider/collider.h
+CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o: ../src/physics_engine/collider/sphere.h
+CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o: ../src/physics_engine/intersect_data.h
+CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o: ../src/physics_engine/physics_engine.h
+CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o: ../src/physics_engine/physics_obj.h
 CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o: ../src/rendering_engine/light.h
 CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o: ../src/rendering_engine/model/indexed_model.h
 CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o: ../src/rendering_engine/model/loader.h
@@ -240,9 +246,11 @@ CMakeFiles/Game_Engine.dir/src/core_engine/util/util.cpp.o: ../src/core_engine/u
 CMakeFiles/Game_Engine.dir/src/core_engine/util/util.cpp.o: ../src/core_engine/util/util.h
 
 CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../include/GL/glew.h
+CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/core_engine/component/terrain.h
 CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/core_engine/component/water/water_fbo.h
 CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/core_engine/core_engine.h
 CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/core_engine/entity.h
+CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/core_engine/entity_component.h
 CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/core_engine/io/input.h
 CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/core_engine/io/sound.h
 CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/core_engine/io/window.h
@@ -252,20 +260,76 @@ CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/core_engine/math/quaternion.h
 CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/core_engine/math/vector.h
 CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/core_engine/transform.h
 CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/main.cpp
+CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/physics_engine/collider/aabb.h
+CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/physics_engine/collider/collider.h
+CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/physics_engine/intersect_data.h
+CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/physics_engine/physics_engine.h
+CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/physics_engine/physics_obj.h
 CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/rendering_engine/light.h
+CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/rendering_engine/model/indexed_model.h
+CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/rendering_engine/model/mesh.h
 CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/rendering_engine/rendering_engine.h
+CMakeFiles/Game_Engine.dir/src/main.cpp.o: ../src/rendering_engine/texture.h
 
-CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.o: ../src/physics_engine/aabb.cpp
-CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.o: ../src/physics_engine/aabb.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/collider/aabb.cpp.o: ../src/core_engine/math/vector.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/collider/aabb.cpp.o: ../src/physics_engine/collider/aabb.cpp
+CMakeFiles/Game_Engine.dir/src/physics_engine/collider/aabb.cpp.o: ../src/physics_engine/collider/aabb.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/collider/aabb.cpp.o: ../src/physics_engine/intersect_data.h
 
+CMakeFiles/Game_Engine.dir/src/physics_engine/collider/collider.cpp.o: ../src/core_engine/math/vector.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/collider/collider.cpp.o: ../src/physics_engine/collider/aabb.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/collider/collider.cpp.o: ../src/physics_engine/collider/collider.cpp
+CMakeFiles/Game_Engine.dir/src/physics_engine/collider/collider.cpp.o: ../src/physics_engine/collider/collider.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/collider/collider.cpp.o: ../src/physics_engine/collider/sphere.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/collider/collider.cpp.o: ../src/physics_engine/intersect_data.h
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/collider/plane.cpp.o: ../src/core_engine/math/vector.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/collider/plane.cpp.o: ../src/physics_engine/collider/collider.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/collider/plane.cpp.o: ../src/physics_engine/collider/plane.cpp
+CMakeFiles/Game_Engine.dir/src/physics_engine/collider/plane.cpp.o: ../src/physics_engine/collider/plane.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/collider/plane.cpp.o: ../src/physics_engine/collider/sphere.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/collider/plane.cpp.o: ../src/physics_engine/intersect_data.h
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/collider/sphere.cpp.o: ../src/core_engine/math/vector.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/collider/sphere.cpp.o: ../src/physics_engine/collider/collider.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/collider/sphere.cpp.o: ../src/physics_engine/collider/sphere.cpp
+CMakeFiles/Game_Engine.dir/src/physics_engine/collider/sphere.cpp.o: ../src/physics_engine/collider/sphere.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/collider/sphere.cpp.o: ../src/physics_engine/intersect_data.h
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/intersect_data.cpp.o: ../src/core_engine/math/vector.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/intersect_data.cpp.o: ../src/physics_engine/intersect_data.cpp
+CMakeFiles/Game_Engine.dir/src/physics_engine/intersect_data.cpp.o: ../src/physics_engine/intersect_data.h
+
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: ../include/GL/glew.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: ../src/core_engine/component/terrain.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: ../src/core_engine/entity.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: ../src/core_engine/entity_component.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: ../src/core_engine/io/input.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: ../src/core_engine/math/math.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: ../src/core_engine/math/matrix.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: ../src/core_engine/math/quaternion.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: ../src/core_engine/math/vector.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: ../src/core_engine/transform.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: ../src/physics_engine/collider/aabb.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: ../src/physics_engine/collider/collider.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: ../src/physics_engine/intersect_data.h
 CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: ../src/physics_engine/physics_engine.cpp
 CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: ../src/physics_engine/physics_engine.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: ../src/physics_engine/physics_obj.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: ../src/rendering_engine/light.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: ../src/rendering_engine/model/indexed_model.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: ../src/rendering_engine/model/mesh.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o: ../src/rendering_engine/texture.h
 
-CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.o: ../src/physics_engine/plane.cpp
-CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.o: ../src/physics_engine/plane.h
-
-CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.o: ../src/physics_engine/sphere.cpp
-CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.o: ../src/physics_engine/sphere.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_obj.cpp.o: ../src/core_engine/math/math.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_obj.cpp.o: ../src/core_engine/math/matrix.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_obj.cpp.o: ../src/core_engine/math/quaternion.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_obj.cpp.o: ../src/core_engine/math/vector.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_obj.cpp.o: ../src/core_engine/transform.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_obj.cpp.o: ../src/physics_engine/collider/collider.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_obj.cpp.o: ../src/physics_engine/intersect_data.h
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_obj.cpp.o: ../src/physics_engine/physics_obj.cpp
+CMakeFiles/Game_Engine.dir/src/physics_engine/physics_obj.cpp.o: ../src/physics_engine/physics_obj.h
 
 CMakeFiles/Game_Engine.dir/src/rendering_engine/model/indexed_model.cpp.o: ../src/core_engine/math/vector.h
 CMakeFiles/Game_Engine.dir/src/rendering_engine/model/indexed_model.cpp.o: ../src/rendering_engine/model/indexed_model.cpp

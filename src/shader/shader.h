@@ -43,7 +43,7 @@ public:
 private:
     GLuint load(std::string vertex_file_path, std::string fragment_file_path);
     std::vector<GLint> light_pos, light_color, attenuation;
-    std::vector<light>* lights;
+    std::vector<light>* lights = nullptr;
 
     GLuint program_id;
 };

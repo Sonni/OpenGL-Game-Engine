@@ -5,11 +5,28 @@
 #include "component/water/water.h"
 #include "component/shadow/shadow.h"
 #include "component/text/text_component.h"
+#include "../physics_engine/collider/sphere.h"
 
-core_engine::core_engine(window* Window, rendering_engine* renderingEngine)
+core_engine::core_engine(window* Window, rendering_engine* renderingEngine, physics_engine* physicsEngine)
 {
     this->Window = Window;
     this->renderingEngine = renderingEngine;
+    this->physicsEngine = physicsEngine;
+}
+
+entity* create_simpel(std::string shader_name, entity_component* ec)
+{
+    entity* game_text = new entity(new shader(shader_name));
+    game_text->add_component(ec);
+}
+
+entity* create_mesh(std::string shader_name, vec3f pos, int scale, std::vector<light>* lights, entity_component* ec)
+{
+    entity* e = new entity(new shader(shader_name), pos);
+    e->add_component(ec);
+    e->get_shader()->add_lights(lights);
+    e->get_transform()->set_scale(scale);
+    return e;
 }
 
 bool core_engine::run()
@@ -24,21 +41,15 @@ bool core_engine::run()
     double unprocessedTime = 0;
     int frames = 0;
 
-    std::vector<entity*> entities;
-    std::vector<entity*> waterDraws;
-    std::vector<entity*> shadowDraws;
-    std::vector<entity*> shadowTmp;
+    std::vector<entity*> entities, waterDraws, shadowDraws, shadowTmp;
 
-
-    mat4f* perspective = new mat4f();
-    perspective->init_perspective(ToRadians(70.0f), Window->get_aspect(), 0.1f, 1000.0f);
 
 
 
 
     ///////
 
-
+    water_fbo wfb;
     mat4f shadow_mvp;
     texture depth_map(1024, 1024, true);
 
@@ -62,6 +73,7 @@ bool core_engine::run()
     post_p->add_component(new blur_component(&post_processing, hud_mesh, &blur));
 
 
+
     entity* game_text = new entity(new shader("text.glsl"));
     game_text->add_component(new text_component("3D Game Engine", "arial", 3.0f, vec2f(0.0f, 0.0f), 1.0f, true));
 
@@ -71,40 +83,28 @@ bool core_engine::run()
     _particle->get_transform()->set_scale(5);
 
     std::vector<light> lights;
-    lights.push_back(light(vec3f(10000, 15000, -10000), vec3f(0.4, 0.4, 0.4))); //Sun
-    lights.push_back(light(vec3f(30, 70, 40), vec3f(0, 0, 2.0), vec3f(0.2, 0.000001, 0.05))); //blue light
-    lights.push_back(light(vec3f(40, 40, 40), vec3f(1.5, 0, 0), vec3f(0.6, 0.000001, 0.02))); //red light
-    water_fbo wfb;
-
-    entity* box_animation = new entity(new shader("animation.glsl"), vec3f(40, 45, 40));
-    box_animation->add_component(new animation_component("box", &shadow_mvp, &depth_map));
-    box_animation->get_shader()->add_lights(&lights);
+    lights.push_back(light(vec3f(10000, 15000, -10000), vec3f(0.9, 0.9, 0.9))); //Sun
 
 
-    entity* monkey = new entity(new shader("basic.glsl"), vec3f(30, 45, 40));
-    monkey->add_component(new mesh_component(new mesh("monkey"), &shadow_mvp, &depth_map, "default.jpg"));
-    monkey->get_shader()->add_lights(&lights);
-    monkey->get_transform()->set_scale(5);
 
-    entity* monkey2 = new entity(new shader("basic_normal_mapping.glsl"), vec3f(30, 65, 40));
-    monkey2->add_component(new mesh_component(new mesh("plane"), &shadow_mvp, &depth_map, "bricks.jpg", "bricks_normal.jpg"));
-    monkey2->get_shader()->add_lights(&lights);
-    monkey2->get_transform()->set_scale(20);
+    entity* box_animation = create_mesh("animation.glsl", vec3f(40, 45, 40), 1, &lights, new animation_component("box", &shadow_mvp, &depth_map, "", ""));
+    entity* monkey = create_mesh("basic.glsl", vec3f(30, 45, 40), 5, &lights, new mesh_component(new mesh("monkey"), &shadow_mvp, &depth_map, "default.jpg", ""));
+    entity* monkey2 = create_mesh("basic_normal_mapping.glsl", vec3f(30, 65, 60), 5, &lights, new mesh_component(new mesh("monkey"), &shadow_mvp, &depth_map, "bricks.jpg", "bricks_normal.jpg"));
+
+
+
+    mat4f* perspective = new mat4f();
+    perspective->init_perspective(ToRadians(70.0f), Window->get_aspect(), 0.1f, 1000.0f);
 
     entity* Camera = new entity(NULL, vec3f(40, 40, 40));
-    camera* cam = new camera(*perspective, Camera->get_transform());
-
-    third_person* TP = new third_person(monkey->get_transform(), Window->get_center());
-    free_look* FL = new free_look(Window->get_center(), 0.4f);
-    free_move* FM = new free_move(5.0f);
-
     Camera->add_component(new camera_component(*perspective));
-    Camera->add_component(FL);
-    Camera->add_component(FM);
+    Camera->add_component(new third_person(monkey->get_transform(), Window->get_center()));
+    camera* cam = new camera(*perspective, Camera->get_transform());
 
 
     entity* terrain_mesh = new entity(new shader("testTerrain.glsl"));
-    terrain_mesh->add_component(new terrain_component(&shadow_mvp, &depth_map, 0, 0, "terrain/empty.png", "terrain/grass.jpg", "terrain/flowers.jpg", "terrain/road.jpg", "terrain/blendmap.png"));
+    terrain_component* t = new terrain_component(&shadow_mvp, &depth_map, 0, 0, "terrain/empty.png", "terrain/grass.jpg", "terrain/flowers.jpg", "terrain/road.jpg", "terrain/blendmap.png");
+    terrain_mesh->add_component(t);
     terrain_mesh->get_shader()->add_lights(&lights);
 
     entity* skybox = new entity(new shader("skybox.glsl"));
@@ -116,14 +116,18 @@ bool core_engine::run()
 
 
 
-    entity* water = new entity(new shader("water.glsl"), vec3f(80, 40, 50));
+    entity* water = new entity(new shader("water.glsl"), vec3f(80, 40, 50), quaternion(), 500);
     water->add_component(new water_component("water/waterDUDV.png", "water/waterNormal.png", &wfb));
-    water->get_transform()->set_scale(500);
 
     entity* shadow = new entity(new shader("shadow.glsl"));
     shadow->add_component(new shadow_component(&shadowDraws, &depth_map, &shadow_mvp));
 
     shadowTmp.push_back(shadow);
+
+    std::vector<entity*> phy_obj;
+    phy_obj.push_back(monkey);
+    phy_obj.push_back(monkey2);
+
 
     entities.push_back(Camera);
     entities.push_back(monkey);
@@ -147,6 +151,11 @@ bool core_engine::run()
     shadowDraws.push_back(monkey);
     shadowDraws.push_back(monkey2);
     shadowDraws.push_back(box_animation);
+
+    physics_obj* p_player = new physics_obj(new sphere(vec3f(0.0f, 0.0f, 0.0f), 5), monkey->get_transform());
+
+    std::vector<physics_obj*> physics_objs;
+    physics_objs.push_back(new physics_obj(new sphere(vec3f(0.0f, 0.0f, 0.0f), 5), monkey2->get_transform()));
 
     float s = 0.001;
     bool wait = false;
@@ -179,10 +188,13 @@ bool core_engine::run()
                 e->update(m_frameTime);
             }
 
+            physicsEngine->update_terrain(t, phy_obj);
+            physicsEngine->update_objs(p_player, physics_objs);
+
             /// day / night
             vec3f tmp = lights.at(0).get_color();
             tmp.set(tmp.get_x() + s, tmp.get_y() + s, tmp.get_z() + s);
-            lights.at(0).set_color(tmp);
+            //lights.at(0).set_color(tmp);
 
             if (tmp.get_y() > 2) s = -0.001;
             if (tmp.get_y() < 0.2) s = 0.001;

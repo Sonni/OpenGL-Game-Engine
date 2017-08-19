@@ -717,32 +717,140 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/physics_engine/aabb.o: src/physics_engine/aabb.cpp.o
+src/physics_engine/collider/aabb.o: src/physics_engine/collider/aabb.cpp.o
 
-.PHONY : src/physics_engine/aabb.o
+.PHONY : src/physics_engine/collider/aabb.o
 
 # target to build an object file
-src/physics_engine/aabb.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.o
-.PHONY : src/physics_engine/aabb.cpp.o
+src/physics_engine/collider/aabb.cpp.o:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/aabb.cpp.o
+.PHONY : src/physics_engine/collider/aabb.cpp.o
 
-src/physics_engine/aabb.i: src/physics_engine/aabb.cpp.i
+src/physics_engine/collider/aabb.i: src/physics_engine/collider/aabb.cpp.i
 
-.PHONY : src/physics_engine/aabb.i
+.PHONY : src/physics_engine/collider/aabb.i
 
 # target to preprocess a source file
-src/physics_engine/aabb.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.i
-.PHONY : src/physics_engine/aabb.cpp.i
+src/physics_engine/collider/aabb.cpp.i:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/aabb.cpp.i
+.PHONY : src/physics_engine/collider/aabb.cpp.i
 
-src/physics_engine/aabb.s: src/physics_engine/aabb.cpp.s
+src/physics_engine/collider/aabb.s: src/physics_engine/collider/aabb.cpp.s
 
-.PHONY : src/physics_engine/aabb.s
+.PHONY : src/physics_engine/collider/aabb.s
 
 # target to generate assembly for a file
-src/physics_engine/aabb.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/aabb.cpp.s
-.PHONY : src/physics_engine/aabb.cpp.s
+src/physics_engine/collider/aabb.cpp.s:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/aabb.cpp.s
+.PHONY : src/physics_engine/collider/aabb.cpp.s
+
+src/physics_engine/collider/collider.o: src/physics_engine/collider/collider.cpp.o
+
+.PHONY : src/physics_engine/collider/collider.o
+
+# target to build an object file
+src/physics_engine/collider/collider.cpp.o:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/collider.cpp.o
+.PHONY : src/physics_engine/collider/collider.cpp.o
+
+src/physics_engine/collider/collider.i: src/physics_engine/collider/collider.cpp.i
+
+.PHONY : src/physics_engine/collider/collider.i
+
+# target to preprocess a source file
+src/physics_engine/collider/collider.cpp.i:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/collider.cpp.i
+.PHONY : src/physics_engine/collider/collider.cpp.i
+
+src/physics_engine/collider/collider.s: src/physics_engine/collider/collider.cpp.s
+
+.PHONY : src/physics_engine/collider/collider.s
+
+# target to generate assembly for a file
+src/physics_engine/collider/collider.cpp.s:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/collider.cpp.s
+.PHONY : src/physics_engine/collider/collider.cpp.s
+
+src/physics_engine/collider/plane.o: src/physics_engine/collider/plane.cpp.o
+
+.PHONY : src/physics_engine/collider/plane.o
+
+# target to build an object file
+src/physics_engine/collider/plane.cpp.o:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/plane.cpp.o
+.PHONY : src/physics_engine/collider/plane.cpp.o
+
+src/physics_engine/collider/plane.i: src/physics_engine/collider/plane.cpp.i
+
+.PHONY : src/physics_engine/collider/plane.i
+
+# target to preprocess a source file
+src/physics_engine/collider/plane.cpp.i:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/plane.cpp.i
+.PHONY : src/physics_engine/collider/plane.cpp.i
+
+src/physics_engine/collider/plane.s: src/physics_engine/collider/plane.cpp.s
+
+.PHONY : src/physics_engine/collider/plane.s
+
+# target to generate assembly for a file
+src/physics_engine/collider/plane.cpp.s:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/plane.cpp.s
+.PHONY : src/physics_engine/collider/plane.cpp.s
+
+src/physics_engine/collider/sphere.o: src/physics_engine/collider/sphere.cpp.o
+
+.PHONY : src/physics_engine/collider/sphere.o
+
+# target to build an object file
+src/physics_engine/collider/sphere.cpp.o:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/sphere.cpp.o
+.PHONY : src/physics_engine/collider/sphere.cpp.o
+
+src/physics_engine/collider/sphere.i: src/physics_engine/collider/sphere.cpp.i
+
+.PHONY : src/physics_engine/collider/sphere.i
+
+# target to preprocess a source file
+src/physics_engine/collider/sphere.cpp.i:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/sphere.cpp.i
+.PHONY : src/physics_engine/collider/sphere.cpp.i
+
+src/physics_engine/collider/sphere.s: src/physics_engine/collider/sphere.cpp.s
+
+.PHONY : src/physics_engine/collider/sphere.s
+
+# target to generate assembly for a file
+src/physics_engine/collider/sphere.cpp.s:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/sphere.cpp.s
+.PHONY : src/physics_engine/collider/sphere.cpp.s
+
+src/physics_engine/intersect_data.o: src/physics_engine/intersect_data.cpp.o
+
+.PHONY : src/physics_engine/intersect_data.o
+
+# target to build an object file
+src/physics_engine/intersect_data.cpp.o:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/intersect_data.cpp.o
+.PHONY : src/physics_engine/intersect_data.cpp.o
+
+src/physics_engine/intersect_data.i: src/physics_engine/intersect_data.cpp.i
+
+.PHONY : src/physics_engine/intersect_data.i
+
+# target to preprocess a source file
+src/physics_engine/intersect_data.cpp.i:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/intersect_data.cpp.i
+.PHONY : src/physics_engine/intersect_data.cpp.i
+
+src/physics_engine/intersect_data.s: src/physics_engine/intersect_data.cpp.s
+
+.PHONY : src/physics_engine/intersect_data.s
+
+# target to generate assembly for a file
+src/physics_engine/intersect_data.cpp.s:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/intersect_data.cpp.s
+.PHONY : src/physics_engine/intersect_data.cpp.s
 
 src/physics_engine/physics_engine.o: src/physics_engine/physics_engine.cpp.o
 
@@ -771,59 +879,32 @@ src/physics_engine/physics_engine.cpp.s:
 	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.s
 .PHONY : src/physics_engine/physics_engine.cpp.s
 
-src/physics_engine/plane.o: src/physics_engine/plane.cpp.o
+src/physics_engine/physics_obj.o: src/physics_engine/physics_obj.cpp.o
 
-.PHONY : src/physics_engine/plane.o
-
-# target to build an object file
-src/physics_engine/plane.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.o
-.PHONY : src/physics_engine/plane.cpp.o
-
-src/physics_engine/plane.i: src/physics_engine/plane.cpp.i
-
-.PHONY : src/physics_engine/plane.i
-
-# target to preprocess a source file
-src/physics_engine/plane.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.i
-.PHONY : src/physics_engine/plane.cpp.i
-
-src/physics_engine/plane.s: src/physics_engine/plane.cpp.s
-
-.PHONY : src/physics_engine/plane.s
-
-# target to generate assembly for a file
-src/physics_engine/plane.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/plane.cpp.s
-.PHONY : src/physics_engine/plane.cpp.s
-
-src/physics_engine/sphere.o: src/physics_engine/sphere.cpp.o
-
-.PHONY : src/physics_engine/sphere.o
+.PHONY : src/physics_engine/physics_obj.o
 
 # target to build an object file
-src/physics_engine/sphere.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.o
-.PHONY : src/physics_engine/sphere.cpp.o
+src/physics_engine/physics_obj.cpp.o:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/physics_obj.cpp.o
+.PHONY : src/physics_engine/physics_obj.cpp.o
 
-src/physics_engine/sphere.i: src/physics_engine/sphere.cpp.i
+src/physics_engine/physics_obj.i: src/physics_engine/physics_obj.cpp.i
 
-.PHONY : src/physics_engine/sphere.i
+.PHONY : src/physics_engine/physics_obj.i
 
 # target to preprocess a source file
-src/physics_engine/sphere.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.i
-.PHONY : src/physics_engine/sphere.cpp.i
+src/physics_engine/physics_obj.cpp.i:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/physics_obj.cpp.i
+.PHONY : src/physics_engine/physics_obj.cpp.i
 
-src/physics_engine/sphere.s: src/physics_engine/sphere.cpp.s
+src/physics_engine/physics_obj.s: src/physics_engine/physics_obj.cpp.s
 
-.PHONY : src/physics_engine/sphere.s
+.PHONY : src/physics_engine/physics_obj.s
 
 # target to generate assembly for a file
-src/physics_engine/sphere.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/sphere.cpp.s
-.PHONY : src/physics_engine/sphere.cpp.s
+src/physics_engine/physics_obj.cpp.s:
+	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/physics_obj.cpp.s
+.PHONY : src/physics_engine/physics_obj.cpp.s
 
 src/rendering_engine/model/indexed_model.o: src/rendering_engine/model/indexed_model.cpp.o
 
@@ -1116,18 +1197,27 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/physics_engine/aabb.o"
-	@echo "... src/physics_engine/aabb.i"
-	@echo "... src/physics_engine/aabb.s"
+	@echo "... src/physics_engine/collider/aabb.o"
+	@echo "... src/physics_engine/collider/aabb.i"
+	@echo "... src/physics_engine/collider/aabb.s"
+	@echo "... src/physics_engine/collider/collider.o"
+	@echo "... src/physics_engine/collider/collider.i"
+	@echo "... src/physics_engine/collider/collider.s"
+	@echo "... src/physics_engine/collider/plane.o"
+	@echo "... src/physics_engine/collider/plane.i"
+	@echo "... src/physics_engine/collider/plane.s"
+	@echo "... src/physics_engine/collider/sphere.o"
+	@echo "... src/physics_engine/collider/sphere.i"
+	@echo "... src/physics_engine/collider/sphere.s"
+	@echo "... src/physics_engine/intersect_data.o"
+	@echo "... src/physics_engine/intersect_data.i"
+	@echo "... src/physics_engine/intersect_data.s"
 	@echo "... src/physics_engine/physics_engine.o"
 	@echo "... src/physics_engine/physics_engine.i"
 	@echo "... src/physics_engine/physics_engine.s"
-	@echo "... src/physics_engine/plane.o"
-	@echo "... src/physics_engine/plane.i"
-	@echo "... src/physics_engine/plane.s"
-	@echo "... src/physics_engine/sphere.o"
-	@echo "... src/physics_engine/sphere.i"
-	@echo "... src/physics_engine/sphere.s"
+	@echo "... src/physics_engine/physics_obj.o"
+	@echo "... src/physics_engine/physics_obj.i"
+	@echo "... src/physics_engine/physics_obj.s"
 	@echo "... src/rendering_engine/model/indexed_model.o"
 	@echo "... src/rendering_engine/model/indexed_model.i"
 	@echo "... src/rendering_engine/model/indexed_model.s"

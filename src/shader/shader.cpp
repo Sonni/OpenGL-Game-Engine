@@ -15,7 +15,9 @@ std::string get_code(std::string file_name)
         while(getline(shader_stream, Line))
             shader_code += "\n" + Line;
         shader_stream.close();
-    }else{
+    }
+    else
+    {
         return "-1";
     }
     return shader_code;
@@ -173,6 +175,9 @@ void shader::get_light_loc()
 
 void shader::set_light() const
 {
+    if (lights == nullptr)
+        return;
+
     for(int i = 0; i < 4; i++)
     {
         if (i < lights->size())

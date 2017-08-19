@@ -15,7 +15,7 @@ public:
     inline const vec3f& get_color() const { return color; }
     inline const vec3f& get_attenuation() const { return attenuation; }
 
-    inline void set_color(const vec3f& color) {this->color = color;}
+    inline void set_color(const vec3f& color) { this->color = color; }
 
 private:
     vec3f pos, color, attenuation;

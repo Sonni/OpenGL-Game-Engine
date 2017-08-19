@@ -88,7 +88,7 @@ void window::update()
 
 		if(e.type == SDL_MOUSEBUTTONDOWN)
 		{
-			win_input.set_mouse_down(e.button.button, true);
+            win_input.set_mouse_down(e.button.button, true);
 		}
 
 		if(e.type == SDL_MOUSEBUTTONUP)

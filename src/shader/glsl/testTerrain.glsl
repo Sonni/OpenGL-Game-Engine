@@ -38,7 +38,7 @@ void main()
 	vec4 pos_relative_to_cam = view_projection * world_pos;
 	gl_Position = pos_relative_to_cam;
 
-    float tmp = world_pos.y - 40.0 + 1.3; // 40 is the height of the water
+    float tmp = world_pos.y - -40.0 + 1.3; // 40 is the height of the water
 	if (tmp > 1)
 	{
 	    in_shadow = 1;

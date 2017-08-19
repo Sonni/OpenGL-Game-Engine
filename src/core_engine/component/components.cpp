@@ -89,7 +89,7 @@ void mesh_component::render() const
 }
 
 /////////////////// ANIMATION ////////////////////
-animation_component::animation_component(const std::string& file_name, mat4f* shadowMap, texture* depth_map) :
+animation_component::animation_component(const std::string& file_name, mat4f* shadowMap, texture* depth_map, const std::string& tex_file_name, const std::string& normal_map) :
         _mesh(file_name),
         tna_model(file_name)
 {

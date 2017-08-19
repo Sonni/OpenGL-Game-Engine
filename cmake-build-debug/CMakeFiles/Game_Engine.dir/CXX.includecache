@@ -169,6 +169,8 @@ component/shadow/shadow.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/shadow/shadow.h
 component/text/text_component.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text_component.h
+../physics_engine/collider/sphere.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/sphere.h
 
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/core_engine.h
 io/window.h
@@ -177,6 +179,8 @@ io/window.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/rendering_engine.h
 component/water/water_fbo.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/water/water_fbo.h
+../physics_engine/physics_engine.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/physics_engine.h
 
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity.cpp
 entity.h
@@ -310,29 +314,75 @@ core_engine/core_engine.h
 core_engine/io/sound.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/sound.h
 
-/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/aabb.cpp
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/aabb.cpp
 aabb.h
-/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/aabb.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/aabb.h
 
-/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/aabb.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/aabb.h
+../intersect_data.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/intersect_data.h
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/collider.cpp
+collider.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/collider.h
+sphere.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/sphere.h
+aabb.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/aabb.h
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/collider.h
+../intersect_data.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/intersect_data.h
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/plane.cpp
+plane.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/plane.h
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/plane.h
+../intersect_data.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/intersect_data.h
+sphere.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/sphere.h
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/sphere.cpp
+sphere.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/sphere.h
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/sphere.h
+collider.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/collider.h
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/intersect_data.cpp
+intersect_data.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/intersect_data.h
+
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/intersect_data.h
+../core_engine/math/vector.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
 
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/physics_engine.cpp
 physics_engine.h
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/physics_engine.h
 
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/physics_engine.h
+../core_engine/component/terrain.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/terrain.h
+physics_obj.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/physics_obj.h
+collider/aabb.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/aabb.h
 
-/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/plane.cpp
-plane.h
-/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/plane.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/physics_obj.cpp
+physics_obj.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/physics_obj.h
 
-/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/plane.h
-
-/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/sphere.cpp
-sphere.h
-/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/sphere.h
-
-/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/sphere.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/physics_obj.h
+../core_engine/math/vector.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h
+collider/collider.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/collider.h
+../core_engine/transform.h
+/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.h
 
 /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/light.h
 

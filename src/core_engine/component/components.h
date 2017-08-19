@@ -58,7 +58,7 @@ private:
 class animation_component : public entity_component
 {
 public:
-    animation_component(const std::string& file_name, mat4f* shadowMap, texture* depth_map);
+    animation_component(const std::string& file_name, mat4f* shadowMap, texture* depth_map, const std::string& tex_file_name, const std::string& normal_map);
     ~animation_component();
 
     virtual void init();
