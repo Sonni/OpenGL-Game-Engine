@@ -20,12 +20,13 @@ Feature:
 - Post processing
 - 3D Sound (wav only)
 - Text
+- Simple Physics
+- Mouse picking
 
 
 Upcoming:
 - Particle system
-- Physics
-- Mouse picking
+- Advanced Physics
 
 3rd party libraries used by the engine is a follows:
 - SDL2 window and input handling.

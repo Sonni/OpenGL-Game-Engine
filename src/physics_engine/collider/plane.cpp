@@ -2,7 +2,7 @@
 
 plane plane::normalize() const
 {
-    float magnitude = normal.Length();
+    float magnitude = normal.length();
 
 
     return plane(normal / magnitude, distance / magnitude);

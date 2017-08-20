@@ -73,94 +73,6 @@ public:
         return t;
     }
 
-    inline mat<T, D> inverse() const
-    {
-        int i, j, k;
-        mat<T, D> s;
-        s.init_identity();
-        mat<T, D> t(*this);
-
-        // Forward elimination
-        for (i = 0; i < D - 1 ; i++) {
-            int pivot = i;
-
-            T pivotsize = t[i][i];
-
-            if (pivotsize < 0)
-                pivotsize = -pivotsize;
-
-            for (j = i + 1; j < D; j++) {
-                T tmp = t[j][i];
-
-                if (tmp < 0)
-                    tmp = -tmp;
-
-                if (tmp > pivotsize) {
-                    pivot = j;
-                    pivotsize = tmp;
-                }
-            }
-
-            if (pivotsize == 0) {
-                //if (singExc)
-                //	throw ::Imath::SingMatrixExc ("Cannot invert singular matrix.");
-
-                return mat<T, D>();
-            }
-
-            if (pivot != i) {
-                for (j = 0; j < D; j++) {
-                    T tmp;
-
-                    tmp = t[i][j];
-                    t[i][j] = t[pivot][j];
-                    t[pivot][j] = tmp;
-
-                    tmp = s[i][j];
-                    s[i][j] = s[pivot][j];
-                    s[pivot][j] = tmp;
-                }
-            }
-
-            for (j = i + 1; j < D; j++) {
-                T f = t[j][i] / t[i][i];
-
-                for (k = 0; k < D; k++) {
-                    t[j][k] -= f * t[i][k];
-                    s[j][k] -= f * s[i][k];
-                }
-            }
-        }
-
-        // Backward substitution
-        for (i = D - 1; i >= 0; --i) {
-            T f;
-
-            if ((f = t[i][i]) == 0) {
-                //if (singExc)
-                //	throw ::Imath::SingMatrixExc ("Cannot invert singular matrix.");
-
-                return mat<T, D>();
-            }
-
-            for (j = 0; j < D; j++) {
-                t[i][j] /= f;
-                s[i][j] /= f;
-            }
-
-            for (j = 0; j < i; j++) {
-                f = t[j][i];
-
-                for (k = 0; k < D; k++) {
-                    t[j][k] -= f * t[i][k];
-                    s[j][k] -= f * s[i][k];
-                }
-            }
-        }
-
-        return s;
-    }
-
     inline mat<T,D> operator*(const mat<T,D>& r) const
     {
         mat<T,D> ret;
@@ -170,7 +82,9 @@ public:
             {
                 ret.m[i][j] = T(0);
                 for(unsigned int k = 0; k < D; k++)
+                {
                     ret.m[i][j] += m[k][j] * r.m[i][k];
+                }
             }
         }
         return ret;
@@ -184,7 +98,9 @@ public:
         {
             ret[i] = 0;
             for(unsigned int j = 0; j < D; j++)
+            {
                 ret[i] += m[j][i] * r[j];
+            }
         }
 
         return ret;
@@ -195,7 +111,9 @@ public:
         vec<T,D> r2;
 
         for(int i = 0; i < D-1; i++)
+        {
             r2[i] = r[i];
+        }
 
         r2[D-1] = T(1);
 
@@ -203,12 +121,14 @@ public:
         vec<T,D-1> ret;
 
         for(int i = 0; i < D-1; i++)
+        {
             ret[i] = ret2[i];
+        }
 
         return ret;
     }
 
-    inline void Set(unsigned int x, unsigned int y, T val) { m[x][y] = val; }
+    inline void set(unsigned int x, unsigned int y, T val) { m[x][y] = val; }
 
     inline const T* operator[](int index) const { return m[index]; }
     inline T* operator[](int index) { return m[index]; }

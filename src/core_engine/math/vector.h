@@ -48,9 +48,9 @@ public:
         return *this - (normal * (this->dot(normal) * 2));
     }
 
-    inline T LengthSq() const { return this->dot(*this); }
-    inline T Length() const { return sqrt(LengthSq()); }
-    inline vec<T,D> normalized() const { return *this/Length(); }
+    inline T length_sq() const { return this->dot(*this); }
+    inline T length() const { return sqrt(length_sq()); }
+    inline vec<T,D> normalized() const { return *this/ length(); }
     inline vec<T,D> lerp(const vec<T, D> &r, T lerpFactor) const { return (r - *this) * lerpFactor + *this; }
 
     inline vec<T, D> operator+(const vec<T,D>& r) const
@@ -281,7 +281,7 @@ public:
     inline void set_z(const T &z) { (*this)[2] = z; }
     inline void set_w(const T &w) { (*this)[3] = w; }
 
-    inline void Set(const T& x, const T& y, const T& z, const T& w) { set_x(x);
+    inline void set(const T &x, const T &y, const T &z, const T &w) { set_x(x);
         set_y(y);
         set_z(z);
         set_w(w); }
@@ -306,7 +306,7 @@ public:
         (*this)[2] = r[2];
     }
 
-    inline float Length() const { return sqrtf(get_x() * get_x() + get_y() * get_y() + get_z() * get_z()); }
+    inline float length() const { return sqrtf(get_x() * get_x() + get_y() * get_y() + get_z() * get_z()); }
     inline float dot(const vec3f &v) const { return get_x() * v.get_x() + get_y() * v.get_y() + get_z() * v.get_z(); }
 
     inline vec3f cross(const vec3f &v) const
@@ -332,9 +332,9 @@ public:
 
     inline vec3f normalized() const
     {
-        const float length = Length();
+        const float l = length();
 
-        return vec3f(get_x() / length, get_y() / length, get_z() / length);
+        return vec3f(get_x() / l, get_y() / l, get_z() / l);
     }
 
     inline vec3f operator+(const vec3f& r) const { return vec3f(get_x() + r.get_x(), get_y() + r.get_y(), get_z() + r.get_z()); }
@@ -394,7 +394,11 @@ public:
     inline void set_y(float y) { (*this)[1] = y; }
     inline void set_z(float z) { (*this)[2] = z; }
 
-    inline void Set(float x, float y, float z) { (*this)[0] = x; (*this)[1] = y; (*this)[2] = z; }
+    inline void set(float x, float y, float z) { (*this)[0] = x; (*this)[1] = y; (*this)[2] = z; }
+    inline void set(const vec3f &v) {
+        set_x(v.get_x());
+        set_y(v.get_y());
+        set_z(v.get_z()); }
 private:
     //float x,y,z;
 };
@@ -404,7 +408,7 @@ typedef vec3<int> vec3i;
 typedef vec4<int> vec4i;
 
 typedef vec2<float> vec2f;
-//typedef vector3<float> vec3f;
+//typedef vec3<float> vec3f;
 typedef vec4<float> vec4f;
 
 typedef vec2<double> vec2d;

@@ -5,7 +5,7 @@ intersect_data sphere::intersect_sphere(const sphere &other) const
 
     float radiusDistance = radius + other.get_radius();
     vec3f direction = (other.get_center() - center);
-    float centerDistance = direction.Length();
+    float centerDistance = direction.length();
     direction /= centerDistance;
 
     float distance = centerDistance - radiusDistance;

@@ -21,7 +21,7 @@ public:
 
         create_text_mesh();
         vertex_count = (int) (vertices.size() / 2);
-        tex = new texture(font_name + ".png");
+        tex = new texture("font/" + font_name + ".png");
 
         glGenVertexArrays(1, &vao_id);
         glBindVertexArray(vao_id);

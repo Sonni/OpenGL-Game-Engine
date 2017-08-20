@@ -71,11 +71,11 @@ public:
             (*this)[2] = 0.25f * s;
         }
 
-        float length = Length();
-        (*this)[3] = (*this)[3] / length;
-        (*this)[0] = (*this)[0] / length;
-        (*this)[1] = (*this)[1] / length;
-        (*this)[2] = (*this)[2] / length;
+        float l = length();
+        (*this)[3] = (*this)[3] / l;
+        (*this)[0] = (*this)[0] / l;
+        (*this)[1] = (*this)[1] / l;
+        (*this)[2] = (*this)[2] / l;
     }
 
     inline quaternion n_lerp(const quaternion &r, float lerpFactor, bool shortestPath) const

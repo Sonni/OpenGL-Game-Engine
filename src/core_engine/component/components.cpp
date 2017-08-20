@@ -15,7 +15,7 @@ mesh_component::mesh_component(mesh* _mesh, mat4f* shadowMap, texture* depth_map
     this->shadow_mvp = shadowMap;
     this->depth_map = depth_map;
     tex = new texture(tex_file_name);
-    disp_map = new texture("bricks_disp.jpg");
+    disp_map = new texture("disp/bricks_disp.jpg");
     if (normal_map.compare("") == 0)
     {
         has_normal_map = false;

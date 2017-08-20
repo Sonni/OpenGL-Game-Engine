@@ -59,7 +59,7 @@ bool core_engine::run()
     entity* game_text = create_mesh("text.glsl", vec3f(), 1, NULL, new text_component("3D Game Engine", "arial", 3.0f, vec2f(0.0f, 0.0f), 1.0f, true));
     entity* box_animation = create_mesh("animation.glsl", vec3f(40, 45, 40), 1, &lights, new animation_component("box", &shadow_mvp, &depth_map, "", ""));
     entity* monkey = create_mesh("basic.glsl", vec3f(30, 45, 40), 5, &lights, new mesh_component(new mesh("monkey"), &shadow_mvp, &depth_map, "default.jpg", ""));
-    entity* monkey2 = create_mesh("basic_normal_mapping.glsl", vec3f(30, 65, 60), 5, &lights, new mesh_component(new mesh("monkey"), &shadow_mvp, &depth_map, "bricks.jpg", "bricks_normal.jpg"));
+    entity* monkey2 = create_mesh("basic_normal_mapping.glsl", vec3f(30, 65, 60), 5, &lights, new mesh_component(new mesh("monkey"), &shadow_mvp, &depth_map, "bricks.jpg", "normal/bricks_normal.jpg"));
     entity* skybox = create_mesh("skybox.glsl", vec3f(), 1, NULL, new skybox_component(500));
     entity* health_bar = create_mesh("gui.glsl", vec3f(150, Window->get_height() - 150, 0), 0.3f, &lights, new gui_component("gui/healthBar.png", hud_mesh, Window->get_width(), Window->get_height()));
     entity* water = create_mesh("water.glsl", vec3f(80, 40, 50), 500, NULL, new water_component("water/waterDUDV.png", "water/waterNormal.png", &wfb));
