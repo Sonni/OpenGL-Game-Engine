@@ -1,6 +1,6 @@
 #include "core_engine.h"
 #include "component/components.h"
-#include "component/terrain.h"
+#include "component/terrain/terrain.h"
 #include "component/movement.h"
 #include "component/water/water.h"
 #include "component/shadow/shadow.h"
@@ -24,6 +24,17 @@ entity* create_mesh(std::string shader_name, vec3f pos, float scale, std::vector
     return e;
 }
 
+entity* create_terrain(std::string shader_name, vec3f pos, float scale, std::vector<light>* lights, entity_component* ec, std::vector<terrain_component*>* t)
+{
+    entity* e = new entity(new shader(shader_name), pos);
+    e->add_component(ec);
+    if (lights != NULL)
+        e->get_shader()->add_lights(lights);
+    e->get_transform()->set_scale(scale);
+    t->push_back((terrain_component*) ec);
+    return e;
+}
+
 bool core_engine::run()
 {
     float frameRate = 60;
@@ -38,6 +49,7 @@ bool core_engine::run()
 
     ///////
     std::vector<entity*> entities, waterDraws, shadowDraws, shadowTmp, phy_obj;
+    std::vector<terrain_component*> terrains;
 
     water_fbo wfb;
     mat4f shadow_mvp;
@@ -51,9 +63,10 @@ bool core_engine::run()
 
 
     vec2f blur;
-    terrain_component* t = new terrain_component(&shadow_mvp, &depth_map, 0, 0, "terrain/empty.png", "terrain/grass.jpg", "terrain/flowers.jpg", "terrain/road.jpg", "terrain/blendmap.png");
 
-    entity* terrain_mesh = create_mesh("testTerrain.glsl", vec3f(0, 0, 0), 1, &lights, t);
+    entity* terrain1 = create_terrain("testTerrain.glsl", vec3f(0, 0, 0), 1, &lights, new terrain_component(&shadow_mvp, &depth_map, 0, 0, "terrain/empty.png", "terrain/grass.jpg", "terrain/flowers.jpg", "terrain/road.jpg", "terrain/blendmap.png"), &terrains);
+    entity* terrain2 = create_terrain("testTerrain.glsl", vec3f(0, 0, 0), 1, &lights, new terrain_component(&shadow_mvp, &depth_map, 0, 1, "terrain/empty.png", "terrain/grass.jpg", "terrain/flowers.jpg", "terrain/road.jpg", "terrain/blendmap.png"), &terrains);
+
     entity* post_p = create_mesh("gaussian_blur.glsl", vec3f(), 1, NULL, new blur_component(&post_processing, hud_mesh, &blur));
     entity* _particle = create_mesh("particle.glsl", vec3f(40, 80, 40), 5, NULL, new particle(hud_mesh, vec3f(0, 2, 0), 0.5f, 4.0, 50));
     entity* game_text = create_mesh("text.glsl", vec3f(), 1, NULL, new text_component("3D Game Engine", "arial", 3.0f, vec2f(0.0f, 0.0f), 1.0f, true));
@@ -62,7 +75,7 @@ bool core_engine::run()
     entity* monkey2 = create_mesh("basic_normal_mapping.glsl", vec3f(30, 65, 60), 5, &lights, new mesh_component(new mesh("monkey"), &shadow_mvp, &depth_map, "bricks.jpg", "normal/bricks_normal.jpg"));
     entity* skybox = create_mesh("skybox.glsl", vec3f(), 1, NULL, new skybox_component(500));
     entity* health_bar = create_mesh("gui.glsl", vec3f(150, Window->get_height() - 150, 0), 0.3f, &lights, new gui_component("gui/healthBar.png", hud_mesh, Window->get_width(), Window->get_height()));
-    entity* water = create_mesh("water.glsl", vec3f(80, 40, 50), 500, NULL, new water_component("water/waterDUDV.png", "water/waterNormal.png", &wfb));
+    entity* water = create_mesh("water.glsl", vec3f(80, 400, 50), 500, NULL, new water_component("water/waterDUDV.png", "water/waterNormal.png", &wfb));
     entity* shadow = create_mesh("shadow.glsl", vec3f(), 1, NULL, new shadow_component(&shadowDraws, &depth_map, &shadow_mvp));
 
 
@@ -75,11 +88,11 @@ bool core_engine::run()
     camera* cam = new camera(*perspective, Camera->get_transform());
 
 
-    entity* a[] = { Camera, monkey, box_animation, terrain_mesh, skybox, water, monkey2, _particle, health_bar, game_text };
-    entities.insert(entities.end(), a, a + 10);
+    entity* a[] = { Camera, monkey, box_animation, terrain1, terrain2, skybox, water, monkey2, _particle, health_bar, game_text };
+    entities.insert(entities.end(), a, a + 11);
 
-    entity* b[] = { terrain_mesh, monkey, monkey2, box_animation, skybox };
-    waterDraws.insert(waterDraws.end(), b, b + 5);
+    entity* b[] = { terrain1, terrain2, monkey, monkey2, box_animation, skybox };
+    waterDraws.insert(waterDraws.end(), b, b + 6);
 
     entity* c[] = { monkey, monkey2, box_animation };
     shadowDraws.insert(shadowDraws.end(), c, c + 3);
@@ -125,7 +138,7 @@ bool core_engine::run()
                 e->update(m_frameTime);
             }
 
-            physicsEngine->update_terrain(t, phy_obj);
+            physicsEngine->update_terrain(terrains, phy_obj);
             physicsEngine->update_objs(p_player, physics_objs);
             physicsEngine->update_gravity(phy_obj, m_frameTime);
 

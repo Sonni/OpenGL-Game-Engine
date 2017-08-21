@@ -2,7 +2,7 @@
 #define GAME_ENGINE_PHYSICS_ENGINE_H
 
 
-#include "../core_engine/component/terrain.h"
+#include "../core_engine/component/terrain/terrain.h"
 #include "physics_obj.h"
 #include "collider/aabb.h"
 
@@ -38,19 +38,21 @@ public:
         }
     }
 
-    void update_terrain(terrain_component* terrain, std::vector<entity*> objs)
+    void update_terrain(std::vector<terrain_component*> terrain, std::vector<entity*> objs)
     {
-        for (entity* e : objs)
+        for (terrain_component* t : terrain)
         {
-            vec3f pos = *e->get_transform()->get_pos();
-            float y = terrain->get_terrain_y(e->get_transform()->get_pos()->get_x(),
-                                             e->get_transform()->get_pos()->get_z());
-            if (y > 0 && y+5 > pos.get_y())
+            for (entity *e : objs)
             {
-                e->get_transform()->get_pos()->set(pos.get_x(), y+5, pos.get_z());
+                vec3f pos = *e->get_transform()->get_pos();
+                float y = t->get_terrain_y(e->get_transform()->get_pos()->get_x(),
+                                           e->get_transform()->get_pos()->get_z());
+
+                if (y > -1000 && y + 5 > pos.get_y()) {
+                    e->get_transform()->get_pos()->set(pos.get_x(), y + 5, pos.get_z());
+                }
             }
         }
-
     }
 
 };

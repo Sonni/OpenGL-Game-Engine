@@ -127,7 +127,7 @@ void third_person::process_input(const input& input, float delta)
     }
 
 
-    float moveSpeed = 20.0f;
+    float moveSpeed = 30.0f;
     if(input.get_key_down(input.KEY_W))
         move_forward(moveSpeed, delta);
     if(input.get_key_down(input.KEY_S))
