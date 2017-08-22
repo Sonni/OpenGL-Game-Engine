@@ -88,7 +88,7 @@ bool core_engine::run()
     Camera->add_component(new third_person(monkey->get_transform(), _window->get_center()));
     camera* cam = new camera(*perspective, Camera->get_transform());
 
-    entity* _particle = create_mesh("particle.glsl", vec3f(40, 15, 40), 5, NULL, new particle_system(hud_mesh, cam, 50, 25, 0.3f, 4));
+    entity* _particle = create_mesh("particle.glsl", vec3f(40, 15, 40), 5, NULL, new particle_system("fire.png", 8, cam, 20, 25, 0.3f, 1.5f, 20.0f));
 
 
     entity* a[] = { Camera, monkey, box_animation, terrain1, terrain2, skybox, water, monkey2, _particle, health_bar, game_text };
