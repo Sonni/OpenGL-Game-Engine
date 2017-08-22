@@ -43,7 +43,7 @@ public:
 
     virtual void init()
     {
-        tex_loc = get_shader()->get_uni_location("tex");
+        get_shader()->add_uniform("tex");
     }
 
     virtual void set_all_uni(camera& cam)
@@ -58,7 +58,7 @@ public:
         get_shader()->use_shader();
 
         tex->bind(0);
-        glUniform1i(tex_loc, 0);
+        get_shader()->set_uniform_1i("tex", 0);
 
         glBindVertexArray(vao_id);
         glEnableVertexAttribArray(0);
@@ -86,7 +86,6 @@ private:
 
     texture* tex;
     GLuint vao_id;
-    GLint tex_loc;
 
     std::vector<float> vertices;
     std::vector<float> tex_coords;

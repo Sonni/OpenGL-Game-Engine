@@ -55,21 +55,22 @@ terrain_component::terrain_component(mat4f* shadowMap, texture* depth_map, int _
 void terrain_component::init() {
     get_shader()->use_shader();
 
-    background_loc = get_shader()->get_uni_location("background_tex");
-    r_tex_loc = get_shader()->get_uni_location("r_tex");
-    g_tex_loc = get_shader()->get_uni_location("g_tex");
-    b_tex_loc = get_shader()->get_uni_location("b_tex");
-    blendmap_loc = get_shader()->get_uni_location("blend_tex");
+    get_shader()->add_uniform("view_projection");
+    get_shader()->add_uniform("model");
 
-    view_projection_loc = get_shader()->get_uni_location("view_projection");
-    model_loc = get_shader()->get_uni_location("model");
-    cut_plane_loc = get_shader()->get_uni_location("cutting_plane");
+    get_shader()->add_uniform("background_tex");
+    get_shader()->add_uniform("r_tex");
+    get_shader()->add_uniform("g_tex");
+    get_shader()->add_uniform("b_tex");
+    get_shader()->add_uniform("blend_tex");
 
-    shadow_mvp_loc = get_shader()->get_uni_location("shadow_mvp");
-    shadow_tex_loc = get_shader()->get_uni_location("shadow_tex");
-    shadow_tex_loc2 = get_shader()->get_uni_location("shadow_tex2");
+    get_shader()->add_uniform("cutting_plane");
 
-    eye_pos_los = get_shader()->get_uni_location("eye_pos");
+    get_shader()->add_uniform("shadow_mvp");
+    get_shader()->add_uniform("shadow_tex");
+    get_shader()->add_uniform("shadow_tex2");
+
+    get_shader()->add_uniform("eye_pos");
 
     get_shader()->get_light_loc();
 }
@@ -78,13 +79,39 @@ void terrain_component::set_all_uni(camera& cam)
 {
     mat4f worldMatrix = get_transform()->get_transformation();
 
-    glUniformMatrix4fv(view_projection_loc, 1, GL_FALSE, &cam.get_view_projection()[0][0]);
-    glUniformMatrix4fv(model_loc, 1, GL_FALSE, &worldMatrix[0][0]);
-    glUniformMatrix4fv(shadow_mvp_loc, 1, GL_FALSE, shadow_mvp[0][0]);
+    get_shader()->set_uniform_mat4f("view_projection", cam.get_view_projection());
+    get_shader()->set_uniform_mat4f("model", worldMatrix);
+    get_shader()->set_uniform_mat4f("shadow_mvp", *shadow_mvp);
 
-    glUniform3f(eye_pos_los, cam.get_transform()->get_pos()->get_x(), cam.get_transform()->get_pos()->get_y(), cam.get_transform()->get_pos()->get_z());
+    get_shader()->set_uniform_3f("eye_pos", *cam.get_transform()->get_pos());
+    get_shader()->set_uniform_4f("cutting_plane", cam.get_cutting_plane());
 
-    glUniform4f(cut_plane_loc, cam.get_cutting_plane().get_x(), cam.get_cutting_plane().get_y(), cam.get_cutting_plane().get_z(), cam.get_cutting_plane().get_w());
+    background->bind(0);
+    get_shader()->set_uniform_1i("background_tex", 0);
+
+    r_tex->bind(1);
+    get_shader()->set_uniform_1i("r_tex", 1);
+
+
+    g_tex->bind(2);
+    get_shader()->set_uniform_1i("g_tex", 2);
+
+
+    b_tex->bind(3);
+    get_shader()->set_uniform_1i("b_tex", 3);
+
+
+    blend_map->bind(4);
+    get_shader()->set_uniform_1i("blend_tex", 4);
+
+
+    depth_map->bind(5, true);
+    get_shader()->set_uniform_1i("shadow_tex", 5);
+
+
+    cur->bind(6);
+    get_shader()->set_uniform_1i("shadow_tex2", 6);
+
 
     get_shader()->set_light();
 
@@ -113,34 +140,32 @@ void terrain_component::update(float delta)
 
 void terrain_component::render() const
 {
-   // glPolygonMode( GL_FRONT_AND_BACK, GL_LINE );
 
-    background->bind(0);
-    glUniform1i(background_loc, 0);
 
-    r_tex->bind(1);
-    glUniform1i(r_tex_loc, 1);
-
-    g_tex->bind(2);
-    glUniform1i(g_tex_loc, 2);
-
-    b_tex->bind(3);
-    glUniform1i(b_tex_loc, 3);
-
-    blend_map->bind(4);
-    glUniform1i(blendmap_loc, 4);
-
-    depth_map->bind(5, true);
-    glUniform1i(shadow_tex_loc, 5);
-
-    cur->bind(6);
-    glUniform1i(shadow_tex_loc2, 6);
-
-    glDisable(GL_CULL_FACE);
     _mesh->draw();
-    glEnable(GL_CULL_FACE);
+}
 
-    // glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+float terrain_component::get_height(int x, int z)
+{
+    if (x < 0 && z < 0)
+        return heights[0][0];
+    if (x < 0 && z >= 256)
+        return heights[0][255];
+    if (x >= 256 && z < 0)
+        return heights[255][0];
+    if (x >= 256 && z > 256)
+        return heights[255][255];
+
+    if (x < 0)
+        return heights[0][z];
+    if (x >= 256)
+        return heights[255][z];
+    if (z < 0)
+        return heights[x][0];
+    if (z >= 256)
+        return heights[x][255];
+
+    return heights[x][z];
 }
 
 void terrain_component::load_mesh()
@@ -152,30 +177,31 @@ void terrain_component::load_mesh()
     
     int count = VERTEX_COUNT * VERTEX_COUNT;
     float vertices[count * 3];
-    float normals[count * 3];
     float tex_coords[count * 2];
     int pointer = 0;
 
     
-    //Loading Verticies
     for(int i = 0; i < VERTEX_COUNT; i++)
     {
         for(int j = 0; j < VERTEX_COUNT; j++)
         {
-            vertices[pointer * 3] = (float)j / ((float)VERTEX_COUNT - 1) * SIZE;
-            vertices[pointer * 3 + 1] = heights[j][i];
-            vertices[pointer * 3 + 2] = (float)i / ((float)VERTEX_COUNT - 1) * SIZE;
+            vertices[pointer * 3] = (float) i / ((float) VERTEX_COUNT - 1) * SIZE;
+            vertices[pointer * 3 + 1] = heights[i][j];
+            vertices[pointer * 3 + 2] = (float) j / ((float) VERTEX_COUNT - 1) * SIZE;
+
+
+
+            vec3f n(get_height(i-1, j) - get_height(i+1, j), 2.0f, get_height(i, j-1) - get_height(i, j+1));
+            n = n.normalized();
+
             
-            normals[pointer * 3] = 0;
-            normals[pointer * 3 + 1] = 1;
-            normals[pointer * 3 + 2] = 0;
-            
-            tex_coords[pointer * 2] = (float)j / ((float)VERTEX_COUNT - 1);
-            tex_coords[pointer * 2 + 1] = (float)i / ((float)VERTEX_COUNT - 1);
+            tex_coords[pointer * 2] = (float) i / ((float) VERTEX_COUNT - 1);
+            tex_coords[pointer * 2 + 1] = (float) j / ((float) VERTEX_COUNT - 1);
             
             
             model.add_vertex(vec3f(vertices[pointer * 3], vertices[pointer * 3 + 1], vertices[pointer * 3 + 2]));
             model.add_tex_coord(vec2f(tex_coords[pointer * 2], tex_coords[pointer * 2 + 1]));
+            model.add_normal(n);
 
             pointer++;
         }
@@ -201,9 +227,10 @@ void terrain_component::load_mesh()
     }
 
 
-    model.calc_normals();
+    //model.calc_normals();
     _mesh = new mesh("Terrain" + std::to_string(grid_x+10000) + std::to_string(grid_z+10000), model.finalize());
 }
+
 
 void terrain_component::load_raw_heights()
 {

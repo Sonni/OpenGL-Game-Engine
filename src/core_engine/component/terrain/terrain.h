@@ -47,11 +47,7 @@ private:
     texture* depth_map;
     mat4f* shadow_mvp;
 
-    GLint background_loc, r_tex_loc, g_tex_loc, b_tex_loc, blendmap_loc;
-    GLint model_loc, view_projection_loc;
-    GLint cut_plane_loc;
-    GLint shadow_mvp_loc, shadow_tex_loc, shadow_tex_loc2;
-    GLint eye_pos_los;
+    float get_height(int x, int z);
 
     void load_mesh();
     void load_raw_heights();

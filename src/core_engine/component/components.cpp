@@ -33,21 +33,21 @@ mesh_component::~mesh_component()
 
 void mesh_component::init()
 {
-    tex_loc  = get_shader()->get_uni_location("model_tex");
+    get_shader()->add_uniform("model_tex");
 
-    view_projection_loc = get_shader()->get_uni_location("view_projection");
-    model_loc = get_shader()->get_uni_location("model");
-    view_loc = get_shader()->get_uni_location("inverted_view");
+    get_shader()->add_uniform("view_projection");
+    get_shader()->add_uniform("model");
+    get_shader()->add_uniform("inverted_view");
 
-    cut_plane_loc = get_shader()->get_uni_location("plane");
+    get_shader()->add_uniform("plane");
 
-    shadow_mvp_loc = get_shader()->get_uni_location("shadow_mvp");
-    shadow_tex_loc = get_shader()->get_uni_location("shadow_tex");
+    get_shader()->add_uniform("shadow_mvp");
+    get_shader()->add_uniform("shadow_tex");
+
     if (has_normal_map)
     {
-        normal_tex_loc = get_shader()->get_uni_location("normal_tex");
-
-        disp_map_loc = get_shader()->get_uni_location("disp_tex");
+        get_shader()->add_uniform("normal_tex");
+        get_shader()->add_uniform("disp_tex");
     }
 
     get_shader()->get_light_loc();
@@ -57,35 +57,38 @@ void mesh_component::init()
 void mesh_component::set_all_uni(camera& cam)
 {
     mat4f inverted_view = cam.get_view_matrix().invert();
-    glUniformMatrix4fv(view_projection_loc, 1, GL_FALSE, &cam.get_view_projection()[0][0]);
-    glUniformMatrix4fv(model_loc, 1, GL_FALSE, &get_transform()->get_transformation()[0][0]);
-    glUniformMatrix4fv(view_loc, 1, GL_FALSE, &inverted_view[0][0]);
 
-    glUniformMatrix4fv(shadow_mvp_loc, 1, GL_FALSE, shadow_mvp[0][0]);
-    glUniform4f(cut_plane_loc, cam.get_cutting_plane().get_x(), cam.get_cutting_plane().get_y(), cam.get_cutting_plane().get_z(), cam.get_cutting_plane().get_w());
+    get_shader()->set_uniform_mat4f("view_projection", cam.get_view_projection());
+    get_shader()->set_uniform_mat4f("model", get_transform()->get_transformation());
+    get_shader()->set_uniform_mat4f("inverted_view", inverted_view);
 
-    get_shader()->set_light();
-}
+    get_shader()->set_uniform_mat4f("shadow_mvp", *shadow_mvp);
 
-void mesh_component::render() const
-{
+
+    get_shader()->set_uniform_4f("plane", cam.get_cutting_plane());
+
     tex->bind(0);
-    glUniform1i(tex_loc, 0);
+    get_shader()->set_uniform_1i("model_tex", 0);
 
     depth_map->bind(1, true);
-    glUniform1i(shadow_tex_loc, 1);
+    get_shader()->set_uniform_1i("shadow_tex", 1);
 
 
 
     if (has_normal_map)
     {
         normal_map->bind(2);
-        glUniform1i(normal_tex_loc, 2);
+        get_shader()->set_uniform_1i("normal_tex", 2);
 
         disp_map->bind(3);
-        glUniform1i(disp_map_loc, 3);
+        get_shader()->set_uniform_1i("disp_tex", 3);
     }
 
+    get_shader()->set_light();
+}
+
+void mesh_component::render() const
+{
     _mesh->draw();
 }
 
@@ -106,16 +109,22 @@ animation_component::~animation_component()
 
 void animation_component::init()
 {
-    tex_loc  = get_shader()->get_uni_location("model_tex");
+    get_shader()->add_uniform("model_tex");
 
-    view_projection_loc = get_shader()->get_uni_location("view_projection");
-    model_loc = get_shader()->get_uni_location("model");
-    eye_pos_loc = get_shader()->get_uni_location("ciew");
+    get_shader()->add_uniform("view_projection");
+    get_shader()->add_uniform("model");
+    get_shader()->add_uniform("eye_pos");
 
-    cut_plane_loc = get_shader()->get_uni_location("plane");
+    get_shader()->add_uniform("plane");
 
-    shadow_mvp_loc = get_shader()->get_uni_location("shadow_mvp");
-    shadow_tex_loc = get_shader()->get_uni_location("shadow_tex");
+    get_shader()->add_uniform("shadow_mvp");
+    get_shader()->add_uniform("shadow_tex");
+
+    for (int i = 0; i < tna_model.m_bones.size(); i++)
+    {
+        get_shader()->get_uniform("skinning_mat[" + std::to_string(i) + "]");
+    }
+
 
     get_shader()->get_light_loc();
 
@@ -124,22 +133,21 @@ void animation_component::init()
 void animation_component::set_all_uni(camera& cam)
 {
     mat4f worldMatrix = get_transform()->get_transformation();
-    mat4f projectedMatrix = cam.get_view_projection() * worldMatrix;
 
-    glUniform4f(cut_plane_loc, cam.get_cutting_plane().get_x(), cam.get_cutting_plane().get_y(), cam.get_cutting_plane().get_z(), cam.get_cutting_plane().get_w());
+    glUniform4f(get_shader()->get_uniform("plane"), cam.get_cutting_plane().get_x(), cam.get_cutting_plane().get_y(), cam.get_cutting_plane().get_z(), cam.get_cutting_plane().get_w());
 
-    glUniformMatrix4fv(view_projection_loc, 1, GL_FALSE, &cam.get_view_projection()[0][0]);
-    glUniformMatrix4fv(model_loc, 1, GL_FALSE, &worldMatrix[0][0]);
+    glUniformMatrix4fv(get_shader()->get_uniform("view_projection"), 1, GL_FALSE, &cam.get_view_projection()[0][0]);
+    glUniformMatrix4fv(get_shader()->get_uniform("model"), 1, GL_FALSE, &worldMatrix[0][0]);
 
-    glUniform3f(eye_pos_loc, cam.get_transform()->get_pos()->get_x(), cam.get_transform()->get_pos()->get_y(), cam.get_transform()->get_pos()->get_z());
+    glUniform3f(get_shader()->get_uniform("eye_pos"), cam.get_transform()->get_pos()->get_x(), cam.get_transform()->get_pos()->get_y(), cam.get_transform()->get_pos()->get_z());
 
     tex->bind(0);
-    glUniform1i(tex_loc, 0);
+    glUniform1i(get_shader()->get_uniform("model_tex"), 0);
 
     depth_map->bind(1, true);
-    glUniform1i(shadow_tex_loc, 1);
+    glUniform1i(get_shader()->get_uniform("shadow_tex"), 1);
 
-    glUniformMatrix4fv(shadow_mvp_loc, 1, GL_FALSE, shadow_mvp[0][0]);
+    glUniformMatrix4fv(get_shader()->get_uniform("shadow_mvp"), 1, GL_FALSE, shadow_mvp[0][0]);
 
 
     get_shader()->set_light();
@@ -187,7 +195,7 @@ void animation_component::render() const
         std::ostringstream name;
         name << "skinning_mat[" << i << "]";
 
-        get_shader()->SetUniformMat4(name.str(), tna_model.m_bones[i].m_skinningMatrix);
+        get_shader()->set_uniform_mat4f(name.str(), tna_model.m_bones[i].m_skinningMatrix);
     }
 
     _mesh.draw();
@@ -230,27 +238,25 @@ void gui_component::init()
 
     get_transform()->set_pos(vec3f(x, y, 0.0));
 
-
-
-    tex_loc = get_shader()->get_uni_location("model_tex");
-    model_loc = get_shader()->get_uni_location("model");
-
-
+    get_shader()->add_uniform("model_tex");
+    get_shader()->add_uniform("model");
 }
 
 
 void gui_component::set_all_uni(camera& cam)
 {
-    glUniformMatrix4fv(model_loc, 1, GL_FALSE, &get_transform()->get_transformation()[0][0]);
+    get_shader()->set_uniform_mat4f("model", get_transform()->get_transformation());
 
-    if (use_texture_class) {
+    if (use_texture_class)
+    {
         gui_tex->bind(0);
-        glUniform1i(tex_loc, 0);
-    } else {
+        get_shader()->set_uniform_1i("model_tex", 0);
+    }
+    else
+    {
         glActiveTexture(GL_TEXTURE0 + 0);
         glBindTexture(GL_TEXTURE_2D, texture_id);
-        glUniform1i(tex_loc, 5);
-
+        get_shader()->set_uniform_1i("model_tex", 5);
     }
 }
 
@@ -285,8 +291,8 @@ skybox_component::~skybox_component()
 
 void skybox_component::init()
 {
-    view_projection_loc = get_shader()->get_uni_location("view_projection");
-    cube_map_loc = get_shader()->get_uni_location("cube_map");
+    get_shader()->add_uniform("view_projection");
+    get_shader()->add_uniform("cube_map");
 }
 
 void skybox_component::set_all_uni(camera& cam)
@@ -298,11 +304,10 @@ void skybox_component::set_all_uni(camera& cam)
 
     mat4f fixed_view_projection = cam.get_projection_matrix() * fixed_view;
 
-
-    glUniformMatrix4fv(view_projection_loc, 1, GL_FALSE, &fixed_view_projection[0][0]);
+    get_shader()->set_uniform_mat4f("view_projection", fixed_view_projection);
 
     glBindTexture(GL_TEXTURE_CUBE_MAP, tex_loc);
-    glUniform1i(cube_map_loc, 0);
+    get_shader()->set_uniform_1i("cube_map", 0);
 }
 
 void skybox_component::update(float delta)

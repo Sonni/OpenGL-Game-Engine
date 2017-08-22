@@ -116,7 +116,7 @@ bool core_engine::run()
     {
         bool render = false;
 
-        double startTime = (double) SDL_GetTicks()/1000.0;;
+        double startTime = (double) SDL_GetTicks() / 1000.0;;
         double passedTime = startTime - lastTime; //Time passed since last frame
         lastTime = startTime;
 
@@ -196,7 +196,7 @@ bool core_engine::run()
         }
         else
         {
-            SDL_Delay(1);
+            SDL_Delay(10);
         }
     }
 

@@ -29,13 +29,6 @@ private:
     bool has_normal_map;
 
     mat4f* shadow_mvp;
-
-    GLint disp_map_loc;
-    GLint normal_tex_loc;
-    GLint cut_plane_loc;
-    GLint tex_loc;
-    GLint model_loc, view_loc, view_projection_loc;
-    GLint shadow_mvp_loc, shadow_tex_loc;
 };
 
 class camera_component : public entity_component
@@ -75,12 +68,6 @@ private:
 
     texture* depth_map;
     mat4f* shadow_mvp;
-
-    GLint model_loc, eye_pos_loc, view_projection_loc;
-    GLint tex_loc;
-    GLint cut_plane_loc;
-
-    GLint shadow_mvp_loc, shadow_tex_loc;
 };
 
 /////////////////// SKYBOX ////////////////////
@@ -100,12 +87,9 @@ public:
 
 private:
     GLuint load_cube_map(std::vector<std::string> file_names);
-
     mesh* _mesh;
 
     GLuint tex_loc;
-    GLint view_projection_loc;
-    GLint cube_map_loc;
 
     std::string file_nmes[6] = {"right", "left", "top", "left", "back", "front"};
 };
@@ -128,7 +112,6 @@ private:
     texture* gui_tex;
     int win_width, win_height;
 
-    GLint tex_loc, model_loc;
     GLuint texture_id;
     bool use_texture_class;
 };
@@ -148,12 +131,12 @@ public:
 
     virtual void init()
     {
-        tex_loc = get_shader()->get_uni_location("model_tex");
+        get_shader()->add_uniform("model_tex");
     }
     virtual void set_all_uni(camera& cam)
     {
         tex->bind(0);
-        glUniform1i(tex_loc, 0);
+        get_shader()->set_uniform_1i("model_tex", 0);
     }
 
     virtual void render() const
@@ -165,8 +148,6 @@ public:
 private:
     mesh* _mesh;
     texture* tex;
-
-    GLint tex_loc;
 };
 
 /////////////////// guassian blur ////////////////////
@@ -184,15 +165,15 @@ public:
 
     virtual void init()
     {
-        tex_loc = get_shader()->get_uni_location("model_tex");
-        blur_loc = get_shader()->get_uni_location("blur");
+        get_shader()->add_uniform("model_tex");
+        get_shader()->add_uniform("blur");
     }
     virtual void set_all_uni(camera& cam)
     {
-        glUniform2f(blur_loc, blur->get_x(), blur->get_y());
+        get_shader()->set_uniform_2f("blur", *blur);
 
         tex->bind(0);
-        glUniform1i(tex_loc, 0);
+        get_shader()->set_uniform_1i("model_tex", 0);
     }
 
     virtual void render() const
@@ -205,9 +186,6 @@ private:
     mesh* _mesh;
     texture* tex;
     vec2f* blur;
-
-    GLint tex_loc;
-    GLint blur_loc;
 };
 
 #endif //GAME_ENGINE_COMPONENTS_H

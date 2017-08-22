@@ -56,7 +56,7 @@ void particle_system::set_all_uni(camera& cam)
 
     for (unsigned int i = 0; i < particles.size(); i++)
     {
-        particles[i].set_all_uni(cam, &data, view_projection_loc, num_of_rows_loc);
+        particles[i].set_all_uni(cam, &data);
     }
 
     update_vbo(vbo, data);

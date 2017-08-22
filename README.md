@@ -22,11 +22,13 @@ Feature:
 - Text
 - Simple Physics
 - Mouse picking
+- Particle system
+
 
 
 Upcoming:
-- Particle system
 - Advanced Physics
+- Phong shading
 
 3rd party libraries used by the engine is a follows:
 - SDL2 window and input handling.

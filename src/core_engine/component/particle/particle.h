@@ -16,7 +16,7 @@ public:
     ~particle() { }
 
 
-    void set_all_uni(camera& cam, std::vector<float>* data, GLint view_projection_loc, GLint num_of_rows_loc);
+    void set_all_uni(camera& cam, std::vector<float>* data);
     void update(float delta, camera* cam);
 
 
