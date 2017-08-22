@@ -13,11 +13,11 @@ out vec4 shadow_coord;
 
 uniform mat4 model;
 uniform mat4 view_projection;
-uniform mat4 view;
+uniform mat4 shadow_mvp;
 
 uniform vec3 light_pos[4];
-uniform mat4 shadow_mvp;
 uniform vec4 cutting_plane;
+uniform vec3 eye_pos;
 
 const float density = 0.012;
 const float gradient = 5.0;
@@ -40,15 +40,15 @@ void main()
 	{
 		to_light_vec[i] = light_pos[i] - world_pos.xyz;
 	}
-	to_cam_vec = (inverse(view) * vec4(0.0, 0.0, 0.0, 1.0)).xyz - world_pos.xyz;
+	to_cam_vec = eye_pos - world_pos.xyz;
 
 	float distance = length(pos_relative_to_cam.xyz);
-	visibility = exp(-pow((distance*density),gradient));
-	visibility = clamp(visibility,0.0,1.0);
+	visibility = exp(-pow((distance * density), gradient));
+	visibility = clamp(visibility, 0.0, 1.0);
 
 	distance = distance - (shadow_distance - transition_amount);
 	distance = distance / transition_amount;
-	shadow_coord.w = clamp(1.0-distance, 0.0, 1.0);
+	shadow_coord.w = clamp(1.0 - distance, 0.0, 1.0);
 }
 
 

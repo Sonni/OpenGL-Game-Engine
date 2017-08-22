@@ -12,16 +12,12 @@ public:
     core_engine(window* Window, rendering_engine* renderingEngine, physics_engine* physicsEngine);
     bool run();
 private:
-    window* Window;
+    window* _window;
     rendering_engine* renderingEngine;
     physics_engine* physicsEngine;
 
     void setup_reflection(camera* cam, water_fbo* wfb, float height_of_water, float y_distance);
     void setup_refraction(camera* cam, water_fbo* wfb, float height_of_water, float y_distance, quaternion old_cam_rot);
-
-
-
-
 };
 
 

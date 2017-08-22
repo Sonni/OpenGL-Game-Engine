@@ -13,7 +13,7 @@ out vec4 shadow_coord;
 
 uniform mat4 model;
 uniform mat4 view_projection;
-uniform mat4 view;
+uniform mat4 inverted_view;
 uniform vec3 light_pos[4];
 uniform mat4 shadow_mvp;
 
@@ -40,7 +40,7 @@ void main()
 	{
 		to_light_vec[i] = light_pos[i] - world_pos.xyz;
 	}
-	to_cam_vec = (inverse(view) * vec4(0.0, 0.0, 0.0, 1.0)).xyz - world_pos.xyz;
+	to_cam_vec = (inverted_view * vec4(0.0, 0.0, 0.0, 1.0)).xyz - world_pos.xyz;
 
 	float distance = length(pos_relative_to_cam.xyz);
 	visibility = exp(-pow((distance * density), gradient));

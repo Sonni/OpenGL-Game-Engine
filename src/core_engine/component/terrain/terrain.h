@@ -11,7 +11,7 @@ class terrain_component : public entity_component
 {
 public:
     
-    terrain_component(mat4f* shadowMap, texture* depth_map, int gridX, int gridY, const std::string& background, const std::string& r, const std::string& g, const std::string& b, const std::string& blendmap);
+    terrain_component(mat4f* shadowMap, texture* depth_map, int _grid_x, int _grid_z, const std::string& background, const std::string& r, const std::string& g, const std::string& b, const std::string& blendmap);
     void operator=(const terrain_component& terrain) {}
     
     ~terrain_component()
@@ -48,9 +48,10 @@ private:
     mat4f* shadow_mvp;
 
     GLint background_loc, r_tex_loc, g_tex_loc, b_tex_loc, blendmap_loc;
-    GLint model_loc, view_loc, view_projection_loc;
+    GLint model_loc, view_projection_loc;
     GLint cut_plane_loc;
     GLint shadow_mvp_loc, shadow_tex_loc, shadow_tex_loc2;
+    GLint eye_pos_los;
 
     void load_mesh();
     void load_raw_heights();

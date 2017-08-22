@@ -5,10 +5,10 @@
 #include <sstream>
 
 
-terrain_component::terrain_component(mat4f* shadowMap, texture* depth_map, int gridX, int gridY, const std::string& background, const std::string& r, const std::string& g, const std::string& b, const std::string& blendmap)
+terrain_component::terrain_component(mat4f* shadowMap, texture* depth_map, int _grid_x, int _grid_z, const std::string& background, const std::string& r, const std::string& g, const std::string& b, const std::string& blendmap)
 {
-    grid_x = gridX;
-    grid_z = gridY;
+    grid_x = _grid_x;
+    grid_z = _grid_z;
     //load_raw_heights();
     load_noise_heights();
     load_mesh();
@@ -50,10 +50,6 @@ terrain_component::terrain_component(mat4f* shadowMap, texture* depth_map, int g
     }
 
     cur = shadows.at(0);
-
-
-
-
 }
 
 void terrain_component::init() {
@@ -67,12 +63,13 @@ void terrain_component::init() {
 
     view_projection_loc = get_shader()->get_uni_location("view_projection");
     model_loc = get_shader()->get_uni_location("model");
-    view_loc = get_shader()->get_uni_location("view");
     cut_plane_loc = get_shader()->get_uni_location("cutting_plane");
 
     shadow_mvp_loc = get_shader()->get_uni_location("shadow_mvp");
     shadow_tex_loc = get_shader()->get_uni_location("shadow_tex");
     shadow_tex_loc2 = get_shader()->get_uni_location("shadow_tex2");
+
+    eye_pos_los = get_shader()->get_uni_location("eye_pos");
 
     get_shader()->get_light_loc();
 }
@@ -83,8 +80,9 @@ void terrain_component::set_all_uni(camera& cam)
 
     glUniformMatrix4fv(view_projection_loc, 1, GL_FALSE, &cam.get_view_projection()[0][0]);
     glUniformMatrix4fv(model_loc, 1, GL_FALSE, &worldMatrix[0][0]);
-    glUniformMatrix4fv(view_loc, 1, GL_FALSE, &cam.get_view_matrix()[0][0]);
     glUniformMatrix4fv(shadow_mvp_loc, 1, GL_FALSE, shadow_mvp[0][0]);
+
+    glUniform3f(eye_pos_los, cam.get_transform()->get_pos()->get_x(), cam.get_transform()->get_pos()->get_y(), cam.get_transform()->get_pos()->get_z());
 
     glUniform4f(cut_plane_loc, cam.get_cutting_plane().get_x(), cam.get_cutting_plane().get_y(), cam.get_cutting_plane().get_z(), cam.get_cutting_plane().get_w());
 

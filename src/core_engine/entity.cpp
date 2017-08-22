@@ -10,7 +10,7 @@ entity::~entity()
             delete components[i];
         }
     }
-
+    delete shader_program;
 }
 
 entity* entity::add_component(entity_component *component)

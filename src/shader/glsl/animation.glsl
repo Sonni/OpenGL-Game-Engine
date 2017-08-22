@@ -16,13 +16,12 @@ out vec4 shadow_coord;
 
 uniform mat4 skinning_mat[10];
 uniform mat4 model;
-uniform mat4 view;
 uniform mat4 view_projection;
-
-uniform vec3 light_pos[4];
-uniform vec4 cutting_plane;
 uniform mat4 shadow_mvp;
 
+uniform vec3 light_pos[4];
+uniform vec3 eye_pos;
+uniform vec4 cutting_plane;
 
 const float density = 0.012;
 const float gradient = 5.0;
@@ -37,20 +36,21 @@ void main()
         new_normal += (vec4(normal, 1.0) * skinning_mat[boneIds[i]]) * weights[i];
     }
 
-    vec4 worldPosition = model * vec4(new_pos.x, new_pos.z, new_pos.y, 1.0);
-    shadow_coord = shadow_mvp * worldPosition;
+    vec4 world_pos = model * vec4(new_pos.x, new_pos.z, new_pos.y, 1.0);
+    shadow_coord = shadow_mvp * world_pos;
 
 
-	vec4 pos_relative_to_cam = view_projection * worldPosition;
+	vec4 pos_relative_to_cam = view_projection * world_pos;
 	gl_Position = pos_relative_to_cam;
 	tex_coord = UV;
 
 	normals = (model * vec4(new_normal.xyz, 0.0)).xyz;
 	for(int i = 0; i < 4; i++)
 	{
-		to_light_vec[i] = light_pos[i] - worldPosition.xyz;
+		to_light_vec[i] = light_pos[i] - world_pos.xyz;
 	}
-	to_cam_vec = (inverse(view) * vec4(0.0,0.0,0.0,1.0)).xyz - worldPosition.xyz;
+    to_cam_vec = eye_pos - world_pos.xyz;
+
 
 	float distance = length(pos_relative_to_cam.xyz);
 	visibility = exp(-pow((distance*density),gradient));

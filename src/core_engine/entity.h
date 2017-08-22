@@ -15,7 +15,6 @@ class entity
 public:
     entity(shader *shader = NULL, const vec3f& pos = vec3f(0,0,0), const quaternion& rot = quaternion(0,0,0,1), float scale = 1.0f) :
             _transform(pos, rot, scale)
-
     {
         shader_program = shader;
     }

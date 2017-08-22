@@ -16,10 +16,11 @@ out float in_shadow;
 uniform mat4 model;
 uniform mat4 view_projection;
 uniform mat4 view;
+uniform mat4 shadow_mvp;
 
 uniform vec3 light_pos[4];
-uniform mat4 shadow_mvp;
 uniform vec4 cutting_plane;
+uniform vec3 eye_pos;
 
 const float density = 0.012;
 const float gradient = 5.0;
@@ -30,7 +31,7 @@ void main()
 {
 	shadow_effect_coord = UV * 100;
 
-    vec4 world_pos = model * vec4(position,1.0);
+    vec4 world_pos = model * vec4(position, 1.0);
     shadow_coord = shadow_mvp * world_pos;
 
 	gl_ClipDistance[0] = dot(world_pos, cutting_plane);
@@ -55,15 +56,15 @@ void main()
 	{
 		to_light_vec[i] = light_pos[i] - world_pos.xyz;
 	}
-	to_cam_vec = (inverse(view) * vec4(0.0, 0.0, 0.0, 1.0)).xyz - world_pos.xyz;
+	to_cam_vec = eye_pos - world_pos.xyz;
 
 	float distance = length(pos_relative_to_cam.xyz);
-	visibility = exp(-pow((distance*density),gradient));
-	visibility = clamp(visibility,0.0,1.0);
+	visibility = exp(-pow((distance * density), gradient));
+	visibility = clamp(visibility, 0.0, 1.0);
 
 	distance = distance - (shadow_distance - transition_amount);
 	distance = distance / transition_amount;
-	shadow_coord.w = clamp(1.0-distance, 0.0, 1.0);
+	shadow_coord.w = clamp(1.0 - distance, 0.0, 1.0);
 }
 
 
@@ -78,7 +79,6 @@ in vec3 to_cam_vec;
 in float visibility;
 in vec2 shadow_effect_coord;
 in float in_shadow;
-
 
 out vec4 color;
 

@@ -37,7 +37,7 @@ void mesh_component::init()
 
     view_projection_loc = get_shader()->get_uni_location("view_projection");
     model_loc = get_shader()->get_uni_location("model");
-    view_loc = get_shader()->get_uni_location("view");
+    view_loc = get_shader()->get_uni_location("inverted_view");
 
     cut_plane_loc = get_shader()->get_uni_location("plane");
 
@@ -56,9 +56,10 @@ void mesh_component::init()
 
 void mesh_component::set_all_uni(camera& cam)
 {
+    mat4f inverted_view = cam.get_view_matrix().invert();
     glUniformMatrix4fv(view_projection_loc, 1, GL_FALSE, &cam.get_view_projection()[0][0]);
     glUniformMatrix4fv(model_loc, 1, GL_FALSE, &get_transform()->get_transformation()[0][0]);
-    glUniformMatrix4fv(view_loc, 1, GL_FALSE, &cam.get_view_matrix()[0][0]);
+    glUniformMatrix4fv(view_loc, 1, GL_FALSE, &inverted_view[0][0]);
 
     glUniformMatrix4fv(shadow_mvp_loc, 1, GL_FALSE, shadow_mvp[0][0]);
     glUniform4f(cut_plane_loc, cam.get_cutting_plane().get_x(), cam.get_cutting_plane().get_y(), cam.get_cutting_plane().get_z(), cam.get_cutting_plane().get_w());
@@ -109,7 +110,7 @@ void animation_component::init()
 
     view_projection_loc = get_shader()->get_uni_location("view_projection");
     model_loc = get_shader()->get_uni_location("model");
-    view_loc = get_shader()->get_uni_location("ciew");
+    eye_pos_loc = get_shader()->get_uni_location("ciew");
 
     cut_plane_loc = get_shader()->get_uni_location("plane");
 
@@ -129,7 +130,8 @@ void animation_component::set_all_uni(camera& cam)
 
     glUniformMatrix4fv(view_projection_loc, 1, GL_FALSE, &cam.get_view_projection()[0][0]);
     glUniformMatrix4fv(model_loc, 1, GL_FALSE, &worldMatrix[0][0]);
-    glUniformMatrix4fv(view_loc, 1, GL_FALSE, &cam.get_view_matrix()[0][0]);
+
+    glUniform3f(eye_pos_loc, cam.get_transform()->get_pos()->get_x(), cam.get_transform()->get_pos()->get_y(), cam.get_transform()->get_pos()->get_z());
 
     tex->bind(0);
     glUniform1i(tex_loc, 0);

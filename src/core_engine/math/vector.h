@@ -386,6 +386,8 @@ public:
         return vec3f((*this)[1] * r.get_z() - (*this)[2] * r.get_y(), (*this)[2] * r.get_x() - (*this)[0] * r.get_z(), (*this)[0] * r.get_y() - (*this)[1] * r.get_x());
     }
 
+    inline void scale(float factor) { (*this)[0] *= factor; (*this)[1] *= factor; (*this)[2] *= factor; }
+
     inline float get_x() const { return (*this)[0]; }
     inline float get_y() const { return (*this)[1]; }
     inline float get_z() const { return (*this)[2]; }

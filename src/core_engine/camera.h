@@ -32,7 +32,7 @@ public:
 	inline void set_projection(const mat4f &projection) { this->projection_matrix = projection; }
 	inline void set_transform(transform *transform) { transformation = transform; }
 private:
-	mat4f   projection_matrix;
+	mat4f projection_matrix;
 	transform* transformation;
 	vec4f cutting_plane;
 };

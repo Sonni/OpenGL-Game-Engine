@@ -15,7 +15,7 @@ out vec4 shadow_coord;
 
 uniform mat4 model;
 uniform mat4 view_projection;
-uniform mat4 view;
+uniform mat4 inverted_view;
 uniform vec3 light_pos[4];
 uniform mat4 shadow_mvp;
 
@@ -37,9 +37,8 @@ void main()
     tex_coord = UV;
 
 	vec3 normals = (model * vec4(normal,0.0)).xyz;
-	mat4 inverse_view = inverse(view);
 
-    mat4 model_view = inverse_view * model;
+    mat4 model_view = inverted_view * model;
 	vec3 n = normalize(normals);
 	vec3 t = normalize((model_view * vec4(tangent, 0.0)).xyz);
 	vec3 bi_t = normalize(cross(n, t));
@@ -55,7 +54,7 @@ void main()
 	{
 		to_light_vec[i] = tbn * (light_pos[i] - world_pos.xyz);
 	}
-	to_cam_vec = tbn * (inverse_view * vec4(0.0, 0.0, 0.0, 1.0)).xyz - world_pos.xyz;
+	to_cam_vec = tbn * (inverted_view * vec4(0.0, 0.0, 0.0, 1.0)).xyz - world_pos.xyz;
 
 
 	float distance = length(pos_relative_to_cam.xyz);

@@ -6,10 +6,11 @@
 #include "component/shadow/shadow.h"
 #include "component/text/text_component.h"
 #include "../physics_engine/collider/sphere.h"
+#include "component/particle/particle_system.h"
 
 core_engine::core_engine(window* Window, rendering_engine* renderingEngine, physics_engine* physicsEngine)
 {
-    this->Window = Window;
+    this->_window = Window;
     this->renderingEngine = renderingEngine;
     this->physicsEngine = physicsEngine;
 }
@@ -54,11 +55,12 @@ bool core_engine::run()
     water_fbo wfb;
     mat4f shadow_mvp;
     texture depth_map(1024, 1024, true);
-    texture post_processing(Window->WIN_HEIGHT, Window->WIN_HEIGHT, 0, GL_TEXTURE_2D, GL_LINEAR, GL_RGBA, GL_RGBA, true, GL_COLOR_ATTACHMENT0);
+    texture post_processing(_window->WIN_HEIGHT, _window->WIN_HEIGHT, 0, GL_TEXTURE_2D, GL_LINEAR, GL_RGBA, GL_RGBA, true, GL_COLOR_ATTACHMENT0);
     mesh* hud_mesh = renderingEngine->get_hud_mesh();
 
     std::vector<light> lights;
     lights.push_back(light(vec3f(10000, 15000, -10000), vec3f(0.9, 0.9, 0.9))); //Sun
+    lights.push_back(light(vec3f(30, 5, 40), vec3f(0, 0, 2.0), vec3f(0.2, 0.000001, 0.05))); //blue light
     //////
 
 
@@ -68,24 +70,25 @@ bool core_engine::run()
     entity* terrain2 = create_terrain("testTerrain.glsl", vec3f(0, 0, 0), 1, &lights, new terrain_component(&shadow_mvp, &depth_map, 0, 1, "terrain/empty.png", "terrain/grass.jpg", "terrain/flowers.jpg", "terrain/road.jpg", "terrain/blendmap.png"), &terrains);
 
     entity* post_p = create_mesh("gaussian_blur.glsl", vec3f(), 1, NULL, new blur_component(&post_processing, hud_mesh, &blur));
-    entity* _particle = create_mesh("particle.glsl", vec3f(40, 80, 40), 5, NULL, new particle(hud_mesh, vec3f(0, 2, 0), 0.5f, 4.0, 50));
     entity* game_text = create_mesh("text.glsl", vec3f(), 1, NULL, new text_component("3D Game Engine", "arial", 3.0f, vec2f(0.0f, 0.0f), 1.0f, true));
     entity* box_animation = create_mesh("animation.glsl", vec3f(40, 45, 40), 1, &lights, new animation_component("box", &shadow_mvp, &depth_map, "", ""));
     entity* monkey = create_mesh("basic.glsl", vec3f(30, 45, 40), 5, &lights, new mesh_component(new mesh("monkey"), &shadow_mvp, &depth_map, "default.jpg", ""));
     entity* monkey2 = create_mesh("basic_normal_mapping.glsl", vec3f(30, 65, 60), 5, &lights, new mesh_component(new mesh("monkey"), &shadow_mvp, &depth_map, "bricks.jpg", "normal/bricks_normal.jpg"));
     entity* skybox = create_mesh("skybox.glsl", vec3f(), 1, NULL, new skybox_component(500));
-    entity* health_bar = create_mesh("gui.glsl", vec3f(150, Window->get_height() - 150, 0), 0.3f, &lights, new gui_component("gui/healthBar.png", hud_mesh, Window->get_width(), Window->get_height()));
+    entity* health_bar = create_mesh("gui.glsl", vec3f(150, _window->get_height() - 150, 0), 0.3f, &lights, new gui_component("gui/healthBar.png", hud_mesh, _window->get_width(), _window->get_height()));
     entity* water = create_mesh("water.glsl", vec3f(80, 400, 50), 500, NULL, new water_component("water/waterDUDV.png", "water/waterNormal.png", &wfb));
     entity* shadow = create_mesh("shadow.glsl", vec3f(), 1, NULL, new shadow_component(&shadowDraws, &depth_map, &shadow_mvp));
 
 
     mat4f* perspective = new mat4f();
-    perspective->init_perspective(ToRadians(70.0f), Window->get_aspect(), 0.1f, 1000.0f);
+    perspective->init_perspective(ToRadians(70.0f), _window->get_aspect(), 0.1f, 1000.0f);
 
     entity* Camera = new entity(NULL, vec3f(40, 40, 40));
     Camera->add_component(new camera_component(*perspective));
-    Camera->add_component(new third_person(monkey->get_transform(), Window->get_center()));
+    Camera->add_component(new third_person(monkey->get_transform(), _window->get_center()));
     camera* cam = new camera(*perspective, Camera->get_transform());
+
+    entity* _particle = create_mesh("particle.glsl", vec3f(40, 15, 40), 5, NULL, new particle_system(hud_mesh, cam, 50, 25, 0.3f, 4));
 
 
     entity* a[] = { Camera, monkey, box_animation, terrain1, terrain2, skybox, water, monkey2, _particle, health_bar, game_text };
@@ -124,9 +127,9 @@ bool core_engine::run()
         //update logic and IO
         while(unprocessedTime > m_frameTime)
         {
-            Window->update();
+            _window->update();
 
-            if(Window->is_closed_requested())
+            if(_window->is_closed_requested())
             {
                 m_isRunning = false;
             }
@@ -134,7 +137,7 @@ bool core_engine::run()
             //update logic and input
             for (entity* e : entities)
             {
-                e->process_input(Window->get_input(), m_frameTime);
+                e->process_input(_window->get_input(), m_frameTime);
                 e->update(m_frameTime);
             }
 
@@ -175,7 +178,7 @@ bool core_engine::run()
             ////////////
 
             ///Render post processed tex to window
-            Window->bind_as_render_targets();
+            _window->bind_as_render_targets();
 
             glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -183,12 +186,12 @@ bool core_engine::run()
 
             post_p->get_shader()->use_shader();
 
-            blur.set(0.0 / Window->WIN_WIDTH, 0.0);
+            blur.set(0.0 / _window->WIN_WIDTH, 0.0);
             post_p->set_all_uni(*cam);
             post_p->render();
             ////////////////////////////////////
 
-            Window->swap_buffers();
+            _window->swap_buffers();
             frames++;
         }
         else
