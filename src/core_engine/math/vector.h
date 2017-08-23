@@ -337,6 +337,11 @@ public:
         return vec3f(get_x() / l, get_y() / l, get_z() / l);
     }
 
+    inline vec3f negate()
+    {
+        return vec3f(-get_x(), -get_y(), -get_z());
+    }
+
     inline vec3f operator+(const vec3f& r) const { return vec3f(get_x() + r.get_x(), get_y() + r.get_y(), get_z() + r.get_z()); }
     inline vec3f operator-(const vec3f& r) const { return vec3f(get_x() - r.get_x(), get_y() - r.get_y(), get_z() - r.get_z()); }
     inline vec3f operator*(float f) const { return vec3f(get_x() * f, get_y() * f, get_z() * f); }

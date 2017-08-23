@@ -69,6 +69,7 @@ uniform sampler2D shadow_tex;
 const vec3 sky_color = vec3(0.6, 0.6, 0.6);
 const float shine_damper = 1.0;
 const float reflectivity = 0.0;
+
 const int pcf_level = 3;
 const float texels = (pcf_level * 2.0 + 1.0) * (pcf_level * 2.0 + 1.0);
 const float map_size = 2048.0;

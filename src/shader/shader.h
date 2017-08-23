@@ -44,6 +44,11 @@ public:
         glUniform1i(get_uniform(uniform_name), f);
     }
 
+    inline void set_uniform_1f(const std::string& uniform_name, float f)
+    {
+        glUniform1f(get_uniform(uniform_name), f);
+    }
+
     inline void set_uniform_2f(const std::string& uniform_name, const vec2f& v)
     {
         glUniform2f(get_uniform(uniform_name), v.get_x(), v.get_y());

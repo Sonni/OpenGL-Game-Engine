@@ -7,6 +7,7 @@
 #include "component/text/text_component.h"
 #include "../physics_engine/collider/sphere.h"
 #include "component/particle/particle_system.h"
+#include "../todo/phong.h"
 
 core_engine::core_engine(window* Window, rendering_engine* renderingEngine, physics_engine* physicsEngine)
 {
@@ -78,6 +79,7 @@ bool core_engine::run()
     entity* health_bar = create_mesh("gui.glsl", vec3f(150, _window->get_height() - 150, 0), 0.3f, &lights, new gui_component("gui/healthBar.png", hud_mesh, _window->get_width(), _window->get_height()));
     entity* water = create_mesh("water.glsl", vec3f(80, 400, 50), 500, NULL, new water_component("water/waterDUDV.png", "water/waterNormal.png", &wfb));
     entity* shadow = create_mesh("shadow.glsl", vec3f(), 1, NULL, new shadow_component(&shadowDraws, &depth_map, &shadow_mvp));
+    entity* phong_mesh = create_mesh("phong.glsl", vec3f(30, 10, 30), 10, NULL, new phong(new mesh("plane"), &shadow_mvp, &depth_map));
 
 
     mat4f* perspective = new mat4f();
@@ -91,14 +93,14 @@ bool core_engine::run()
     entity* _particle = create_mesh("particle.glsl", vec3f(40, 15, 40), 5, NULL, new particle_system("fire.png", 8, cam, 20, 25, 0.3f, 1.5f, 20.0f));
 
 
-    entity* a[] = { Camera, monkey, box_animation, terrain1, terrain2, skybox, water, monkey2, _particle, health_bar, game_text };
-    entities.insert(entities.end(), a, a + 11);
+    entity* a[] = { Camera, monkey, box_animation, phong_mesh, terrain1, terrain2, skybox, water, monkey2, _particle, health_bar, game_text };
+    entities.insert(entities.end(), a, a + 12);
 
     entity* b[] = { terrain1, terrain2, monkey, monkey2, box_animation, skybox };
     waterDraws.insert(waterDraws.end(), b, b + 6);
 
-    entity* c[] = { monkey, monkey2, box_animation };
-    shadowDraws.insert(shadowDraws.end(), c, c + 3);
+    entity* c[] = { phong_mesh, monkey, monkey2, box_animation };
+    shadowDraws.insert(shadowDraws.end(), c, c + 4);
 
     entity* d[] = { monkey, monkey2 };
     phy_obj.insert(phy_obj.end(), d, d + 2);
