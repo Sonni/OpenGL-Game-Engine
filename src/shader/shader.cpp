@@ -13,7 +13,18 @@ std::string get_code(std::string file_name)
     {
         std::string Line = "";
         while(getline(shader_stream, Line))
+        {
+            const char* l = Line.c_str();
+            if (l[0] == '#' && l[1] == 'i')
+            {
+                std::size_t start = Line.find('<');
+                std::size_t end = Line.find('>');
+
+                std::string include_name = Line.substr(start+1, end-start-1);
+                Line = get_code(path + include_name);
+            }
             shader_code += "\n" + Line;
+        }
         shader_stream.close();
     }
     else
@@ -73,6 +84,16 @@ shader::shader(std::string glsl_file_name)
             {
                 shader_code = &fs_code;
                 getline(shader_stream, Line);
+            }
+
+            const char* l = Line.c_str();
+            if (l[0] == '#' && l[1] == 'i')
+            {
+                std::size_t start = Line.find('<');
+                std::size_t end = Line.find('>');
+
+                std::string include_name = Line.substr(start+1, end-start-1);
+                Line = get_code(path + include_name);
             }
             *shader_code += "\n" + Line;
         }

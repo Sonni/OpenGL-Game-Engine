@@ -4,7 +4,7 @@
 #include <vector>
 #include "transform.h"
 #include "io/input.h"
-#include "../rendering_engine/light.h"
+#include "../rendering_engine/light/light.h"
 
 class shader;
 class entity_component;

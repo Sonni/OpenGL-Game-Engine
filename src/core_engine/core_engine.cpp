@@ -7,7 +7,8 @@
 #include "component/text/text_component.h"
 #include "../physics_engine/collider/sphere.h"
 #include "component/particle/particle_system.h"
-#include "../todo/phong.h"
+#include "component/mesh/advanced_mesh.h"
+#include "component/mesh/simpel_mesh.h"
 
 core_engine::core_engine(window* Window, rendering_engine* renderingEngine, physics_engine* physicsEngine)
 {
@@ -15,6 +16,7 @@ core_engine::core_engine(window* Window, rendering_engine* renderingEngine, phys
     this->renderingEngine = renderingEngine;
     this->physicsEngine = physicsEngine;
 }
+
 
 entity* create_mesh(std::string shader_name, vec3f pos, float scale, std::vector<light>* lights, entity_component* ec)
 {
@@ -26,12 +28,22 @@ entity* create_mesh(std::string shader_name, vec3f pos, float scale, std::vector
     return e;
 }
 
-entity* create_terrain(std::string shader_name, vec3f pos, float scale, std::vector<light>* lights, entity_component* ec, std::vector<terrain_component*>* t)
+entity* create_mesh_phong(std::string shader_name, vec3f pos, float scale, phong_light* lights, entity_component* ec)
 {
     entity* e = new entity(new shader(shader_name), pos);
+    e->get_shader()->add_light_compo(lights);
+
     e->add_component(ec);
-    if (lights != NULL)
-        e->get_shader()->add_lights(lights);
+    e->get_transform()->set_scale(scale);
+    return e;
+}
+
+entity* create_terrain(std::string shader_name, vec3f pos, float scale, phong_light* lights, entity_component* ec, std::vector<terrain_component*>* t)
+{
+    entity* e = new entity(new shader(shader_name), pos);
+    e->get_shader()->add_light_compo(lights);
+    e->add_component(ec);
+
     e->get_transform()->set_scale(scale);
     t->push_back((terrain_component*) ec);
     return e;
@@ -62,24 +74,30 @@ bool core_engine::run()
     std::vector<light> lights;
     lights.push_back(light(vec3f(10000, 15000, -10000), vec3f(0.9, 0.9, 0.9))); //Sun
     lights.push_back(light(vec3f(30, 5, 40), vec3f(0, 0, 2.0), vec3f(0.2, 0.000001, 0.05))); //blue light
+
+    quaternion q = quaternion(vec3f(1,0,0), ToRadians(-60.0f)) * quaternion(vec3f(0,1,0), ToRadians(90.0f));
+
+    phong_light l;
+    l.s_pointLights.push_back(point_light(base_light(vec3f(1, 0, 0), 20.0f), attenuation(0, 0, 0.5), vec3f(30, 2, 30), 0));
+    l.s_spotLights.push_back(spot_light(point_light(base_light(vec3f(0,0,1), 40.0f), attenuation(0,0,0.05f), vec3f(30, 12, 30), 0), ToRadians(45.f), quaternion(vec3f(1,0,0), ToRadians(-60.0f)) * quaternion(vec3f(0,1,0), ToRadians(90.0f))));
     //////
 
 
     vec2f blur;
 
-    entity* terrain1 = create_terrain("testTerrain.glsl", vec3f(0, 0, 0), 1, &lights, new terrain_component(&shadow_mvp, &depth_map, 0, 0, "terrain/empty.png", "terrain/grass.jpg", "terrain/flowers.jpg", "terrain/road.jpg", "terrain/blendmap.png"), &terrains);
-    entity* terrain2 = create_terrain("testTerrain.glsl", vec3f(0, 0, 0), 1, &lights, new terrain_component(&shadow_mvp, &depth_map, 0, 1, "terrain/empty.png", "terrain/grass.jpg", "terrain/flowers.jpg", "terrain/road.jpg", "terrain/blendmap.png"), &terrains);
+    entity* terrain1 = create_terrain("testTerrain.glsl", vec3f(0, 0, 0), 1, &l, new terrain_component(&shadow_mvp, &depth_map, 0, 0, "terrain/empty.png", "terrain/grass.jpg", "terrain/flowers.jpg", "terrain/road.jpg", "terrain/blendmap.png"), &terrains);
+    entity* terrain2 = create_terrain("testTerrain.glsl", vec3f(0, 0, 0), 1, &l, new terrain_component(&shadow_mvp, &depth_map, 0, 1, "terrain/empty.png", "terrain/grass.jpg", "terrain/flowers.jpg", "terrain/road.jpg", "terrain/blendmap.png"), &terrains);
 
     entity* post_p = create_mesh("gaussian_blur.glsl", vec3f(), 1, NULL, new blur_component(&post_processing, hud_mesh, &blur));
     entity* game_text = create_mesh("text.glsl", vec3f(), 1, NULL, new text_component("3D Game Engine", "arial", 3.0f, vec2f(0.0f, 0.0f), 1.0f, true));
     entity* box_animation = create_mesh("animation.glsl", vec3f(40, 45, 40), 1, &lights, new animation_component("box", &shadow_mvp, &depth_map, "", ""));
-    entity* monkey = create_mesh("basic.glsl", vec3f(30, 45, 40), 5, &lights, new mesh_component(new mesh("monkey"), &shadow_mvp, &depth_map, "default.jpg", ""));
+    entity* monkey = create_mesh_phong("phong.glsl", vec3f(30, 45, 40), 5, &l, new advanced_mesh(new mesh("monkey"), &shadow_mvp, &depth_map, vec3f(0.3, 0.3, 0.3), "default.png"));
     entity* monkey2 = create_mesh("basic_normal_mapping.glsl", vec3f(30, 65, 60), 5, &lights, new mesh_component(new mesh("monkey"), &shadow_mvp, &depth_map, "bricks.jpg", "normal/bricks_normal.jpg"));
     entity* skybox = create_mesh("skybox.glsl", vec3f(), 1, NULL, new skybox_component(500));
     entity* health_bar = create_mesh("gui.glsl", vec3f(150, _window->get_height() - 150, 0), 0.3f, &lights, new gui_component("gui/healthBar.png", hud_mesh, _window->get_width(), _window->get_height()));
     entity* water = create_mesh("water.glsl", vec3f(80, 400, 50), 500, NULL, new water_component("water/waterDUDV.png", "water/waterNormal.png", &wfb));
     entity* shadow = create_mesh("shadow.glsl", vec3f(), 1, NULL, new shadow_component(&shadowDraws, &depth_map, &shadow_mvp));
-    entity* phong_mesh = create_mesh("phong.glsl", vec3f(30, 10, 30), 10, NULL, new phong(new mesh("plane"), &shadow_mvp, &depth_map));
+    entity* phong_mesh = create_mesh_phong("phong.glsl", vec3f(30, 10, 30), 15, &l, new advanced_mesh(new mesh("plane"), &shadow_mvp, &depth_map, vec3f(0.3, 0.3, 0.3), "bricks.jpg", "bricks_normal.jpg", "bricks_disp.jpg"));
 
 
     mat4f* perspective = new mat4f();

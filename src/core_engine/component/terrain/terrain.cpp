@@ -72,19 +72,23 @@ void terrain_component::init() {
 
     get_shader()->add_uniform("eye_pos");
 
-    get_shader()->get_light_loc();
+    get_shader()->add_uniform("ambient_light");
+
+
+    get_shader()->get_light_compo_loc();
 }
 
 void terrain_component::set_all_uni(camera& cam)
 {
-    mat4f worldMatrix = get_transform()->get_transformation();
-
     get_shader()->set_uniform_mat4f("view_projection", cam.get_view_projection());
-    get_shader()->set_uniform_mat4f("model", worldMatrix);
+    get_shader()->set_uniform_mat4f("model", get_transform()->get_transformation());
     get_shader()->set_uniform_mat4f("shadow_mvp", *shadow_mvp);
 
     get_shader()->set_uniform_3f("eye_pos", *cam.get_transform()->get_pos());
     get_shader()->set_uniform_4f("cutting_plane", cam.get_cutting_plane());
+
+    get_shader()->set_uniform_3f("ambient_light", vec3f(0.1, 0.1, 0.1));
+
 
     background->bind(0);
     get_shader()->set_uniform_1i("background_tex", 0);
@@ -113,7 +117,7 @@ void terrain_component::set_all_uni(camera& cam)
     get_shader()->set_uniform_1i("shadow_tex2", 6);
 
 
-    get_shader()->set_light();
+    get_shader()->set_light_combo();
 
 
 }

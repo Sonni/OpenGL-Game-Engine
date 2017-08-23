@@ -4,9 +4,11 @@
 #include <GL/glew.h>
 #include <fstream>
 #include <map>
+#include <sstream>
 #include "../core_engine/transform.h"
 #include "../core_engine/camera.h"
-#include "../rendering_engine/light.h"
+#include "../rendering_engine/light/light.h"
+#include "../rendering_engine/light/phong_light.h"
 
 
 class shader
@@ -58,6 +60,91 @@ public:
     {
         glUniform4f(get_uniform(uniform_name), v.get_x(), v.get_y(), v.get_z(), v.get_w());
     }
+    
+    void add_light_compo(phong_light* l) { this->lc = l; }
+
+    void get_light_compo_loc()
+    {
+
+
+        add_uniform("directionalLight.base.color");
+        add_uniform("directionalLight.base.intensity");
+        add_uniform("directionalLight.direction");
+
+        for(int i = 0; i < lc->MAX_POINT_LIGHTS; i++)
+        {
+            std::ostringstream pointLightNameBuilder;
+            pointLightNameBuilder << "pointLights[" << i << "]";
+            std::string pointLightName = pointLightNameBuilder.str();
+
+            add_uniform(pointLightName + ".base.color");
+            add_uniform(pointLightName + ".base.intensity");
+            add_uniform(pointLightName + ".atten.constant");
+            add_uniform(pointLightName + ".atten.linear");
+            add_uniform(pointLightName + ".atten.exponent");
+            add_uniform(pointLightName + ".position");
+            add_uniform(pointLightName + ".range");
+        }
+
+        for(int i = 0; i < lc->MAX_SPOT_LIGHTS; i++)
+        {
+            std::ostringstream spotLightNameBuilder;
+            spotLightNameBuilder << "spotLights[" << i << "]";
+            std::string spotLightName = spotLightNameBuilder.str();
+
+            add_uniform(spotLightName + ".pointLight.base.color");
+            add_uniform(spotLightName + ".pointLight.base.intensity");
+            add_uniform(spotLightName + ".pointLight.atten.constant");
+            add_uniform(spotLightName + ".pointLight.atten.linear");
+            add_uniform(spotLightName + ".pointLight.atten.exponent");
+            add_uniform(spotLightName + ".pointLight.position");
+            add_uniform(spotLightName + ".pointLight.range");
+            add_uniform(spotLightName + ".direction");
+            add_uniform(spotLightName + ".cutoff");
+        }
+
+    }
+    
+    void set_light_combo()
+    {
+        set_uniform_3f("directionalLight.direction", lc->s_directionalLight.direction);
+        set_uniform_3f("directionalLight.base.color", lc->s_directionalLight.base.color);
+        set_uniform_1f("directionalLight.base.intensity", lc->s_directionalLight.base.intensity);
+
+        for(int i = 0; i < lc->s_numPointLights; i++)
+        {
+            std::ostringstream pointLightNameBuilder;
+            pointLightNameBuilder << "pointLights[" << i << "]";
+            std::string pointLightName = pointLightNameBuilder.str();
+
+            set_uniform_3f(pointLightName + ".base.color", lc->s_pointLights[i].base.color);
+            set_uniform_1f(pointLightName + ".base.intensity", lc->s_pointLights[i].base.intensity);
+            set_uniform_1f(pointLightName + ".atten.constant", lc->s_pointLights[i].atten.constant);
+            set_uniform_1f(pointLightName + ".atten.linear", lc->s_pointLights[i].atten.linear);
+            set_uniform_1f(pointLightName + ".atten.exponent", lc->s_pointLights[i].atten.exponent);
+            set_uniform_3f(pointLightName + ".position", lc->s_pointLights[i].position);
+            set_uniform_1f(pointLightName + ".range", lc->s_pointLights[i].range);
+
+        }
+
+        for(int i = 0; i < lc->s_numSpotLights; i++)
+        {
+            std::ostringstream spotLightNameBuilder;
+            spotLightNameBuilder << "spotLights[" << i << "]";
+            std::string spotLightName = spotLightNameBuilder.str();
+
+            set_uniform_3f(spotLightName + ".pointLight.base.color", lc->s_spotLights[i]._point_light.base.color);
+            set_uniform_1f(spotLightName + ".pointLight.base.intensity", lc->s_spotLights[i]._point_light.base.intensity);
+            set_uniform_1f(spotLightName + ".pointLight.atten.constant", lc->s_spotLights[i]._point_light.atten.constant);
+            set_uniform_1f(spotLightName + ".pointLight.atten.linear", lc->s_spotLights[i]._point_light.atten.linear);
+            set_uniform_1f(spotLightName + ".pointLight.atten.exponent", lc->s_spotLights[i]._point_light.atten.exponent);
+            set_uniform_3f(spotLightName + ".pointLight.position", lc->s_spotLights[i]._point_light.position);
+            set_uniform_1f(spotLightName + ".pointLight.range", lc->s_spotLights[i]._point_light.range);
+            set_uniform_3f(spotLightName + ".direction", lc->s_spotLights[i].q.get_forward());
+            set_uniform_1f(spotLightName + ".cutoff", lc->s_spotLights[i].cutoff);
+
+        }
+    }
 
     void get_light_loc();
     void set_light() const;
@@ -73,6 +160,7 @@ private:
     GLuint load(std::string vertex_file_path, std::string fragment_file_path);
     std::vector<GLint> light_pos, light_color, attenuation;
     std::vector<light>* lights = nullptr;
+    phong_light* lc;
 
     std::map<std::string, GLint> uniforms;
 
