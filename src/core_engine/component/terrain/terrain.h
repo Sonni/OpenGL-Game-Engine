@@ -6,6 +6,7 @@
 #include "../../../rendering_engine/texture.h"
 #include "../../../rendering_engine/model/mesh.h"
 #include "perlin_noise.h"
+#include "../../../physics_engine/collider/sphere.h"
 
 class terrain_component : public entity_component
 {
@@ -17,18 +18,26 @@ public:
     ~terrain_component()
     {
         delete _mesh;
+        delete _sphere;
     }
 
     virtual void init();
-    virtual void update(float delta);
+    virtual void update(float delta, const camera &cam);
     virtual void render() const;
     virtual void set_all_uni(camera& cam);
+
+    sphere* get_sphere() const { return _sphere; }
+    const sphere& get_sphere() { return *_sphere; }
 
     float barry_centric(const vec3f& p1, const vec3f& p2, const vec3f& p3, const vec2f& pos) const;
     float get_terrain_y(float world_x, float world_z);
 private:
 
     const int SIZE = 200;
+
+    float max_y, min_y;
+    sphere* _sphere;
+    bool draw = true;
 
     int grid_x, grid_z;
     std::vector<std::vector<float>> heights;

@@ -12,6 +12,24 @@ terrain_component::terrain_component(mat4f* shadowMap, texture* depth_map, int _
     //load_raw_heights();
     load_noise_heights();
     load_mesh();
+
+    float mid_y = (max_y + min_y) / 2.0f;
+    float mid_x = (grid_x * SIZE + (grid_x + 1) * SIZE) / 2.0f;
+    float mid_z = (grid_z * SIZE + (grid_z + 1) * SIZE) / 2.0f;
+
+    vec3f center(mid_x, mid_y, mid_z);
+
+    float radius = fabs(max_y) - fabs(mid_y);
+
+    vec3f start(grid_x * SIZE, mid_y, grid_z * SIZE);
+
+    float start_len = (start-center).length();
+    if (start_len > radius)
+        radius = start_len;
+
+    _sphere = new sphere(center, radius);
+
+
     this->shadow_mvp = shadowMap;
     this->depth_map = depth_map;
 
@@ -124,9 +142,18 @@ void terrain_component::set_all_uni(camera& cam)
 
 float move_factor = 0;
 float cur_tex = 0;
-void terrain_component::update(float delta)
+void terrain_component::update(float delta, const camera &cam)
 {
     get_transform()->set_pos(vec3f(grid_x * SIZE, 0, grid_z * SIZE));
+
+    if (cam.get_frustum().sphere_in_frustum(*_sphere))
+    {
+        draw = true;
+    }
+    else
+    {
+        draw = false;
+    }
 
     move_factor += 5.0f;
     if (move_factor > 20)
@@ -144,9 +171,10 @@ void terrain_component::update(float delta)
 
 void terrain_component::render() const
 {
-
-
-    _mesh->draw();
+    if (draw)
+    {
+        _mesh->draw();
+    }
 }
 
 float terrain_component::get_height(int x, int z)
@@ -184,6 +212,8 @@ void terrain_component::load_mesh()
     float tex_coords[count * 2];
     int pointer = 0;
 
+    max_y = min_y = heights[0][0];
+
     
     for(int i = 0; i < VERTEX_COUNT; i++)
     {
@@ -193,6 +223,10 @@ void terrain_component::load_mesh()
             vertices[pointer * 3 + 1] = heights[i][j];
             vertices[pointer * 3 + 2] = (float) j / ((float) VERTEX_COUNT - 1) * SIZE;
 
+            if (max_y < heights[i][j])
+                max_y = heights[i][j];
+            if (min_y > heights[i][j]);
+                min_y = heights[i][j];
 
 
             vec3f n(get_height(i-1, j) - get_height(i+1, j), 2.0f, get_height(i, j-1) - get_height(i, j+1));

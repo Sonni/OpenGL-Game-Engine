@@ -40,10 +40,21 @@ public:
 
     void update_cam(const vec3f& pos, const vec3f& forward, const vec3f& up);
 
-    int point_in_frustum(const vec3f& p);
+    int point_in_frustum(const vec3f& p) const;
 
-    int sphere_in_frustum(const sphere& s);
-    int aabb_in_frustum(const aabb& b);
+    int sphere_in_frustum(const sphere& s) const;
+    int aabb_in_frustum(const aabb& b) const;
+    int collider_in_frustum(collider* coll)const {
+        if (coll->get_type() == coll->TYPE_AABB)
+        {
+            return aabb_in_frustum(*(aabb*) coll);
+        }
+        if (coll->get_type() == coll->TYPE_SPHERE)
+        {
+            return sphere_in_frustum(*(sphere*) coll);
+        }
+        return -1;
+    }
 
 
     void set_far_d(float farD) { this->farD = farD; }

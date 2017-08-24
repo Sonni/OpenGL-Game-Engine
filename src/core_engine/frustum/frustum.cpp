@@ -76,7 +76,7 @@ void frustum::update_cam(const vec3f& pos, const vec3f& forward, const vec3f& up
 }
 
 
-int frustum::point_in_frustum(const vec3f& p)
+int frustum::point_in_frustum(const vec3f& p) const
 {
     int result = INSIDE;
     for(int i = 0; i < 6; i++)
@@ -86,9 +86,8 @@ int frustum::point_in_frustum(const vec3f& p)
 }
 
 
-int frustum::sphere_in_frustum(const sphere& s)
+int frustum::sphere_in_frustum(const sphere& s) const
 {
-
     int result = INSIDE;
     float distance;
 
@@ -103,7 +102,7 @@ int frustum::sphere_in_frustum(const sphere& s)
 }
 
 
-int frustum::aabb_in_frustum(const aabb& b)
+int frustum::aabb_in_frustum(const aabb& b) const
 {
 
 	int result = OUTSIDE;

@@ -50,59 +50,66 @@ void particle_system::init()
 
 void particle_system::set_all_uni(camera& cam)
 {
-    std::vector<float> data;
-
-    insertion_sort(&particles);
-
-    for (unsigned int i = 0; i < particles.size(); i++)
+    if (draw)
     {
-        particles[i].set_all_uni(cam, &data);
+        std::vector<float> data;
+
+        insertion_sort(&particles);
+
+        for (unsigned int i = 0; i < particles.size(); i++) {
+            particles[i].set_all_uni(cam, &data);
+        }
+
+        update_vbo(vbo, data);
+
+        glUniformMatrix4fv(view_projection_loc, 1, GL_FALSE, &cam.get_view_projection()[0][0]);
+        glUniform1f(num_of_rows_loc, num_of_rows);
+
+        tex->bind(0);
+        glUniform1i(tex_loc, 0);
+
+        glEnable(GL_BLEND);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        glDepthMask(GL_FALSE);
+
+        glBindVertexArray(vao_id);
+        glEnableVertexAttribArray(0);
+        glEnableVertexAttribArray(1);
+        glEnableVertexAttribArray(2);
+        glEnableVertexAttribArray(3);
+        glEnableVertexAttribArray(4);
+        glEnableVertexAttribArray(5);
+        glEnableVertexAttribArray(6);
+
+        glDrawArraysInstanced(GL_TRIANGLE_STRIP, 0, vertex_count, particles.size());
+
+        glDisableVertexAttribArray(0);
+        glDisableVertexAttribArray(1);
+        glDisableVertexAttribArray(2);
+        glDisableVertexAttribArray(3);
+        glDisableVertexAttribArray(4);
+        glDisableVertexAttribArray(5);
+        glDisableVertexAttribArray(6);
+        glBindVertexArray(0);
+
+        glDepthMask(GL_TRUE);
+        glDisable(GL_BLEND);
     }
-
-    update_vbo(vbo, data);
-
-    glUniformMatrix4fv(view_projection_loc, 1, GL_FALSE, &cam.get_view_projection()[0][0]);
-    glUniform1f(num_of_rows_loc, num_of_rows);
-
-    tex->bind(0);
-    glUniform1i(tex_loc, 0);
-
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    glDepthMask(GL_FALSE);
-
-    glBindVertexArray(vao_id);
-    glEnableVertexAttribArray(0);
-    glEnableVertexAttribArray(1);
-    glEnableVertexAttribArray(2);
-    glEnableVertexAttribArray(3);
-    glEnableVertexAttribArray(4);
-    glEnableVertexAttribArray(5);
-    glEnableVertexAttribArray(6);
-
-    glDrawArraysInstanced(GL_TRIANGLE_STRIP, 0, vertex_count, particles.size());
-
-    glDisableVertexAttribArray(0);
-    glDisableVertexAttribArray(1);
-    glDisableVertexAttribArray(2);
-    glDisableVertexAttribArray(3);
-    glDisableVertexAttribArray(4);
-    glDisableVertexAttribArray(5);
-    glDisableVertexAttribArray(6);
-    glBindVertexArray(0);
-
-    glDepthMask(GL_TRUE);
-    glDisable(GL_BLEND);
 }
 
 
-void particle_system::update(float delta)
+void particle_system::update(float delta, const camera &cam)
 {
+    if (cam.get_frustum().sphere_in_frustum(sphere(*get_transform()->get_pos(), 40)))
+        draw = true;
+    else
+        draw = false;
+
     generate_particles(*get_transform()->get_pos(), delta);
 
     for (unsigned int i = 0; i < particles.size(); i++)
     {
-        particles[i].update(delta, cam);
+        particles[i].update(delta, this->cam);
         if (particles[i].get_is_dead())
         {
             particles.erase(particles.begin()+i);

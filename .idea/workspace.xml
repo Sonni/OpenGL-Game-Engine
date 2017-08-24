@@ -12,11 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b99eff21-27b0-44ab-80c7-e96795ab6e4f" name="Default" comment="Particle system finish">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/core_engine/frustum/frustum.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/core_engine/frustum/frustum.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/core_engine/frustum/frustum_plane.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/core_engine/frustum/frustum_plane.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/shader/glsl/simpel_mesh.glsl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/core_engine/component/mesh/animated_mesh.cpp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/core_engine/component/mesh/animated_mesh.h" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game_Engine.dir/C.includecache" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game_Engine.dir/CXX.includecache" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game_Engine.dir/DependInfo.cmake" afterPath="" />
@@ -38,12 +35,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Game_Engine.dir/src/shader/shader.cpp.o" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/Game_Engine" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/Game_Engine.cbp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/rendering_engine/light/light.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/shader/glsl/basic.glsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/shader/glsl/basic_normal_mapping.glsl" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/shader/glsl/phong.glsl" afterPath="$PROJECT_DIR$/src/shader/glsl/advanced_mesh.glsl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CMakeSystem.cmake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
@@ -52,29 +45,31 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/camera.h" afterPath="$PROJECT_DIR$/src/core_engine/camera.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/component/components.cpp" afterPath="$PROJECT_DIR$/src/core_engine/component/components.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/component/components.h" afterPath="$PROJECT_DIR$/src/core_engine/component/components.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/component/mesh/advanced_mesh.h" afterPath="$PROJECT_DIR$/src/core_engine/component/mesh/advanced_mesh.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/component/mesh/simpel_mesh.cpp" afterPath="$PROJECT_DIR$/src/core_engine/component/mesh/simpel_mesh.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/component/mesh/simpel_mesh.h" afterPath="$PROJECT_DIR$/src/core_engine/component/mesh/simpel_mesh.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/component/movement.cpp" afterPath="$PROJECT_DIR$/src/core_engine/component/movement.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/component/movement.h" afterPath="$PROJECT_DIR$/src/core_engine/component/movement.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/component/particle/particle_system.cpp" afterPath="$PROJECT_DIR$/src/core_engine/component/particle/particle_system.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/component/particle/particle_system.h" afterPath="$PROJECT_DIR$/src/core_engine/component/particle/particle_system.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/component/terrain/terrain.cpp" afterPath="$PROJECT_DIR$/src/core_engine/component/terrain/terrain.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/component/terrain/terrain.h" afterPath="$PROJECT_DIR$/src/core_engine/component/terrain/terrain.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/component/water/water.cpp" afterPath="$PROJECT_DIR$/src/core_engine/component/water/water.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/component/water/water.h" afterPath="$PROJECT_DIR$/src/core_engine/component/water/water.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/core_engine.cpp" afterPath="$PROJECT_DIR$/src/core_engine/core_engine.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/entity.cpp" afterPath="$PROJECT_DIR$/src/core_engine/entity.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/entity.h" afterPath="$PROJECT_DIR$/src/core_engine/entity.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/io/sound.cpp" afterPath="$PROJECT_DIR$/src/core_engine/io/sound.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/math/vector.h" afterPath="$PROJECT_DIR$/src/core_engine/math/vector.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physics_engine/collider/aabb.cpp" afterPath="$PROJECT_DIR$/src/physics_engine/collider/aabb.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physics_engine/collider/aabb.h" afterPath="$PROJECT_DIR$/src/physics_engine/collider/aabb.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/entity_component.h" afterPath="$PROJECT_DIR$/src/core_engine/entity_component.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/frustum/frustum.cpp" afterPath="$PROJECT_DIR$/src/core_engine/frustum/frustum.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/frustum/frustum.h" afterPath="$PROJECT_DIR$/src/core_engine/frustum/frustum.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/frustum/frustum_plane.cpp" afterPath="$PROJECT_DIR$/src/core_engine/frustum/frustum_plane.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/frustum/frustum_plane.h" afterPath="$PROJECT_DIR$/src/core_engine/frustum/frustum_plane.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/core_engine/io/window.h" afterPath="$PROJECT_DIR$/src/core_engine/io/window.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physics_engine/physics_engine.h" afterPath="$PROJECT_DIR$/src/physics_engine/physics_engine.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physics_engine/physics_obj.cpp" afterPath="$PROJECT_DIR$/src/physics_engine/physics_obj.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rendering_engine/light/lighting.h" afterPath="$PROJECT_DIR$/src/rendering_engine/light/lighting.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rendering_engine/light/phong_light.h" afterPath="$PROJECT_DIR$/src/rendering_engine/light/phong_light.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rendering_engine/texture.cpp" afterPath="$PROJECT_DIR$/src/rendering_engine/texture.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/rendering_engine/texture.h" afterPath="$PROJECT_DIR$/src/rendering_engine/texture.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/shader/glsl/animation.glsl" afterPath="$PROJECT_DIR$/src/shader/glsl/animation.glsl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/shader/glsl/testTerrain.glsl" afterPath="$PROJECT_DIR$/src/shader/glsl/testTerrain.glsl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/shader/shader.cpp" afterPath="$PROJECT_DIR$/src/shader/shader.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/shader/shader.h" afterPath="$PROJECT_DIR$/src/shader/shader.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/physics_engine/physics_obj.h" afterPath="$PROJECT_DIR$/src/physics_engine/physics_obj.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,11 +85,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="core_engine.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="core_engine.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/core_engine/core_engine.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state relative-caret-position="844">
+              <caret line="130" column="32" lean-forward="false" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="physics_engine.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/physics_engine/physics_engine.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -103,70 +110,68 @@
       <file leaf-file-name="physics_engine.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/physics_engine/physics_engine.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="36" column="88" lean-forward="false" selection-start-line="36" selection-start-column="88" selection-end-line="36" selection-end-column="88" />
+            <state relative-caret-position="195">
+              <caret line="36" column="18" lean-forward="false" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="physics_obj.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/physics_engine/physics_obj.cpp">
+      <file leaf-file-name="advanced_mesh.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core_engine/component/mesh/advanced_mesh.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="88">
+              <caret line="83" column="4" lean-forward="false" selection-start-line="83" selection-start-column="4" selection-end-line="96" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="frustum.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/core_engine/frustum/frustum.cpp">
+      <file leaf-file-name="animated_mesh.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core_engine/component/mesh/animated_mesh.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+            <state relative-caret-position="390">
+              <caret line="32" column="15" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <file leaf-file-name="simpel_mesh.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core_engine/component/mesh/simpel_mesh.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="25" lean-forward="false" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+            <state relative-caret-position="449">
+              <caret line="82" column="22" lean-forward="false" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="simpel_mesh.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core_engine/component/mesh/simpel_mesh.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="31" column="30" lean-forward="false" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+            <state relative-caret-position="210">
+              <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shader.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/shader/shader.h">
+      <file leaf-file-name="terrain.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/core_engine/component/terrain/terrain.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-196">
-              <caret line="104" column="18" lean-forward="false" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
-              <folding>
-                <element signature="e#59#79#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="171">
+              <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="entity.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/core_engine/entity.cpp">
+      <file leaf-file-name="terrain.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/core_engine/component/terrain/terrain.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="235">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -182,18 +187,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="frustum.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/core_engine/frustum/frustum.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-              <folding>
-                <element signature="e#66#92#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -205,7 +198,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>otalLi</find>
       <find>specularIn</find>
       <find>totalLight</find>
       <find>tbnMatrix</find>
@@ -235,9 +227,9 @@
       <find>Vector3f</find>
       <find>Frustum</find>
       <find>Normalized</find>
+      <find>update(float delta)</find>
     </findStrings>
     <replaceStrings>
-      <replace>vec2f</replace>
       <replace>.get_z()</replace>
       <replace>_sphere.get_radius()</replace>
       <replace>get_z</replace>
@@ -267,6 +259,7 @@
       <replace>vec3f</replace>
       <replace>frustum</replace>
       <replace>normalized</replace>
+      <replace>update(float delta, const camera &amp;cam)</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -275,46 +268,22 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/core_engine/component/particle/particle_system.h" />
-        <option value="$PROJECT_DIR$/src/core_engine/component/particle/particle.cpp" />
-        <option value="$PROJECT_DIR$/src/core_engine/component/particle/particle.h" />
-        <option value="$PROJECT_DIR$/src/core_engine/component/particle/particle_system.cpp" />
-        <option value="$PROJECT_DIR$/src/core_engine/component/terrain/terrain.h" />
-        <option value="$PROJECT_DIR$/src/core_engine/component/text/text_component.h" />
-        <option value="$PROJECT_DIR$/src/todo/lighting.cpp" />
-        <option value="$PROJECT_DIR$/src/todo/phong.cpp" />
-        <option value="$PROJECT_DIR$/src/shader/glsl/basic.glsl" />
-        <option value="$PROJECT_DIR$/src/todo/light_compo.cpp" />
-        <option value="$PROJECT_DIR$/src/todo/light_compo.h" />
-        <option value="$PROJECT_DIR$/src/todo/lighting.h" />
-        <option value="$PROJECT_DIR$/src/shader/glsl/shadow_h.glsl" />
-        <option value="$PROJECT_DIR$/src/shader/glsl/light_h.glsl" />
-        <option value="$PROJECT_DIR$/src/core_engine/component/terrain/terrain.cpp" />
-        <option value="$PROJECT_DIR$/src/shader/glsl/phong.glsl" />
         <option value="$PROJECT_DIR$/src/todo/phong.h" />
         <option value="$PROJECT_DIR$/src/core_engine/component/mesh/phong.h" />
         <option value="$PROJECT_DIR$/src/rendering_engine/light/light_compo.h" />
-        <option value="$PROJECT_DIR$/src/core_engine/component/mesh/simpel_mesh.h" />
-        <option value="$PROJECT_DIR$/src/core_engine/component/mesh/simpel_mesh.cpp" />
-        <option value="$PROJECT_DIR$/src/core_engine/entity.h" />
-        <option value="$PROJECT_DIR$/src/core_engine/component/mesh/advanced_mesh.h" />
         <option value="$PROJECT_DIR$/src/rendering_engine/light/lighting.h" />
         <option value="$PROJECT_DIR$/src/rendering_engine/light/phong_light.h" />
-        <option value="$PROJECT_DIR$/src/core_engine/entity.cpp" />
         <option value="$PROJECT_DIR$/src/core_engine/io/sound.cpp" />
         <option value="$PROJECT_DIR$/src/physics_engine/physics_obj.cpp" />
         <option value="$PROJECT_DIR$/src/core_engine/math/vector.h" />
         <option value="$PROJECT_DIR$/src/rendering_engine/texture.cpp" />
         <option value="$PROJECT_DIR$/src/rendering_engine/texture.h" />
-        <option value="$PROJECT_DIR$/src/core_engine/component/components.cpp" />
-        <option value="$PROJECT_DIR$/src/core_engine/component/components.h" />
         <option value="$PROJECT_DIR$/src/shader/glsl/testTerrain.glsl" />
         <option value="$PROJECT_DIR$/src/shader/glsl/advanced_mesh.glsl" />
         <option value="$PROJECT_DIR$/src/shader/glsl/animation.glsl" />
         <option value="$PROJECT_DIR$/src/shader/shader.cpp" />
         <option value="$PROJECT_DIR$/src/shader/glsl/simpel_mesh.glsl" />
         <option value="$PROJECT_DIR$/src/physics_engine/collider/aabb.cpp" />
-        <option value="$PROJECT_DIR$/src/physics_engine/physics_engine.h" />
         <option value="$PROJECT_DIR$/src/physics_engine/collider/aabb.h" />
         <option value="$PROJECT_DIR$/src/todo/frustum.h" />
         <option value="$PROJECT_DIR$/src/todo/frustum_plane.h" />
@@ -322,10 +291,34 @@
         <option value="$PROJECT_DIR$/src/todo/frustum.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/shader/shader.h" />
-        <option value="$PROJECT_DIR$/src/core_engine/frustum/frustum.h" />
-        <option value="$PROJECT_DIR$/src/core_engine/frustum/frustum.cpp" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/core_engine/io/window.h" />
+        <option value="$PROJECT_DIR$/src/core_engine/component/movement.cpp" />
+        <option value="$PROJECT_DIR$/src/core_engine/component/movement.h" />
+        <option value="$PROJECT_DIR$/src/core_engine/component/terrain/terrain.h" />
+        <option value="$PROJECT_DIR$/src/core_engine/entity.cpp" />
+        <option value="$PROJECT_DIR$/src/core_engine/camera.h" />
+        <option value="$PROJECT_DIR$/src/core_engine/frustum/frustum_plane.cpp" />
+        <option value="$PROJECT_DIR$/src/core_engine/frustum/frustum_plane.h" />
+        <option value="$PROJECT_DIR$/src/core_engine/frustum/frustum.h" />
+        <option value="$PROJECT_DIR$/src/physics_engine/physics_obj.h" />
+        <option value="$PROJECT_DIR$/src/core_engine/component/components.h" />
+        <option value="$PROJECT_DIR$/src/core_engine/component/components.cpp" />
+        <option value="$PROJECT_DIR$/src/core_engine/component/mesh/animated_mesh.cpp" />
+        <option value="$PROJECT_DIR$/src/core_engine/component/particle/particle_system.h" />
+        <option value="$PROJECT_DIR$/src/core_engine/frustum/frustum.cpp" />
+        <option value="$PROJECT_DIR$/src/core_engine/component/particle/particle_system.cpp" />
+        <option value="$PROJECT_DIR$/src/core_engine/component/water/water.h" />
+        <option value="$PROJECT_DIR$/src/core_engine/component/water/water.cpp" />
+        <option value="$PROJECT_DIR$/src/core_engine/entity.h" />
+        <option value="$PROJECT_DIR$/src/core_engine/entity_component.h" />
+        <option value="$PROJECT_DIR$/src/core_engine/component/mesh/animated_mesh.h" />
+        <option value="$PROJECT_DIR$/src/core_engine/component/mesh/advanced_mesh.h" />
+        <option value="$PROJECT_DIR$/src/physics_engine/physics_engine.h" />
         <option value="$PROJECT_DIR$/src/core_engine/core_engine.cpp" />
+        <option value="$PROJECT_DIR$/src/core_engine/component/mesh/simpel_mesh.cpp" />
+        <option value="$PROJECT_DIR$/src/core_engine/component/mesh/simpel_mesh.h" />
+        <option value="$PROJECT_DIR$/src/core_engine/component/terrain/terrain.cpp" />
       </list>
     </option>
   </component>
@@ -396,7 +389,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="shader" />
+              <option name="myItemId" value="core_engine" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -415,6 +408,62 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="core_engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="component" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="3D_Engine" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OpenGL-Game-Engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core_engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="component" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="terrain" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="3D_Engine" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OpenGL-Game-Engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core_engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="component" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mesh" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -702,7 +751,8 @@
       <workItem from="1503409002368" duration="37886000" />
       <workItem from="1503477206545" duration="20328000" />
       <workItem from="1503527837959" duration="1812000" />
-      <workItem from="1503537558965" duration="9477000" />
+      <workItem from="1503537558965" duration="9743000" />
+      <workItem from="1503595594642" duration="12519000" />
     </task>
     <task id="LOCAL-00001" summary="Changes">
       <created>1499551751966</created>
@@ -886,11 +936,18 @@
       <option name="project" value="LOCAL" />
       <updated>1503501227157</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Frustum culling, aabb / aabb collision">
+      <created>1503593886574</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1503593886574</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="367524000" />
+    <option name="totallyTimeSpent" value="380309000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -902,17 +959,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20347223" sideWeight="0.4935065" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.49444443" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.49305555" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.51180553" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.49722221" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329602" sideWeight="0.48819444" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20347223" sideWeight="0.4935065" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20347223" sideWeight="0.5064935" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39925373" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298611" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -921,7 +979,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -957,7 +1014,8 @@
     <MESSAGE value="Shader class update, terrain improvement, phong shading begin" />
     <MESSAGE value="Phong update" />
     <MESSAGE value="Phong finish, big shader update." />
-    <option name="LAST_COMMIT_MESSAGE" value="Phong finish, big shader update." />
+    <MESSAGE value="Frustum culling, aabb / aabb collision" />
+    <option name="LAST_COMMIT_MESSAGE" value="Frustum culling, aabb / aabb collision" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -966,177 +1024,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/core_engine/component/mesh/advanced_mesh.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rendering_engine/light/lighting.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="40" column="2" lean-forward="false" selection-start-line="40" selection-start-column="2" selection-end-line="40" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rendering_engine/light/phong_light.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rendering_engine/light/phong_light.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core_engine/math/math.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core_engine/io/sound.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="184" column="61" lean-forward="false" selection-start-line="184" selection-start-column="61" selection-end-line="184" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core_engine/math/vector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1411">
-          <caret line="287" column="4" lean-forward="false" selection-start-line="287" selection-start-column="4" selection-end-line="287" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rendering_engine/texture.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="206" column="4" lean-forward="false" selection-start-line="206" selection-start-column="4" selection-end-line="206" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rendering_engine/texture.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rendering_engine/stb_image.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core_engine/component/components.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="207" column="27" lean-forward="false" selection-start-line="207" selection-start-column="27" selection-end-line="207" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core_engine/component/components.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="62" column="32" lean-forward="true" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shader/glsl/shadow_h.glsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="39" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shader/glsl/terrain.glsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="4" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="50" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shader/glsl/testTerrain.glsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shader/glsl/gaussian_blur.glsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shader/glsl/advanced_mesh.glsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="42" lean-forward="false" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shader/glsl/shadow.glsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shader/glsl/animation.glsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="37" lean-forward="false" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shader/shader.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="108" column="64" lean-forward="false" selection-start-line="108" selection-start-column="64" selection-end-line="108" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/shader/glsl/simpel_mesh.glsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="71" column="36" lean-forward="false" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/rendering_engine/model/mesh.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1545">
-          <caret line="103" column="23" lean-forward="false" selection-start-line="103" selection-start-column="23" selection-end-line="103" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/rendering_engine/model/tnaLoader.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="189" column="48" lean-forward="true" selection-start-line="189" selection-start-column="48" selection-end-line="189" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1152,7 +1043,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1180,14 +1070,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core_engine/entity.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/core_engine/io/window.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1950">
@@ -1198,45 +1080,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/core_engine/io/window.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#59#80#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/GL/glew.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="269" column="7" lean-forward="false" selection-start-line="269" selection-start-column="7" selection-end-line="269" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core_engine/component/particle/particle.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/physics_engine/physics_obj.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/physics_engine/physics_engine.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1244,80 +1091,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/physics_engine/collider/collider.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/physics_engine/collider/aabb.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core_engine/frustum/frustum_plane.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core_engine/frustum/frustum_plane.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="49" lean-forward="false" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/physics_engine/collider/aabb.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="53" lean-forward="false" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/physics_engine/physics_engine.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="36" column="88" lean-forward="false" selection-start-line="36" selection-start-column="88" selection-end-line="36" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/physics_engine/physics_obj.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core_engine/frustum/frustum.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-          <folding>
-            <element signature="e#66#92#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/core_engine/frustum/frustum.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1330,17 +1103,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="31" column="30" lean-forward="false" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/shader/shader.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-196">
+        <state relative-caret-position="1560">
           <caret line="104" column="18" lean-forward="false" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
           <folding>
             <element signature="e#59#79#0" expanded="true" />
@@ -1348,10 +1113,266 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/io/window.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="94" lean-forward="false" selection-start-line="20" selection-start-column="94" selection-end-line="20" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/transform.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/component/movement.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="70" column="19" lean-forward="false" selection-start-line="70" selection-start-column="19" selection-end-line="70" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/component/movement.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="67" column="17" lean-forward="false" selection-start-line="67" selection-start-column="17" selection-end-line="67" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/core_engine/entity.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="464">
+          <caret line="49" column="1" lean-forward="false" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/frustum/frustum_plane.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="45" column="24" lean-forward="false" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/frustum/frustum_plane.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/rendering_engine/model/mesh.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="38" column="6" lean-forward="false" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physics_engine/collider/aabb.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="53" lean-forward="false" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physics_engine/collider/aabb.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physics_engine/collider/collider.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/camera.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="37" column="25" lean-forward="false" selection-start-line="37" selection-start-column="25" selection-end-line="37" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physics_engine/physics_obj.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/frustum/frustum.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="40" column="68" lean-forward="false" selection-start-line="40" selection-start-column="68" selection-end-line="40" selection-end-column="68" />
+          <folding>
+            <element signature="e#66#92#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/component/components.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/component/particle/particle.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-98">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/component/particle/particle_system.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="38" column="21" lean-forward="false" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/component/particle/particle_system.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/component/water/water_fbo.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/component/water/water_fbo.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/component/water/water.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/component/water/water.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/component/components.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#23#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physics_engine/physics_obj.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="12" column="35" lean-forward="false" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/frustum/frustum.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="101" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/component/mesh/advanced_mesh.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/component/mesh/animated_mesh.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="119" column="0" lean-forward="false" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/entity.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#59#76#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/entity_component.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#79#98#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physics_engine/physics_engine.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/physics_engine/physics_engine.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="36" column="18" lean-forward="false" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -1364,10 +1385,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/component/mesh/animated_mesh.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="32" column="15" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/component/mesh/advanced_mesh.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="83" column="4" lean-forward="false" selection-start-line="83" selection-start-column="4" selection-end-line="96" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/component/mesh/simpel_mesh.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="82" column="22" lean-forward="false" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/core_engine/core_engine.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="844">
+          <caret line="130" column="32" lean-forward="false" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/component/mesh/simpel_mesh.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/component/terrain/terrain.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/core_engine/component/terrain/terrain.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>

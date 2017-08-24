@@ -12,40 +12,13 @@
 class camera_component : public entity_component
 {
 public:
-    camera_component(const mat4f& projection) :
-            m_camera(projection, 0) {}
+    camera_component(const mat4f& projection)
+            {}
 
 
-    inline mat4f get_view_projection() const { return m_camera.get_view_projection(); }
-
-    inline void set_projection(const mat4f& projection) { m_camera.set_projection(projection); }
     virtual void set_parent(entity* parent);
 protected:
 private:
-    camera m_camera;
-};
-
-/////////////////// Animation ////////////////////
-class animation_component : public entity_component
-{
-public:
-    animation_component(const std::string& file_name, mat4f* shadowMap, texture* depth_map, const std::string& tex_file_name, const std::string& normal_map);
-    ~animation_component();
-
-    virtual void init();
-    virtual void set_all_uni(camera& cam);
-
-    virtual void update(float delta);
-    virtual void render() const;
-
-protected:
-private:
-    mesh _mesh;
-    TNAModel tna_model;
-    texture* tex;
-
-    texture* depth_map;
-    mat4f* shadow_mvp;
 };
 
 /////////////////// SKYBOX ////////////////////
@@ -59,7 +32,7 @@ public:
 
     virtual void init();
     virtual void set_all_uni(camera& cam);
-    virtual void update(float delta);
+    virtual void update(float delta, const camera &cam);
     virtual void render() const;
 
 

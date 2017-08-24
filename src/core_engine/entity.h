@@ -4,6 +4,7 @@
 #include <vector>
 #include "transform.h"
 #include "io/input.h"
+#include "../physics_engine/physics_obj.h"
 
 class shader;
 class entity_component;
@@ -12,7 +13,7 @@ class camera;
 class entity
 {
 public:
-    entity(shader *shader = NULL, const vec3f& pos = vec3f(0,0,0), const quaternion& rot = quaternion(0,0,0,1), float scale = 1.0f) :
+    entity(shader *shader = NULL, const vec3f& pos = vec3f(0, 0, 0), const quaternion& rot = quaternion(0, 0, 0, 1), float scale = 1.0f) :
             _transform(pos, rot, scale)
     {
         shader_program = shader;
@@ -24,8 +25,10 @@ public:
 
     void set_all_uni(camera& cam);
     void process_input(const input &input, float delta);
-    void update(float delta);
+    void update(float delta, const camera &cam);
     void render() const;
+
+
 
     void delete_component(entity_component *component);
 

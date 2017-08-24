@@ -9,13 +9,15 @@
 #include "../../../shader/shader.h"
 #include "../../../rendering_engine/model/mesh.h"
 #include "../../../rendering_engine/texture.h"
+#include "../../../physics_engine/physics_obj.h"
 
 class advanced_mesh : public entity_component
 {
 public:
-    advanced_mesh(mesh* _mesh, mat4f* shadowMap, texture* depth_map, const vec3f& ambient, const std::string& tex_name = "default.png", const std::string& normal_name = "default_normal.jpg", const std::string& disp_name = "default_disp.png") :
+    advanced_mesh(mesh* _mesh, mat4f* shadowMap, texture* depth_map, const vec3f& ambient, physics_obj* phy_obj = NULL, const std::string& tex_name = "default.png", const std::string& normal_name = "default_normal.jpg", const std::string& disp_name = "default_disp.png") :
             _mesh(_mesh)
-            , s_ambientLight(ambient)
+            , s_ambientLight(ambient),
+            phy_obj(phy_obj)
     {
         tex = new texture(tex_name);
         normal = new texture("normal/" + normal_name);
@@ -79,11 +81,35 @@ public:
         get_shader()->set_uniform_1i("shadow_tex", 3);
     }
 
+    virtual void update(float delta, const camera &cam)
+    {
+        if (phy_obj != NULL)
+        {
+            phy_obj->get_collider()->set_pos(*get_transform()->get_pos());
+
+            if (cam.get_frustum().collider_in_frustum(phy_obj->get_collider())) {
+                draw = true;
+            }
+            else {
+                draw = false;
+            }
+        }
+    }
+
     virtual void render() const
     {
-        _mesh->draw();
+        if (draw)
+        {
+            _mesh->draw();
+        }
     }
-    
+
+    physics_obj* get_physics_obj() const
+    {
+        return phy_obj;
+    }
+
+
 private:
     vec3f s_ambientLight;
 
@@ -92,6 +118,8 @@ private:
     texture* disp_map;
 
     mesh* _mesh;
+    physics_obj* phy_obj;
+    bool draw = true;
 
     texture* depth_map;
     mat4f* shadow_mvp;

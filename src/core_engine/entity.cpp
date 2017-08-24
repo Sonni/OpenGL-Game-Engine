@@ -46,11 +46,11 @@ void entity::process_input(const input &input, float delta)
     }
 }
 
-void entity::update(float delta)
+void entity::update(float delta, const camera &cam)
 {
     for(unsigned int i = 0; i < components.size(); i++)
     {
-        components[i]->update(delta);
+        components[i]->update(delta, cam);
     }
 }
 

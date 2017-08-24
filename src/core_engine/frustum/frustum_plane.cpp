@@ -43,7 +43,7 @@ void frustum_plane::set_coefficients(float a, float b, float c, float d)
 }
 
 
-float frustum_plane::distance(vec3f p)
+float frustum_plane::distance(vec3f p) const
 {
     return (d + normal.dot(p));
 }

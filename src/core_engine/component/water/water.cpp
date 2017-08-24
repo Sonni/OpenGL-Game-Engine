@@ -6,6 +6,8 @@ water_component::water_component(const std::string& dudv, const std::string& nor
     normal_tex = new texture(normalMap);
     this->wfb = wfb;
     m_mesh = new mesh("plane");
+
+
 }
 
 void water_component::init()
@@ -23,6 +25,19 @@ void water_component::init()
     reflec_loc = get_shader()->get_uni_location("reflection_tex");
     depth_loc = get_shader()->get_uni_location("depth_tex");
     cam_pos_loc = get_shader()->get_uni_location("cam_pos");
+
+    vec3f pos = *get_transform()->get_pos();
+    float half_len = get_transform()->get_scale()/2;
+
+    float y = pos.get_y();
+    float x = pos.get_x() + half_len;
+    float z = pos.get_z() + half_len;
+    vec3f center(x, y, z);
+
+    float radius = (float) sqrt(pow(half_len, 2) * 2);
+
+    _sphere = new sphere(center, radius);
+
 }
 
 
@@ -60,16 +75,27 @@ void water_component::set_all_uni(camera& cam)
 
 }
 
-void water_component::update(float delta)
+void water_component::update(float delta, const camera &cam)
 {
+    if (cam.get_frustum().sphere_in_frustum(*_sphere))
+    {
+        draw = true;
+    }
+    else
+    {
+        draw = false;
+    }
 }
 
 void water_component::render() const
 {
-    glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    glDisable(GL_CULL_FACE);
-    m_mesh->draw();
-    glEnable(GL_CULL_FACE);
-    glDisable(GL_BLEND);
+    if (draw)
+    {
+        glEnable(GL_BLEND);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+        glDisable(GL_CULL_FACE);
+        m_mesh->draw();
+        glEnable(GL_CULL_FACE);
+        glDisable(GL_BLEND);
+    }
 }

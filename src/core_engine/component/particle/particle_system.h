@@ -16,7 +16,7 @@ public:
 
     virtual void init();
     virtual void set_all_uni(camera& cam);
-    virtual void update(float delta);
+    virtual void update(float delta, const camera &cam);
 
     inline void set_speed_error(float error) { speed_offset = error * average_speed; }
     inline void set_life_error(float error) { life_offset = error * average_life_len; }
@@ -35,6 +35,8 @@ private:
 
     float speed_offset, life_offset, scale_offset;
     float direction_deviation;
+
+    bool draw = true;
 
     vec3f direction;
 

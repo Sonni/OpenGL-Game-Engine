@@ -18,7 +18,7 @@ public:
 	inline bool is_closed_requested()          const { return close_requested; }
 	inline int get_width()                   const { return width; }
 	inline int get_height()                  const { return height; }
-	inline float get_aspect()                const { return (float)width/(float)height; }
+	inline float get_aspect()                const { return (float)WIN_WIDTH/(float)WIN_HEIGHT; }
 	inline const std::string& get_title()    const { return title; }
 	inline vec2f get_center()             const { return vec2f((float)width/2.0f, (float)height/2.0f); }
 	inline SDL_Window* get_sdl_window()             { return sdl_window; }

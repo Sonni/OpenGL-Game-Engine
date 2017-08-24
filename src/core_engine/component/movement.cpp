@@ -68,7 +68,7 @@ void free_look::process_input(const input& input, float delta)
 }
 
 /////////////////// THIRD PERSON ////////////////////
-void third_person::update(float delta)
+void third_person::update(float delta, const camera &cam)
 {
     yaw = (float) atan2(get_transform()->get_rot()->get_forward().get_x(), get_transform()->get_rot()->get_forward().get_z());
     float pitch = asinf(get_transform()->get_rot()->get_forward().get_y());

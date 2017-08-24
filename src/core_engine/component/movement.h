@@ -65,7 +65,7 @@ public:
     }
 
     virtual void process_input(const input& input, float delta);
-    virtual void update(float delta);
+    virtual void update(float delta, const camera &cam);
 private:
 
     void move_forward(float amt, float delta);

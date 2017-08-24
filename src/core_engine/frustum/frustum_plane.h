@@ -19,7 +19,7 @@ public:
     void set_points(const vec3f& v1, const vec3f& v2, const vec3f& v3);
     void set_normal_and_point(const vec3f& normal, const vec3f& point);
     void set_coefficients(float a, float b, float c, float d);
-    float distance(vec3f p);
+    float distance(vec3f p) const;
 
     void print();
 };

@@ -10,16 +10,19 @@ public:
 
     water_component(const std::string& dudv, const std::string& normalMap, water_fbo* wfb);
 
-    ~water_component() { delete m_mesh; delete dudv_tex; delete normal_tex; }
+    ~water_component() { delete m_mesh; delete dudv_tex; delete normal_tex; delete _sphere;}
 
     virtual void init();
     virtual void set_all_uni(camera& cam);
-    virtual void update(float delta);
+    virtual void update(float delta, const camera &cam);
     virtual void render() const;
 
 private:
     mesh* m_mesh;
     float moveFactor = 0.0;
+    bool draw = true;
+
+    sphere* _sphere;
 
     texture* dudv_tex;
     texture* normal_tex;

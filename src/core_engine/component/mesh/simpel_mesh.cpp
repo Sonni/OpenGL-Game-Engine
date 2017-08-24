@@ -1,8 +1,9 @@
 #include "simpel_mesh.h"
 #include "../../../shader/shader.h"
 
-mesh_component::mesh_component(mesh* _mesh, mat4f* shadowMap, texture* depth_map, const vec3f& ambient, const std::string& tex_file_name) :
-    ambient(ambient)
+mesh_component::mesh_component(mesh* _mesh, mat4f* shadowMap, texture* depth_map, physics_obj* phy_obj, const vec3f& ambient, const std::string& tex_file_name) :
+    ambient(ambient),
+    phy_obj(phy_obj)
 {
     this->_mesh = _mesh;
     this->shadow_mvp = shadowMap;
@@ -32,7 +33,6 @@ void mesh_component::init()
     get_shader()->add_uniform("shadow_tex");
 
     get_shader()->set_light_loc();
-
 }
 
 void mesh_component::set_all_uni(camera& cam)
@@ -61,7 +61,25 @@ void mesh_component::set_all_uni(camera& cam)
     get_shader()->set_uniform_1i("shadow_tex", 1);
 }
 
+void mesh_component::update(float delta, const camera &cam)
+{
+    if (phy_obj != NULL)
+    {
+        phy_obj->get_collider()->set_pos(*get_transform()->get_pos());
+
+        if (cam.get_frustum().collider_in_frustum(phy_obj->get_collider())) {
+            draw = true;
+        }
+        else {
+            draw = false;
+        }
+    }
+}
+
 void mesh_component::render() const
 {
-    _mesh->draw();
+    if (draw)
+    {
+        _mesh->draw();
+    }
 }

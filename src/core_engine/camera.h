@@ -2,13 +2,15 @@
 #define GAME_ENGINE_CAMERA_H
 
 #include "entity_component.h"
+#include "frustum/frustum.h"
 
 class camera
 {
 public:
-	camera(const mat4f& projection, transform* transform) :
+	camera(const mat4f& projection, transform* transform, frustum* _frustum) :
 			projection_matrix(projection),
-			transformation(transform)
+			transformation(transform),
+			_frustum(_frustum)
 	{}
 
 	~camera() {}
@@ -31,10 +33,14 @@ public:
 	
 	inline void set_projection(const mat4f &projection) { this->projection_matrix = projection; }
 	inline void set_transform(transform *transform) { transformation = transform; }
+
+    inline frustum get_frustum() { return *_frustum; }
+    inline const frustum get_frustum() const { return *_frustum; }
 private:
 	mat4f projection_matrix;
 	transform* transformation;
 	vec4f cutting_plane;
+	frustum* _frustum;
 };
 
 

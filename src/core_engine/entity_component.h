@@ -3,6 +3,7 @@
 
 #include "entity.h"
 #include "io/input.h"
+#include "../physics_engine/physics_obj.h"
 
 class camera;
 class entity_component
@@ -15,10 +16,12 @@ public:
 
     virtual void init() {}
 	virtual void process_input(const input &_input, float delta) {}
-	virtual void update(float delta) {}
+	virtual void update(float delta, const camera &cam) {}
 	virtual void render() const {}
 
 	virtual void set_all_uni(camera& cam) {}
+
+
 
 
 	void delete_component(entity_component *component)  {parent->delete_component(component);}
