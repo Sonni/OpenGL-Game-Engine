@@ -5,7 +5,6 @@
 #include <sstream>
 #include <vector>
 #include "../../math/vector.h"
-#include "../../../rendering_engine/light/lighting.h"
 #include "../../math/matrix.h"
 #include "../../../shader/shader.h"
 #include "../../../rendering_engine/model/mesh.h"
@@ -43,8 +42,8 @@ public:
 
         get_shader()->add_uniform("shadow_mvp");
         get_shader()->add_uniform("shadow_tex");
-        
-        get_shader()->get_light_compo_loc();
+
+        get_shader()->set_light_loc();
     }
 
     virtual void set_all_uni(camera& cam)
@@ -58,7 +57,7 @@ public:
 
         get_shader()->set_uniform_3f("ambient_light", s_ambientLight);
 
-        get_shader()->set_light_combo();
+        get_shader()->set_light();
 
         get_shader()->set_uniform_1f("specular_intensity", 1.0f);
         get_shader()->set_uniform_1f("specular_power", 8.0f);

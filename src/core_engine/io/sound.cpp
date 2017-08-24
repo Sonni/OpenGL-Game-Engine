@@ -182,7 +182,7 @@ void sound::delete_sound(unsigned int id)
     {
         if (datas[i].source_id == id)
         {
-            alSourcei(datas[i].source_id, AL_BUFFER, NULL);
+            alSourcei(datas[i].source_id, AL_BUFFER, (ALint) NULL);
             alDeleteBuffers(1, &datas[i].buffer_id);
             delete[] datas[i].buffer;
             alDeleteSources(1, &datas[i].source_id);

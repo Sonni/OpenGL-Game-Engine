@@ -75,7 +75,7 @@ void terrain_component::init() {
     get_shader()->add_uniform("ambient_light");
 
 
-    get_shader()->get_light_compo_loc();
+    get_shader()->set_light_loc();
 }
 
 void terrain_component::set_all_uni(camera& cam)
@@ -117,7 +117,7 @@ void terrain_component::set_all_uni(camera& cam)
     get_shader()->set_uniform_1i("shadow_tex2", 6);
 
 
-    get_shader()->set_light_combo();
+    get_shader()->set_light();
 
 
 }

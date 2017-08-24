@@ -7,7 +7,6 @@
 #include <sstream>
 #include "../core_engine/transform.h"
 #include "../core_engine/camera.h"
-#include "../rendering_engine/light/light.h"
 #include "../rendering_engine/light/phong_light.h"
 
 
@@ -61,12 +60,10 @@ public:
         glUniform4f(get_uniform(uniform_name), v.get_x(), v.get_y(), v.get_z(), v.get_w());
     }
     
-    void add_light_compo(phong_light* l) { this->lc = l; }
+    void add_light(phong_light *l) { this->lc = l; }
 
-    void get_light_compo_loc()
+    void set_light_loc()
     {
-
-
         add_uniform("directionalLight.base.color");
         add_uniform("directionalLight.base.intensity");
         add_uniform("directionalLight.direction");
@@ -105,7 +102,7 @@ public:
 
     }
     
-    void set_light_combo()
+    void set_light()
     {
         set_uniform_3f("directionalLight.direction", lc->s_directionalLight.direction);
         set_uniform_3f("directionalLight.base.color", lc->s_directionalLight.base.color);
@@ -146,10 +143,6 @@ public:
         }
     }
 
-    void get_light_loc();
-    void set_light() const;
-
-    inline void add_lights(std::vector<light>* light) { lights = light;}
 
     inline void add_uniform(const std::string& name) { uniforms[name] = get_uni_location(name); }
     inline GLint get_uniform(const std::string& name) { return uniforms[name]; }
@@ -158,8 +151,6 @@ public:
 
 private:
     GLuint load(std::string vertex_file_path, std::string fragment_file_path);
-    std::vector<GLint> light_pos, light_color, attenuation;
-    std::vector<light>* lights = nullptr;
     phong_light* lc;
 
     std::map<std::string, GLint> uniforms;

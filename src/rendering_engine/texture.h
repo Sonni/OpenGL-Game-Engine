@@ -51,7 +51,6 @@ public:
     }
 
 	texture(const texture& tex);
-	void operator=(texture tex);
 	virtual ~texture();
     
     texture sub_image(int x, int y, int width, int height);

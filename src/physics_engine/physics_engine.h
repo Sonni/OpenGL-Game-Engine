@@ -30,10 +30,12 @@ public:
             collider* c2 = o->get_collider();
 
             intersect_data data = c1->intersect(*c2);
+
             if (data.get_does_intersect())
             {
+                std::cout << data.get_direction() << std::endl;
                 vec3f new_pos = *obj->get_transform()->get_pos() + data.get_direction();
-                obj->get_transform()->set_pos(new_pos);
+                //obj->get_transform()->set_pos(new_pos);
             }
         }
     }

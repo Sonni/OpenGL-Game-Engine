@@ -47,11 +47,10 @@ struct point_light
     vec3f position;
     float range;
 
-    point_light(const base_light& base = base_light(), const attenuation& atten = attenuation(), const vec3f& position = vec3f(), float range = 0) :
+    point_light(const base_light& base = base_light(), const attenuation& atten = attenuation(), const vec3f& position = vec3f()) :
             base(base),
             atten(atten),
-            position(position),
-            range(range)
+            position(position)
     {
         float a = atten.exponent;
         float b = atten.linear;
@@ -64,13 +63,11 @@ struct point_light
 struct spot_light
 {
     point_light _point_light;
-    vec3f direction;
     float cutoff;
     quaternion q;
 
-    spot_light(const point_light& _point_light = point_light(), float viewAngle = ToRadians(170.0f), const quaternion& q = quaternion()) :
+    spot_light(const point_light& _point_light, float viewAngle = ToRadians(170.0f), const quaternion& q = quaternion()) :
             _point_light(_point_light),
-            direction(direction),
             cutoff((float) cos(viewAngle / 2.0f)),
             q(q)
     {}

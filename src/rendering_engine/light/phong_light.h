@@ -22,7 +22,6 @@ public:
     std::vector<spot_light> s_spotLights;
     int s_numPointLights;
     int s_numSpotLights;
-
 };
 
 

@@ -52,7 +52,7 @@ private:
 class skybox_component : public entity_component
 {
 public:
-    skybox_component(float size);
+    skybox_component();
     void operator=(const skybox_component& skyboxRenderer) { }
 
     ~skybox_component();

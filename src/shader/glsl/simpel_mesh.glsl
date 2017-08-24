@@ -1,11 +1,8 @@
 #version 330 core
 
-layout(location = 0) in vec3 position;
-layout(location = 1) in vec2 uv;
-layout(location = 2) in vec3 normal;
-layout(location = 3) in vec3 tangent;
-layout(location = 4) in ivec4 boneIds;
-layout(location = 5) in vec4 weights;
+layout (location = 0) in vec3 position;
+layout (location = 1) in vec2 uv;
+layout (location = 2) in vec3 normal;
 
 out vec2 tex_coord;
 out vec3 world_pos;
@@ -15,31 +12,20 @@ out vec4 shadow_coord;
 uniform mat4 model;
 uniform mat4 mvp;
 uniform mat4 shadow_mvp;
-
-uniform mat4 skinning_mat[10];
 uniform vec3 eye_pos;
 
 const float shadow_distance = 80.0;
 const float transition_amount = 10.0;
 
-
 void main()
 {
-    vec4 new_pos;
-    vec4 new_normal;
-    for (int i = 0; i < 4; i++)
-    {
-        new_pos += (vec4(position, 1.0) * skinning_mat[boneIds[i]]) * weights[i];
-        new_normal += (vec4(normal, 1.0) * skinning_mat[boneIds[i]]) * weights[i];
-    }
-
-    gl_Position = mvp * vec4(new_pos.x, new_pos.z, new_pos.y, 1.0);
+    gl_Position = mvp * vec4(position.x, position.z, position.y, 1.0);
     tex_coord = uv;
-    world_pos = (model * vec4(new_pos.x, new_pos.z, new_pos.y, 1.0)).xyz;
+    world_pos = (model * vec4(position.x, position.z, position.y, 1.0)).xyz;
 
     shadow_coord = shadow_mvp * vec4(world_pos, 1.0);
 
-    normals = new_normal.xyz;
+    normals = normal;
 
     float distance = length(eye_pos - world_pos.xyz);
 
@@ -50,6 +36,7 @@ void main()
 
 //-END_OF_VS-
 #version 330 core
+
 
 in vec2 tex_coord;
 in vec3 world_pos;

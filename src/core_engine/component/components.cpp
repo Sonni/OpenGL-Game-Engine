@@ -26,16 +26,21 @@ animation_component::~animation_component()
 
 void animation_component::init()
 {
-    get_shader()->add_uniform("model_tex");
-
-    get_shader()->add_uniform("view_projection");
     get_shader()->add_uniform("model");
+    get_shader()->add_uniform("mvp");
+    get_shader()->add_uniform("base_color");
+    get_shader()->add_uniform("ambient_light");
+
+    get_shader()->add_uniform("specular_intensity");
+    get_shader()->add_uniform("specular_power");
     get_shader()->add_uniform("eye_pos");
 
-    get_shader()->add_uniform("plane");
+    get_shader()->add_uniform("sampler");
 
     get_shader()->add_uniform("shadow_mvp");
     get_shader()->add_uniform("shadow_tex");
+
+    get_shader()->set_light_loc();
 
     for (int i = 0; i < tna_model.m_bones.size(); i++)
     {
@@ -43,31 +48,34 @@ void animation_component::init()
     }
 
 
-    get_shader()->get_light_loc();
+    get_shader()->set_light_loc();
 
 }
 
 void animation_component::set_all_uni(camera& cam)
 {
-    mat4f worldMatrix = get_transform()->get_transformation();
+    mat4f mvp = cam.get_view_projection() * get_transform()->get_transformation();
 
-    glUniform4f(get_shader()->get_uniform("plane"), cam.get_cutting_plane().get_x(), cam.get_cutting_plane().get_y(), cam.get_cutting_plane().get_z(), cam.get_cutting_plane().get_w());
+    get_shader()->set_uniform_mat4f("mvp", mvp);
+    get_shader()->set_uniform_mat4f("model", get_transform()->get_transformation());
+    get_shader()->set_uniform_3f("base_color", vec3f(1, 1, 1));
+    get_shader()->set_uniform_mat4f("shadow_mvp", *shadow_mvp);
 
-    glUniformMatrix4fv(get_shader()->get_uniform("view_projection"), 1, GL_FALSE, &cam.get_view_projection()[0][0]);
-    glUniformMatrix4fv(get_shader()->get_uniform("model"), 1, GL_FALSE, &worldMatrix[0][0]);
 
-    glUniform3f(get_shader()->get_uniform("eye_pos"), cam.get_transform()->get_pos()->get_x(), cam.get_transform()->get_pos()->get_y(), cam.get_transform()->get_pos()->get_z());
-
-    tex->bind(0);
-    glUniform1i(get_shader()->get_uniform("model_tex"), 0);
-
-    depth_map->bind(1, true);
-    glUniform1i(get_shader()->get_uniform("shadow_tex"), 1);
-
-    glUniformMatrix4fv(get_shader()->get_uniform("shadow_mvp"), 1, GL_FALSE, shadow_mvp[0][0]);
-
+    get_shader()->set_uniform_3f("ambient_light", vec3f(0.3, 0.3, 0.3));
 
     get_shader()->set_light();
+
+    get_shader()->set_uniform_1f("specular_intensity", 1.0f);
+    get_shader()->set_uniform_1f("specular_power", 8.0f);
+
+    get_shader()->set_uniform_3f("eye_pos", *cam.get_transform()->get_pos());
+
+    tex->bind(0);
+    get_shader()->set_uniform_1i("sampler", 0);
+
+    depth_map->bind(1, true);
+    get_shader()->set_uniform_1i("shadow_tex", 1);
 
 }
 
@@ -192,7 +200,7 @@ void gui_component::render() const
 }
 
 /////////////////// SKYBOX ////////////////////
-skybox_component::skybox_component(float size)
+skybox_component::skybox_component()
 {
     std::vector<std::string> tex_names(file_nmes, file_nmes + sizeof(file_nmes) / sizeof(file_nmes[0]));
     tex_loc = load_cube_map(tex_names);
@@ -219,7 +227,10 @@ void skybox_component::set_all_uni(camera& cam)
     fixed_view.m[3][1] = 0;
     fixed_view.m[3][2] = 0;
 
-    mat4f fixed_view_projection = cam.get_projection_matrix() * fixed_view;
+    mat4f scale;
+    scale.init_scale(vec3f(get_transform()->get_scale(), get_transform()->get_scale(), get_transform()->get_scale()));
+
+    mat4f fixed_view_projection = cam.get_projection_matrix() * fixed_view * scale;
 
     get_shader()->set_uniform_mat4f("view_projection", fixed_view_projection);
 

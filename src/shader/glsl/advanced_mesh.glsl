@@ -13,6 +13,10 @@ out vec4 shadow_coord;
 uniform mat4 model;
 uniform mat4 mvp;
 uniform mat4 shadow_mvp;
+uniform vec3 eye_pos;
+
+const float shadow_distance = 80.0;
+const float transition_amount = 10.0;
 
 void main()
 {
@@ -28,6 +32,12 @@ void main()
 
     vec3 biTangent = cross(t, n);
     tbn_mat = mat3(t, biTangent, n);
+
+    float distance = length(eye_pos - world_pos.xyz);
+
+	distance = distance - (shadow_distance - transition_amount);
+	distance = distance / transition_amount;
+	shadow_coord.w = clamp(1.0 - distance, 0.0, 1.0);
 }
 
 //-END_OF_VS-

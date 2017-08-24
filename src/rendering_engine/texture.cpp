@@ -209,14 +209,6 @@ texture::texture(const texture& tex) :
     m_fileName(tex.m_fileName)
 { }
 
-void texture::operator=(texture tex)
-{
-    char* temp[sizeof(texture)/sizeof(char)];
-    memcpy(temp, this, sizeof(texture));
-    memcpy(this, &tex, sizeof(texture));
-    memcpy(&tex, temp, sizeof(texture));
-}
-
 texture::~texture()
 {
     if(m_textureData)

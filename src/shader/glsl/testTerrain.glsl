@@ -15,6 +15,7 @@ out float in_shadow;
 uniform mat4 model;
 uniform mat4 view_projection;
 uniform mat4 shadow_mvp;
+uniform vec3 eye_pos;
 
 uniform vec4 cutting_plane;
 
@@ -43,6 +44,13 @@ void main()
     float tmp = world_position.y - -40.0 + 1.3; // 40 is the height of the water
 	if (tmp > 1) { in_shadow = 1; }
 	else { in_shadow = 0.7; }
+
+
+	float distance = length(eye_pos - world_pos.xyz);
+
+	distance = distance - (shadow_distance - transition_amount);
+	distance = distance / transition_amount;
+	shadow_coord.w = clamp(1.0 - distance, 0.0, 1.0);
 }
 
 

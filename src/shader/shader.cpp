@@ -105,7 +105,10 @@ shader::shader(std::string glsl_file_name)
     }
 
     if (found_shader)
+    {
+        std::cout << "Linking: " << glsl_file_name << std::endl;
         program_id = load(vs_code, fs_code);
+    }
     else
         program_id = 0;
 }
@@ -180,38 +183,3 @@ GLuint shader::load(std::string vs_code, std::string fs_code)
     return ProgramID;
 }
 
-void shader::get_light_loc()
-{
-    for (int i = 0; i < 4; i++)
-    {
-        std::string color = "light_color[" + std::to_string(i) + "]";
-        std::string pos = "light_pos[" + std::to_string(i) + "]";
-        std::string att = "attenuation[" + std::to_string(i) + "]";
-
-        light_color.push_back(get_uni_location(color.c_str()));
-        light_pos.push_back(get_uni_location(pos.c_str()));
-        attenuation.push_back(get_uni_location(att.c_str()));
-    }
-}
-
-void shader::set_light() const
-{
-    if (lights == nullptr)
-        return;
-
-    for(int i = 0; i < 4; i++)
-    {
-        if (i < lights->size())
-        {
-            glUniform3f(light_pos.at(i), lights->at(i).get_pos().get_x(), lights->at(i).get_pos().get_y(), lights->at(i).get_pos().get_z());
-            glUniform3f(light_color.at(i), lights->at(i).get_color().get_x(), lights->at(i).get_color().get_y(), lights->at(i).get_color().get_z());
-            glUniform3f(attenuation.at(i), lights->at(i).get_attenuation().get_x(), lights->at(i).get_attenuation().get_y(), lights->at(i).get_attenuation().get_z());
-        }
-        else
-        {
-            glUniform3f(light_pos.at(i), 0, 0, 0);
-            glUniform3f(light_color.at(i), 0, 0, 0);
-            glUniform3f(attenuation.at(i), 1, 0, 0);
-        }
-    }
-}

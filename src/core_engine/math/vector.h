@@ -222,14 +222,6 @@ public:
                axis * this->dot(axis * (1 - cosAngle)); //Rotation on local Y
     }
 
-    inline vec2<T> get_xy() const { return vec2<T>(get_x(), get_y()); }
-    inline vec2<T> get_yz() const { return vec2<T>(get_y(), get_z()); }
-    inline vec2<T> get_zx() const { return vec2<T>(get_z(), get_x()); }
-
-    inline vec2<T> get_yx() const { return vec2<T>(get_y(), get_x()); }
-    inline vec2<T> get_zy() const { return vec2<T>(get_z(), get_y()); }
-    inline vec2<T> get_xz() const { return vec2<T>(get_x(), get_z()); }
-
     inline T get_x() const { return (*this)[0]; }
     inline T get_y() const { return (*this)[1]; }
     inline T get_z() const { return (*this)[2]; }
@@ -238,13 +230,19 @@ public:
     inline void set_y(const T &y) { (*this)[1] = y; }
     inline void set_z(const T &z) { (*this)[2] = z; }
 
-    inline void set(const T &x, const T &y, const T &z) { set_x(x);
+    inline void set(const T &x, const T &y, const T &z)
+    {
+        set_x(x);
         set_y(y);
-        set_z(z); }
-    inline void set(const vec3<T> &v) {
+        set_z(z);
+    }
+
+    inline void set(const vec3<T> &v)
+    {
         set_x(v.get_x());
         set_y(v.get_y());
-        set_z(v.get_z()); }
+        set_z(v.get_z());
+    }
 protected:
 private:
 };
@@ -281,10 +279,13 @@ public:
     inline void set_z(const T &z) { (*this)[2] = z; }
     inline void set_w(const T &w) { (*this)[3] = w; }
 
-    inline void set(const T &x, const T &y, const T &z, const T &w) { set_x(x);
+    inline void set(const T &x, const T &y, const T &z, const T &w)
+    {
+        set_x(x);
         set_y(y);
         set_z(z);
-        set_w(w); }
+        set_w(w);
+    }
 protected:
 private:
 };
@@ -328,7 +329,7 @@ public:
                axis * this->dot(axis * (1 - cos)); //Rotation on local Y
     }
 
-    vec3f rotate(const quaternion &rotation) const;
+    vec3f rotate(const quaternion& rotation) const;
 
     inline vec3f normalized() const
     {

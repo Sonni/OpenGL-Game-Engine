@@ -23,12 +23,13 @@ Feature:
 - Simple Physics
 - Mouse picking
 - Particle system
+- Frustum culling
 
 
 
 Upcoming:
 - Advanced Physics
-- Phong shading
+- Finishing Skeletal animation
 
 3rd party libraries used by the engine is a follows:
 - SDL2 window and input handling.
