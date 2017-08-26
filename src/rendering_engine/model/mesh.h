@@ -34,6 +34,8 @@ private:
 	GLuint vao;
 	GLuint vab[NUM_BUFFERS];
 	int m_drawCount;
+	bool has_ani = false;
+    int count;
 };
 
 class mesh

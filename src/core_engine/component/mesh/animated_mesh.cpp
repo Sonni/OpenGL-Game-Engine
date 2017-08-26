@@ -1,5 +1,92 @@
 #include "animated_mesh.h"
 
+void set_attribute(GLuint attrib_num, int coord_size, std::vector<float> data)
+{
+    GLuint vboID;
+    glGenBuffers(1, &vboID);
+    glBindBuffer(GL_ARRAY_BUFFER, vboID);
+    glBufferData(GL_ARRAY_BUFFER, data.size() * sizeof(data[0]), &data[0], GL_STATIC_DRAW);
+    glVertexAttribPointer(attrib_num, coord_size, GL_FLOAT, GL_FALSE, 0, 0);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+}
+
+void set_attribute(GLuint attrib_num, int coord_size, std::vector<vec3f> data)
+{
+    GLuint vboID;
+    glGenBuffers(1, &vboID);
+    glBindBuffer(GL_ARRAY_BUFFER, vboID);
+    glBufferData(GL_ARRAY_BUFFER, data.size() * sizeof(data[0]), &data[0], GL_STATIC_DRAW);
+    glVertexAttribPointer(attrib_num, coord_size, GL_FLOAT, GL_FALSE, 0, 0);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+}
+
+void set_attribute(GLuint attrib_num, int coord_size, std::vector<vec2f> data)
+{
+    GLuint vboID;
+    glGenBuffers(1, &vboID);
+    glBindBuffer(GL_ARRAY_BUFFER, vboID);
+    glBufferData(GL_ARRAY_BUFFER, data.size() * sizeof(data[0]), &data[0], GL_STATIC_DRAW);
+    glVertexAttribPointer(attrib_num, coord_size, GL_FLOAT, GL_FALSE, 0, 0);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+}
+
+void set_attribute(GLuint attrib_num, int coord_size, std::vector<int> data)
+{
+    GLuint vboID;
+    glGenBuffers(1, &vboID);
+    glBindBuffer(GL_ARRAY_BUFFER, vboID);
+    glBufferData(GL_ARRAY_BUFFER, data.size() * sizeof(data[0]), &data[0], GL_STATIC_DRAW);
+    glVertexAttribIPointer(attrib_num, coord_size, GL_INT, GL_FALSE, 0);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+}
+void set_attribute(GLuint attrib_num, int coord_size, std::vector<vec3i> data)
+{
+    GLuint vboID;
+    glGenBuffers(1, &vboID);
+    glBindBuffer(GL_ARRAY_BUFFER, vboID);
+    glBufferData(GL_ARRAY_BUFFER, data.size() * sizeof(data[0]), &data[0], GL_STATIC_DRAW);
+    glVertexAttribIPointer(attrib_num, coord_size, GL_INT, GL_FALSE, 0);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+}
+
+
+
+
+std::vector<float> to_array(std::vector<vec3f> v)
+{
+    std::vector<float> r;
+    for (int i = 0; i < v.size(); i++)
+    {
+        r.push_back(v[i].get_x());
+        r.push_back(v[i].get_y());
+        r.push_back(v[i].get_z());
+    }
+    return r;
+}
+
+std::vector<unsigned int> to_array(std::vector<vec3i> v)
+{
+    std::vector<unsigned int> r;
+    for (int i = 0; i < v.size(); i++)
+    {
+        r.push_back((unsigned int) v[i].get_x());
+        r.push_back((unsigned int) v[i].get_y());
+        r.push_back((unsigned int) v[i].get_z());
+    }
+    return r;
+}
+
+std::vector<float> to_array(std::vector<vec2f> v)
+{
+    std::vector<float> r;
+    for (int i = 0; i < v.size(); i++)
+    {
+        r.push_back(v[i].get_x());
+        r.push_back(v[i].get_y());
+    }
+    return r;
+}
+
 animation_component::animation_component(const std::string& file_name, mat4f* shadowMap, texture* depth_map, physics_obj* phy_obj, const std::string& tex_file_name, const std::string& normal_map) :
         _mesh(file_name),
         tna_model(file_name),
@@ -7,7 +94,36 @@ animation_component::animation_component(const std::string& file_name, mat4f* sh
 {
     this->shadow_mvp = shadowMap;
     this->depth_map = depth_map;
-    tex = new texture("default.png");
+    tex = new texture("diffuse.png");
+/*
+
+    vertex_count = tna_model.m_vertices.size();
+
+
+    std::vector<float> vert = to_array(tna_model.m_vertices);
+
+
+    //std::vector<unsigned int> ind = to_array(tna_model.small_ind);
+    std::vector<vec3i> ind = tna_model.m_ind;
+
+    glGenVertexArrays(1, &vao_id);
+    glBindVertexArray(vao_id);
+
+    GLuint vboID;
+    glGenBuffers(1, &vboID);
+    glBindBuffer(GL_ARRAY_BUFFER, vboID);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, ind.size() * sizeof(ind[0]), &ind[0], GL_STATIC_DRAW);
+
+
+
+
+    set_attribute(0, 3, tna_model.m_vertices);
+    set_attribute(1, 2, tna_model.m_uvs);
+    set_attribute(2, 3, tna_model.m_normals);
+    set_attribute(3, 3, tna_model.joint_ids);
+    set_attribute(4, 3, tna_model.m_weights);
+
+    glBindVertexArray(0);*/
 }
 
 animation_component::~animation_component()
@@ -15,117 +131,106 @@ animation_component::~animation_component()
     delete tex;
 }
 
+
 void animation_component::init()
 {
-    get_shader()->add_uniform("model");
-    get_shader()->add_uniform("mvp");
-    get_shader()->add_uniform("base_color");
-    get_shader()->add_uniform("ambient_light");
+    glBindAttribLocation(get_shader()->get_program_id(), 0, "in_position");
+    glBindAttribLocation(get_shader()->get_program_id(), 1, "in_textureCoords");
+    glBindAttribLocation(get_shader()->get_program_id(), 2, "in_normal");
+    glBindAttribLocation(get_shader()->get_program_id(), 3, "in_jointIndices");
+    glBindAttribLocation(get_shader()->get_program_id(), 4, "in_weights");
 
-    get_shader()->add_uniform("specular_intensity");
-    get_shader()->add_uniform("specular_power");
-    get_shader()->add_uniform("eye_pos");
 
-    get_shader()->add_uniform("sampler");
 
-    get_shader()->add_uniform("shadow_mvp");
-    get_shader()->add_uniform("shadow_tex");
+    get_shader()->add_uniform("diffuseMap");
+    get_shader()->add_uniform("projectionViewMatrix");
 
-    get_shader()->set_light_loc();
-
-    for (int i = 0; i < tna_model.m_bones.size(); i++)
+   for (int i = 0; i < 50; i++)
     {
-        get_shader()->get_uniform("skinning_mat[" + std::to_string(i) + "]");
+        std::ostringstream spotLightNameBuilder;
+        spotLightNameBuilder << "jointTransforms[" << i << "]";
+        std::string n = spotLightNameBuilder.str();
+
+        get_shader()->add_uniform(n);
     }
 
-
-    get_shader()->set_light_loc();
 
 }
 
 void animation_component::set_all_uni(camera& cam)
 {
-    mat4f mvp = cam.get_view_projection() * get_transform()->get_transformation();
 
-    get_shader()->set_uniform_mat4f("mvp", mvp);
-    get_shader()->set_uniform_mat4f("model", get_transform()->get_transformation());
-    get_shader()->set_uniform_3f("base_color", vec3f(1, 1, 1));
-    get_shader()->set_uniform_mat4f("shadow_mvp", *shadow_mvp);
+    get_shader()->set_uniform_mat4f("projectionViewMatrix", cam.get_view_projection() * get_transform()->get_transformation());
 
-
-    get_shader()->set_uniform_3f("ambient_light", vec3f(0.3, 0.3, 0.3));
-
-    get_shader()->set_light();
-
-    get_shader()->set_uniform_1f("specular_intensity", 1.0f);
-    get_shader()->set_uniform_1f("specular_power", 8.0f);
-
-    get_shader()->set_uniform_3f("eye_pos", *cam.get_transform()->get_pos());
 
     tex->bind(0);
-    get_shader()->set_uniform_1i("sampler", 0);
+    get_shader()->set_uniform_1i("diffuseMap", 0);
 
-    depth_map->bind(1, true);
-    get_shader()->set_uniform_1i("shadow_tex", 1);
 
 }
 
 float counter = 0;
 float animationCounter = 0;
 float leftOver = 0;
+
+void animation_component::add_child(joint* r) const
+{
+
+    mat4f ani = r->animatedTransform;
+
+    //std::cout << r->name << " : " << r->id << " : " << ani << std::endl;
+
+
+    get_shader()->set_uniform_mat4f("jointTransforms[" + std::to_string(r->id) + "]", ani);
+
+    for (joint* j : r->m_children)
+    {
+        add_child(j);
+    }
+
+}
+
 void animation_component::update(float delta, const camera &cam)
 {
-    if (phy_obj != NULL)
-    {
-        phy_obj->get_collider()->set_pos(*get_transform()->get_pos());
 
-        if (cam.get_frustum().collider_in_frustum(phy_obj->get_collider())) {
-            draw = true;
-        }
-        else {
-            draw = false;
-        }
-    }
+    tna_model.update();
 
-    counter += 500.0f * delta;
-
-    if(counter > 10)
-    {
-        animationCounter += 1;
-        leftOver += fmodf(counter, 10);
-
-        if(leftOver > 10)
-        {
-            animationCounter++;
-            leftOver = 0;
-        }
-
-        if(animationCounter >= 20 * 2 + tna_model.m_animation[0].m_time.size())
-        {
-            animationCounter = 0;
-        }
-        else
-        {
-            tna_model.CalcBonesWorldMatrix(animationCounter);
-            counter = 0;
-        }
-    }
 
 }
 
 void animation_component::render() const
 {
-    if (draw)
-    {
-        std::vector<mat4f> boneMats;
 
-        for (int i = 0; i < tna_model.m_bones.size(); i++) {
-            std::ostringstream name;
-            name << "skinning_mat[" << i << "]";
 
-            get_shader()->set_uniform_mat4f(name.str(), tna_model.m_bones[i].m_skinningMatrix);
-        }
+    add_child(tna_model.m_root);
 
-        _mesh.draw();
-    }
+    glEnable(GL_DEPTH_TEST);
+    glDisable(GL_BLEND);
+
+    glEnable(GL_DEPTH_TEST);
+    glDepthFunc(GL_LEQUAL);
+
+    glDisable(GL_CULL_FACE);
+
+/*
+    glBindVertexArray(vao_id);
+    glEnableVertexAttribArray(0);
+    glEnableVertexAttribArray(1);
+    glEnableVertexAttribArray(2);
+    glEnableVertexAttribArray(3);
+    glEnableVertexAttribArray(4);
+
+    glDrawElements(GL_TRIANGLES, vertex_count, GL_UNSIGNED_INT, 0);
+
+
+    glDisableVertexAttribArray(0);
+    glDisableVertexAttribArray(1);
+    glDisableVertexAttribArray(2);
+    glDisableVertexAttribArray(3);
+    glDisableVertexAttribArray(4);
+    */
+
+    _mesh.draw();
+
+
 }

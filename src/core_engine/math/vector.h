@@ -3,6 +3,7 @@
 
 #include <math.h>
 #include <iostream>
+#include <iomanip>
 
 class quaternion;
 
@@ -52,6 +53,16 @@ public:
     inline T length() const { return sqrt(length_sq()); }
     inline vec<T,D> normalized() const { return *this/ length(); }
     inline vec<T,D> lerp(const vec<T, D> &r, T lerpFactor) const { return (r - *this) * lerpFactor + *this; }
+
+    inline vec<T,D> interpolate(const vec<T, D> &r, float progression) const
+    {
+        vec<T, D> res;
+
+        for(unsigned int i = 0; i < D; i++)
+            res[i] = (*this)[i] + (r[i] - (*this)[i]) * progression;
+
+        return res;
+    }
 
     inline vec<T, D> operator+(const vec<T,D>& r) const
     {
@@ -140,7 +151,7 @@ public:
         for (unsigned int i = 0; i < D; i++)
             result += std::to_string(r.values[i]) + " ";
 
-        out << result << std::endl;
+        out <<  result << std::endl;
         return out;
     }
 protected:

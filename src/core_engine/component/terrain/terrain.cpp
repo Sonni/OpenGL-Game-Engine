@@ -114,30 +114,22 @@ void terrain_component::set_all_uni(camera& cam)
     r_tex->bind(1);
     get_shader()->set_uniform_1i("r_tex", 1);
 
-
     g_tex->bind(2);
     get_shader()->set_uniform_1i("g_tex", 2);
-
 
     b_tex->bind(3);
     get_shader()->set_uniform_1i("b_tex", 3);
 
-
     blend_map->bind(4);
     get_shader()->set_uniform_1i("blend_tex", 4);
-
 
     depth_map->bind(5, true);
     get_shader()->set_uniform_1i("shadow_tex", 5);
 
-
     cur->bind(6);
     get_shader()->set_uniform_1i("shadow_tex2", 6);
 
-
     get_shader()->set_light();
-
-
 }
 
 float move_factor = 0;
@@ -166,7 +158,6 @@ void terrain_component::update(float delta, const camera &cam)
     {
         cur_tex = 0;
     }
-
 }
 
 void terrain_component::render() const
@@ -372,22 +363,17 @@ float terrain_component::get_terrain_y(float world_x, float world_z)
     int x_grid = (int) floor(terrain_x / grid_size);
     int z_grid = (int) floor(terrain_z / grid_size);
 
-
-
     float x = (float) fmod(terrain_x, grid_size) / grid_size;
     float z = (float) fmod(terrain_z, grid_size) / grid_size;
     float terrain_y;
 
     if (x <= (1 - z))
     {
-        terrain_y = barry_centric(vec3f(0, heights[x_grid][z_grid], 0), vec3f(1, heights[x_grid + 1][z_grid], 0),
-                                  vec3f(0, heights[x_grid][z_grid + 1], 1), vec2f(x, z));
+        terrain_y = barry_centric(vec3f(0, heights[x_grid][z_grid], 0), vec3f(1, heights[x_grid + 1][z_grid], 0), vec3f(0, heights[x_grid][z_grid + 1], 1), vec2f(x, z));
     }
     else
     {
-        terrain_y = barry_centric(vec3f(1, heights[x_grid + 1][z_grid], 0),
-                                  vec3f(1, heights[x_grid + 1][z_grid + 1], 1),
-                                  vec3f(0, heights[x_grid][z_grid + 1], 1), vec2f(x, z));
+        terrain_y = barry_centric(vec3f(1, heights[x_grid + 1][z_grid], 0), vec3f(1, heights[x_grid + 1][z_grid + 1], 1), vec3f(0, heights[x_grid][z_grid + 1], 1), vec2f(x, z));
     }
     return terrain_y;
 }

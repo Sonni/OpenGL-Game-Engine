@@ -86,7 +86,7 @@ bool core_engine::run()
 
     entity* post_p = create_mesh("gaussian_blur.glsl", vec3f(), 1, new blur_component(&post_processing, hud_mesh, &blur));
     entity* game_text = create_mesh("text.glsl", vec3f(), 1, new text_component("3D Game Engine", "arial", 3.0f, vec2f(0.0f, 0.0f), 1.0f, true));
-    entity* box_animation = create_mesh_phong("animation.glsl", vec3f(50, 10, 50), 1, &l, new animation_component("box", &shadow_mvp, &depth_map, new physics_obj(new aabb(vec3f(0, 0, 0), vec3f(s, s, s))),  "", ""));
+    entity* box_animation = create_mesh_phong("animation.glsl", vec3f(50, 10, 50), 1, &l, new animation_component("running_man", &shadow_mvp, &depth_map, new physics_obj(new aabb(vec3f(0, 0, 0), vec3f(s, s, s))),  "", ""));
     entity* monkey = create_mesh_phong("advanced_mesh.glsl", vec3f(30, 45, 40), 5, &l, new advanced_mesh(new mesh("monkey"), &shadow_mvp, &depth_map, vec3f(0.3, 0.3, 0.3), p_player, "default.png"));
     entity* monkey2 = create_mesh_phong("simpel_mesh.glsl", vec3f(30, 65, 60), 5, &l, new advanced_mesh(new mesh("monkey"), &shadow_mvp, &depth_map, vec3f(0.3, 0.3, 0.3), mk2, "bricks.jpg"));
     entity* skybox = create_mesh("skybox.glsl", vec3f(), 2, new skybox_component());

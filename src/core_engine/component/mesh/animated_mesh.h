@@ -16,6 +16,9 @@ public:
     animation_component(const std::string& file_name, mat4f* shadowMap, texture* depth_map, physics_obj* phy_obj = NULL, const std::string& tex_file_name = "default.png", const std::string& normal_map = "default_normal.png");
     ~animation_component();
 
+
+    void add_child(joint* r) const;
+
     virtual void init();
     virtual void set_all_uni(camera& cam);
 
@@ -32,6 +35,10 @@ private:
     texture* tex;
     physics_obj* phy_obj;
     bool draw = true;
+    int vertex_count;
+
+    GLuint vao_id;
+
 
     texture* depth_map;
     mat4f* shadow_mvp;

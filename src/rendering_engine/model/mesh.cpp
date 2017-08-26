@@ -10,11 +10,11 @@ std::map<std::string, mesh_data*> mesh::s_resourceMap;
 mesh_data::mesh_data(const indexed_model& model) :
 	m_drawCount((int) model.get_indices().size())
 {
-	if(!model.is_valid())
+	/*if(!model.is_valid())
 	{
 		std::cout << "Model is not valid" << std::endl;
 		assert(0 != 0);
-	}
+	}*/
 
     
 	glGenVertexArrays(1, &vao);
@@ -36,26 +36,37 @@ mesh_data::mesh_data(const indexed_model& model) :
 	glEnableVertexAttribArray(2);
 	glVertexAttribPointer(2, 3, GL_FLOAT, GL_FALSE, 0, 0);
 	
-	glBindBuffer(GL_ARRAY_BUFFER, vab[TANGENT_VB]);
-	glBufferData(GL_ARRAY_BUFFER, model.get_tangents().size() * sizeof(model.get_tangents()[0]), &model.get_tangents()[0], GL_STATIC_DRAW);
-	glEnableVertexAttribArray(3);
-	glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, 0, 0);
+
 
     if(model.has_animation())
     {
+
+
         glBindBuffer(GL_ARRAY_BUFFER, vab[BONEIDS_VB]);
         glBufferData(GL_ARRAY_BUFFER, model.get_bone_ids().size() * sizeof(model.get_bone_ids()[0]), &model.get_bone_ids()[0], GL_STATIC_DRAW);
-        glEnableVertexAttribArray(4);
-        glVertexAttribIPointer(4, 4, GL_INT, GL_FALSE, 0);
+        glEnableVertexAttribArray(3);
+        glVertexAttribIPointer(3, 3, GL_INT, GL_FALSE, 0);
 
         glBindBuffer(GL_ARRAY_BUFFER, vab[WEIGHTS_VB]);
         glBufferData(GL_ARRAY_BUFFER, model.get_weights().size() * sizeof(model.get_weights()[0]), &model.get_weights()[0], GL_STATIC_DRAW);
-        glEnableVertexAttribArray(5);
-        glVertexAttribPointer(5, 4, GL_FLOAT, GL_FALSE, 0, 0);
+        glEnableVertexAttribArray(4);
+        glVertexAttribPointer(4, 3, GL_FLOAT, GL_FALSE, 0, 0);
+
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vab[INDEX_VB]);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, model.get_indices().size() * sizeof(model.get_indices()[0]),
+                     &model.get_indices()[0], GL_STATIC_DRAW);
     }
-	
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vab[INDEX_VB]);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, model.get_indices().size() * sizeof(model.get_indices()[0]), &model.get_indices()[0], GL_STATIC_DRAW);
+    else
+    {
+        glBindBuffer(GL_ARRAY_BUFFER, vab[TANGENT_VB]);
+        glBufferData(GL_ARRAY_BUFFER, model.get_tangents().size() * sizeof(model.get_tangents()[0]), &model.get_tangents()[0], GL_STATIC_DRAW);
+        glEnableVertexAttribArray(3);
+        glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, 0, 0);
+
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, vab[INDEX_VB]);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, model.get_indices().size() * sizeof(model.get_indices()[0]),
+                     &model.get_indices()[0], GL_STATIC_DRAW);
+    }
 }
 
 mesh_data::~mesh_data()
@@ -67,7 +78,7 @@ mesh_data::~mesh_data()
 void mesh_data::draw() const
 {
 	glBindVertexArray(vao);
-	
+
     glDrawElements(GL_TRIANGLES, m_drawCount, GL_UNSIGNED_INT, 0);
 }
 
@@ -114,7 +125,10 @@ mesh::mesh(const std::string& fileName, bool flipUVS)
         //std::vector<Vector3f> tangents = calc_tangents(model);
 
 
-        m_meshData = new mesh_data(model.finalize());
+        if (has_animation)
+            m_meshData = new mesh_data(model);
+        else
+            m_meshData = new mesh_data(model.finalize());
         s_resourceMap.insert(std::pair<std::string, mesh_data*>(fileName, m_meshData));
     }
 }

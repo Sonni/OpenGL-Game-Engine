@@ -90,6 +90,28 @@ public:
         return quaternion(lerp(correctedDest, lerpFactor).normalized());
     }
 
+    quaternion interpolate(const quaternion& q, float blend1)
+    {
+        quaternion res;
+        float blend2 = 1.0f - blend1;
+        if ((*this).dot(q) < 0)
+        {
+            res.set_w(blend2 * (*this).get_w() + blend1 * -q.get_w());
+            res.set_x(blend2 * (*this).get_x() + blend1 * -q.get_x());
+            res.set_y(blend2 * (*this).get_y() + blend1 * -q.get_y());
+            res.set_z(blend2 * (*this).get_z() + blend1 * -q.get_z());
+        }
+        else
+        {
+            res.set_w(blend2 * (*this).get_w() + blend1 * q.get_w());
+            res.set_x(blend2 * (*this).get_x() + blend1 * q.get_x());
+            res.set_y(blend2 * (*this).get_y() + blend1 * q.get_y());
+            res.set_z(blend2 * (*this).get_z() + blend1 * q.get_z());
+        }
+
+        return quaternion(res.normalized());
+    }
+
     inline quaternion s_lerp(const quaternion &r, float lerpFactor, bool shortestPath) const
     {
         static const float EPSILON = 1e3;

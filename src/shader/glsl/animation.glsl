@@ -1,86 +1,53 @@
 #version 330 core
 
-layout(location = 0) in vec3 position;
-layout(location = 1) in vec2 uv;
-layout(location = 2) in vec3 normal;
-layout(location = 3) in vec3 tangent;
-layout(location = 4) in ivec4 boneIds;
-layout(location = 5) in vec4 weights;
+layout(location = 0) in vec3 in_position;
+layout(location = 1) in vec2 in_textureCoords;
+layout(location = 2) in vec3 in_normal;
+layout(location = 3) in ivec3 in_jointIndices;
+layout(location = 4) in vec3 in_weights;
 
-out vec2 tex_coord;
-out vec3 world_pos;
-out vec3 normals;
-out vec4 shadow_coord;
+const int MAX_JOINTS = 50;//max joints allowed in a skeleton
+const int MAX_WEIGHTS = 3;//max number of joints that can affect a vertex
 
-uniform mat4 model;
-uniform mat4 mvp;
-uniform mat4 shadow_mvp;
+out vec2 pass_textureCoords;
 
-uniform mat4 skinning_mat[10];
-uniform vec3 eye_pos;
-
-const float shadow_distance = 80.0;
-const float transition_amount = 10.0;
+uniform mat4 jointTransforms[MAX_JOINTS];
+uniform mat4 projectionViewMatrix;
 
 
 void main()
 {
-    vec4 new_pos;
-    vec4 new_normal;
-    for (int i = 0; i < 4; i++)
-    {
-        new_pos += (vec4(position, 1.0) * skinning_mat[boneIds[i]]) * weights[i];
-        new_normal += (vec4(normal, 1.0) * skinning_mat[boneIds[i]]) * weights[i];
-    }
+   vec4 totalLocalPos = vec4(0.0);
+   	vec4 totalNormal = vec4(0.0);
 
-    gl_Position = mvp * vec4(new_pos.x, new_pos.z, new_pos.y, 1.0);
-    tex_coord = uv;
-    world_pos = (model * vec4(new_pos.x, new_pos.z, new_pos.y, 1.0)).xyz;
+   	for(int i=0;i<MAX_WEIGHTS;i++){
+   		mat4 jointTransform = jointTransforms[in_jointIndices[i]];
+   		vec4 posePosition = jointTransform * vec4(in_position, 1.0);
+   		totalLocalPos += posePosition * in_weights[i];
 
-    shadow_coord = shadow_mvp * vec4(world_pos, 1.0);
+   		vec4 worldNormal = jointTransform * vec4(in_normal, 0.0);
+   		totalNormal += worldNormal * in_weights[i];
 
-    normals = new_normal.xyz;
+   	}
 
-    float distance = length(eye_pos - world_pos.xyz);
 
-	distance = distance - (shadow_distance - transition_amount);
-	distance = distance / transition_amount;
-	shadow_coord.w = clamp(1.0 - distance, 0.0, 1.0);
+   	gl_Position = projectionViewMatrix *  totalLocalPos;
+   	pass_textureCoords = in_textureCoords;
 }
 
 //-END_OF_VS-
 #version 330 core
 
-in vec2 tex_coord;
-in vec3 world_pos;
-in vec4 shadow_coord;
-in vec3 normals;
+in vec2 pass_textureCoords;
 
-out vec4 out_color;
+out vec4 out_colour;
 
-uniform vec3 base_color;
-uniform vec3 ambient_light;
-uniform sampler2D sampler;
-uniform sampler2D shadow_tex;
+uniform sampler2D diffuseMap;
 
-uniform float specular_intensity;
-uniform float specular_power;
-
-#include <light_h.glsl>
-#include <shadow_h.glsl>
 
 void main()
 {
-    float light_factor = calc_shadow(shadow_coord, shadow_tex);
+    vec4 diffuseColour = texture(diffuseMap, pass_textureCoords);
 
-    vec4 color = vec4(base_color, 1);
-    vec4 tex_color = texture(sampler, tex_coord.xy);
-
-    if(tex_color != vec4(0,0,0,0))
-        color *= tex_color;
-
-    vec4 total_light = vec4(ambient_light, 1);
-    total_light += calc_light_effect(world_pos, normalize(normals), light_factor, specular_intensity, specular_power);
-
-    out_color = color * total_light;
+    	out_colour = diffuseColour;
 }
