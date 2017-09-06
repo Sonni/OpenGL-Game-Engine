@@ -3,7 +3,7 @@
 
 
 
-void Loader::LoadWeights(const std::string& line, std::vector<float>& weightsRef)
+void Loader::load_weights(const std::string &line, std::vector<float> &weightsRef)
 {
     std::string weight = line;
     weight.erase(0, 3);
@@ -25,18 +25,19 @@ void Loader::load_joint_ids(const std::string &line, std::vector<int> &ids)
 
 bool set_children(joint* child, joint* parent)
 {
-
     if (child->parent_id == parent->id)
     {
-
-        parent->m_children.push_back(child);
+        parent->children.push_back(child);
 
         return true;
     }
-    for (joint* j : parent->m_children)
+    for (joint* j : parent->children)
     {
-        if (set_children(child, j)) return true;
+        if (set_children(child, j))
+            return true;
     }
+
+    return false;
 }
 
 void Loader::load_joints(const std::string &line, joint* root)
@@ -54,7 +55,7 @@ void Loader::load_joints(const std::string &line, joint* root)
 
 
     joint* r = new joint();
-    r->localBindTransform = m;
+    r->inverse_bind_transform = m.transpose();
     r->id = stoi(s[2]);
     r->parent_id = stoi(s[4]);
     r->name = s[0];
@@ -75,29 +76,25 @@ void load_joint(std::string l, std::map<std::string, joint_transform>* m)
 
     std::string joint_name = s[1];
 
-    joint_transform j;
-    j.pos = vec3f(stof(s[3]), stof(s[4]), stof(s[5]));
-    j.rot = quaternion(stof(s[7]), stof(s[8]), stof(s[9]), stof(s[10]));
 
-    (*m)[joint_name] = j;
+    (*m)[joint_name] = joint_transform(vec3f(stof(s[3]), stof(s[4]), stof(s[5])), quaternion(stof(s[7]), stof(s[8]), stof(s[9]), stof(s[10])));
 }
 
 void Loader::load_keyframe(const std::string &line, std::vector<keyframe>& keyframes)
 {
-    keyframe k;
     std::string l = line;
     l.erase(0, 10);
     std::vector<std::string> s = util::split_string(l, ' ');
 
-    float time_stamp = stof(s[0]);
-    k.time_stamp = time_stamp;
-    k.pose = new std::map<std::string, joint_transform>;
+    keyframe k;
+    k.poses = new std::map<std::string, joint_transform>;
+    k.time_stamp = stof(s[0]);
 
     std::vector<std::string> j = util::split_string(l, 'j');
 
     for (int i = 1; i < j.size(); i++)
     {
-        load_joint(j[i], k.pose);
+        load_joint(j[i], k.poses);
     }
 
     keyframes.push_back(k);

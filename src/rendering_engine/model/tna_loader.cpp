@@ -1,10 +1,9 @@
-#include "tnaLoader.h"
+#include "tna_loader.h"
+#include "../../core_engine/util/util.h"
 #include <fstream>
-#include <iomanip>
 
 
-
-TNAModel::TNAModel(const std::string& fileName)
+tna_model::tna_model(const std::string& fileName)
 {
     std::setprecision(9);
 
@@ -35,23 +34,23 @@ TNAModel::TNAModel(const std::string& fileName)
             {
                 case 'v':
                     if(lineCStr[1] == 't')
-                        LoadUvs(line);
+                        load_uvs(line);
                     else if(lineCStr[1] == 'n')
-                        LoadNormals(line);
+                        load_normals(line);
                     else if(lineCStr[1] == ':' || lineCStr[1] == '\t')
-                        LoadVertices(line);
+                        load_vertices(line);
                     break;
                 case 'f':
-                    LoadFaces(line);
+                    load_faces(line);
                     break;
                 case 'r':
-                    LoadSmallFaces(line);
+                    load_reduced_faces(line);
                     break;
                 case 'l':
-                    LoadLen(line);
+                    load_animation_len(line);
                     break;
                 case 'w':
-                    Loader::LoadWeights(line, m_weights);
+                    Loader::load_weights(line, m_weights);
                     break;
                 case 'j':
                     if(lineCStr[1] == '_')
@@ -76,10 +75,10 @@ TNAModel::TNAModel(const std::string& fileName)
         std::cerr << "Unable to load mesh: " << path << std::endl;
     }
 
-    m_root->calcInverseBindTransform(mat4f().init_identity());
+    m_root->calc_inverse_bind(mat4f().init_identity());
 }
 
-indexed_model TNAModel::to_indexed_model()
+indexed_model tna_model::to_indexed_model()
 {
     indexed_model result;
     result.set_is_animated(has_animation);
@@ -118,13 +117,10 @@ indexed_model TNAModel::to_indexed_model()
 
     if (!has_animation) result.calc_tangents();
 
-
-
-
     return result;
 }
 
-void TNAModel::LoadVertices(const std::string& line)
+void tna_model::load_vertices(const std::string &line)
 {
     std::string vert_line = line;
     vert_line.erase(0, 3);
@@ -134,7 +130,7 @@ void TNAModel::LoadVertices(const std::string& line)
         vertices.push_back(vec3f(std::stof(vertArray[i]), std::stof(vertArray[i + 1]), std::stof(vertArray[i + 2])));
 }
 
-void TNAModel::LoadUvs(const std::string& line)
+void tna_model::load_uvs(const std::string &line)
 {
     std::string uv_line = line;
     uv_line.erase(0, 4);
@@ -144,7 +140,7 @@ void TNAModel::LoadUvs(const std::string& line)
         uvs.push_back(vec2f(std::stof(uvArray[i]), std::stof(uvArray[i + 1])));
 }
 
-void TNAModel::LoadNormals(const std::string& line)
+void tna_model::load_normals(const std::string &line)
 {
     std::string normale_line = line;
     normale_line.erase(0, 4);
@@ -154,7 +150,7 @@ void TNAModel::LoadNormals(const std::string& line)
         normals.push_back(vec3f(std::stof(normalArray[i]), std::stof(normalArray[i + 1]), std::stof(normalArray[i + 2])));
 }
 
-void TNAModel::LoadFaces(const std::string& line)
+void tna_model::load_faces(const std::string &line)
 {
     std::string faces = line;
     faces.erase(0, 3);
@@ -167,7 +163,7 @@ void TNAModel::LoadFaces(const std::string& line)
     }
 }
 
-void TNAModel::LoadSmallFaces(const std::string& line)
+void tna_model::load_reduced_faces(const std::string &line)
 {
     std::string faces = line;
     faces.erase(0, 4);
@@ -182,7 +178,7 @@ void TNAModel::LoadSmallFaces(const std::string& line)
     }
 }
 
-void TNAModel::LoadLen(const std::string& line)
+void tna_model::load_animation_len(const std::string &line)
 {
     animation_len = stof(util::split_string(line, ' ')[1]);
 }

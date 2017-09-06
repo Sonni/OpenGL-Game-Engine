@@ -1,12 +1,12 @@
 #ifndef ___D_rendering_engine__tennaLoader__
 #define ___D_rendering_engine__tennaLoader__
 
-#include <iomanip>
-#include "indexed_model.h"
 #include "loader.h"
-#include "../../core_engine/util/util.h"
+#include "indexed_model.h"
 
-class TNAModel
+#
+
+class tna_model
 {
 public:
     std::vector<vec3f> vertices;
@@ -28,25 +28,27 @@ public:
     float animationTime = 0;
 
 
-    TNAModel(const std::string& fileName);
+    tna_model(const std::string& fileName);
 
     bool has_animation = false;
 
-    void update()
+    void update(float delta)
     {
-        inc_time();
-        set_joints_pose(calc_animation(), m_root, mat4f().init_identity());
-    }
-
-
-    void inc_time()
-    {
-        animationTime += 0.02;
+        animationTime += delta;
         if (animationTime > animation_len)
         {
             animationTime = (float) fmod(animationTime, animation_len);
         }
+
+        set_joints_pose(calc_animation(), m_root, mat4f().init_identity());
     }
+
+    inline void set_time(float time)
+    {
+        animationTime = time;
+    }
+
+
 
     std::map<std::string, mat4f> calc_animation()
     {
@@ -59,13 +61,13 @@ public:
         mat4f currentLocalTransform = currentPose[_joint->name];
         mat4f currentTransform = parentTransform * currentLocalTransform;
 
-        for (joint* childJoint : _joint->m_children)
+        for (joint* childJoint : _joint->children)
         {
             set_joints_pose(currentPose, childJoint, currentTransform);
         }
 
-        currentTransform = currentTransform * _joint->inverseBindTransform;
-        _joint->animatedTransform = currentTransform;
+        currentTransform = currentTransform * _joint->inverse_bind_transform;
+        _joint->animated_transform = currentTransform;
     }
 
     std::vector<keyframe> get_prev_and_next_frame()
@@ -100,12 +102,12 @@ public:
         std::map<std::string, joint_transform>::iterator it;
         std::map<std::string, mat4f> currentPose;
 
-        for ( it = previousFrame.pose->begin(); it != previousFrame.pose->end(); it++ )
+        for (it = previousFrame.poses->begin(); it != previousFrame.poses->end(); it++)
         {
-            joint_transform previousTransform = (*previousFrame.pose)[it->first];
-            joint_transform nextTransform = (*nextFrame.pose)[it->first];
+            joint_transform previousTransform = (*previousFrame.poses)[it->first];
+            joint_transform nextTransform = (*nextFrame.poses)[it->first];
             joint_transform currentTransform = interpolate(previousTransform, nextTransform, progression);
-            currentPose[it->first] = currentTransform.getLocalTransform();
+            currentPose[it->first] = currentTransform.get_local_transform();
         }
 
         return currentPose;
@@ -113,20 +115,17 @@ public:
 
     joint_transform interpolate(joint_transform frameA, joint_transform frameB, float progression)
     {
-        joint_transform res;
-        res.pos = vec3f(frameA.pos.interpolate(frameB.pos, progression));
-        res.rot = frameA.rot.interpolate(frameB.rot, progression);
-        return res;
+        return joint_transform(vec3f(frameA.get_pos().interpolate(frameB.get_pos(), progression)), frameA.get_rot().interpolate(frameB.get_rot(), progression));
     }
 
     indexed_model to_indexed_model();
 private:
-    void LoadVertices(const std::string& line);
-    void LoadUvs(const std::string& line);
-    void LoadNormals(const std::string& line);
-    void LoadFaces(const std::string& line);
-    void LoadSmallFaces(const std::string& line);
-    void LoadLen(const std::string& line);
+    void load_vertices(const std::string &line);
+    void load_uvs(const std::string &line);
+    void load_normals(const std::string &line);
+    void load_faces(const std::string &line);
+    void load_reduced_faces(const std::string &line);
+    void load_animation_len(const std::string &line);
 
     int count = 0; //To get the root
     std::string m_fileName;

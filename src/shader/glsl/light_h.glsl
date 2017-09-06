@@ -66,7 +66,6 @@ vec4 calcLight(BaseLight base, vec3 direction, vec3 world_pos, vec3 normal, floa
         }
     }
 
-
     return max(diffuseColor * light_factor, 0.4) + specularColor;
 }
 

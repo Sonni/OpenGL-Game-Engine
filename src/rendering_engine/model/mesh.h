@@ -34,14 +34,13 @@ private:
 	GLuint vao;
 	GLuint vab[NUM_BUFFERS];
 	int m_drawCount;
-	bool has_ani = false;
     int count;
 };
 
 class mesh
 {
 public:
-	mesh(const std::string& meshName, const indexed_model& model);
+	mesh(const std::string& meshName, const indexed_model& model, bool is_animated = false);
 	mesh(const std::string& fileName, bool flipUVS = false);
 	mesh(const mesh& mesh);
 	virtual ~mesh();

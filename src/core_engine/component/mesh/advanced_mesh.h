@@ -14,7 +14,7 @@
 class advanced_mesh : public entity_component
 {
 public:
-    advanced_mesh(mesh* _mesh, mat4f* shadowMap, texture* depth_map, const vec3f& ambient, physics_obj* phy_obj = NULL, const std::string& tex_name = "default.png", const std::string& normal_name = "default_normal.jpg", const std::string& disp_name = "default_disp.png") :
+    advanced_mesh(mesh* _mesh, mat4f* shadowMap, texture* depth_map, const vec3f& ambient, physics_obj* phy_obj = NULL, const std::string& tex_name = "default.png", const std::string& normal_name = "default_normal.jpg", const std::string& disp_name = "default_disp.png", const std::string& specular_name = "default.png") :
             _mesh(_mesh)
             , s_ambientLight(ambient),
             phy_obj(phy_obj)
@@ -22,6 +22,7 @@ public:
         tex = new texture(tex_name);
         normal = new texture("normal/" + normal_name);
         disp_map = new texture("disp/" + disp_name);
+        specular_map = new texture("specular/" + specular_name);
 
         this->shadow_mvp = shadowMap;
         this->depth_map = depth_map;
@@ -41,6 +42,7 @@ public:
         get_shader()->add_uniform("sampler");
         get_shader()->add_uniform("normal_map");
         get_shader()->add_uniform("disp_tex");
+        get_shader()->add_uniform("specu_tex");
 
         get_shader()->add_uniform("shadow_mvp");
         get_shader()->add_uniform("shadow_tex");
@@ -79,6 +81,9 @@ public:
 
         depth_map->bind(3, true);
         get_shader()->set_uniform_1i("shadow_tex", 3);
+
+        specular_map->bind(4);
+        get_shader()->set_uniform_1i("specu_tex", 4);
     }
 
     virtual void update(float delta, const camera &cam)
@@ -100,7 +105,16 @@ public:
     {
         if (draw)
         {
+            glDisable(GL_CULL_FACE);
+            glEnable(GL_BLEND);
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
             _mesh->draw();
+
+            glDisable(GL_BLEND);
+
+
+            glEnable(GL_CULL_FACE);
         }
     }
 
@@ -116,6 +130,7 @@ private:
     texture* tex;
     texture* normal;
     texture* disp_map;
+    texture* specular_map;
 
     mesh* _mesh;
     physics_obj* phy_obj;

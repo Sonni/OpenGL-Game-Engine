@@ -40,6 +40,7 @@ public:
         }
     }
 
+    int offset = 0;
     void update_terrain(std::vector<terrain_component*> terrain, std::vector<entity*> objs)
     {
         for (terrain_component* t : terrain)
@@ -50,8 +51,8 @@ public:
                 float y = t->get_terrain_y(e->get_transform()->get_pos()->get_x(),
                                            e->get_transform()->get_pos()->get_z());
 
-                if (y > -1000 && y + 5 > pos.get_y()) {
-                    e->get_transform()->get_pos()->set(pos.get_x(), y + 5, pos.get_z());
+                if (y > -1000 && y + offset > pos.get_y()) {
+                    e->get_transform()->get_pos()->set(pos.get_x(), y + offset, pos.get_z());
                 }
             }
         }

@@ -78,18 +78,6 @@ public:
         (*this)[2] = (*this)[2] / l;
     }
 
-    inline quaternion n_lerp(const quaternion &r, float lerpFactor, bool shortestPath) const
-    {
-        quaternion correctedDest;
-
-        if(shortestPath && this->dot(r) < 0)
-            correctedDest = r * -1;
-        else
-            correctedDest = r;
-
-        return quaternion(lerp(correctedDest, lerpFactor).normalized());
-    }
-
     quaternion interpolate(const quaternion& q, float blend1)
     {
         quaternion res;
@@ -110,6 +98,18 @@ public:
         }
 
         return quaternion(res.normalized());
+    }
+
+    inline quaternion n_lerp(const quaternion &r, float lerpFactor, bool shortestPath) const
+    {
+        quaternion correctedDest;
+
+        if(shortestPath && this->dot(r) < 0)
+            correctedDest = r * -1;
+        else
+            correctedDest = r;
+
+        return quaternion(lerp(correctedDest, lerpFactor).normalized());
     }
 
     inline quaternion s_lerp(const quaternion &r, float lerpFactor, bool shortestPath) const

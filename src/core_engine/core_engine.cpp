@@ -66,7 +66,7 @@ bool core_engine::run()
     water_fbo wfb;
     mat4f shadow_mvp;
     texture depth_map(1024, 1024, true);
-    texture post_processing(_window->WIN_HEIGHT, _window->WIN_HEIGHT, 0, GL_TEXTURE_2D, GL_LINEAR, GL_RGBA, GL_RGBA, true, GL_COLOR_ATTACHMENT0);
+    texture post_processing(_window->WIN_WIDTH, _window->WIN_HEIGHT, 0, GL_TEXTURE_2D, GL_LINEAR, GL_RGBA, GL_RGBA, true, GL_COLOR_ATTACHMENT0);
     mesh* hud_mesh = renderingEngine->get_hud_mesh();
 
     phong_light l;
@@ -86,8 +86,8 @@ bool core_engine::run()
 
     entity* post_p = create_mesh("gaussian_blur.glsl", vec3f(), 1, new blur_component(&post_processing, hud_mesh, &blur));
     entity* game_text = create_mesh("text.glsl", vec3f(), 1, new text_component("3D Game Engine", "arial", 3.0f, vec2f(0.0f, 0.0f), 1.0f, true));
-    entity* box_animation = create_mesh_phong("animation.glsl", vec3f(50, 10, 50), 1, &l, new animation_component("running_man", &shadow_mvp, &depth_map, new physics_obj(new aabb(vec3f(0, 0, 0), vec3f(s, s, s))),  "", ""));
-    entity* monkey = create_mesh_phong("advanced_mesh.glsl", vec3f(30, 45, 40), 5, &l, new advanced_mesh(new mesh("monkey"), &shadow_mvp, &depth_map, vec3f(0.3, 0.3, 0.3), p_player, "default.png"));
+    entity* box_animation = create_mesh_phong("advanced_mesh.glsl", vec3f(50, -1, 50), 1, &l, new advanced_mesh(new mesh("lantern"), &shadow_mvp, &depth_map, vec3f(0.3, 0.3, 0.3), mk2, "lantern.png", "bricks_normal.jpg", "default_disp.png", "lantern.png"));
+    entity* monkey = create_mesh_phong("animation.glsl", vec3f(30, 45, 40), 1, &l, new animation_component("running_man", &shadow_mvp, &depth_map, p_player,  "", ""));
     entity* monkey2 = create_mesh_phong("simpel_mesh.glsl", vec3f(30, 65, 60), 5, &l, new advanced_mesh(new mesh("monkey"), &shadow_mvp, &depth_map, vec3f(0.3, 0.3, 0.3), mk2, "bricks.jpg"));
     entity* skybox = create_mesh("skybox.glsl", vec3f(), 2, new skybox_component());
     entity* health_bar = create_mesh("gui.glsl", vec3f(150, _window->get_height() - 150, 0), 0.3f, new gui_component("gui/healthBar.png", hud_mesh, _window->get_width(), _window->get_height()));
@@ -218,6 +218,7 @@ bool core_engine::run()
             blur.set(0.0 / _window->WIN_WIDTH, 0.0);
             post_p->set_all_uni(*cam);
             post_p->render();
+
             ////////////////////////////////////
 
             _window->swap_buffers();

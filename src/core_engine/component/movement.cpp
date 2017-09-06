@@ -77,9 +77,11 @@ void third_person::update(float delta, const camera &cam)
     float tmpV = (float) (distance_from_target * sin((pitch)));
 
 
-    get_transform()->get_pos()->set_y(target->get_pos()->get_y() - tmpV - 2);
+    get_transform()->get_pos()->set_y(target->get_pos()->get_y() - tmpV + 2);
     get_transform()->get_pos()->set_x((-tmpH * sin(yaw) + target->get_pos()->get_x()));
     get_transform()->get_pos()->set_z((-tmpH * cos(yaw) + target->get_pos()->get_z()));
+
+
 
 
 }
@@ -129,19 +131,28 @@ void third_person::process_input(const input& input, float delta)
 
     float moveSpeed = 30.0f;
     if(input.get_key_down(input.KEY_W))
+    {
         move_forward(moveSpeed, delta);
+        target->set_rot(quaternion(vec3f(0, 1, 0), yaw));
+    }
     if(input.get_key_down(input.KEY_S))
+    {
         move_forward(-moveSpeed, delta);
+        target->set_rot(quaternion(vec3f(0, 1, 0), yaw));
+    }
     if(input.get_key_down(input.KEY_E))
         move_right(-moveSpeed, delta);
     if(input.get_key_down(input.KEY_Q))
         move_right(moveSpeed, delta);
 
     if(input.get_key_down(input.KEY_A))
+    {
         get_transform()->rotate(vec3f(0, 1, 0), -moveSpeed * 0.2f * delta);
-
+    }
     if(input.get_key_down(input.KEY_D))
+    {
         get_transform()->rotate(quaternion(vec3f(0,1,0), moveSpeed * 0.2f * delta));
+    }
 
     if(input.get_key_down(input.KEY_K))
         get_transform()->rotate(get_transform()->get_rot()->get_right(), moveSpeed * 0.2f * delta);

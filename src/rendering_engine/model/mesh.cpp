@@ -1,9 +1,6 @@
 #include "mesh.h"
-#include "../../../../Game-Engine/src/profiling.h"
-
 #include <cassert>
-#include "tnaLoader.h"
-
+#include "tna_loader.h"
 
 std::map<std::string, mesh_data*> mesh::s_resourceMap;
 
@@ -16,7 +13,6 @@ mesh_data::mesh_data(const indexed_model& model) :
 		assert(0 != 0);
 	}*/
 
-    
 	glGenVertexArrays(1, &vao);
 	glBindVertexArray(vao);
 
@@ -83,7 +79,7 @@ void mesh_data::draw() const
 }
 
 
-mesh::mesh(const std::string& meshName, const indexed_model& model) :
+mesh::mesh(const std::string& meshName, const indexed_model& model, bool is_animated) :
         m_fileName(meshName)
 {
     std::map<std::string, mesh_data*>::const_iterator it = s_resourceMap.find(meshName);
@@ -94,6 +90,7 @@ mesh::mesh(const std::string& meshName, const indexed_model& model) :
     }
     else
     {
+        has_animation = is_animated;
         m_meshData = new mesh_data(model);
         s_resourceMap.insert(std::pair<std::string, mesh_data*>(meshName, m_meshData));
     }
@@ -112,7 +109,7 @@ mesh::mesh(const std::string& fileName, bool flipUVS)
     }
     else
     {
-        TNAModel tnaModel(fileName);
+        tna_model tnaModel(fileName);
         indexed_model model = tnaModel.to_indexed_model();
         has_animation = tnaModel.has_animation;
 

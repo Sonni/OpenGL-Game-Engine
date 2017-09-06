@@ -20,9 +20,9 @@ const float transition_amount = 10.0;
 
 void main()
 {
-    gl_Position = mvp * vec4(position.x, position.z, position.y, 1.0);
+    gl_Position = mvp * vec4(position.x, position.y, position.z, 1.0);
     tex_coord = uv;
-    world_pos = (model * vec4(position.x, position.z, position.y, 1.0)).xyz;
+    world_pos = (model * vec4(position.x, position.y, position.z, 1.0)).xyz;
 
     shadow_coord = shadow_mvp * vec4(world_pos, 1.0);
 
@@ -57,6 +57,7 @@ uniform sampler2D sampler;
 uniform sampler2D normal_map;
 uniform sampler2D disp_tex;
 uniform sampler2D shadow_tex;
+uniform sampler2D specu_tex;
 
 uniform float specular_intensity;
 uniform float specular_power;
@@ -80,6 +81,17 @@ void main()
 
     vec4 total_light = vec4(ambient_light, 1);
     total_light += calc_light_effect(world_pos, normal, light_factor, specular_intensity, specular_power);
+
+
+      /*  vec4 spec_color = texture(specu_tex, tex_coord.xy);
+
+        if (spec_color.g > 0.5)
+        {
+                total_light = vec4(1.0, 1.0, 1.0, 0.6);
+        } else {
+                total_light = vec4(0.2, 0.2, 0.2, 1.0);
+
+        }*/
 
     out_color = color * total_light;
 }

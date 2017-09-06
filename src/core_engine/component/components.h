@@ -4,7 +4,7 @@
 #include "../entity.h"
 #include "../../rendering_engine/model/mesh.h"
 #include "../../shader/shader.h"
-#include "../../rendering_engine/model/tnaLoader.h"
+#include "../../rendering_engine/model/tna_loader.h"
 #include "../../rendering_engine/texture.h"
 #include "water/water_fbo.h"
 #include <sstream>
