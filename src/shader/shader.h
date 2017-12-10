@@ -15,10 +15,8 @@ class shader
 public:
     shader(std::string vertex_file_name, std::string fragment_file_name);
     shader(std::string glsl_file_name);
-    void use_shader()
-    {
-        glUseProgram(program_id);
-    }
+
+    inline void use_shader() { glUseProgram(program_id); }
 
     virtual void get_all_uni_loc() {}
     virtual void set_all_uni(transform& Transform, camera& cam) {}

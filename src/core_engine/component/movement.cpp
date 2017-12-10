@@ -27,15 +27,15 @@ void free_move::move(const vec3f &direction, float amt)
 vec2f old_pos;
 void free_look::process_input(const input& input, float delta)
 {
-    if(input.get_mouse_up(input::MOUSE_LEFT_BUTTON))
+    if(input.get_key_down(unlock_mouse_key))
     {
-        //input.set_cursor(true);
+        input.set_cursor(true);
         mouse_locked = false;
     }
 
     if(mouse_locked)
     {
-        vec2f deltaPos = input.get_mouse_pos() - old_pos;
+        vec2f deltaPos = input.get_mouse_pos() - window_center;
 
         bool rotY = deltaPos.get_x() != 0;
         bool rotX = deltaPos.get_y() != 0;
@@ -51,7 +51,7 @@ void free_look::process_input(const input& input, float delta)
 
         if(rotY || rotX)
         {
-            //input.set_mouse_pos(window_center);
+            input.set_mouse_pos(window_center);
         }
     }
 
@@ -60,8 +60,8 @@ void free_look::process_input(const input& input, float delta)
 
     if(input.get_mouse_down(input::MOUSE_LEFT_BUTTON))
     {
-        //input.set_cursor(false);
-        //input.set_mouse_pos(window_center);
+        input.set_cursor(false);
+        input.set_mouse_pos(window_center);
         mouse_locked = true;
     }
 

@@ -3,12 +3,12 @@
 intersect_data sphere::intersect_sphere(const sphere &other) const
 {
 
-    float radiusDistance = radius + other.get_radius();
+    float radius_dist = radius + other.get_radius();
     vec3f direction = (other.get_center() - center);
-    float centerDistance = direction.length();
-    direction /= centerDistance;
+    float center_dest = direction.length();
+    direction /= center_dest;
 
-    float distance = centerDistance - radiusDistance;
+    float distance = center_dest - radius_dist;
 
     return intersect_data(distance < 0, direction * distance);
 }

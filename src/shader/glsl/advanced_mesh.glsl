@@ -20,9 +20,9 @@ const float transition_amount = 10.0;
 
 void main()
 {
-    gl_Position = mvp * vec4(position.x, position.y, position.z, 1.0);
+    gl_Position = mvp * vec4(position.x, position.z, position.y, 1.0);
     tex_coord = uv;
-    world_pos = (model * vec4(position.x, position.y, position.z, 1.0)).xyz;
+    world_pos = (model * vec4(position.x, position.z, position.y, 1.0)).xyz;
 
     shadow_coord = shadow_mvp * vec4(world_pos, 1.0);
 

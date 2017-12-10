@@ -22,8 +22,10 @@ public:
         }
     }
 
-    void update_objs(physics_obj* obj, std::vector<physics_obj*> objs)
+    void update_objs(entity* e, physics_obj* obj, std::vector<physics_obj*> objs)
     {
+        obj->get_collider()->set_pos(*e->get_transform()->get_pos()); //For test purpose
+
         for (physics_obj* o : objs)
         {
             collider* c1 = obj->get_collider();
@@ -33,9 +35,9 @@ public:
 
             if (data.get_does_intersect())
             {
-                std::cout << data.get_direction() << std::endl;
-                //vec3f new_pos = *obj->get_transform()->get_pos() + data.get_direction();
-                //obj->get_transform()->set_pos(new_pos);
+                //std::cout << data.get_direction() << std::endl;
+                vec3f new_pos = *e->get_transform()->get_pos() + data.get_direction();
+                e->get_transform()->set_pos(new_pos);
             }
         }
     }

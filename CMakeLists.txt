@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/include/)
 file(GLOB_RECURSE SOURCES "${CMAKE_SOURCE_DIR}/src/*.c*")
-add_executable(${NAME} ${SOURCES})
+add_executable(${NAME} ${SOURCES} src/core_engine/component/test/chaser.cpp src/core_engine/component/test/chaser.h)
 
 IF(APPLE)
     macro(ADD_FRAMEWORK fwname)

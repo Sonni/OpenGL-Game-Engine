@@ -28,7 +28,7 @@ public:
     void operator=(const window& other) {}
 
 	void set_full_screen(bool value);
-	static const int WIN_WIDTH = 600;
+	static const int WIN_WIDTH = 824;
 	static const int WIN_HEIGHT = 600;
 private:
 	int width;

@@ -9,6 +9,7 @@
 #include "component/mesh/simpel_mesh.h"
 #include "frustum/frustum.h"
 #include "component/mesh/animated_mesh.h"
+#include "component/test/chaser.h"
 
 core_engine::core_engine(window* Window, rendering_engine* renderingEngine, physics_engine* physicsEngine)
 {
@@ -76,8 +77,10 @@ bool core_engine::run()
 
 
     float s = 10.0f;
-    physics_obj* p_player = new physics_obj(new aabb(vec3f(0, 0, 0), vec3f(s, s, s)));
-    physics_obj* mk2 = new physics_obj(new aabb(vec3f(0, 0, 0), vec3f(s, s, s)));
+    //physics_obj* p_player = new physics_obj(new aabb(vec3f(0, 0, 0), vec3f(s, s, s)));
+    physics_obj* p_player = new physics_obj(new sphere(vec3f(0.0f, 0.0f, 0.0f), 3));
+    physics_obj* mk2 = new physics_obj(new sphere(vec3f(0.0f, 0.0f, 0.0f), 5));
+    //physics_obj* mk2 = new physics_obj(new aabb(vec3f(0, 0, 0), vec3f(s, s, s)));
 
     vec2f blur;
 
@@ -86,14 +89,16 @@ bool core_engine::run()
 
     entity* post_p = create_mesh("gaussian_blur.glsl", vec3f(), 1, new blur_component(&post_processing, hud_mesh, &blur));
     entity* game_text = create_mesh("text.glsl", vec3f(), 1, new text_component("3D Game Engine", "arial", 3.0f, vec2f(0.0f, 0.0f), 1.0f, true));
-    entity* box_animation = create_mesh_phong("advanced_mesh.glsl", vec3f(50, -1, 50), 1, &l, new advanced_mesh(new mesh("lantern"), &shadow_mvp, &depth_map, vec3f(0.3, 0.3, 0.3), mk2, "lantern.png", "bricks_normal.jpg", "default_disp.png", "lantern.png"));
     entity* monkey = create_mesh_phong("animation.glsl", vec3f(30, 45, 40), 1, &l, new animation_component("running_man", &shadow_mvp, &depth_map, p_player,  "", ""));
     entity* monkey2 = create_mesh_phong("simpel_mesh.glsl", vec3f(30, 65, 60), 5, &l, new advanced_mesh(new mesh("monkey"), &shadow_mvp, &depth_map, vec3f(0.3, 0.3, 0.3), mk2, "bricks.jpg"));
     entity* skybox = create_mesh("skybox.glsl", vec3f(), 2, new skybox_component());
     entity* health_bar = create_mesh("gui.glsl", vec3f(150, _window->get_height() - 150, 0), 0.3f, new gui_component("gui/healthBar.png", hud_mesh, _window->get_width(), _window->get_height()));
-    entity* water = create_mesh("water.glsl", vec3f(80, 2000, 50), 1, new water_component("water/waterDUDV.png", "water/waterNormal.png", &wfb));
+    entity* water = create_mesh("water.glsl", vec3f(80, 200, 50), 500, new water_component("water/waterDUDV.png", "water/waterNormal.png", &wfb));
     entity* shadow = create_mesh("shadow.glsl", vec3f(), 1, new shadow_component(&shadowDraws, &depth_map, &shadow_mvp));
     entity* phong_mesh = create_mesh_phong("advanced_mesh.glsl", vec3f(30, 10, 30), 15, &l, new advanced_mesh(new mesh("plane"), &shadow_mvp, &depth_map, vec3f(0.3, 0.3, 0.3), new physics_obj(new aabb(vec3f(0, 0, 0), vec3f(s, s, s))), "bricks.jpg", "bricks_normal.jpg", "bricks_disp.jpg"));
+
+    entity* chaser = create_mesh_phong("advanced_mesh.glsl", vec3f(50, -1, 50), 3, &l, new advanced_mesh(new mesh("monkey"), &shadow_mvp, &depth_map, vec3f(0.3, 0.3, 0.3), mk2, "lantern.png", "bricks_normal.jpg", "default_disp.png", "lantern.png"));
+    chaser->add_component(new chaser_component(monkey->get_transform()));
 
 
     mat4f* perspective = new mat4f();
@@ -105,27 +110,27 @@ bool core_engine::run()
     entity* Camera = new entity(NULL, vec3f(40, 40, 40));
     Camera->add_component(new camera_component(*perspective));
     Camera->add_component(new third_person(monkey->get_transform(), _window->get_center()));
+
     camera* cam = new camera(*perspective, Camera->get_transform(), &f);
 
     entity* _particle = create_mesh("particle.glsl", vec3f(40, 15, 40), 5, new particle_system("fire.png", 8, cam, 20, 25, 0.3f, 1.5f, 20.0f));
 
 
-    entity* a[] = { Camera, monkey, box_animation, phong_mesh, terrain1, terrain2, skybox, water, monkey2, _particle, health_bar, game_text };
+    entity* a[] = { Camera, monkey, chaser, phong_mesh, terrain1, terrain2, skybox, water, monkey2, _particle, game_text, health_bar };
     entities.insert(entities.end(), a, a + 12);
 
-    entity* b[] = { terrain1, terrain2, monkey, monkey2, box_animation, skybox };
+    entity* b[] = { terrain1, terrain2, monkey, monkey2, chaser, skybox };
     waterDraws.insert(waterDraws.end(), b, b + 6);
 
-    entity* c[] = { phong_mesh, monkey, monkey2, box_animation };
+    entity* c[] = { phong_mesh, monkey, monkey2, chaser };
     shadowDraws.insert(shadowDraws.end(), c, c + 4);
 
-    entity* d[] = { monkey, monkey2 };
-    phy_obj.insert(phy_obj.end(), d, d + 2);
+    entity* d[] = { monkey, monkey2, chaser };
+    phy_obj.insert(phy_obj.end(), d, d + 3);
 
     shadowTmp.push_back(shadow);
 
 
-    //physics_obj* p_player = new physics_obj(new sphere(vec3f(0.0f, 0.0f, 0.0f), 5), monkey->get_transform());
 
     std::vector<physics_obj*> physics_objs;
     physics_objs.push_back(mk2);
@@ -170,7 +175,7 @@ bool core_engine::run()
 
 
             physicsEngine->update_terrain(terrains, phy_obj);
-            physicsEngine->update_objs(p_player, physics_objs);
+            physicsEngine->update_objs(monkey, p_player, physics_objs);
             physicsEngine->update_gravity(phy_obj, m_frameTime);
 
             render = true;

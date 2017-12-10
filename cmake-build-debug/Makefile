@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Game_Engine
+# Target rules for targets named 3D_Engine
 
 # Build rule for target.
-Game_Engine: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Game_Engine
-.PHONY : Game_Engine
+3D_Engine: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 3D_Engine
+.PHONY : 3D_Engine
 
 # fast build rule for target.
-Game_Engine/fast:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/build
-.PHONY : Game_Engine/fast
+3D_Engine/fast:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/build
+.PHONY : 3D_Engine/fast
 
 src/core_engine/camera.o: src/core_engine/camera.cpp.o
 
@@ -129,7 +129,7 @@ src/core_engine/camera.o: src/core_engine/camera.cpp.o
 
 # target to build an object file
 src/core_engine/camera.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/camera.cpp.o
 .PHONY : src/core_engine/camera.cpp.o
 
 src/core_engine/camera.i: src/core_engine/camera.cpp.i
@@ -138,7 +138,7 @@ src/core_engine/camera.i: src/core_engine/camera.cpp.i
 
 # target to preprocess a source file
 src/core_engine/camera.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/camera.cpp.i
 .PHONY : src/core_engine/camera.cpp.i
 
 src/core_engine/camera.s: src/core_engine/camera.cpp.s
@@ -147,7 +147,7 @@ src/core_engine/camera.s: src/core_engine/camera.cpp.s
 
 # target to generate assembly for a file
 src/core_engine/camera.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/camera.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/camera.cpp.s
 .PHONY : src/core_engine/camera.cpp.s
 
 src/core_engine/component/components.o: src/core_engine/component/components.cpp.o
@@ -156,7 +156,7 @@ src/core_engine/component/components.o: src/core_engine/component/components.cpp
 
 # target to build an object file
 src/core_engine/component/components.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/components.cpp.o
 .PHONY : src/core_engine/component/components.cpp.o
 
 src/core_engine/component/components.i: src/core_engine/component/components.cpp.i
@@ -165,7 +165,7 @@ src/core_engine/component/components.i: src/core_engine/component/components.cpp
 
 # target to preprocess a source file
 src/core_engine/component/components.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/components.cpp.i
 .PHONY : src/core_engine/component/components.cpp.i
 
 src/core_engine/component/components.s: src/core_engine/component/components.cpp.s
@@ -174,8 +174,116 @@ src/core_engine/component/components.s: src/core_engine/component/components.cpp
 
 # target to generate assembly for a file
 src/core_engine/component/components.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/components.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/components.cpp.s
 .PHONY : src/core_engine/component/components.cpp.s
+
+src/core_engine/component/mesh/advanced_mesh.o: src/core_engine/component/mesh/advanced_mesh.cpp.o
+
+.PHONY : src/core_engine/component/mesh/advanced_mesh.o
+
+# target to build an object file
+src/core_engine/component/mesh/advanced_mesh.cpp.o:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/mesh/advanced_mesh.cpp.o
+.PHONY : src/core_engine/component/mesh/advanced_mesh.cpp.o
+
+src/core_engine/component/mesh/advanced_mesh.i: src/core_engine/component/mesh/advanced_mesh.cpp.i
+
+.PHONY : src/core_engine/component/mesh/advanced_mesh.i
+
+# target to preprocess a source file
+src/core_engine/component/mesh/advanced_mesh.cpp.i:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/mesh/advanced_mesh.cpp.i
+.PHONY : src/core_engine/component/mesh/advanced_mesh.cpp.i
+
+src/core_engine/component/mesh/advanced_mesh.s: src/core_engine/component/mesh/advanced_mesh.cpp.s
+
+.PHONY : src/core_engine/component/mesh/advanced_mesh.s
+
+# target to generate assembly for a file
+src/core_engine/component/mesh/advanced_mesh.cpp.s:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/mesh/advanced_mesh.cpp.s
+.PHONY : src/core_engine/component/mesh/advanced_mesh.cpp.s
+
+src/core_engine/component/mesh/animated_mesh.o: src/core_engine/component/mesh/animated_mesh.cpp.o
+
+.PHONY : src/core_engine/component/mesh/animated_mesh.o
+
+# target to build an object file
+src/core_engine/component/mesh/animated_mesh.cpp.o:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/mesh/animated_mesh.cpp.o
+.PHONY : src/core_engine/component/mesh/animated_mesh.cpp.o
+
+src/core_engine/component/mesh/animated_mesh.i: src/core_engine/component/mesh/animated_mesh.cpp.i
+
+.PHONY : src/core_engine/component/mesh/animated_mesh.i
+
+# target to preprocess a source file
+src/core_engine/component/mesh/animated_mesh.cpp.i:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/mesh/animated_mesh.cpp.i
+.PHONY : src/core_engine/component/mesh/animated_mesh.cpp.i
+
+src/core_engine/component/mesh/animated_mesh.s: src/core_engine/component/mesh/animated_mesh.cpp.s
+
+.PHONY : src/core_engine/component/mesh/animated_mesh.s
+
+# target to generate assembly for a file
+src/core_engine/component/mesh/animated_mesh.cpp.s:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/mesh/animated_mesh.cpp.s
+.PHONY : src/core_engine/component/mesh/animated_mesh.cpp.s
+
+src/core_engine/component/mesh/simpel_mesh.o: src/core_engine/component/mesh/simpel_mesh.cpp.o
+
+.PHONY : src/core_engine/component/mesh/simpel_mesh.o
+
+# target to build an object file
+src/core_engine/component/mesh/simpel_mesh.cpp.o:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/mesh/simpel_mesh.cpp.o
+.PHONY : src/core_engine/component/mesh/simpel_mesh.cpp.o
+
+src/core_engine/component/mesh/simpel_mesh.i: src/core_engine/component/mesh/simpel_mesh.cpp.i
+
+.PHONY : src/core_engine/component/mesh/simpel_mesh.i
+
+# target to preprocess a source file
+src/core_engine/component/mesh/simpel_mesh.cpp.i:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/mesh/simpel_mesh.cpp.i
+.PHONY : src/core_engine/component/mesh/simpel_mesh.cpp.i
+
+src/core_engine/component/mesh/simpel_mesh.s: src/core_engine/component/mesh/simpel_mesh.cpp.s
+
+.PHONY : src/core_engine/component/mesh/simpel_mesh.s
+
+# target to generate assembly for a file
+src/core_engine/component/mesh/simpel_mesh.cpp.s:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/mesh/simpel_mesh.cpp.s
+.PHONY : src/core_engine/component/mesh/simpel_mesh.cpp.s
+
+src/core_engine/component/mouse_picker.o: src/core_engine/component/mouse_picker.cpp.o
+
+.PHONY : src/core_engine/component/mouse_picker.o
+
+# target to build an object file
+src/core_engine/component/mouse_picker.cpp.o:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/mouse_picker.cpp.o
+.PHONY : src/core_engine/component/mouse_picker.cpp.o
+
+src/core_engine/component/mouse_picker.i: src/core_engine/component/mouse_picker.cpp.i
+
+.PHONY : src/core_engine/component/mouse_picker.i
+
+# target to preprocess a source file
+src/core_engine/component/mouse_picker.cpp.i:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/mouse_picker.cpp.i
+.PHONY : src/core_engine/component/mouse_picker.cpp.i
+
+src/core_engine/component/mouse_picker.s: src/core_engine/component/mouse_picker.cpp.s
+
+.PHONY : src/core_engine/component/mouse_picker.s
+
+# target to generate assembly for a file
+src/core_engine/component/mouse_picker.cpp.s:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/mouse_picker.cpp.s
+.PHONY : src/core_engine/component/mouse_picker.cpp.s
 
 src/core_engine/component/movement.o: src/core_engine/component/movement.cpp.o
 
@@ -183,7 +291,7 @@ src/core_engine/component/movement.o: src/core_engine/component/movement.cpp.o
 
 # target to build an object file
 src/core_engine/component/movement.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/movement.cpp.o
 .PHONY : src/core_engine/component/movement.cpp.o
 
 src/core_engine/component/movement.i: src/core_engine/component/movement.cpp.i
@@ -192,7 +300,7 @@ src/core_engine/component/movement.i: src/core_engine/component/movement.cpp.i
 
 # target to preprocess a source file
 src/core_engine/component/movement.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/movement.cpp.i
 .PHONY : src/core_engine/component/movement.cpp.i
 
 src/core_engine/component/movement.s: src/core_engine/component/movement.cpp.s
@@ -201,8 +309,62 @@ src/core_engine/component/movement.s: src/core_engine/component/movement.cpp.s
 
 # target to generate assembly for a file
 src/core_engine/component/movement.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/movement.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/movement.cpp.s
 .PHONY : src/core_engine/component/movement.cpp.s
+
+src/core_engine/component/particle/particle.o: src/core_engine/component/particle/particle.cpp.o
+
+.PHONY : src/core_engine/component/particle/particle.o
+
+# target to build an object file
+src/core_engine/component/particle/particle.cpp.o:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/particle/particle.cpp.o
+.PHONY : src/core_engine/component/particle/particle.cpp.o
+
+src/core_engine/component/particle/particle.i: src/core_engine/component/particle/particle.cpp.i
+
+.PHONY : src/core_engine/component/particle/particle.i
+
+# target to preprocess a source file
+src/core_engine/component/particle/particle.cpp.i:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/particle/particle.cpp.i
+.PHONY : src/core_engine/component/particle/particle.cpp.i
+
+src/core_engine/component/particle/particle.s: src/core_engine/component/particle/particle.cpp.s
+
+.PHONY : src/core_engine/component/particle/particle.s
+
+# target to generate assembly for a file
+src/core_engine/component/particle/particle.cpp.s:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/particle/particle.cpp.s
+.PHONY : src/core_engine/component/particle/particle.cpp.s
+
+src/core_engine/component/particle/particle_system.o: src/core_engine/component/particle/particle_system.cpp.o
+
+.PHONY : src/core_engine/component/particle/particle_system.o
+
+# target to build an object file
+src/core_engine/component/particle/particle_system.cpp.o:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/particle/particle_system.cpp.o
+.PHONY : src/core_engine/component/particle/particle_system.cpp.o
+
+src/core_engine/component/particle/particle_system.i: src/core_engine/component/particle/particle_system.cpp.i
+
+.PHONY : src/core_engine/component/particle/particle_system.i
+
+# target to preprocess a source file
+src/core_engine/component/particle/particle_system.cpp.i:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/particle/particle_system.cpp.i
+.PHONY : src/core_engine/component/particle/particle_system.cpp.i
+
+src/core_engine/component/particle/particle_system.s: src/core_engine/component/particle/particle_system.cpp.s
+
+.PHONY : src/core_engine/component/particle/particle_system.s
+
+# target to generate assembly for a file
+src/core_engine/component/particle/particle_system.cpp.s:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/particle/particle_system.cpp.s
+.PHONY : src/core_engine/component/particle/particle_system.cpp.s
 
 src/core_engine/component/shadow/shadow.o: src/core_engine/component/shadow/shadow.cpp.o
 
@@ -210,7 +372,7 @@ src/core_engine/component/shadow/shadow.o: src/core_engine/component/shadow/shad
 
 # target to build an object file
 src/core_engine/component/shadow/shadow.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/shadow/shadow.cpp.o
 .PHONY : src/core_engine/component/shadow/shadow.cpp.o
 
 src/core_engine/component/shadow/shadow.i: src/core_engine/component/shadow/shadow.cpp.i
@@ -219,7 +381,7 @@ src/core_engine/component/shadow/shadow.i: src/core_engine/component/shadow/shad
 
 # target to preprocess a source file
 src/core_engine/component/shadow/shadow.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/shadow/shadow.cpp.i
 .PHONY : src/core_engine/component/shadow/shadow.cpp.i
 
 src/core_engine/component/shadow/shadow.s: src/core_engine/component/shadow/shadow.cpp.s
@@ -228,35 +390,89 @@ src/core_engine/component/shadow/shadow.s: src/core_engine/component/shadow/shad
 
 # target to generate assembly for a file
 src/core_engine/component/shadow/shadow.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/shadow/shadow.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/shadow/shadow.cpp.s
 .PHONY : src/core_engine/component/shadow/shadow.cpp.s
 
-src/core_engine/component/terrain.o: src/core_engine/component/terrain.cpp.o
+src/core_engine/component/terrain/perlin_noise.o: src/core_engine/component/terrain/perlin_noise.cpp.o
 
-.PHONY : src/core_engine/component/terrain.o
+.PHONY : src/core_engine/component/terrain/perlin_noise.o
 
 # target to build an object file
-src/core_engine/component/terrain.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.o
-.PHONY : src/core_engine/component/terrain.cpp.o
+src/core_engine/component/terrain/perlin_noise.cpp.o:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/terrain/perlin_noise.cpp.o
+.PHONY : src/core_engine/component/terrain/perlin_noise.cpp.o
 
-src/core_engine/component/terrain.i: src/core_engine/component/terrain.cpp.i
+src/core_engine/component/terrain/perlin_noise.i: src/core_engine/component/terrain/perlin_noise.cpp.i
 
-.PHONY : src/core_engine/component/terrain.i
+.PHONY : src/core_engine/component/terrain/perlin_noise.i
 
 # target to preprocess a source file
-src/core_engine/component/terrain.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.i
-.PHONY : src/core_engine/component/terrain.cpp.i
+src/core_engine/component/terrain/perlin_noise.cpp.i:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/terrain/perlin_noise.cpp.i
+.PHONY : src/core_engine/component/terrain/perlin_noise.cpp.i
 
-src/core_engine/component/terrain.s: src/core_engine/component/terrain.cpp.s
+src/core_engine/component/terrain/perlin_noise.s: src/core_engine/component/terrain/perlin_noise.cpp.s
 
-.PHONY : src/core_engine/component/terrain.s
+.PHONY : src/core_engine/component/terrain/perlin_noise.s
 
 # target to generate assembly for a file
-src/core_engine/component/terrain.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/terrain.cpp.s
-.PHONY : src/core_engine/component/terrain.cpp.s
+src/core_engine/component/terrain/perlin_noise.cpp.s:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/terrain/perlin_noise.cpp.s
+.PHONY : src/core_engine/component/terrain/perlin_noise.cpp.s
+
+src/core_engine/component/terrain/terrain.o: src/core_engine/component/terrain/terrain.cpp.o
+
+.PHONY : src/core_engine/component/terrain/terrain.o
+
+# target to build an object file
+src/core_engine/component/terrain/terrain.cpp.o:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/terrain/terrain.cpp.o
+.PHONY : src/core_engine/component/terrain/terrain.cpp.o
+
+src/core_engine/component/terrain/terrain.i: src/core_engine/component/terrain/terrain.cpp.i
+
+.PHONY : src/core_engine/component/terrain/terrain.i
+
+# target to preprocess a source file
+src/core_engine/component/terrain/terrain.cpp.i:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/terrain/terrain.cpp.i
+.PHONY : src/core_engine/component/terrain/terrain.cpp.i
+
+src/core_engine/component/terrain/terrain.s: src/core_engine/component/terrain/terrain.cpp.s
+
+.PHONY : src/core_engine/component/terrain/terrain.s
+
+# target to generate assembly for a file
+src/core_engine/component/terrain/terrain.cpp.s:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/terrain/terrain.cpp.s
+.PHONY : src/core_engine/component/terrain/terrain.cpp.s
+
+src/core_engine/component/test/chaser.o: src/core_engine/component/test/chaser.cpp.o
+
+.PHONY : src/core_engine/component/test/chaser.o
+
+# target to build an object file
+src/core_engine/component/test/chaser.cpp.o:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/test/chaser.cpp.o
+.PHONY : src/core_engine/component/test/chaser.cpp.o
+
+src/core_engine/component/test/chaser.i: src/core_engine/component/test/chaser.cpp.i
+
+.PHONY : src/core_engine/component/test/chaser.i
+
+# target to preprocess a source file
+src/core_engine/component/test/chaser.cpp.i:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/test/chaser.cpp.i
+.PHONY : src/core_engine/component/test/chaser.cpp.i
+
+src/core_engine/component/test/chaser.s: src/core_engine/component/test/chaser.cpp.s
+
+.PHONY : src/core_engine/component/test/chaser.s
+
+# target to generate assembly for a file
+src/core_engine/component/test/chaser.cpp.s:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/test/chaser.cpp.s
+.PHONY : src/core_engine/component/test/chaser.cpp.s
 
 src/core_engine/component/text/meta_file.o: src/core_engine/component/text/meta_file.cpp.o
 
@@ -264,7 +480,7 @@ src/core_engine/component/text/meta_file.o: src/core_engine/component/text/meta_
 
 # target to build an object file
 src/core_engine/component/text/meta_file.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/text/meta_file.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/text/meta_file.cpp.o
 .PHONY : src/core_engine/component/text/meta_file.cpp.o
 
 src/core_engine/component/text/meta_file.i: src/core_engine/component/text/meta_file.cpp.i
@@ -273,7 +489,7 @@ src/core_engine/component/text/meta_file.i: src/core_engine/component/text/meta_
 
 # target to preprocess a source file
 src/core_engine/component/text/meta_file.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/text/meta_file.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/text/meta_file.cpp.i
 .PHONY : src/core_engine/component/text/meta_file.cpp.i
 
 src/core_engine/component/text/meta_file.s: src/core_engine/component/text/meta_file.cpp.s
@@ -282,7 +498,7 @@ src/core_engine/component/text/meta_file.s: src/core_engine/component/text/meta_
 
 # target to generate assembly for a file
 src/core_engine/component/text/meta_file.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/text/meta_file.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/text/meta_file.cpp.s
 .PHONY : src/core_engine/component/text/meta_file.cpp.s
 
 src/core_engine/component/text/text.o: src/core_engine/component/text/text.cpp.o
@@ -291,7 +507,7 @@ src/core_engine/component/text/text.o: src/core_engine/component/text/text.cpp.o
 
 # target to build an object file
 src/core_engine/component/text/text.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/text/text.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/text/text.cpp.o
 .PHONY : src/core_engine/component/text/text.cpp.o
 
 src/core_engine/component/text/text.i: src/core_engine/component/text/text.cpp.i
@@ -300,7 +516,7 @@ src/core_engine/component/text/text.i: src/core_engine/component/text/text.cpp.i
 
 # target to preprocess a source file
 src/core_engine/component/text/text.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/text/text.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/text/text.cpp.i
 .PHONY : src/core_engine/component/text/text.cpp.i
 
 src/core_engine/component/text/text.s: src/core_engine/component/text/text.cpp.s
@@ -309,7 +525,7 @@ src/core_engine/component/text/text.s: src/core_engine/component/text/text.cpp.s
 
 # target to generate assembly for a file
 src/core_engine/component/text/text.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/text/text.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/text/text.cpp.s
 .PHONY : src/core_engine/component/text/text.cpp.s
 
 src/core_engine/component/text/text_component.o: src/core_engine/component/text/text_component.cpp.o
@@ -318,7 +534,7 @@ src/core_engine/component/text/text_component.o: src/core_engine/component/text/
 
 # target to build an object file
 src/core_engine/component/text/text_component.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/text/text_component.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/text/text_component.cpp.o
 .PHONY : src/core_engine/component/text/text_component.cpp.o
 
 src/core_engine/component/text/text_component.i: src/core_engine/component/text/text_component.cpp.i
@@ -327,7 +543,7 @@ src/core_engine/component/text/text_component.i: src/core_engine/component/text/
 
 # target to preprocess a source file
 src/core_engine/component/text/text_component.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/text/text_component.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/text/text_component.cpp.i
 .PHONY : src/core_engine/component/text/text_component.cpp.i
 
 src/core_engine/component/text/text_component.s: src/core_engine/component/text/text_component.cpp.s
@@ -336,7 +552,7 @@ src/core_engine/component/text/text_component.s: src/core_engine/component/text/
 
 # target to generate assembly for a file
 src/core_engine/component/text/text_component.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/text/text_component.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/text/text_component.cpp.s
 .PHONY : src/core_engine/component/text/text_component.cpp.s
 
 src/core_engine/component/water/water.o: src/core_engine/component/water/water.cpp.o
@@ -345,7 +561,7 @@ src/core_engine/component/water/water.o: src/core_engine/component/water/water.c
 
 # target to build an object file
 src/core_engine/component/water/water.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/water/water.cpp.o
 .PHONY : src/core_engine/component/water/water.cpp.o
 
 src/core_engine/component/water/water.i: src/core_engine/component/water/water.cpp.i
@@ -354,7 +570,7 @@ src/core_engine/component/water/water.i: src/core_engine/component/water/water.c
 
 # target to preprocess a source file
 src/core_engine/component/water/water.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/water/water.cpp.i
 .PHONY : src/core_engine/component/water/water.cpp.i
 
 src/core_engine/component/water/water.s: src/core_engine/component/water/water.cpp.s
@@ -363,7 +579,7 @@ src/core_engine/component/water/water.s: src/core_engine/component/water/water.c
 
 # target to generate assembly for a file
 src/core_engine/component/water/water.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/water/water.cpp.s
 .PHONY : src/core_engine/component/water/water.cpp.s
 
 src/core_engine/component/water/water_fbo.o: src/core_engine/component/water/water_fbo.cpp.o
@@ -372,7 +588,7 @@ src/core_engine/component/water/water_fbo.o: src/core_engine/component/water/wat
 
 # target to build an object file
 src/core_engine/component/water/water_fbo.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/water/water_fbo.cpp.o
 .PHONY : src/core_engine/component/water/water_fbo.cpp.o
 
 src/core_engine/component/water/water_fbo.i: src/core_engine/component/water/water_fbo.cpp.i
@@ -381,7 +597,7 @@ src/core_engine/component/water/water_fbo.i: src/core_engine/component/water/wat
 
 # target to preprocess a source file
 src/core_engine/component/water/water_fbo.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/water/water_fbo.cpp.i
 .PHONY : src/core_engine/component/water/water_fbo.cpp.i
 
 src/core_engine/component/water/water_fbo.s: src/core_engine/component/water/water_fbo.cpp.s
@@ -390,7 +606,7 @@ src/core_engine/component/water/water_fbo.s: src/core_engine/component/water/wat
 
 # target to generate assembly for a file
 src/core_engine/component/water/water_fbo.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/component/water/water_fbo.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/component/water/water_fbo.cpp.s
 .PHONY : src/core_engine/component/water/water_fbo.cpp.s
 
 src/core_engine/core_engine.o: src/core_engine/core_engine.cpp.o
@@ -399,7 +615,7 @@ src/core_engine/core_engine.o: src/core_engine/core_engine.cpp.o
 
 # target to build an object file
 src/core_engine/core_engine.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/core_engine.cpp.o
 .PHONY : src/core_engine/core_engine.cpp.o
 
 src/core_engine/core_engine.i: src/core_engine/core_engine.cpp.i
@@ -408,7 +624,7 @@ src/core_engine/core_engine.i: src/core_engine/core_engine.cpp.i
 
 # target to preprocess a source file
 src/core_engine/core_engine.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/core_engine.cpp.i
 .PHONY : src/core_engine/core_engine.cpp.i
 
 src/core_engine/core_engine.s: src/core_engine/core_engine.cpp.s
@@ -417,7 +633,7 @@ src/core_engine/core_engine.s: src/core_engine/core_engine.cpp.s
 
 # target to generate assembly for a file
 src/core_engine/core_engine.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/core_engine.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/core_engine.cpp.s
 .PHONY : src/core_engine/core_engine.cpp.s
 
 src/core_engine/entity.o: src/core_engine/entity.cpp.o
@@ -426,7 +642,7 @@ src/core_engine/entity.o: src/core_engine/entity.cpp.o
 
 # target to build an object file
 src/core_engine/entity.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/entity.cpp.o
 .PHONY : src/core_engine/entity.cpp.o
 
 src/core_engine/entity.i: src/core_engine/entity.cpp.i
@@ -435,7 +651,7 @@ src/core_engine/entity.i: src/core_engine/entity.cpp.i
 
 # target to preprocess a source file
 src/core_engine/entity.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/entity.cpp.i
 .PHONY : src/core_engine/entity.cpp.i
 
 src/core_engine/entity.s: src/core_engine/entity.cpp.s
@@ -444,8 +660,62 @@ src/core_engine/entity.s: src/core_engine/entity.cpp.s
 
 # target to generate assembly for a file
 src/core_engine/entity.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/entity.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/entity.cpp.s
 .PHONY : src/core_engine/entity.cpp.s
+
+src/core_engine/frustum/frustum.o: src/core_engine/frustum/frustum.cpp.o
+
+.PHONY : src/core_engine/frustum/frustum.o
+
+# target to build an object file
+src/core_engine/frustum/frustum.cpp.o:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/frustum/frustum.cpp.o
+.PHONY : src/core_engine/frustum/frustum.cpp.o
+
+src/core_engine/frustum/frustum.i: src/core_engine/frustum/frustum.cpp.i
+
+.PHONY : src/core_engine/frustum/frustum.i
+
+# target to preprocess a source file
+src/core_engine/frustum/frustum.cpp.i:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/frustum/frustum.cpp.i
+.PHONY : src/core_engine/frustum/frustum.cpp.i
+
+src/core_engine/frustum/frustum.s: src/core_engine/frustum/frustum.cpp.s
+
+.PHONY : src/core_engine/frustum/frustum.s
+
+# target to generate assembly for a file
+src/core_engine/frustum/frustum.cpp.s:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/frustum/frustum.cpp.s
+.PHONY : src/core_engine/frustum/frustum.cpp.s
+
+src/core_engine/frustum/frustum_plane.o: src/core_engine/frustum/frustum_plane.cpp.o
+
+.PHONY : src/core_engine/frustum/frustum_plane.o
+
+# target to build an object file
+src/core_engine/frustum/frustum_plane.cpp.o:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/frustum/frustum_plane.cpp.o
+.PHONY : src/core_engine/frustum/frustum_plane.cpp.o
+
+src/core_engine/frustum/frustum_plane.i: src/core_engine/frustum/frustum_plane.cpp.i
+
+.PHONY : src/core_engine/frustum/frustum_plane.i
+
+# target to preprocess a source file
+src/core_engine/frustum/frustum_plane.cpp.i:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/frustum/frustum_plane.cpp.i
+.PHONY : src/core_engine/frustum/frustum_plane.cpp.i
+
+src/core_engine/frustum/frustum_plane.s: src/core_engine/frustum/frustum_plane.cpp.s
+
+.PHONY : src/core_engine/frustum/frustum_plane.s
+
+# target to generate assembly for a file
+src/core_engine/frustum/frustum_plane.cpp.s:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/frustum/frustum_plane.cpp.s
+.PHONY : src/core_engine/frustum/frustum_plane.cpp.s
 
 src/core_engine/io/input.o: src/core_engine/io/input.cpp.o
 
@@ -453,7 +723,7 @@ src/core_engine/io/input.o: src/core_engine/io/input.cpp.o
 
 # target to build an object file
 src/core_engine/io/input.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/io/input.cpp.o
 .PHONY : src/core_engine/io/input.cpp.o
 
 src/core_engine/io/input.i: src/core_engine/io/input.cpp.i
@@ -462,7 +732,7 @@ src/core_engine/io/input.i: src/core_engine/io/input.cpp.i
 
 # target to preprocess a source file
 src/core_engine/io/input.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/io/input.cpp.i
 .PHONY : src/core_engine/io/input.cpp.i
 
 src/core_engine/io/input.s: src/core_engine/io/input.cpp.s
@@ -471,7 +741,7 @@ src/core_engine/io/input.s: src/core_engine/io/input.cpp.s
 
 # target to generate assembly for a file
 src/core_engine/io/input.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/io/input.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/io/input.cpp.s
 .PHONY : src/core_engine/io/input.cpp.s
 
 src/core_engine/io/sound.o: src/core_engine/io/sound.cpp.o
@@ -480,7 +750,7 @@ src/core_engine/io/sound.o: src/core_engine/io/sound.cpp.o
 
 # target to build an object file
 src/core_engine/io/sound.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/io/sound.cpp.o
 .PHONY : src/core_engine/io/sound.cpp.o
 
 src/core_engine/io/sound.i: src/core_engine/io/sound.cpp.i
@@ -489,7 +759,7 @@ src/core_engine/io/sound.i: src/core_engine/io/sound.cpp.i
 
 # target to preprocess a source file
 src/core_engine/io/sound.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/io/sound.cpp.i
 .PHONY : src/core_engine/io/sound.cpp.i
 
 src/core_engine/io/sound.s: src/core_engine/io/sound.cpp.s
@@ -498,7 +768,7 @@ src/core_engine/io/sound.s: src/core_engine/io/sound.cpp.s
 
 # target to generate assembly for a file
 src/core_engine/io/sound.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/io/sound.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/io/sound.cpp.s
 .PHONY : src/core_engine/io/sound.cpp.s
 
 src/core_engine/io/window.o: src/core_engine/io/window.cpp.o
@@ -507,7 +777,7 @@ src/core_engine/io/window.o: src/core_engine/io/window.cpp.o
 
 # target to build an object file
 src/core_engine/io/window.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/io/window.cpp.o
 .PHONY : src/core_engine/io/window.cpp.o
 
 src/core_engine/io/window.i: src/core_engine/io/window.cpp.i
@@ -516,7 +786,7 @@ src/core_engine/io/window.i: src/core_engine/io/window.cpp.i
 
 # target to preprocess a source file
 src/core_engine/io/window.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/io/window.cpp.i
 .PHONY : src/core_engine/io/window.cpp.i
 
 src/core_engine/io/window.s: src/core_engine/io/window.cpp.s
@@ -525,7 +795,7 @@ src/core_engine/io/window.s: src/core_engine/io/window.cpp.s
 
 # target to generate assembly for a file
 src/core_engine/io/window.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/io/window.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/io/window.cpp.s
 .PHONY : src/core_engine/io/window.cpp.s
 
 src/core_engine/math/math.o: src/core_engine/math/math.cpp.o
@@ -534,7 +804,7 @@ src/core_engine/math/math.o: src/core_engine/math/math.cpp.o
 
 # target to build an object file
 src/core_engine/math/math.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/math.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/math/math.cpp.o
 .PHONY : src/core_engine/math/math.cpp.o
 
 src/core_engine/math/math.i: src/core_engine/math/math.cpp.i
@@ -543,7 +813,7 @@ src/core_engine/math/math.i: src/core_engine/math/math.cpp.i
 
 # target to preprocess a source file
 src/core_engine/math/math.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/math.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/math/math.cpp.i
 .PHONY : src/core_engine/math/math.cpp.i
 
 src/core_engine/math/math.s: src/core_engine/math/math.cpp.s
@@ -552,7 +822,7 @@ src/core_engine/math/math.s: src/core_engine/math/math.cpp.s
 
 # target to generate assembly for a file
 src/core_engine/math/math.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/math.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/math/math.cpp.s
 .PHONY : src/core_engine/math/math.cpp.s
 
 src/core_engine/math/matrix.o: src/core_engine/math/matrix.cpp.o
@@ -561,7 +831,7 @@ src/core_engine/math/matrix.o: src/core_engine/math/matrix.cpp.o
 
 # target to build an object file
 src/core_engine/math/matrix.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/matrix.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/math/matrix.cpp.o
 .PHONY : src/core_engine/math/matrix.cpp.o
 
 src/core_engine/math/matrix.i: src/core_engine/math/matrix.cpp.i
@@ -570,7 +840,7 @@ src/core_engine/math/matrix.i: src/core_engine/math/matrix.cpp.i
 
 # target to preprocess a source file
 src/core_engine/math/matrix.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/matrix.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/math/matrix.cpp.i
 .PHONY : src/core_engine/math/matrix.cpp.i
 
 src/core_engine/math/matrix.s: src/core_engine/math/matrix.cpp.s
@@ -579,7 +849,7 @@ src/core_engine/math/matrix.s: src/core_engine/math/matrix.cpp.s
 
 # target to generate assembly for a file
 src/core_engine/math/matrix.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/matrix.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/math/matrix.cpp.s
 .PHONY : src/core_engine/math/matrix.cpp.s
 
 src/core_engine/math/quaternion.o: src/core_engine/math/quaternion.cpp.o
@@ -588,7 +858,7 @@ src/core_engine/math/quaternion.o: src/core_engine/math/quaternion.cpp.o
 
 # target to build an object file
 src/core_engine/math/quaternion.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/quaternion.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/math/quaternion.cpp.o
 .PHONY : src/core_engine/math/quaternion.cpp.o
 
 src/core_engine/math/quaternion.i: src/core_engine/math/quaternion.cpp.i
@@ -597,7 +867,7 @@ src/core_engine/math/quaternion.i: src/core_engine/math/quaternion.cpp.i
 
 # target to preprocess a source file
 src/core_engine/math/quaternion.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/quaternion.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/math/quaternion.cpp.i
 .PHONY : src/core_engine/math/quaternion.cpp.i
 
 src/core_engine/math/quaternion.s: src/core_engine/math/quaternion.cpp.s
@@ -606,7 +876,7 @@ src/core_engine/math/quaternion.s: src/core_engine/math/quaternion.cpp.s
 
 # target to generate assembly for a file
 src/core_engine/math/quaternion.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/quaternion.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/math/quaternion.cpp.s
 .PHONY : src/core_engine/math/quaternion.cpp.s
 
 src/core_engine/math/vector.o: src/core_engine/math/vector.cpp.o
@@ -615,7 +885,7 @@ src/core_engine/math/vector.o: src/core_engine/math/vector.cpp.o
 
 # target to build an object file
 src/core_engine/math/vector.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/vector.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/math/vector.cpp.o
 .PHONY : src/core_engine/math/vector.cpp.o
 
 src/core_engine/math/vector.i: src/core_engine/math/vector.cpp.i
@@ -624,7 +894,7 @@ src/core_engine/math/vector.i: src/core_engine/math/vector.cpp.i
 
 # target to preprocess a source file
 src/core_engine/math/vector.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/vector.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/math/vector.cpp.i
 .PHONY : src/core_engine/math/vector.cpp.i
 
 src/core_engine/math/vector.s: src/core_engine/math/vector.cpp.s
@@ -633,7 +903,7 @@ src/core_engine/math/vector.s: src/core_engine/math/vector.cpp.s
 
 # target to generate assembly for a file
 src/core_engine/math/vector.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/math/vector.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/math/vector.cpp.s
 .PHONY : src/core_engine/math/vector.cpp.s
 
 src/core_engine/transform.o: src/core_engine/transform.cpp.o
@@ -642,7 +912,7 @@ src/core_engine/transform.o: src/core_engine/transform.cpp.o
 
 # target to build an object file
 src/core_engine/transform.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/transform.cpp.o
 .PHONY : src/core_engine/transform.cpp.o
 
 src/core_engine/transform.i: src/core_engine/transform.cpp.i
@@ -651,7 +921,7 @@ src/core_engine/transform.i: src/core_engine/transform.cpp.i
 
 # target to preprocess a source file
 src/core_engine/transform.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/transform.cpp.i
 .PHONY : src/core_engine/transform.cpp.i
 
 src/core_engine/transform.s: src/core_engine/transform.cpp.s
@@ -660,7 +930,7 @@ src/core_engine/transform.s: src/core_engine/transform.cpp.s
 
 # target to generate assembly for a file
 src/core_engine/transform.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/transform.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/transform.cpp.s
 .PHONY : src/core_engine/transform.cpp.s
 
 src/core_engine/util/util.o: src/core_engine/util/util.cpp.o
@@ -669,7 +939,7 @@ src/core_engine/util/util.o: src/core_engine/util/util.cpp.o
 
 # target to build an object file
 src/core_engine/util/util.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/util/util.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/util/util.cpp.o
 .PHONY : src/core_engine/util/util.cpp.o
 
 src/core_engine/util/util.i: src/core_engine/util/util.cpp.i
@@ -678,7 +948,7 @@ src/core_engine/util/util.i: src/core_engine/util/util.cpp.i
 
 # target to preprocess a source file
 src/core_engine/util/util.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/util/util.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/util/util.cpp.i
 .PHONY : src/core_engine/util/util.cpp.i
 
 src/core_engine/util/util.s: src/core_engine/util/util.cpp.s
@@ -687,7 +957,7 @@ src/core_engine/util/util.s: src/core_engine/util/util.cpp.s
 
 # target to generate assembly for a file
 src/core_engine/util/util.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/core_engine/util/util.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/core_engine/util/util.cpp.s
 .PHONY : src/core_engine/util/util.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -696,7 +966,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -705,7 +975,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -714,7 +984,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/physics_engine/collider/aabb.o: src/physics_engine/collider/aabb.cpp.o
@@ -723,7 +993,7 @@ src/physics_engine/collider/aabb.o: src/physics_engine/collider/aabb.cpp.o
 
 # target to build an object file
 src/physics_engine/collider/aabb.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/aabb.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/physics_engine/collider/aabb.cpp.o
 .PHONY : src/physics_engine/collider/aabb.cpp.o
 
 src/physics_engine/collider/aabb.i: src/physics_engine/collider/aabb.cpp.i
@@ -732,7 +1002,7 @@ src/physics_engine/collider/aabb.i: src/physics_engine/collider/aabb.cpp.i
 
 # target to preprocess a source file
 src/physics_engine/collider/aabb.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/aabb.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/physics_engine/collider/aabb.cpp.i
 .PHONY : src/physics_engine/collider/aabb.cpp.i
 
 src/physics_engine/collider/aabb.s: src/physics_engine/collider/aabb.cpp.s
@@ -741,7 +1011,7 @@ src/physics_engine/collider/aabb.s: src/physics_engine/collider/aabb.cpp.s
 
 # target to generate assembly for a file
 src/physics_engine/collider/aabb.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/aabb.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/physics_engine/collider/aabb.cpp.s
 .PHONY : src/physics_engine/collider/aabb.cpp.s
 
 src/physics_engine/collider/collider.o: src/physics_engine/collider/collider.cpp.o
@@ -750,7 +1020,7 @@ src/physics_engine/collider/collider.o: src/physics_engine/collider/collider.cpp
 
 # target to build an object file
 src/physics_engine/collider/collider.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/collider.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/physics_engine/collider/collider.cpp.o
 .PHONY : src/physics_engine/collider/collider.cpp.o
 
 src/physics_engine/collider/collider.i: src/physics_engine/collider/collider.cpp.i
@@ -759,7 +1029,7 @@ src/physics_engine/collider/collider.i: src/physics_engine/collider/collider.cpp
 
 # target to preprocess a source file
 src/physics_engine/collider/collider.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/collider.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/physics_engine/collider/collider.cpp.i
 .PHONY : src/physics_engine/collider/collider.cpp.i
 
 src/physics_engine/collider/collider.s: src/physics_engine/collider/collider.cpp.s
@@ -768,7 +1038,7 @@ src/physics_engine/collider/collider.s: src/physics_engine/collider/collider.cpp
 
 # target to generate assembly for a file
 src/physics_engine/collider/collider.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/collider.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/physics_engine/collider/collider.cpp.s
 .PHONY : src/physics_engine/collider/collider.cpp.s
 
 src/physics_engine/collider/plane.o: src/physics_engine/collider/plane.cpp.o
@@ -777,7 +1047,7 @@ src/physics_engine/collider/plane.o: src/physics_engine/collider/plane.cpp.o
 
 # target to build an object file
 src/physics_engine/collider/plane.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/plane.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/physics_engine/collider/plane.cpp.o
 .PHONY : src/physics_engine/collider/plane.cpp.o
 
 src/physics_engine/collider/plane.i: src/physics_engine/collider/plane.cpp.i
@@ -786,7 +1056,7 @@ src/physics_engine/collider/plane.i: src/physics_engine/collider/plane.cpp.i
 
 # target to preprocess a source file
 src/physics_engine/collider/plane.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/plane.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/physics_engine/collider/plane.cpp.i
 .PHONY : src/physics_engine/collider/plane.cpp.i
 
 src/physics_engine/collider/plane.s: src/physics_engine/collider/plane.cpp.s
@@ -795,7 +1065,7 @@ src/physics_engine/collider/plane.s: src/physics_engine/collider/plane.cpp.s
 
 # target to generate assembly for a file
 src/physics_engine/collider/plane.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/plane.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/physics_engine/collider/plane.cpp.s
 .PHONY : src/physics_engine/collider/plane.cpp.s
 
 src/physics_engine/collider/sphere.o: src/physics_engine/collider/sphere.cpp.o
@@ -804,7 +1074,7 @@ src/physics_engine/collider/sphere.o: src/physics_engine/collider/sphere.cpp.o
 
 # target to build an object file
 src/physics_engine/collider/sphere.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/sphere.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/physics_engine/collider/sphere.cpp.o
 .PHONY : src/physics_engine/collider/sphere.cpp.o
 
 src/physics_engine/collider/sphere.i: src/physics_engine/collider/sphere.cpp.i
@@ -813,7 +1083,7 @@ src/physics_engine/collider/sphere.i: src/physics_engine/collider/sphere.cpp.i
 
 # target to preprocess a source file
 src/physics_engine/collider/sphere.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/sphere.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/physics_engine/collider/sphere.cpp.i
 .PHONY : src/physics_engine/collider/sphere.cpp.i
 
 src/physics_engine/collider/sphere.s: src/physics_engine/collider/sphere.cpp.s
@@ -822,7 +1092,7 @@ src/physics_engine/collider/sphere.s: src/physics_engine/collider/sphere.cpp.s
 
 # target to generate assembly for a file
 src/physics_engine/collider/sphere.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/collider/sphere.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/physics_engine/collider/sphere.cpp.s
 .PHONY : src/physics_engine/collider/sphere.cpp.s
 
 src/physics_engine/intersect_data.o: src/physics_engine/intersect_data.cpp.o
@@ -831,7 +1101,7 @@ src/physics_engine/intersect_data.o: src/physics_engine/intersect_data.cpp.o
 
 # target to build an object file
 src/physics_engine/intersect_data.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/intersect_data.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/physics_engine/intersect_data.cpp.o
 .PHONY : src/physics_engine/intersect_data.cpp.o
 
 src/physics_engine/intersect_data.i: src/physics_engine/intersect_data.cpp.i
@@ -840,7 +1110,7 @@ src/physics_engine/intersect_data.i: src/physics_engine/intersect_data.cpp.i
 
 # target to preprocess a source file
 src/physics_engine/intersect_data.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/intersect_data.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/physics_engine/intersect_data.cpp.i
 .PHONY : src/physics_engine/intersect_data.cpp.i
 
 src/physics_engine/intersect_data.s: src/physics_engine/intersect_data.cpp.s
@@ -849,7 +1119,7 @@ src/physics_engine/intersect_data.s: src/physics_engine/intersect_data.cpp.s
 
 # target to generate assembly for a file
 src/physics_engine/intersect_data.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/intersect_data.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/physics_engine/intersect_data.cpp.s
 .PHONY : src/physics_engine/intersect_data.cpp.s
 
 src/physics_engine/physics_engine.o: src/physics_engine/physics_engine.cpp.o
@@ -858,7 +1128,7 @@ src/physics_engine/physics_engine.o: src/physics_engine/physics_engine.cpp.o
 
 # target to build an object file
 src/physics_engine/physics_engine.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/physics_engine/physics_engine.cpp.o
 .PHONY : src/physics_engine/physics_engine.cpp.o
 
 src/physics_engine/physics_engine.i: src/physics_engine/physics_engine.cpp.i
@@ -867,7 +1137,7 @@ src/physics_engine/physics_engine.i: src/physics_engine/physics_engine.cpp.i
 
 # target to preprocess a source file
 src/physics_engine/physics_engine.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/physics_engine/physics_engine.cpp.i
 .PHONY : src/physics_engine/physics_engine.cpp.i
 
 src/physics_engine/physics_engine.s: src/physics_engine/physics_engine.cpp.s
@@ -876,7 +1146,7 @@ src/physics_engine/physics_engine.s: src/physics_engine/physics_engine.cpp.s
 
 # target to generate assembly for a file
 src/physics_engine/physics_engine.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/physics_engine.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/physics_engine/physics_engine.cpp.s
 .PHONY : src/physics_engine/physics_engine.cpp.s
 
 src/physics_engine/physics_obj.o: src/physics_engine/physics_obj.cpp.o
@@ -885,7 +1155,7 @@ src/physics_engine/physics_obj.o: src/physics_engine/physics_obj.cpp.o
 
 # target to build an object file
 src/physics_engine/physics_obj.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/physics_obj.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/physics_engine/physics_obj.cpp.o
 .PHONY : src/physics_engine/physics_obj.cpp.o
 
 src/physics_engine/physics_obj.i: src/physics_engine/physics_obj.cpp.i
@@ -894,7 +1164,7 @@ src/physics_engine/physics_obj.i: src/physics_engine/physics_obj.cpp.i
 
 # target to preprocess a source file
 src/physics_engine/physics_obj.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/physics_obj.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/physics_engine/physics_obj.cpp.i
 .PHONY : src/physics_engine/physics_obj.cpp.i
 
 src/physics_engine/physics_obj.s: src/physics_engine/physics_obj.cpp.s
@@ -903,8 +1173,62 @@ src/physics_engine/physics_obj.s: src/physics_engine/physics_obj.cpp.s
 
 # target to generate assembly for a file
 src/physics_engine/physics_obj.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/physics_engine/physics_obj.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/physics_engine/physics_obj.cpp.s
 .PHONY : src/physics_engine/physics_obj.cpp.s
+
+src/rendering_engine/light/lighting.o: src/rendering_engine/light/lighting.cpp.o
+
+.PHONY : src/rendering_engine/light/lighting.o
+
+# target to build an object file
+src/rendering_engine/light/lighting.cpp.o:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/light/lighting.cpp.o
+.PHONY : src/rendering_engine/light/lighting.cpp.o
+
+src/rendering_engine/light/lighting.i: src/rendering_engine/light/lighting.cpp.i
+
+.PHONY : src/rendering_engine/light/lighting.i
+
+# target to preprocess a source file
+src/rendering_engine/light/lighting.cpp.i:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/light/lighting.cpp.i
+.PHONY : src/rendering_engine/light/lighting.cpp.i
+
+src/rendering_engine/light/lighting.s: src/rendering_engine/light/lighting.cpp.s
+
+.PHONY : src/rendering_engine/light/lighting.s
+
+# target to generate assembly for a file
+src/rendering_engine/light/lighting.cpp.s:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/light/lighting.cpp.s
+.PHONY : src/rendering_engine/light/lighting.cpp.s
+
+src/rendering_engine/light/phong_light.o: src/rendering_engine/light/phong_light.cpp.o
+
+.PHONY : src/rendering_engine/light/phong_light.o
+
+# target to build an object file
+src/rendering_engine/light/phong_light.cpp.o:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/light/phong_light.cpp.o
+.PHONY : src/rendering_engine/light/phong_light.cpp.o
+
+src/rendering_engine/light/phong_light.i: src/rendering_engine/light/phong_light.cpp.i
+
+.PHONY : src/rendering_engine/light/phong_light.i
+
+# target to preprocess a source file
+src/rendering_engine/light/phong_light.cpp.i:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/light/phong_light.cpp.i
+.PHONY : src/rendering_engine/light/phong_light.cpp.i
+
+src/rendering_engine/light/phong_light.s: src/rendering_engine/light/phong_light.cpp.s
+
+.PHONY : src/rendering_engine/light/phong_light.s
+
+# target to generate assembly for a file
+src/rendering_engine/light/phong_light.cpp.s:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/light/phong_light.cpp.s
+.PHONY : src/rendering_engine/light/phong_light.cpp.s
 
 src/rendering_engine/model/indexed_model.o: src/rendering_engine/model/indexed_model.cpp.o
 
@@ -912,7 +1236,7 @@ src/rendering_engine/model/indexed_model.o: src/rendering_engine/model/indexed_m
 
 # target to build an object file
 src/rendering_engine/model/indexed_model.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/rendering_engine/model/indexed_model.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/model/indexed_model.cpp.o
 .PHONY : src/rendering_engine/model/indexed_model.cpp.o
 
 src/rendering_engine/model/indexed_model.i: src/rendering_engine/model/indexed_model.cpp.i
@@ -921,7 +1245,7 @@ src/rendering_engine/model/indexed_model.i: src/rendering_engine/model/indexed_m
 
 # target to preprocess a source file
 src/rendering_engine/model/indexed_model.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/rendering_engine/model/indexed_model.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/model/indexed_model.cpp.i
 .PHONY : src/rendering_engine/model/indexed_model.cpp.i
 
 src/rendering_engine/model/indexed_model.s: src/rendering_engine/model/indexed_model.cpp.s
@@ -930,7 +1254,7 @@ src/rendering_engine/model/indexed_model.s: src/rendering_engine/model/indexed_m
 
 # target to generate assembly for a file
 src/rendering_engine/model/indexed_model.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/rendering_engine/model/indexed_model.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/model/indexed_model.cpp.s
 .PHONY : src/rendering_engine/model/indexed_model.cpp.s
 
 src/rendering_engine/model/loader.o: src/rendering_engine/model/loader.cpp.o
@@ -939,7 +1263,7 @@ src/rendering_engine/model/loader.o: src/rendering_engine/model/loader.cpp.o
 
 # target to build an object file
 src/rendering_engine/model/loader.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/rendering_engine/model/loader.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/model/loader.cpp.o
 .PHONY : src/rendering_engine/model/loader.cpp.o
 
 src/rendering_engine/model/loader.i: src/rendering_engine/model/loader.cpp.i
@@ -948,7 +1272,7 @@ src/rendering_engine/model/loader.i: src/rendering_engine/model/loader.cpp.i
 
 # target to preprocess a source file
 src/rendering_engine/model/loader.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/rendering_engine/model/loader.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/model/loader.cpp.i
 .PHONY : src/rendering_engine/model/loader.cpp.i
 
 src/rendering_engine/model/loader.s: src/rendering_engine/model/loader.cpp.s
@@ -957,7 +1281,7 @@ src/rendering_engine/model/loader.s: src/rendering_engine/model/loader.cpp.s
 
 # target to generate assembly for a file
 src/rendering_engine/model/loader.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/rendering_engine/model/loader.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/model/loader.cpp.s
 .PHONY : src/rendering_engine/model/loader.cpp.s
 
 src/rendering_engine/model/mesh.o: src/rendering_engine/model/mesh.cpp.o
@@ -966,7 +1290,7 @@ src/rendering_engine/model/mesh.o: src/rendering_engine/model/mesh.cpp.o
 
 # target to build an object file
 src/rendering_engine/model/mesh.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/rendering_engine/model/mesh.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/model/mesh.cpp.o
 .PHONY : src/rendering_engine/model/mesh.cpp.o
 
 src/rendering_engine/model/mesh.i: src/rendering_engine/model/mesh.cpp.i
@@ -975,7 +1299,7 @@ src/rendering_engine/model/mesh.i: src/rendering_engine/model/mesh.cpp.i
 
 # target to preprocess a source file
 src/rendering_engine/model/mesh.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/rendering_engine/model/mesh.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/model/mesh.cpp.i
 .PHONY : src/rendering_engine/model/mesh.cpp.i
 
 src/rendering_engine/model/mesh.s: src/rendering_engine/model/mesh.cpp.s
@@ -984,35 +1308,62 @@ src/rendering_engine/model/mesh.s: src/rendering_engine/model/mesh.cpp.s
 
 # target to generate assembly for a file
 src/rendering_engine/model/mesh.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/rendering_engine/model/mesh.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/model/mesh.cpp.s
 .PHONY : src/rendering_engine/model/mesh.cpp.s
 
-src/rendering_engine/model/tnaLoader.o: src/rendering_engine/model/tnaLoader.cpp.o
+src/rendering_engine/model/skeletal_animation.o: src/rendering_engine/model/skeletal_animation.cpp.o
 
-.PHONY : src/rendering_engine/model/tnaLoader.o
+.PHONY : src/rendering_engine/model/skeletal_animation.o
 
 # target to build an object file
-src/rendering_engine/model/tnaLoader.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/rendering_engine/model/tnaLoader.cpp.o
-.PHONY : src/rendering_engine/model/tnaLoader.cpp.o
+src/rendering_engine/model/skeletal_animation.cpp.o:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/model/skeletal_animation.cpp.o
+.PHONY : src/rendering_engine/model/skeletal_animation.cpp.o
 
-src/rendering_engine/model/tnaLoader.i: src/rendering_engine/model/tnaLoader.cpp.i
+src/rendering_engine/model/skeletal_animation.i: src/rendering_engine/model/skeletal_animation.cpp.i
 
-.PHONY : src/rendering_engine/model/tnaLoader.i
+.PHONY : src/rendering_engine/model/skeletal_animation.i
 
 # target to preprocess a source file
-src/rendering_engine/model/tnaLoader.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/rendering_engine/model/tnaLoader.cpp.i
-.PHONY : src/rendering_engine/model/tnaLoader.cpp.i
+src/rendering_engine/model/skeletal_animation.cpp.i:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/model/skeletal_animation.cpp.i
+.PHONY : src/rendering_engine/model/skeletal_animation.cpp.i
 
-src/rendering_engine/model/tnaLoader.s: src/rendering_engine/model/tnaLoader.cpp.s
+src/rendering_engine/model/skeletal_animation.s: src/rendering_engine/model/skeletal_animation.cpp.s
 
-.PHONY : src/rendering_engine/model/tnaLoader.s
+.PHONY : src/rendering_engine/model/skeletal_animation.s
 
 # target to generate assembly for a file
-src/rendering_engine/model/tnaLoader.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/rendering_engine/model/tnaLoader.cpp.s
-.PHONY : src/rendering_engine/model/tnaLoader.cpp.s
+src/rendering_engine/model/skeletal_animation.cpp.s:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/model/skeletal_animation.cpp.s
+.PHONY : src/rendering_engine/model/skeletal_animation.cpp.s
+
+src/rendering_engine/model/tna_loader.o: src/rendering_engine/model/tna_loader.cpp.o
+
+.PHONY : src/rendering_engine/model/tna_loader.o
+
+# target to build an object file
+src/rendering_engine/model/tna_loader.cpp.o:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/model/tna_loader.cpp.o
+.PHONY : src/rendering_engine/model/tna_loader.cpp.o
+
+src/rendering_engine/model/tna_loader.i: src/rendering_engine/model/tna_loader.cpp.i
+
+.PHONY : src/rendering_engine/model/tna_loader.i
+
+# target to preprocess a source file
+src/rendering_engine/model/tna_loader.cpp.i:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/model/tna_loader.cpp.i
+.PHONY : src/rendering_engine/model/tna_loader.cpp.i
+
+src/rendering_engine/model/tna_loader.s: src/rendering_engine/model/tna_loader.cpp.s
+
+.PHONY : src/rendering_engine/model/tna_loader.s
+
+# target to generate assembly for a file
+src/rendering_engine/model/tna_loader.cpp.s:
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/model/tna_loader.cpp.s
+.PHONY : src/rendering_engine/model/tna_loader.cpp.s
 
 src/rendering_engine/rendering_engine.o: src/rendering_engine/rendering_engine.cpp.o
 
@@ -1020,7 +1371,7 @@ src/rendering_engine/rendering_engine.o: src/rendering_engine/rendering_engine.c
 
 # target to build an object file
 src/rendering_engine/rendering_engine.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/rendering_engine/rendering_engine.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/rendering_engine.cpp.o
 .PHONY : src/rendering_engine/rendering_engine.cpp.o
 
 src/rendering_engine/rendering_engine.i: src/rendering_engine/rendering_engine.cpp.i
@@ -1029,7 +1380,7 @@ src/rendering_engine/rendering_engine.i: src/rendering_engine/rendering_engine.c
 
 # target to preprocess a source file
 src/rendering_engine/rendering_engine.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/rendering_engine/rendering_engine.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/rendering_engine.cpp.i
 .PHONY : src/rendering_engine/rendering_engine.cpp.i
 
 src/rendering_engine/rendering_engine.s: src/rendering_engine/rendering_engine.cpp.s
@@ -1038,7 +1389,7 @@ src/rendering_engine/rendering_engine.s: src/rendering_engine/rendering_engine.c
 
 # target to generate assembly for a file
 src/rendering_engine/rendering_engine.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/rendering_engine/rendering_engine.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/rendering_engine.cpp.s
 .PHONY : src/rendering_engine/rendering_engine.cpp.s
 
 src/rendering_engine/stb_image.o: src/rendering_engine/stb_image.c.o
@@ -1047,7 +1398,7 @@ src/rendering_engine/stb_image.o: src/rendering_engine/stb_image.c.o
 
 # target to build an object file
 src/rendering_engine/stb_image.c.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/rendering_engine/stb_image.c.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/stb_image.c.o
 .PHONY : src/rendering_engine/stb_image.c.o
 
 src/rendering_engine/stb_image.i: src/rendering_engine/stb_image.c.i
@@ -1056,7 +1407,7 @@ src/rendering_engine/stb_image.i: src/rendering_engine/stb_image.c.i
 
 # target to preprocess a source file
 src/rendering_engine/stb_image.c.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/rendering_engine/stb_image.c.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/stb_image.c.i
 .PHONY : src/rendering_engine/stb_image.c.i
 
 src/rendering_engine/stb_image.s: src/rendering_engine/stb_image.c.s
@@ -1065,7 +1416,7 @@ src/rendering_engine/stb_image.s: src/rendering_engine/stb_image.c.s
 
 # target to generate assembly for a file
 src/rendering_engine/stb_image.c.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/rendering_engine/stb_image.c.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/stb_image.c.s
 .PHONY : src/rendering_engine/stb_image.c.s
 
 src/rendering_engine/texture.o: src/rendering_engine/texture.cpp.o
@@ -1074,7 +1425,7 @@ src/rendering_engine/texture.o: src/rendering_engine/texture.cpp.o
 
 # target to build an object file
 src/rendering_engine/texture.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/rendering_engine/texture.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/texture.cpp.o
 .PHONY : src/rendering_engine/texture.cpp.o
 
 src/rendering_engine/texture.i: src/rendering_engine/texture.cpp.i
@@ -1083,7 +1434,7 @@ src/rendering_engine/texture.i: src/rendering_engine/texture.cpp.i
 
 # target to preprocess a source file
 src/rendering_engine/texture.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/rendering_engine/texture.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/texture.cpp.i
 .PHONY : src/rendering_engine/texture.cpp.i
 
 src/rendering_engine/texture.s: src/rendering_engine/texture.cpp.s
@@ -1092,7 +1443,7 @@ src/rendering_engine/texture.s: src/rendering_engine/texture.cpp.s
 
 # target to generate assembly for a file
 src/rendering_engine/texture.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/rendering_engine/texture.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/rendering_engine/texture.cpp.s
 .PHONY : src/rendering_engine/texture.cpp.s
 
 src/shader/shader.o: src/shader/shader.cpp.o
@@ -1101,7 +1452,7 @@ src/shader/shader.o: src/shader/shader.cpp.o
 
 # target to build an object file
 src/shader/shader.cpp.o:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/shader/shader.cpp.o
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/shader/shader.cpp.o
 .PHONY : src/shader/shader.cpp.o
 
 src/shader/shader.i: src/shader/shader.cpp.i
@@ -1110,7 +1461,7 @@ src/shader/shader.i: src/shader/shader.cpp.i
 
 # target to preprocess a source file
 src/shader/shader.cpp.i:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/shader/shader.cpp.i
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/shader/shader.cpp.i
 .PHONY : src/shader/shader.cpp.i
 
 src/shader/shader.s: src/shader/shader.cpp.s
@@ -1119,7 +1470,7 @@ src/shader/shader.s: src/shader/shader.cpp.s
 
 # target to generate assembly for a file
 src/shader/shader.cpp.s:
-	$(MAKE) -f CMakeFiles/Game_Engine.dir/build.make CMakeFiles/Game_Engine.dir/src/shader/shader.cpp.s
+	$(MAKE) -f CMakeFiles/3D_Engine.dir/build.make CMakeFiles/3D_Engine.dir/src/shader/shader.cpp.s
 .PHONY : src/shader/shader.cpp.s
 
 # Help Target
@@ -1130,22 +1481,46 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Game_Engine"
+	@echo "... 3D_Engine"
 	@echo "... src/core_engine/camera.o"
 	@echo "... src/core_engine/camera.i"
 	@echo "... src/core_engine/camera.s"
 	@echo "... src/core_engine/component/components.o"
 	@echo "... src/core_engine/component/components.i"
 	@echo "... src/core_engine/component/components.s"
+	@echo "... src/core_engine/component/mesh/advanced_mesh.o"
+	@echo "... src/core_engine/component/mesh/advanced_mesh.i"
+	@echo "... src/core_engine/component/mesh/advanced_mesh.s"
+	@echo "... src/core_engine/component/mesh/animated_mesh.o"
+	@echo "... src/core_engine/component/mesh/animated_mesh.i"
+	@echo "... src/core_engine/component/mesh/animated_mesh.s"
+	@echo "... src/core_engine/component/mesh/simpel_mesh.o"
+	@echo "... src/core_engine/component/mesh/simpel_mesh.i"
+	@echo "... src/core_engine/component/mesh/simpel_mesh.s"
+	@echo "... src/core_engine/component/mouse_picker.o"
+	@echo "... src/core_engine/component/mouse_picker.i"
+	@echo "... src/core_engine/component/mouse_picker.s"
 	@echo "... src/core_engine/component/movement.o"
 	@echo "... src/core_engine/component/movement.i"
 	@echo "... src/core_engine/component/movement.s"
+	@echo "... src/core_engine/component/particle/particle.o"
+	@echo "... src/core_engine/component/particle/particle.i"
+	@echo "... src/core_engine/component/particle/particle.s"
+	@echo "... src/core_engine/component/particle/particle_system.o"
+	@echo "... src/core_engine/component/particle/particle_system.i"
+	@echo "... src/core_engine/component/particle/particle_system.s"
 	@echo "... src/core_engine/component/shadow/shadow.o"
 	@echo "... src/core_engine/component/shadow/shadow.i"
 	@echo "... src/core_engine/component/shadow/shadow.s"
-	@echo "... src/core_engine/component/terrain.o"
-	@echo "... src/core_engine/component/terrain.i"
-	@echo "... src/core_engine/component/terrain.s"
+	@echo "... src/core_engine/component/terrain/perlin_noise.o"
+	@echo "... src/core_engine/component/terrain/perlin_noise.i"
+	@echo "... src/core_engine/component/terrain/perlin_noise.s"
+	@echo "... src/core_engine/component/terrain/terrain.o"
+	@echo "... src/core_engine/component/terrain/terrain.i"
+	@echo "... src/core_engine/component/terrain/terrain.s"
+	@echo "... src/core_engine/component/test/chaser.o"
+	@echo "... src/core_engine/component/test/chaser.i"
+	@echo "... src/core_engine/component/test/chaser.s"
 	@echo "... src/core_engine/component/text/meta_file.o"
 	@echo "... src/core_engine/component/text/meta_file.i"
 	@echo "... src/core_engine/component/text/meta_file.s"
@@ -1167,6 +1542,12 @@ help:
 	@echo "... src/core_engine/entity.o"
 	@echo "... src/core_engine/entity.i"
 	@echo "... src/core_engine/entity.s"
+	@echo "... src/core_engine/frustum/frustum.o"
+	@echo "... src/core_engine/frustum/frustum.i"
+	@echo "... src/core_engine/frustum/frustum.s"
+	@echo "... src/core_engine/frustum/frustum_plane.o"
+	@echo "... src/core_engine/frustum/frustum_plane.i"
+	@echo "... src/core_engine/frustum/frustum_plane.s"
 	@echo "... src/core_engine/io/input.o"
 	@echo "... src/core_engine/io/input.i"
 	@echo "... src/core_engine/io/input.s"
@@ -1218,6 +1599,12 @@ help:
 	@echo "... src/physics_engine/physics_obj.o"
 	@echo "... src/physics_engine/physics_obj.i"
 	@echo "... src/physics_engine/physics_obj.s"
+	@echo "... src/rendering_engine/light/lighting.o"
+	@echo "... src/rendering_engine/light/lighting.i"
+	@echo "... src/rendering_engine/light/lighting.s"
+	@echo "... src/rendering_engine/light/phong_light.o"
+	@echo "... src/rendering_engine/light/phong_light.i"
+	@echo "... src/rendering_engine/light/phong_light.s"
 	@echo "... src/rendering_engine/model/indexed_model.o"
 	@echo "... src/rendering_engine/model/indexed_model.i"
 	@echo "... src/rendering_engine/model/indexed_model.s"
@@ -1227,9 +1614,12 @@ help:
 	@echo "... src/rendering_engine/model/mesh.o"
 	@echo "... src/rendering_engine/model/mesh.i"
 	@echo "... src/rendering_engine/model/mesh.s"
-	@echo "... src/rendering_engine/model/tnaLoader.o"
-	@echo "... src/rendering_engine/model/tnaLoader.i"
-	@echo "... src/rendering_engine/model/tnaLoader.s"
+	@echo "... src/rendering_engine/model/skeletal_animation.o"
+	@echo "... src/rendering_engine/model/skeletal_animation.i"
+	@echo "... src/rendering_engine/model/skeletal_animation.s"
+	@echo "... src/rendering_engine/model/tna_loader.o"
+	@echo "... src/rendering_engine/model/tna_loader.i"
+	@echo "... src/rendering_engine/model/tna_loader.s"
 	@echo "... src/rendering_engine/rendering_engine.o"
 	@echo "... src/rendering_engine/rendering_engine.i"
 	@echo "... src/rendering_engine/rendering_engine.s"
