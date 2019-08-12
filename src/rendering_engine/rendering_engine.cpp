@@ -15,9 +15,8 @@ rendering_engine::rendering_engine()
     hud_mesh = new mesh("squre", hud_square.finalize());
 }
 
-void rendering_engine::render(camera* cam, std::vector<entity*> e) {
-
-
+void rendering_engine::render(camera* cam, std::vector<entity*> e)
+{
     glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glEnable(GL_DEPTH_TEST);
@@ -29,11 +28,7 @@ void rendering_engine::render(camera* cam, std::vector<entity*> e) {
             e.at(i)->get_shader()->use_shader();
             e.at(i)->set_all_uni(*cam);
 
-
             e.at(i)->render();
         }
     }
-
-
-
 }

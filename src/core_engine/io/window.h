@@ -2,7 +2,6 @@
 #define GAME_ENGINE_WINDOW_H
 
 #include <SDL2/SDL.h>
-#include <string>
 #include "input.h"
 
 class window

@@ -4,7 +4,7 @@ set(NAME 3D_Engine)
 
 project(${NAME})
 set(CMAKE_CXX_STANDARD 11)
-
+set("-j 4")
 
 INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/include/)
 file(GLOB_RECURSE SOURCES "${CMAKE_SOURCE_DIR}/src/*.c*")
@@ -16,6 +16,7 @@ IF(APPLE)
     endmacro(ADD_FRAMEWORK)
 
     add_framework(SDL2)
+    add_framework(SDL2_net)
     add_framework(OpenGL)
     add_framework(OpenAL)
     add_framework(GLEW)

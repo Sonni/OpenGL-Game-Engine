@@ -1,8 +1,6 @@
 #include "loader.h"
 #include "../../core_engine/util/util.h"
 
-
-
 void Loader::load_weights(const std::string &line, std::vector<float> &weightsRef)
 {
     std::string weight = line;

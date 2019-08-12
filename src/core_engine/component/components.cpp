@@ -86,7 +86,6 @@ skybox_component::skybox_component()
 {
     std::vector<std::string> tex_names(file_nmes, file_nmes + sizeof(file_nmes) / sizeof(file_nmes[0]));
     tex_loc = load_cube_map(tex_names);
-
     _mesh = new mesh("cube");
 }
 
@@ -130,29 +129,36 @@ void skybox_component::render() const
     _mesh->draw();
 }
 
-GLuint skybox_component::load_cube_map(std::vector<std::string> file_names)
+GLuint skybox_component::load_cube_map(std::vector<std::string> faces)
 {
-    GLuint texID;
-    glGenTextures(6, &texID);
-    glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_CUBE_MAP, texID);
+    unsigned int textureID;
+    glGenTextures(1, &textureID);
+    glBindTexture(GL_TEXTURE_CUBE_MAP, textureID);
 
-    for (int i = 0; i < 6; i++)
+    int width, height, nrChannels;
+    for (unsigned int i = 0; i < faces.size(); i++)
     {
-        int width, height, numComponents;
-        std::string file_name = "../res/textures/skybox/" + file_names[i] + ".png";
-        unsigned char* data = stbi_load(file_name.c_str(), &width, &height, &numComponents, 4);
-
-        if(data == NULL)
+        std::string file_name = "../res/textures/skybox/" + faces[i] + ".png";
+        unsigned char *data = stbi_load(file_name.c_str(), &width, &height, &nrChannels, 0);
+        if (data)
         {
-            std::cerr << "Unable to load texture: " << file_name << std::endl;
+            glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i,
+                         0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data
+            );
+            stbi_image_free(data);
         }
-
-
-        glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
-
+        else
+        {
+            std::cout << "Cubemap texture failed to load at path: " << file_name << std::endl;
+            stbi_image_free(data);
+        }
     }
-    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    return texID;
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
+
+    return textureID;
 }
+

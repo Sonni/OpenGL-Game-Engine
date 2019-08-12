@@ -233,8 +233,8 @@ public:
         const T frustum_len     = z_near - z_far;
         const T tan_half_fov = tanf(fov / T(2));
 
-        (*this)[0][0] = T(1)/(tan_half_fov * aspect_ratio); (*this)[1][0] = T(0);   (*this)[2][0] = T(0);            (*this)[3][0] = T(0);
-        (*this)[0][1] = T(0);                   (*this)[1][1] = T(1)/tan_half_fov; (*this)[2][1] = T(0);            (*this)[3][1] = T(0);
+        (*this)[0][0] = T(1)/(tan_half_fov); (*this)[1][0] = T(0);   (*this)[2][0] = T(0);            (*this)[3][0] = T(0);
+        (*this)[0][1] = T(0);                   (*this)[1][1] = aspect_ratio/tan_half_fov; (*this)[2][1] = T(0);            (*this)[3][1] = T(0);
         (*this)[0][2] = T(0);                   (*this)[1][2] = T(0);            (*this)[2][2] = (-z_near - z_far)/frustum_len ; (*this)[3][2] = T(2)*z_far*z_near/frustum_len;
         (*this)[0][3] = T(0);                   (*this)[1][3] = T(0);            (*this)[2][3] = T(1);            (*this)[3][3] = T(0);
 

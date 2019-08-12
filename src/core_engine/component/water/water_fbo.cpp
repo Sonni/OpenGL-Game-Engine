@@ -1,4 +1,5 @@
 #include "water_fbo.h"
+#include "../../io/window.h"
 
 water_fbo::~water_fbo()
 {

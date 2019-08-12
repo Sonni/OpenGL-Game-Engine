@@ -7,7 +7,7 @@ char* sound::load_wav(const char *file_name, int &channels, int &sample_rate, in
 	in.read(tmp_buffer, 4);
 	if(strncmp(tmp_buffer, "RIFF", 4) != 0)
 	{
-		std::cout << "Not a valid wav: RIFF) " << tmp_buffer[0] << tmp_buffer[1] << tmp_buffer[2] << tmp_buffer[3] << tmp_buffer[4] << '\n';
+		std::cout << "Not a valid wav: RIFF) " << tmp_buffer[0] << tmp_buffer[1] << tmp_buffer[2] << tmp_buffer[3] << '\n';
 		return 0;
 	}
     
@@ -17,14 +17,14 @@ char* sound::load_wav(const char *file_name, int &channels, int &sample_rate, in
 	in.read(tmp_buffer, 4);
 	if(strncmp(tmp_buffer, "WAVE", 4) != 0)
     {
-		std::cout << "Not a valid wav: WAVE " << tmp_buffer[0] << tmp_buffer[1] << tmp_buffer[2] << tmp_buffer[3] << tmp_buffer[4] << '\n';
+		std::cout << "Not a valid wav: WAVE " << tmp_buffer[0] << tmp_buffer[1] << tmp_buffer[2] << tmp_buffer[3] << '\n';
 		return 0;
 	}
     
 	in.read(tmp_buffer, 4);
 	if(strncmp(tmp_buffer, "fmt ", 4) != 0)
     {
-		std::cout << "Not a valid wav: fmt " << tmp_buffer[0] << tmp_buffer[1] << tmp_buffer[2] << tmp_buffer[3] << tmp_buffer[4] << '\n';
+		std::cout << "Not a valid wav: fmt " << tmp_buffer[0] << tmp_buffer[1] << tmp_buffer[2] << tmp_buffer[3] << '\n';
 		return 0;
 	}
     

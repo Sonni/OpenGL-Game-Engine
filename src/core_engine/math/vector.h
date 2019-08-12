@@ -154,6 +154,15 @@ public:
         out <<  result << std::endl;
         return out;
     }
+
+    inline std::string toString() const
+    {
+        std::string result = "";
+        for (unsigned int i = 0; i < D; i++)
+            result += std::to_string(values[i]) + " ";
+
+        return result;
+    }
 protected:
 private:
     T values[D];

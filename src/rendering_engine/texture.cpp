@@ -2,7 +2,6 @@
 #include "texture.h"
 #include "stb_image.h"
 #include "../core_engine/math/math.h"
-#include <iostream>
 
 std::map<std::string, texture_data*> texture::s_resourceMap;
 

@@ -1,0 +1,1032 @@
+Sat Aug  3 19:42:57 2019Linking: animation.glsl
+ERROR: Sat Aug  3 19:42:57 2019This is error 432.
+WARNING: Sat Aug  3 19:42:57 2019This is warning 231.
+Sat Aug  3 19:42:57 2019Linking: testTerrain.glsl
+ERROR: Sat Aug  3 19:42:57 2019This is error 432.
+WARNING: Sat Aug  3 19:42:57 2019This is warning 231.
+Sat Aug  3 19:42:57 2019Linking: testTerrain.glsl
+Sat Aug  3 19:42:57 2019Linking: text.glsl
+Sat Aug  3 19:42:57 2019Linking: gui.glsl
+Sat Aug  3 19:42:57 2019Linking: simpel_mesh.glsl
+Sat Aug  3 19:42:57 2019Linking: particle.glsl
+Sat Aug  3 19:42:57 2019Linking: advanced_mesh.glsl
+Sat Aug  3 19:42:57 2019Linking: advanced_mesh.glsl
+Sat Aug  3 19:42:58 2019Linking: skybox.glsl
+Sat Aug  3 19:42:58 2019Linking: gaussian_blur.glsl
+Sat Aug  3 19:42:58 2019Linking: water.glsl
+Sat Aug  3 19:42:58 2019Linking: shadow.glsl
+<Sat Aug  3 19:43:58 2019> Linking: animation.glsl
+ERROR: <Sat Aug  3 19:43:58 2019> This is error 432.
+WARNING: <Sat Aug  3 19:43:58 2019> This is warning 231.
+<Sat Aug  3 19:43:58 2019> Linking: testTerrain.glsl
+ERROR: <Sat Aug  3 19:43:58 2019> This is error 432.
+WARNING: <Sat Aug  3 19:43:58 2019> This is warning 231.
+<Sat Aug  3 19:43:58 2019> Linking: testTerrain.glsl
+<Sat Aug  3 19:43:58 2019> Linking: text.glsl
+<Sat Aug  3 19:43:58 2019> Linking: gui.glsl
+<Sat Aug  3 19:43:58 2019> Linking: simpel_mesh.glsl
+<Sat Aug  3 19:43:59 2019> Linking: particle.glsl
+<Sat Aug  3 19:43:59 2019> Linking: advanced_mesh.glsl
+<Sat Aug  3 19:43:59 2019> Linking: advanced_mesh.glsl
+<Sat Aug  3 19:43:59 2019> Linking: skybox.glsl
+<Sat Aug  3 19:43:59 2019> Linking: gaussian_blur.glsl
+<Sat Aug  3 19:43:59 2019> Linking: water.glsl
+<Sat Aug  3 19:43:59 2019> Linking: shadow.glsl
+<Thu Aug  8 13:52:48 2019> Linking: animation.glsl
+<Thu Aug  8 13:52:49 2019> Linking: testTerrain.glsl
+<Thu Aug  8 13:52:49 2019> Linking: testTerrain.glsl
+<Thu Aug  8 13:52:50 2019> Linking: text.glsl
+<Thu Aug  8 13:52:50 2019> Linking: gui.glsl
+<Thu Aug  8 13:52:50 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 13:52:50 2019> Linking: particle.glsl
+<Thu Aug  8 13:52:50 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 13:52:50 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 13:52:51 2019> Linking: skybox.glsl
+<Thu Aug  8 13:52:51 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 13:52:51 2019> Linking: water.glsl
+<Thu Aug  8 13:52:51 2019> Linking: shadow.glsl
+<Thu Aug  8 13:54:53 2019> Linking: animation.glsl
+ERROR: <Thu Aug  8 13:54:53 2019> This is error 432.
+WARNING: <Thu Aug  8 13:54:53 2019> This is warning 231.
+<Thu Aug  8 13:54:53 2019> Linking: testTerrain.glsl
+ERROR: <Thu Aug  8 13:54:53 2019> This is error 432.
+WARNING: <Thu Aug  8 13:54:53 2019> This is warning 231.
+<Thu Aug  8 13:54:53 2019> Linking: testTerrain.glsl
+<Thu Aug  8 13:54:53 2019> Linking: text.glsl
+<Thu Aug  8 13:54:53 2019> Linking: gui.glsl
+<Thu Aug  8 13:54:53 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 13:54:53 2019> Linking: particle.glsl
+<Thu Aug  8 13:54:53 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 13:54:53 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 13:54:54 2019> Linking: skybox.glsl
+<Thu Aug  8 13:54:54 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 13:54:54 2019> Linking: water.glsl
+<Thu Aug  8 13:54:54 2019> Linking: shadow.glsl
+<Thu Aug  8 13:56:42 2019> Linking: animation.glsl
+ERROR: <Thu Aug  8 13:56:42 2019> This is error 432.
+WARNING: <Thu Aug  8 13:56:42 2019> This is warning 231.
+<Thu Aug  8 13:56:42 2019> Linking: testTerrain.glsl
+ERROR: <Thu Aug  8 13:56:42 2019> This is error 432.
+WARNING: <Thu Aug  8 13:56:42 2019> This is warning 231.
+<Thu Aug  8 13:56:42 2019> Linking: testTerrain.glsl
+<Thu Aug  8 13:56:42 2019> Linking: text.glsl
+<Thu Aug  8 13:56:42 2019> Linking: gui.glsl
+<Thu Aug  8 13:56:42 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 13:56:42 2019> Linking: particle.glsl
+<Thu Aug  8 13:56:42 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 13:56:43 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 13:56:43 2019> Linking: skybox.glsl
+<Thu Aug  8 13:56:43 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 13:56:43 2019> Linking: water.glsl
+<Thu Aug  8 13:56:43 2019> Linking: shadow.glsl
+<Thu Aug  8 13:57:05 2019> Linking: animation.glsl
+ERROR: <Thu Aug  8 13:57:05 2019> This is error 432.
+WARNING: <Thu Aug  8 13:57:05 2019> This is warning 231.
+<Thu Aug  8 13:57:05 2019> Linking: testTerrain.glsl
+ERROR: <Thu Aug  8 13:57:05 2019> This is error 432.
+WARNING: <Thu Aug  8 13:57:05 2019> This is warning 231.
+<Thu Aug  8 13:57:05 2019> Linking: testTerrain.glsl
+<Thu Aug  8 13:57:06 2019> Linking: text.glsl
+<Thu Aug  8 13:57:06 2019> Linking: gui.glsl
+<Thu Aug  8 13:57:06 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 13:57:06 2019> Linking: particle.glsl
+<Thu Aug  8 13:57:06 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 13:57:06 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 13:57:06 2019> Linking: skybox.glsl
+<Thu Aug  8 13:57:06 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 13:57:06 2019> Linking: water.glsl
+<Thu Aug  8 13:57:06 2019> Linking: shadow.glsl
+<Thu Aug  8 13:58:32 2019> Linking: animation.glsl
+<Thu Aug  8 13:58:32 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 13:58:32 2019> This is error 432.
+WARNING: <Thu Aug  8 13:58:32 2019> This is warning 231.
+<Thu Aug  8 13:58:32 2019> Linking: testTerrain.glsl
+<Thu Aug  8 13:58:32 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 13:58:32 2019> This is error 432.
+WARNING: <Thu Aug  8 13:58:32 2019> This is warning 231.
+<Thu Aug  8 13:58:32 2019> Linking: testTerrain.glsl
+<Thu Aug  8 13:58:32 2019> Linking: text.glsl
+<Thu Aug  8 13:58:32 2019> Linking: gui.glsl
+<Thu Aug  8 13:58:32 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 13:58:32 2019> Linking: particle.glsl
+<Thu Aug  8 13:58:32 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 13:58:32 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 13:58:33 2019> Linking: skybox.glsl
+<Thu Aug  8 13:58:33 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 13:58:33 2019> Linking: water.glsl
+<Thu Aug  8 13:58:33 2019> Linking: shadow.glsl
+<Thu Aug  8 13:59:05 2019> Linking: animation.glsl
+<Thu Aug  8 13:59:05 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 13:59:05 2019> This is error 432.
+WARNING: <Thu Aug  8 13:59:05 2019> This is warning 231.
+<Thu Aug  8 13:59:05 2019> Linking: testTerrain.glsl
+<Thu Aug  8 13:59:05 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 13:59:05 2019> This is error 432.
+WARNING: <Thu Aug  8 13:59:05 2019> This is warning 231.
+<Thu Aug  8 13:59:05 2019> Linking: testTerrain.glsl
+<Thu Aug  8 13:59:05 2019> Linking: text.glsl
+<Thu Aug  8 13:59:05 2019> Linking: gui.glsl
+<Thu Aug  8 13:59:05 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 13:59:05 2019> Linking: particle.glsl
+<Thu Aug  8 13:59:05 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 13:59:06 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 13:59:06 2019> Linking: skybox.glsl
+<Thu Aug  8 13:59:06 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 13:59:06 2019> Linking: water.glsl
+<Thu Aug  8 13:59:06 2019> Linking: shadow.glsl
+<Thu Aug  8 14:00:04 2019> Linking: animation.glsl
+<Thu Aug  8 14:00:04 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:00:04 2019> This is error 432.
+WARNING: <Thu Aug  8 14:00:04 2019> This is warning 231.
+<Thu Aug  8 14:00:04 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:00:04 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:00:04 2019> This is error 432.
+WARNING: <Thu Aug  8 14:00:04 2019> This is warning 231.
+<Thu Aug  8 14:00:04 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:00:04 2019> Linking: text.glsl
+<Thu Aug  8 14:00:04 2019> Linking: gui.glsl
+<Thu Aug  8 14:00:04 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:00:04 2019> Linking: particle.glsl
+<Thu Aug  8 14:00:04 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:00:04 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:00:05 2019> Linking: skybox.glsl
+<Thu Aug  8 14:00:05 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:00:05 2019> Linking: water.glsl
+<Thu Aug  8 14:00:05 2019> Linking: shadow.glsl
+<Thu Aug  8 14:01:26 2019> Linking: animation.glsl
+<Thu Aug  8 14:01:26 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:01:26 2019> This is error 432.
+WARNING: <Thu Aug  8 14:01:26 2019> This is warning 231.
+<Thu Aug  8 14:01:26 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:01:26 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:01:26 2019> This is error 432.
+WARNING: <Thu Aug  8 14:01:26 2019> This is warning 231.
+<Thu Aug  8 14:01:26 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:01:27 2019> Linking: text.glsl
+<Thu Aug  8 14:01:27 2019> Linking: gui.glsl
+<Thu Aug  8 14:01:27 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:01:27 2019> Linking: particle.glsl
+<Thu Aug  8 14:01:27 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:01:27 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:01:27 2019> Linking: skybox.glsl
+<Thu Aug  8 14:01:27 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:01:27 2019> Linking: water.glsl
+<Thu Aug  8 14:01:27 2019> Linking: shadow.glsl
+<Thu Aug  8 14:04:54 2019> Linking: animation.glsl
+<Thu Aug  8 14:04:54 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:04:54 2019> This is error 432.
+WARNING: <Thu Aug  8 14:04:54 2019> This is warning 231.
+<Thu Aug  8 14:04:54 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:04:54 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:04:54 2019> This is error 432.
+WARNING: <Thu Aug  8 14:04:54 2019> This is warning 231.
+<Thu Aug  8 14:04:54 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:04:54 2019> Linking: text.glsl
+<Thu Aug  8 14:04:54 2019> Linking: gui.glsl
+<Thu Aug  8 14:04:54 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:04:54 2019> Linking: particle.glsl
+<Thu Aug  8 14:04:54 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:04:55 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:04:55 2019> Linking: skybox.glsl
+<Thu Aug  8 14:04:55 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:04:55 2019> Linking: water.glsl
+<Thu Aug  8 14:04:55 2019> Linking: shadow.glsl
+<Thu Aug  8 14:05:29 2019> Linking: animation.glsl
+<Thu Aug  8 14:05:29 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:05:29 2019> This is error 432.
+WARNING: <Thu Aug  8 14:05:29 2019> This is warning 231.
+<Thu Aug  8 14:05:29 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:05:29 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:05:29 2019> This is error 432.
+WARNING: <Thu Aug  8 14:05:29 2019> This is warning 231.
+<Thu Aug  8 14:05:29 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:05:29 2019> Linking: text.glsl
+<Thu Aug  8 14:05:29 2019> Linking: gui.glsl
+<Thu Aug  8 14:05:29 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:05:29 2019> Linking: particle.glsl
+<Thu Aug  8 14:05:29 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:05:29 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:05:30 2019> Linking: skybox.glsl
+<Thu Aug  8 14:05:30 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:05:30 2019> Linking: water.glsl
+<Thu Aug  8 14:05:30 2019> Linking: shadow.glsl
+<Thu Aug  8 14:09:50 2019> Linking: animation.glsl
+<Thu Aug  8 14:09:50 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:09:50 2019> This is error 432.
+WARNING: <Thu Aug  8 14:09:50 2019> This is warning 231.
+<Thu Aug  8 14:09:50 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:09:50 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:09:50 2019> This is error 432.
+WARNING: <Thu Aug  8 14:09:50 2019> This is warning 231.
+<Thu Aug  8 14:09:50 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:09:50 2019> Linking: text.glsl
+<Thu Aug  8 14:09:50 2019> Linking: gui.glsl
+<Thu Aug  8 14:09:50 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:09:50 2019> Linking: particle.glsl
+<Thu Aug  8 14:09:50 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:09:50 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:09:50 2019> Linking: skybox.glsl
+<Thu Aug  8 14:09:50 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:09:51 2019> Linking: water.glsl
+<Thu Aug  8 14:09:51 2019> Linking: shadow.glsl
+<Thu Aug  8 14:12:50 2019> Linking: animation.glsl
+<Thu Aug  8 14:12:50 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:12:50 2019> This is error 432.
+WARNING: <Thu Aug  8 14:12:50 2019> This is warning 231.
+<Thu Aug  8 14:12:50 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:12:50 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:12:50 2019> This is error 432.
+WARNING: <Thu Aug  8 14:12:50 2019> This is warning 231.
+<Thu Aug  8 14:12:50 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:12:50 2019> Linking: text.glsl
+<Thu Aug  8 14:12:50 2019> Linking: gui.glsl
+<Thu Aug  8 14:12:50 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:12:50 2019> Linking: particle.glsl
+<Thu Aug  8 14:12:50 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:12:50 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:12:51 2019> Linking: skybox.glsl
+<Thu Aug  8 14:12:51 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:12:51 2019> Linking: water.glsl
+<Thu Aug  8 14:12:51 2019> Linking: shadow.glsl
+<Thu Aug  8 14:13:15 2019> Linking: animation.glsl
+<Thu Aug  8 14:13:15 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:13:15 2019> This is error 432.
+WARNING: <Thu Aug  8 14:13:15 2019> This is warning 231.
+<Thu Aug  8 14:14:54 2019> Linking: animation.glsl
+<Thu Aug  8 14:14:54 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:14:54 2019> This is error 432.
+WARNING: <Thu Aug  8 14:14:54 2019> This is warning 231.
+<Thu Aug  8 14:14:54 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:14:54 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:14:54 2019> This is error 432.
+WARNING: <Thu Aug  8 14:14:54 2019> This is warning 231.
+<Thu Aug  8 14:14:54 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:14:54 2019> Linking: text.glsl
+<Thu Aug  8 14:14:54 2019> Linking: gui.glsl
+<Thu Aug  8 14:14:54 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:14:54 2019> Linking: particle.glsl
+<Thu Aug  8 14:14:54 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:14:54 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:14:55 2019> Linking: skybox.glsl
+<Thu Aug  8 14:14:55 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:14:55 2019> Linking: water.glsl
+<Thu Aug  8 14:14:55 2019> Linking: shadow.glsl
+<Thu Aug  8 14:18:01 2019> Linking: animation.glsl
+<Thu Aug  8 14:18:01 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:18:01 2019> This is error 432.
+WARNING: <Thu Aug  8 14:18:01 2019> This is warning 231.
+<Thu Aug  8 14:18:01 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:18:01 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:18:01 2019> This is error 432.
+WARNING: <Thu Aug  8 14:18:01 2019> This is warning 231.
+<Thu Aug  8 14:18:01 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:18:01 2019> Linking: text.glsl
+<Thu Aug  8 14:18:01 2019> Linking: gui.glsl
+<Thu Aug  8 14:18:01 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:18:01 2019> Linking: particle.glsl
+<Thu Aug  8 14:18:01 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:18:01 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:18:02 2019> Linking: skybox.glsl
+<Thu Aug  8 14:18:02 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:18:02 2019> Linking: water.glsl
+<Thu Aug  8 14:18:02 2019> Linking: shadow.glsl
+<Thu Aug  8 14:18:26 2019> Linking: animation.glsl
+<Thu Aug  8 14:18:26 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:18:26 2019> This is error 432.
+WARNING: <Thu Aug  8 14:18:26 2019> This is warning 231.
+<Thu Aug  8 14:18:26 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:18:26 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:18:26 2019> This is error 432.
+WARNING: <Thu Aug  8 14:18:26 2019> This is warning 231.
+<Thu Aug  8 14:18:26 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:18:26 2019> Linking: text.glsl
+<Thu Aug  8 14:18:27 2019> Linking: gui.glsl
+<Thu Aug  8 14:18:27 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:18:27 2019> Linking: particle.glsl
+<Thu Aug  8 14:18:27 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:18:27 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:18:27 2019> Linking: skybox.glsl
+<Thu Aug  8 14:18:27 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:18:27 2019> Linking: water.glsl
+<Thu Aug  8 14:18:27 2019> Linking: shadow.glsl
+<Thu Aug  8 14:19:37 2019> Linking: animation.glsl
+<Thu Aug  8 14:19:37 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:19:37 2019> This is error 432.
+WARNING: <Thu Aug  8 14:19:37 2019> This is warning 231.
+<Thu Aug  8 14:19:37 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:19:37 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:19:37 2019> This is error 432.
+WARNING: <Thu Aug  8 14:19:37 2019> This is warning 231.
+<Thu Aug  8 14:19:37 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:19:37 2019> Linking: text.glsl
+<Thu Aug  8 14:19:37 2019> Linking: gui.glsl
+<Thu Aug  8 14:19:37 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:19:37 2019> Linking: particle.glsl
+<Thu Aug  8 14:19:37 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:19:37 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:19:37 2019> Linking: skybox.glsl
+<Thu Aug  8 14:19:37 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:19:37 2019> Linking: water.glsl
+<Thu Aug  8 14:19:37 2019> Linking: shadow.glsl
+<Thu Aug  8 14:20:29 2019> Linking: animation.glsl
+<Thu Aug  8 14:20:29 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:20:29 2019> This is error 432.
+WARNING: <Thu Aug  8 14:20:29 2019> This is warning 231.
+<Thu Aug  8 14:20:30 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:20:30 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:20:30 2019> This is error 432.
+WARNING: <Thu Aug  8 14:20:30 2019> This is warning 231.
+<Thu Aug  8 14:20:30 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:20:30 2019> Linking: text.glsl
+<Thu Aug  8 14:20:30 2019> Linking: gui.glsl
+<Thu Aug  8 14:20:30 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:20:30 2019> Linking: particle.glsl
+<Thu Aug  8 14:20:30 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:20:30 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:20:30 2019> Linking: skybox.glsl
+<Thu Aug  8 14:20:30 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:20:30 2019> Linking: water.glsl
+<Thu Aug  8 14:20:30 2019> Linking: shadow.glsl
+<Thu Aug  8 14:21:25 2019> Linking: animation.glsl
+<Thu Aug  8 14:21:25 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:21:25 2019> This is error 432.
+WARNING: <Thu Aug  8 14:21:25 2019> This is warning 231.
+<Thu Aug  8 14:21:25 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:21:25 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:21:25 2019> This is error 432.
+WARNING: <Thu Aug  8 14:21:25 2019> This is warning 231.
+<Thu Aug  8 14:21:25 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:21:26 2019> Linking: text.glsl
+<Thu Aug  8 14:21:26 2019> Linking: gui.glsl
+<Thu Aug  8 14:21:26 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:21:26 2019> Linking: particle.glsl
+<Thu Aug  8 14:21:26 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:21:26 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:21:26 2019> Linking: skybox.glsl
+<Thu Aug  8 14:21:26 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:21:26 2019> Linking: water.glsl
+<Thu Aug  8 14:21:26 2019> Linking: shadow.glsl
+<Thu Aug  8 14:22:03 2019> Linking: animation.glsl
+<Thu Aug  8 14:22:03 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:22:03 2019> This is error 432.
+WARNING: <Thu Aug  8 14:22:03 2019> This is warning 231.
+<Thu Aug  8 14:22:03 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:22:03 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:22:03 2019> This is error 432.
+WARNING: <Thu Aug  8 14:22:03 2019> This is warning 231.
+<Thu Aug  8 14:22:03 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:22:03 2019> Linking: text.glsl
+<Thu Aug  8 14:22:03 2019> Linking: gui.glsl
+<Thu Aug  8 14:22:03 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:22:03 2019> Linking: particle.glsl
+<Thu Aug  8 14:22:03 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:22:03 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:22:03 2019> Linking: skybox.glsl
+<Thu Aug  8 14:22:03 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:22:03 2019> Linking: water.glsl
+<Thu Aug  8 14:22:03 2019> Linking: shadow.glsl
+<Thu Aug  8 14:24:18 2019> Linking: animation.glsl
+<Thu Aug  8 14:24:18 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:24:18 2019> This is error 432.
+WARNING: <Thu Aug  8 14:24:18 2019> This is warning 231.
+<Thu Aug  8 14:24:18 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:24:18 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:24:18 2019> This is error 432.
+WARNING: <Thu Aug  8 14:24:18 2019> This is warning 231.
+<Thu Aug  8 14:24:18 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:24:18 2019> Linking: text.glsl
+<Thu Aug  8 14:24:18 2019> Linking: gui.glsl
+<Thu Aug  8 14:24:18 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:24:18 2019> Linking: particle.glsl
+<Thu Aug  8 14:24:18 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:24:19 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:24:19 2019> Linking: skybox.glsl
+<Thu Aug  8 14:24:19 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:24:19 2019> Linking: water.glsl
+<Thu Aug  8 14:24:19 2019> Linking: shadow.glsl
+<Thu Aug  8 14:25:13 2019> Linking: animation.glsl
+<Thu Aug  8 14:25:13 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:25:13 2019> This is error 432.
+WARNING: <Thu Aug  8 14:25:13 2019> This is warning 231.
+<Thu Aug  8 14:25:13 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:25:13 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:25:13 2019> This is error 432.
+WARNING: <Thu Aug  8 14:25:13 2019> This is warning 231.
+<Thu Aug  8 14:25:13 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:25:13 2019> Linking: text.glsl
+<Thu Aug  8 14:25:13 2019> Linking: gui.glsl
+<Thu Aug  8 14:25:13 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:25:13 2019> Linking: particle.glsl
+<Thu Aug  8 14:25:13 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:25:13 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:25:13 2019> Linking: skybox.glsl
+<Thu Aug  8 14:25:13 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:25:13 2019> Linking: water.glsl
+<Thu Aug  8 14:25:13 2019> Linking: shadow.glsl
+<Thu Aug  8 14:26:09 2019> Linking: animation.glsl
+<Thu Aug  8 14:26:09 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:26:09 2019> This is error 432.
+WARNING: <Thu Aug  8 14:26:09 2019> This is warning 231.
+<Thu Aug  8 14:26:09 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:26:09 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:26:09 2019> This is error 432.
+WARNING: <Thu Aug  8 14:26:09 2019> This is warning 231.
+<Thu Aug  8 14:26:09 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:26:09 2019> Linking: text.glsl
+<Thu Aug  8 14:26:09 2019> Linking: gui.glsl
+<Thu Aug  8 14:26:09 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:26:09 2019> Linking: particle.glsl
+<Thu Aug  8 14:26:09 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:26:09 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:26:10 2019> Linking: skybox.glsl
+<Thu Aug  8 14:26:10 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:26:10 2019> Linking: water.glsl
+<Thu Aug  8 14:26:10 2019> Linking: shadow.glsl
+<Thu Aug  8 14:27:01 2019> Linking: animation.glsl
+<Thu Aug  8 14:27:01 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:27:01 2019> This is error 432.
+WARNING: <Thu Aug  8 14:27:01 2019> This is warning 231.
+<Thu Aug  8 14:27:01 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:27:01 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:27:01 2019> This is error 432.
+WARNING: <Thu Aug  8 14:27:01 2019> This is warning 231.
+<Thu Aug  8 14:27:01 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:27:01 2019> Linking: text.glsl
+<Thu Aug  8 14:27:01 2019> Linking: gui.glsl
+<Thu Aug  8 14:27:01 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:27:01 2019> Linking: particle.glsl
+<Thu Aug  8 14:27:01 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:27:02 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:27:02 2019> Linking: skybox.glsl
+<Thu Aug  8 14:27:02 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:27:02 2019> Linking: water.glsl
+<Thu Aug  8 14:27:02 2019> Linking: shadow.glsl
+<Thu Aug  8 14:30:20 2019> Linking: animation.glsl
+<Thu Aug  8 14:30:20 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:30:20 2019> This is error 432.
+WARNING: <Thu Aug  8 14:30:20 2019> This is warning 231.
+<Thu Aug  8 14:31:04 2019> Linking: animation.glsl
+<Thu Aug  8 14:31:04 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:31:04 2019> This is error 432.
+WARNING: <Thu Aug  8 14:31:04 2019> This is warning 231.
+<Thu Aug  8 14:31:04 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:31:04 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:31:04 2019> This is error 432.
+WARNING: <Thu Aug  8 14:31:04 2019> This is warning 231.
+<Thu Aug  8 14:31:04 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:31:04 2019> Linking: text.glsl
+<Thu Aug  8 14:31:04 2019> Linking: gui.glsl
+<Thu Aug  8 14:31:04 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:31:04 2019> Linking: particle.glsl
+<Thu Aug  8 14:31:05 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:31:05 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:31:05 2019> Linking: skybox.glsl
+<Thu Aug  8 14:31:05 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:31:05 2019> Linking: water.glsl
+<Thu Aug  8 14:31:05 2019> Linking: shadow.glsl
+<Thu Aug  8 14:35:01 2019> Linking: animation.glsl
+<Thu Aug  8 14:35:01 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:35:01 2019> This is error 432.
+WARNING: <Thu Aug  8 14:35:01 2019> This is warning 231.
+<Thu Aug  8 14:35:01 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:35:01 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:35:01 2019> This is error 432.
+WARNING: <Thu Aug  8 14:35:01 2019> This is warning 231.
+<Thu Aug  8 14:35:01 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:35:01 2019> Linking: text.glsl
+<Thu Aug  8 14:35:01 2019> Linking: gui.glsl
+<Thu Aug  8 14:35:01 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:35:01 2019> Linking: particle.glsl
+<Thu Aug  8 14:35:01 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:35:01 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:35:02 2019> Linking: skybox.glsl
+<Thu Aug  8 14:35:02 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:35:02 2019> Linking: water.glsl
+<Thu Aug  8 14:35:02 2019> Linking: shadow.glsl
+<Thu Aug  8 14:35:31 2019> Linking: animation.glsl
+<Thu Aug  8 14:35:31 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:35:31 2019> This is error 432.
+WARNING: <Thu Aug  8 14:35:31 2019> This is warning 231.
+<Thu Aug  8 14:35:31 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:35:31 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:35:31 2019> This is error 432.
+WARNING: <Thu Aug  8 14:35:31 2019> This is warning 231.
+<Thu Aug  8 14:35:31 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:35:31 2019> Linking: text.glsl
+<Thu Aug  8 14:35:31 2019> Linking: gui.glsl
+<Thu Aug  8 14:35:31 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:35:31 2019> Linking: particle.glsl
+<Thu Aug  8 14:35:31 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:35:31 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:35:32 2019> Linking: skybox.glsl
+<Thu Aug  8 14:35:32 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:35:32 2019> Linking: water.glsl
+<Thu Aug  8 14:35:32 2019> Linking: shadow.glsl
+<Thu Aug  8 14:35:57 2019> Linking: animation.glsl
+<Thu Aug  8 14:35:57 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:35:57 2019> This is error 432.
+WARNING: <Thu Aug  8 14:35:57 2019> This is warning 231.
+<Thu Aug  8 14:35:57 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:35:57 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:35:57 2019> This is error 432.
+WARNING: <Thu Aug  8 14:35:57 2019> This is warning 231.
+<Thu Aug  8 14:35:57 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:35:57 2019> Linking: text.glsl
+<Thu Aug  8 14:35:57 2019> Linking: gui.glsl
+<Thu Aug  8 14:35:57 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:35:57 2019> Linking: particle.glsl
+<Thu Aug  8 14:35:57 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:35:57 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:35:58 2019> Linking: skybox.glsl
+<Thu Aug  8 14:35:58 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:35:58 2019> Linking: water.glsl
+<Thu Aug  8 14:35:58 2019> Linking: shadow.glsl
+<Thu Aug  8 14:37:08 2019> Linking: animation.glsl
+<Thu Aug  8 14:37:08 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:37:08 2019> This is error 432.
+WARNING: <Thu Aug  8 14:37:08 2019> This is warning 231.
+<Thu Aug  8 14:37:08 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:37:08 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:37:08 2019> This is error 432.
+WARNING: <Thu Aug  8 14:37:08 2019> This is warning 231.
+<Thu Aug  8 14:37:08 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:37:08 2019> Linking: text.glsl
+<Thu Aug  8 14:37:08 2019> Linking: gui.glsl
+<Thu Aug  8 14:37:08 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:37:08 2019> Linking: particle.glsl
+<Thu Aug  8 14:37:08 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:37:08 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:37:08 2019> Linking: skybox.glsl
+<Thu Aug  8 14:37:08 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:37:09 2019> Linking: water.glsl
+<Thu Aug  8 14:37:09 2019> Linking: shadow.glsl
+<Thu Aug  8 14:40:31 2019> Linking: animation.glsl
+<Thu Aug  8 14:40:31 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:40:31 2019> This is error 432.
+WARNING: <Thu Aug  8 14:40:31 2019> This is warning 231.
+<Thu Aug  8 14:40:31 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:40:31 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 14:40:31 2019> This is error 432.
+WARNING: <Thu Aug  8 14:40:31 2019> This is warning 231.
+<Thu Aug  8 14:40:31 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:40:31 2019> Linking: text.glsl
+<Thu Aug  8 14:40:31 2019> Linking: gui.glsl
+<Thu Aug  8 14:40:32 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:40:32 2019> Linking: particle.glsl
+<Thu Aug  8 14:40:32 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:40:32 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:40:32 2019> Linking: skybox.glsl
+<Thu Aug  8 14:40:32 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:40:32 2019> Linking: water.glsl
+<Thu Aug  8 14:40:32 2019> Linking: shadow.glsl
+<Thu Aug  8 14:41:22 2019> Linking: animation.glsl
+<Thu Aug  8 14:41:23 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:41:23 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:41:23 2019> Linking: text.glsl
+<Thu Aug  8 14:41:23 2019> Linking: gui.glsl
+<Thu Aug  8 14:41:23 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:41:23 2019> Linking: particle.glsl
+<Thu Aug  8 14:41:23 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:41:23 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:41:23 2019> Linking: skybox.glsl
+<Thu Aug  8 14:41:23 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:41:24 2019> Linking: water.glsl
+<Thu Aug  8 14:41:24 2019> Linking: shadow.glsl
+<Thu Aug  8 14:42:26 2019> Linking: animation.glsl
+<Thu Aug  8 14:42:26 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:42:27 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:42:27 2019> Linking: text.glsl
+<Thu Aug  8 14:42:27 2019> Linking: gui.glsl
+<Thu Aug  8 14:42:27 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:42:27 2019> Linking: particle.glsl
+<Thu Aug  8 14:42:27 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:42:27 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:42:27 2019> Linking: skybox.glsl
+<Thu Aug  8 14:42:27 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:42:27 2019> Linking: water.glsl
+<Thu Aug  8 14:42:27 2019> Linking: shadow.glsl
+<Thu Aug  8 14:44:15 2019> Linking: animation.glsl
+<Thu Aug  8 14:44:15 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:44:15 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:44:15 2019> Linking: text.glsl
+<Thu Aug  8 14:44:15 2019> Linking: gui.glsl
+<Thu Aug  8 14:44:15 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:44:15 2019> Linking: particle.glsl
+<Thu Aug  8 14:44:15 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:44:15 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:44:16 2019> Linking: skybox.glsl
+<Thu Aug  8 14:44:16 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:44:16 2019> Linking: water.glsl
+<Thu Aug  8 14:44:16 2019> Linking: shadow.glsl
+<Thu Aug  8 14:47:01 2019> Linking: animation.glsl
+<Thu Aug  8 14:47:01 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:47:02 2019> Linking: testTerrain.glsl
+<Thu Aug  8 14:47:02 2019> Linking: text.glsl
+<Thu Aug  8 14:47:02 2019> Linking: gui.glsl
+<Thu Aug  8 14:47:02 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 14:47:02 2019> Linking: particle.glsl
+<Thu Aug  8 14:47:02 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:47:02 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 14:47:02 2019> Linking: skybox.glsl
+<Thu Aug  8 14:47:02 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 14:47:02 2019> Linking: water.glsl
+<Thu Aug  8 14:47:02 2019> Linking: shadow.glsl
+<Thu Aug  8 19:47:33 2019> Linking: animation.glsl
+<Thu Aug  8 19:47:34 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:47:34 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:47:34 2019> Linking: text.glsl
+<Thu Aug  8 19:47:34 2019> Linking: gui.glsl
+<Thu Aug  8 19:47:34 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 19:47:34 2019> Linking: particle.glsl
+<Thu Aug  8 19:47:34 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:47:34 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:47:35 2019> Linking: skybox.glsl
+<Thu Aug  8 19:47:35 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 19:47:35 2019> Linking: water.glsl
+<Thu Aug  8 19:47:35 2019> Linking: shadow.glsl
+<Thu Aug  8 19:47:58 2019> Linking: animation.glsl
+<Thu Aug  8 19:47:59 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:47:59 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:47:59 2019> Linking: text.glsl
+<Thu Aug  8 19:47:59 2019> Linking: gui.glsl
+<Thu Aug  8 19:47:59 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 19:47:59 2019> Linking: particle.glsl
+<Thu Aug  8 19:47:59 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:47:59 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:47:59 2019> Linking: skybox.glsl
+<Thu Aug  8 19:47:59 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 19:48:00 2019> Linking: water.glsl
+<Thu Aug  8 19:48:00 2019> Linking: shadow.glsl
+<Thu Aug  8 19:48:39 2019> Linking: animation.glsl
+<Thu Aug  8 19:48:39 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:48:39 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:48:39 2019> Linking: text.glsl
+<Thu Aug  8 19:48:39 2019> Linking: gui.glsl
+<Thu Aug  8 19:48:40 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 19:48:40 2019> Linking: particle.glsl
+<Thu Aug  8 19:48:40 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:48:40 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:48:40 2019> Linking: skybox.glsl
+<Thu Aug  8 19:48:40 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 19:48:40 2019> Linking: water.glsl
+<Thu Aug  8 19:48:40 2019> Linking: shadow.glsl
+<Thu Aug  8 19:49:05 2019> Linking: animation.glsl
+<Thu Aug  8 19:49:05 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:49:05 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:49:05 2019> Linking: text.glsl
+<Thu Aug  8 19:49:05 2019> Linking: gui.glsl
+<Thu Aug  8 19:49:05 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 19:49:06 2019> Linking: particle.glsl
+<Thu Aug  8 19:49:06 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:49:06 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:49:06 2019> Linking: skybox.glsl
+<Thu Aug  8 19:49:06 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 19:49:06 2019> Linking: water.glsl
+<Thu Aug  8 19:49:06 2019> Linking: shadow.glsl
+<Thu Aug  8 19:52:07 2019> Linking: animation.glsl
+<Thu Aug  8 19:52:08 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:52:08 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:52:09 2019> Linking: text.glsl
+<Thu Aug  8 19:52:09 2019> Linking: gui.glsl
+<Thu Aug  8 19:52:09 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 19:52:09 2019> Linking: particle.glsl
+<Thu Aug  8 19:52:09 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:52:09 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:52:09 2019> Linking: skybox.glsl
+<Thu Aug  8 19:52:09 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 19:52:09 2019> Linking: water.glsl
+<Thu Aug  8 19:52:09 2019> Linking: shadow.glsl
+<Thu Aug  8 19:53:25 2019> Linking: animation.glsl
+<Thu Aug  8 19:53:27 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:53:30 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:53:30 2019> Linking: text.glsl
+<Thu Aug  8 19:53:30 2019> Linking: gui.glsl
+<Thu Aug  8 19:53:30 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 19:53:30 2019> Linking: particle.glsl
+<Thu Aug  8 19:53:30 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:53:30 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:53:31 2019> Linking: skybox.glsl
+<Thu Aug  8 19:53:31 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 19:53:31 2019> Linking: water.glsl
+<Thu Aug  8 19:53:31 2019> Linking: shadow.glsl
+<Thu Aug  8 19:55:05 2019> Linking: animation.glsl
+<Thu Aug  8 19:55:52 2019> Linking: animation.glsl
+<Thu Aug  8 19:55:52 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:55:52 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:55:52 2019> Linking: text.glsl
+<Thu Aug  8 19:55:52 2019> Linking: gui.glsl
+<Thu Aug  8 19:55:52 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 19:55:52 2019> Linking: particle.glsl
+<Thu Aug  8 19:55:52 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:55:52 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:55:53 2019> Linking: skybox.glsl
+<Thu Aug  8 19:55:53 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 19:55:53 2019> Linking: water.glsl
+<Thu Aug  8 19:55:53 2019> Linking: shadow.glsl
+<Thu Aug  8 19:56:43 2019> Linking: animation.glsl
+<Thu Aug  8 19:56:43 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:56:43 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:56:43 2019> Linking: text.glsl
+<Thu Aug  8 19:56:43 2019> Linking: gui.glsl
+<Thu Aug  8 19:56:43 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 19:56:43 2019> Linking: particle.glsl
+<Thu Aug  8 19:56:43 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:56:43 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:56:44 2019> Linking: skybox.glsl
+<Thu Aug  8 19:56:44 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 19:56:44 2019> Linking: water.glsl
+<Thu Aug  8 19:56:44 2019> Linking: shadow.glsl
+<Thu Aug  8 19:57:58 2019> Linking: animation.glsl
+<Thu Aug  8 19:57:58 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:57:58 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:57:58 2019> Linking: text.glsl
+<Thu Aug  8 19:57:58 2019> Linking: gui.glsl
+<Thu Aug  8 19:57:58 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 19:57:58 2019> Linking: particle.glsl
+<Thu Aug  8 19:57:58 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:57:58 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:57:59 2019> Linking: skybox.glsl
+<Thu Aug  8 19:57:59 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 19:57:59 2019> Linking: water.glsl
+<Thu Aug  8 19:57:59 2019> Linking: shadow.glsl
+<Thu Aug  8 19:58:40 2019> Linking: animation.glsl
+<Thu Aug  8 19:58:40 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:58:40 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:58:40 2019> Linking: text.glsl
+<Thu Aug  8 19:58:40 2019> Linking: gui.glsl
+<Thu Aug  8 19:58:40 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 19:58:40 2019> Linking: particle.glsl
+<Thu Aug  8 19:58:40 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:58:40 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:58:41 2019> Linking: skybox.glsl
+<Thu Aug  8 19:58:41 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 19:58:41 2019> Linking: water.glsl
+<Thu Aug  8 19:58:41 2019> Linking: shadow.glsl
+<Thu Aug  8 19:59:44 2019> Linking: animation.glsl
+<Thu Aug  8 19:59:44 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:59:44 2019> Linking: testTerrain.glsl
+<Thu Aug  8 19:59:44 2019> Linking: text.glsl
+<Thu Aug  8 19:59:44 2019> Linking: gui.glsl
+<Thu Aug  8 19:59:44 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 19:59:45 2019> Linking: particle.glsl
+<Thu Aug  8 19:59:45 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:59:45 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 19:59:45 2019> Linking: skybox.glsl
+<Thu Aug  8 19:59:45 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 19:59:45 2019> Linking: water.glsl
+<Thu Aug  8 19:59:45 2019> Linking: shadow.glsl
+<Thu Aug  8 20:00:23 2019> Linking: animation.glsl
+<Thu Aug  8 20:00:23 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:00:23 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:00:23 2019> Linking: text.glsl
+<Thu Aug  8 20:00:23 2019> Linking: gui.glsl
+<Thu Aug  8 20:00:23 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 20:00:23 2019> Linking: particle.glsl
+<Thu Aug  8 20:00:23 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:00:23 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:00:24 2019> Linking: skybox.glsl
+<Thu Aug  8 20:00:24 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 20:00:24 2019> Linking: water.glsl
+<Thu Aug  8 20:00:24 2019> Linking: shadow.glsl
+<Thu Aug  8 20:01:17 2019> Linking: animation.glsl
+<Thu Aug  8 20:01:17 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:01:18 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:01:18 2019> Linking: text.glsl
+<Thu Aug  8 20:01:18 2019> Linking: gui.glsl
+<Thu Aug  8 20:01:18 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 20:01:18 2019> Linking: particle.glsl
+<Thu Aug  8 20:01:18 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:01:18 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:01:18 2019> Linking: skybox.glsl
+<Thu Aug  8 20:01:18 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 20:01:18 2019> Linking: water.glsl
+<Thu Aug  8 20:01:18 2019> Linking: shadow.glsl
+<Thu Aug  8 20:04:57 2019> Linking: animation.glsl
+<Thu Aug  8 20:04:57 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:04:58 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:04:58 2019> Linking: text.glsl
+<Thu Aug  8 20:04:58 2019> Linking: gui.glsl
+<Thu Aug  8 20:04:58 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 20:04:58 2019> Linking: particle.glsl
+<Thu Aug  8 20:04:58 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:04:58 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:04:58 2019> Linking: skybox.glsl
+<Thu Aug  8 20:04:58 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 20:04:58 2019> Linking: water.glsl
+<Thu Aug  8 20:04:58 2019> Linking: shadow.glsl
+<Thu Aug  8 20:05:16 2019> Linking: animation.glsl
+<Thu Aug  8 20:05:17 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:05:17 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:05:17 2019> Linking: text.glsl
+<Thu Aug  8 20:05:17 2019> Linking: gui.glsl
+<Thu Aug  8 20:05:17 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 20:05:17 2019> Linking: particle.glsl
+<Thu Aug  8 20:05:17 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:05:17 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:05:18 2019> Linking: skybox.glsl
+<Thu Aug  8 20:05:18 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 20:05:18 2019> Linking: water.glsl
+<Thu Aug  8 20:05:18 2019> Linking: shadow.glsl
+<Thu Aug  8 20:11:29 2019> Linking: animation.glsl
+<Thu Aug  8 20:11:30 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:11:30 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:11:30 2019> Linking: text.glsl
+<Thu Aug  8 20:11:30 2019> Linking: gui.glsl
+<Thu Aug  8 20:11:30 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 20:11:30 2019> Linking: particle.glsl
+<Thu Aug  8 20:11:30 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:11:30 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:11:31 2019> Linking: skybox.glsl
+<Thu Aug  8 20:11:31 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 20:11:31 2019> Linking: water.glsl
+<Thu Aug  8 20:11:31 2019> Linking: shadow.glsl
+<Thu Aug  8 20:12:59 2019> Linking: animation.glsl
+<Thu Aug  8 20:13:00 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:13:01 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:13:01 2019> Linking: text.glsl
+<Thu Aug  8 20:13:01 2019> Linking: gui.glsl
+<Thu Aug  8 20:13:01 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 20:13:01 2019> Linking: particle.glsl
+<Thu Aug  8 20:13:01 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:13:01 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:13:02 2019> Linking: skybox.glsl
+<Thu Aug  8 20:13:02 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 20:13:02 2019> Linking: water.glsl
+<Thu Aug  8 20:13:02 2019> Linking: shadow.glsl
+<Thu Aug  8 20:13:50 2019> Linking: animation.glsl
+<Thu Aug  8 20:13:51 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:13:52 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:13:52 2019> Linking: text.glsl
+<Thu Aug  8 20:13:52 2019> Linking: gui.glsl
+<Thu Aug  8 20:13:52 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 20:13:52 2019> Linking: particle.glsl
+<Thu Aug  8 20:13:52 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:13:52 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:13:52 2019> Linking: skybox.glsl
+<Thu Aug  8 20:13:52 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 20:13:52 2019> Linking: water.glsl
+<Thu Aug  8 20:13:52 2019> Linking: shadow.glsl
+<Thu Aug  8 20:18:17 2019> Linking: animation.glsl
+<Thu Aug  8 20:18:18 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:18:18 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:18:18 2019> Linking: text.glsl
+<Thu Aug  8 20:18:18 2019> Linking: gui.glsl
+<Thu Aug  8 20:18:18 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 20:18:18 2019> Linking: particle.glsl
+<Thu Aug  8 20:18:18 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:18:18 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:18:18 2019> Linking: skybox.glsl
+<Thu Aug  8 20:18:18 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 20:18:18 2019> Linking: water.glsl
+<Thu Aug  8 20:18:18 2019> Linking: shadow.glsl
+<Thu Aug  8 20:20:44 2019> Linking: animation.glsl
+<Thu Aug  8 20:22:00 2019> Linking: animation.glsl
+<Thu Aug  8 20:22:00 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 20:22:00 2019> This is error 432.
+WARNING: <Thu Aug  8 20:22:00 2019> This is warning 231.
+<Thu Aug  8 20:22:00 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:22:00 2019> Trying to load terrain raw heights at: ../res/heights2.raw
+ERROR: <Thu Aug  8 20:22:00 2019> This is error 432.
+WARNING: <Thu Aug  8 20:22:00 2019> This is warning 231.
+<Thu Aug  8 20:22:00 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:22:00 2019> Linking: text.glsl
+<Thu Aug  8 20:22:00 2019> Linking: gui.glsl
+<Thu Aug  8 20:22:00 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 20:22:00 2019> Linking: particle.glsl
+<Thu Aug  8 20:22:00 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:22:00 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:22:00 2019> Linking: skybox.glsl
+<Thu Aug  8 20:22:00 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 20:22:00 2019> Linking: water.glsl
+<Thu Aug  8 20:22:00 2019> Linking: shadow.glsl
+<Thu Aug  8 20:23:32 2019> Linking: animation.glsl
+<Thu Aug  8 20:23:32 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:23:33 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:23:33 2019> Linking: text.glsl
+<Thu Aug  8 20:23:33 2019> Linking: gui.glsl
+<Thu Aug  8 20:23:33 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 20:23:33 2019> Linking: particle.glsl
+<Thu Aug  8 20:23:33 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:23:33 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:23:33 2019> Linking: skybox.glsl
+<Thu Aug  8 20:23:33 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 20:23:33 2019> Linking: water.glsl
+<Thu Aug  8 20:23:33 2019> Linking: shadow.glsl
+<Thu Aug  8 20:26:15 2019> Linking: animation.glsl
+<Thu Aug  8 20:26:15 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:26:16 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:26:16 2019> Linking: text.glsl
+<Thu Aug  8 20:26:16 2019> Linking: gui.glsl
+<Thu Aug  8 20:26:16 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 20:26:16 2019> Linking: particle.glsl
+<Thu Aug  8 20:26:16 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:26:16 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:26:16 2019> Linking: skybox.glsl
+<Thu Aug  8 20:26:16 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 20:26:16 2019> Linking: water.glsl
+<Thu Aug  8 20:26:16 2019> Linking: shadow.glsl
+<Thu Aug  8 20:28:24 2019> Linking: animation.glsl
+<Thu Aug  8 20:28:25 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:28:25 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:28:25 2019> Linking: text.glsl
+<Thu Aug  8 20:28:25 2019> Linking: gui.glsl
+<Thu Aug  8 20:28:25 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 20:28:25 2019> Linking: particle.glsl
+<Thu Aug  8 20:28:25 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:28:25 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:28:26 2019> Linking: skybox.glsl
+<Thu Aug  8 20:28:26 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 20:28:26 2019> Linking: water.glsl
+<Thu Aug  8 20:28:26 2019> Linking: shadow.glsl
+<Thu Aug  8 20:29:24 2019> Linking: animation.glsl
+<Thu Aug  8 20:29:24 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:29:24 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:29:24 2019> Linking: text.glsl
+<Thu Aug  8 20:29:24 2019> Linking: gui.glsl
+<Thu Aug  8 20:29:24 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 20:29:24 2019> Linking: particle.glsl
+<Thu Aug  8 20:29:24 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:29:25 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:29:25 2019> Linking: skybox.glsl
+<Thu Aug  8 20:29:25 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 20:29:25 2019> Linking: water.glsl
+<Thu Aug  8 20:29:25 2019> Linking: shadow.glsl
+<Thu Aug  8 20:30:24 2019> Linking: animation.glsl
+<Thu Aug  8 20:30:25 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:30:25 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:30:25 2019> Linking: text.glsl
+<Thu Aug  8 20:30:25 2019> Linking: gui.glsl
+<Thu Aug  8 20:30:25 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 20:30:25 2019> Linking: particle.glsl
+<Thu Aug  8 20:30:25 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:30:25 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:30:26 2019> Linking: skybox.glsl
+<Thu Aug  8 20:30:26 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 20:30:26 2019> Linking: water.glsl
+<Thu Aug  8 20:30:26 2019> Linking: shadow.glsl
+<Thu Aug  8 20:31:02 2019> Linking: animation.glsl
+<Thu Aug  8 20:31:04 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:31:06 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:31:06 2019> Linking: text.glsl
+<Thu Aug  8 20:31:06 2019> Linking: gui.glsl
+<Thu Aug  8 20:31:06 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 20:31:06 2019> Linking: particle.glsl
+<Thu Aug  8 20:31:06 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:31:06 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:31:07 2019> Linking: skybox.glsl
+<Thu Aug  8 20:31:07 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 20:31:07 2019> Linking: water.glsl
+<Thu Aug  8 20:31:07 2019> Linking: shadow.glsl
+<Thu Aug  8 20:32:41 2019> Linking: animation.glsl
+<Thu Aug  8 20:32:41 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:32:41 2019> Linking: testTerrain.glsl
+<Thu Aug  8 20:32:41 2019> Linking: text.glsl
+<Thu Aug  8 20:32:41 2019> Linking: gui.glsl
+<Thu Aug  8 20:32:41 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 20:32:41 2019> Linking: particle.glsl
+<Thu Aug  8 20:32:41 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:32:41 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 20:32:42 2019> Linking: skybox.glsl
+<Thu Aug  8 20:32:42 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 20:32:42 2019> Linking: water.glsl
+<Thu Aug  8 20:32:42 2019> Linking: shadow.glsl
+<Thu Aug  8 23:28:14 2019> Linking: animation.glsl
+<Thu Aug  8 23:28:15 2019> Linking: testTerrain.glsl
+<Thu Aug  8 23:28:15 2019> Linking: testTerrain.glsl
+<Thu Aug  8 23:28:15 2019> Linking: text.glsl
+<Thu Aug  8 23:28:15 2019> Linking: gui.glsl
+<Thu Aug  8 23:28:15 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 23:28:15 2019> Linking: particle.glsl
+<Thu Aug  8 23:28:15 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 23:28:15 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 23:28:15 2019> Linking: skybox.glsl
+<Thu Aug  8 23:28:15 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 23:28:16 2019> Linking: water.glsl
+<Thu Aug  8 23:28:16 2019> Linking: shadow.glsl
+<Thu Aug  8 23:28:54 2019> Linking: animation.glsl
+<Thu Aug  8 23:28:54 2019> Linking: testTerrain.glsl
+<Thu Aug  8 23:28:54 2019> Linking: testTerrain.glsl
+<Thu Aug  8 23:28:54 2019> Linking: text.glsl
+<Thu Aug  8 23:28:54 2019> Linking: gui.glsl
+<Thu Aug  8 23:28:54 2019> Linking: simpel_mesh.glsl
+<Thu Aug  8 23:28:54 2019> Linking: particle.glsl
+<Thu Aug  8 23:28:54 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 23:28:54 2019> Linking: advanced_mesh.glsl
+<Thu Aug  8 23:28:55 2019> Linking: skybox.glsl
+<Thu Aug  8 23:28:55 2019> Linking: gaussian_blur.glsl
+<Thu Aug  8 23:28:55 2019> Linking: water.glsl
+<Thu Aug  8 23:28:55 2019> Linking: shadow.glsl
+<Thu Aug  8 23:29:10 2019> Linking: animation.glsl
+<Thu Aug  8 23:29:10 2019> Linking: testTerrain.glsl
+<Thu Aug  8 23:29:30 2019> Linking: animation.glsl
+<Thu Aug  8 23:29:30 2019> Linking: testTerrain.glsl
+<Thu Aug  8 23:29:44 2019> Linking: animation.glsl
+<Thu Aug  8 23:29:44 2019> Linking: testTerrain.glsl
+<Thu Aug  8 23:29:55 2019> Linking: animation.glsl
+<Thu Aug  8 23:29:55 2019> Linking: testTerrain.glsl
+<Thu Aug  8 23:31:48 2019> Linking: animation.glsl
+<Thu Aug  8 23:31:48 2019> Linking: testTerrain.glsl
+<Thu Aug  8 23:31:58 2019> Linking: animation.glsl
+<Thu Aug  8 23:31:58 2019> Linking: testTerrain.glsl
+<Thu Aug  8 23:33:03 2019> Linking: animation.glsl
+<Thu Aug  8 23:33:03 2019> Linking: testTerrain.glsl

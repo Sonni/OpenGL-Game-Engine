@@ -20,7 +20,7 @@ public:
     virtual void update(float delta, const camera &cam);
     virtual void render() const;
 
-    physics_obj* get_physics_obj() const { return phy_obj; }
+    inline physics_obj* get_physics_obj() const { return phy_obj; }
 
 private:
     mesh* _mesh;

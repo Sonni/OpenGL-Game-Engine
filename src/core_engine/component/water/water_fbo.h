@@ -3,7 +3,6 @@
 
 #include <stdio.h>
 #include <GL/glew.h>
-#include "../../io/window.h"
 
 class water_fbo
 {

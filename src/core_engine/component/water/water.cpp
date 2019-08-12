@@ -6,8 +6,6 @@ water_component::water_component(const std::string& dudv, const std::string& nor
     normal_tex = new texture(normalMap);
     this->wfb = wfb;
     m_mesh = new mesh("plane");
-
-
 }
 
 void water_component::init()

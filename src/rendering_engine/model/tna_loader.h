@@ -4,8 +4,6 @@
 #include "loader.h"
 #include "indexed_model.h"
 
-#
-
 class tna_model
 {
 public:

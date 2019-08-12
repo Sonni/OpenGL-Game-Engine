@@ -130,8 +130,6 @@ mesh::mesh(const std::string& fileName, bool flipUVS)
     }
 }
 
-
-
 mesh::mesh(const mesh& Mesh) :
 	m_fileName(Mesh.m_fileName),
 	m_meshData(Mesh.m_meshData)

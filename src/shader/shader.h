@@ -2,10 +2,8 @@
 #define GAME_ENGINE_SHADER_H
 
 #include <GL/glew.h>
-#include <fstream>
 #include <map>
 #include <sstream>
-#include "../core_engine/transform.h"
 #include "../core_engine/camera.h"
 #include "../rendering_engine/light/phong_light.h"
 

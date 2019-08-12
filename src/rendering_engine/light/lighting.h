@@ -1,7 +1,6 @@
 #ifndef INC_3D_ENGINE_LIGHTING_H
 #define INC_3D_ENGINE_LIGHTING_H
 
-
 #include "../../core_engine/math/vector.h"
 #include "../../core_engine/math/math.h"
 

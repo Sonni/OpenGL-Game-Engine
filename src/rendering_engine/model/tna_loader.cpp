@@ -12,10 +12,8 @@ tna_model::tna_model(const std::string& fileName)
     std::ifstream file;
     file.open(path);
 
-
     m_root = new joint();
 
-    
     std::string line;
     if(file.is_open())
     {
@@ -172,9 +170,7 @@ void tna_model::load_reduced_faces(const std::string &line)
 
     for(int i = 0; i < faceArray.size(); i += 3)
     {
-
         reduced_indices.push_back(vec3i(stoi(faceArray[i]), stoi(faceArray[i+1]), stoi(faceArray[i+2])));
-
     }
 }
 

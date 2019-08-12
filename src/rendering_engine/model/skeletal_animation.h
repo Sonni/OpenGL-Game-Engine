@@ -1,7 +1,6 @@
 #ifndef INC_3D_ENGINE_SKELETAL_ANIMATION_H
 #define INC_3D_ENGINE_SKELETAL_ANIMATION_H
 
-
 #include <map>
 #include <vector>
 #include "../../core_engine/math/quaternion.h"

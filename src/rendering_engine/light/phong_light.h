@@ -1,7 +1,6 @@
 #ifndef INC_3D_ENGINE_LIGHT_COMPO_H
 #define INC_3D_ENGINE_LIGHT_COMPO_H
 
-
 #include "lighting.h"
 #include <vector>
 

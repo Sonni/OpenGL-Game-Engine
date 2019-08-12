@@ -1,6 +1,7 @@
 #include "shader.h"
+#include "../utils/logger.h"
 
-std::string path = "../src/shader/glsl/";
+std::string path = "../res/glsl/";
 
 std::string get_code(std::string file_name)
 {
@@ -99,12 +100,13 @@ shader::shader(std::string glsl_file_name)
         shader_stream.close();
     }else{
         found_shader = false;
-        printf("Could not find glsl file at: %s", file_path);
+        logger::log_err("Could not find glsl file at: ", file_path);
     }
 
     if (found_shader)
     {
-        std::cout << "Linking: " << glsl_file_name << std::endl;
+        logger::log_msg("Linking: ", glsl_file_name);
+
         program_id = load(vs_code, fs_code);
     }
     else

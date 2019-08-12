@@ -26,7 +26,6 @@ private:
     physics_obj* phy_obj;
     bool draw = true;
 
-
     mat4f* shadow_mvp;
 };
 

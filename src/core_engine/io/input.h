@@ -23,10 +23,15 @@ public:
 		KEY_V = 25,
 		KEY_W = 26,
 
-		KEY_1 = 30,
+        KEY_1 = 30,
 		KEY_2 = 31,
+		KEY_3 = 32,
 		KEY_4 = 33,
-		KEY_5 = 34,
+        KEY_5 = 34,
+        KEY_6 = 35,
+        KEY_7 = 36,
+        KEY_8 = 37,
+        KEY_9 = 38,
 
         KEY_ESCAPE = 41,
         KEY_TAB = 43,
