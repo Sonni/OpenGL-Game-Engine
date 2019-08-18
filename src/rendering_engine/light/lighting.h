@@ -8,67 +8,67 @@
 
 struct base_light
 {
-    vec3f color;
-    float intensity;
+    vec3f m_color;
+    float m_intensity;
 
     base_light(const vec3f& color = vec3f(0,0,0), float intensity = 0) :
-            color(color),
-            intensity(intensity) {}
+            m_color(color),
+            m_intensity(intensity) {}
 };
 
 struct directional_light
 {
-    base_light base;
-    vec3f direction;
+    base_light m_base;
+    vec3f m_direction;
 
     directional_light(const base_light& base = base_light(), vec3f direction = vec3f(0,0,0)) :
-            base(base),
-            direction(direction)
+            m_base(base),
+            m_direction(direction)
     {}
 };
 
 struct attenuation
 {
-    float constant;
-    float linear;
-    float exponent;
+    float m_constant;
+    float m_linear;
+    float m_exponent;
 
     attenuation(float constant = 0, float linear = 0, float exponent = 1) :
-            constant(constant),
-            linear(linear),
-            exponent(exponent) {}
+            m_constant(constant),
+            m_linear(linear),
+            m_exponent(exponent) {}
 };
 
 struct point_light
 {
-    base_light base;
-    attenuation atten;
-    vec3f position;
-    float range;
+    base_light m_base;
+    attenuation m_atten;
+    vec3f m_position;
+    float m_range;
 
     point_light(const base_light& base = base_light(), const attenuation& atten = attenuation(), const vec3f& position = vec3f()) :
-            base(base),
-            atten(atten),
-            position(position)
+            m_base(base),
+            m_atten(atten),
+            m_position(position)
     {
-        float a = atten.exponent;
-        float b = atten.linear;
-        float c = atten.constant - COLOR_DEPTH * base.intensity * base.color.max();
+        float a = atten.m_exponent;
+        float b = atten.m_linear;
+        float c = atten.m_constant - COLOR_DEPTH * base.m_intensity * base.m_color.max();
 
-        this->range = (-b + sqrtf(b*b - 4*a*c))/(2*a);
+        m_range = (-b + sqrtf(b*b - 4*a*c))/(2*a);
     }
 };
 
 struct spot_light
 {
-    point_light _point_light;
-    float cutoff;
-    quaternion q;
+    point_light m_point_light;
+    float m_cutoff;
+    quaternion m_q;
 
     spot_light(const point_light& _point_light, float viewAngle = ToRadians(170.0f), const quaternion& q = quaternion()) :
-            _point_light(_point_light),
-            cutoff((float) cos(viewAngle / 2.0f)),
-            q(q)
+            m_point_light(_point_light),
+            m_cutoff((float) cos(viewAngle / 2.0f)),
+            m_q(q)
     {}
 };
 

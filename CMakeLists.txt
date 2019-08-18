@@ -4,7 +4,9 @@ set(NAME 3D_Engine)
 
 project(${NAME})
 set(CMAKE_CXX_STANDARD 11)
-set("-j 4")
+
+SET(CMAKE_CXX_FLAGS "-O0")
+SET(CMAKE_C_FLAGS "-O0")
 
 INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/include/)
 file(GLOB_RECURSE SOURCES "${CMAKE_SOURCE_DIR}/src/*.c*")

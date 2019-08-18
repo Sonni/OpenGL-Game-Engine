@@ -15,9 +15,9 @@ public:
             for(unsigned int j = 0; j < D; j++)
             {
                 if(i == j)
-                    m[i][j] = T(1);
+                    m_matrix[i][j] = T(1);
                 else
-                    m[i][j] = T(0);
+                    m_matrix[i][j] = T(0);
             }
         }
 
@@ -31,13 +31,13 @@ public:
             for(unsigned int j = 0; j < D; j++)
             {
                 if(i == j && i != D - 1)
-                    m[i][j] = r[i];
+                    m_matrix[i][j] = r[i];
                 else
-                    m[i][j] = T(0);
+                    m_matrix[i][j] = T(0);
             }
         }
 
-        m[D - 1][D - 1] = T(1);
+        m_matrix[D - 1][D - 1] = T(1);
 
         return *this;
     }
@@ -49,15 +49,15 @@ public:
             for(unsigned int j = 0; j < D; j++)
             {
                 if(i == D - 1 && j != D - 1)
-                    m[i][j] = r[j];
+                    m_matrix[i][j] = r[j];
                 else if(i == j)
-                    m[i][j] = T(1);
+                    m_matrix[i][j] = T(1);
                 else
-                    m[i][j] = T(0);
+                    m_matrix[i][j] = T(0);
             }
         }
 
-        m[D - 1][D - 1] = T(1);
+        m_matrix[D - 1][D - 1] = T(1);
 
         return *this;
     }
@@ -67,7 +67,7 @@ public:
         mat<T, D> t;
         for (int j = 0; j < D; j++) {
             for (int i = 0; i < D; i++) {
-                t[i][j] = m[j][i];
+                t[i][j] = m_matrix[j][i];
             }
         }
         return t;
@@ -80,10 +80,10 @@ public:
         {
             for (unsigned int j = 0 ; j < D; j++)
             {
-                ret.m[i][j] = T(0);
+                ret.m_matrix[i][j] = T(0);
                 for(unsigned int k = 0; k < D; k++)
                 {
-                    ret.m[i][j] += m[k][j] * r.m[i][k];
+                    ret.m_matrix[i][j] += m_matrix[k][j] * r.m_matrix[i][k];
                 }
             }
         }
@@ -99,7 +99,7 @@ public:
             ret[i] = 0;
             for(unsigned int j = 0; j < D; j++)
             {
-                ret[i] += m[j][i] * r[j];
+                ret[i] += m_matrix[j][i] * r[j];
             }
         }
 
@@ -128,10 +128,10 @@ public:
         return ret;
     }
 
-    inline void set(unsigned int x, unsigned int y, T val) { m[x][y] = val; }
+    inline void set(unsigned int x, unsigned int y, T val) { m_matrix[x][y] = val; }
 
-    inline const T* operator[](int index) const { return m[index]; }
-    inline T* operator[](int index) { return m[index]; }
+    inline const T* operator[](int index) const { return m_matrix[index]; }
+    inline T* operator[](int index) { return m_matrix[index]; }
 
     friend std::ostream& operator<<(std::ostream& out, const mat<T,D>& r)
     {
@@ -140,7 +140,7 @@ public:
         {
             for (unsigned int y = 0; y < D; y++)
             {
-                result += std::to_string(r.m[y][x]) + " ";
+                result += std::to_string(r.m_matrix[y][x]) + " ";
             }
             result += "\n";
         }
@@ -149,10 +149,9 @@ public:
         return out;
     }
 
-    T m[D][D];
 protected:
 private:
-
+    T m_matrix[D][D];
 };
 
 template<typename T>

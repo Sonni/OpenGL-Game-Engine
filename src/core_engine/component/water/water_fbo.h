@@ -15,15 +15,15 @@ public:
 
     ~water_fbo();
 
-    void bind_reflect_fbo() const { bind_fbo(reflection_fbo, REFLECTION_WIDTH, REFLECTION_HEIGHT); }
-    void bind_refract_fbo() const { bind_fbo(refraction_fbo, REFRACTION_WIDTH, REFRACTION_HEIGHT); }
+    void bind_reflect_fbo() const { bind_fbo(m_reflection_fbo, m_REFLECTION_WIDTH, m_REFLECTION_HEIGHT); }
+    void bind_refract_fbo() const { bind_fbo(m_refraction_fbo, m_REFRACTION_WIDTH, m_REFRACTION_HEIGHT); }
 
 
     void unbind_fbo() const;
 
-    inline GLuint get_reflect_tex() const { return reflection_tex; }
-    inline GLuint get_refract_tex() const { return refraction_tex; }
-    inline GLuint get_refract_depth_tex() const { return refraction_depth_tex; }
+    inline GLuint get_reflect_tex() const { return m_reflection_tex; }
+    inline GLuint get_refract_tex() const { return m_refraction_tex; }
+    inline GLuint get_refract_depth_tex() const { return m_refraction_depth_tex; }
     
     void bind_fbo(int frameBuffer, int width, int height) const;
     
@@ -33,19 +33,19 @@ public:
     GLuint create_depth_buffer_attachment(int width, int height) const;
 
 private:
-    const int REFLECTION_WIDTH = 320;
-    const int REFLECTION_HEIGHT = 180;
+    const int m_REFLECTION_WIDTH = 320;
+    const int m_REFLECTION_HEIGHT = 180;
 
-    const int REFRACTION_WIDTH = 1280;
-    const int REFRACTION_HEIGHT = 720;
+    const int m_REFRACTION_WIDTH = 1280;
+    const int m_REFRACTION_HEIGHT = 720;
 
-    GLuint reflection_fbo;
-    GLuint reflection_tex;
-    GLuint reflection_depth_buffer;
+    GLuint m_reflection_fbo;
+    GLuint m_reflection_tex;
+    GLuint m_reflection_depth_buffer;
 
-    GLuint refraction_fbo;
-    GLuint refraction_tex;
-    GLuint refraction_depth_tex;
+    GLuint m_refraction_fbo;
+    GLuint m_refraction_tex;
+    GLuint m_refraction_depth_tex;
 
     void init_reflect_fbo();
     void init_refract_fbo();

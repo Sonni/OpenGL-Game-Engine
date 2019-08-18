@@ -8,27 +8,27 @@ void text_component::create_text_mesh()
 
 std::vector<line> text_component::create_structure()
 {
-    std::string chars = text_string;
+    std::string chars = m_text_string;
     std::vector<line> lines;
-    line current_line(meta_data.getSpaceWidth(), font_size, max_line_size);
-    word current_word(font_size);
+    line current_line(m_meta_data.getSpaceWidth(), m_font_size, m_max_line_size);
+    word current_word(m_font_size);
     for (char ascii : chars)
     {
-        if (ascii == SPACE_ASCII)
+        if (ascii == m_SPACE_ASCII)
         {
             bool added = current_line.add_word(current_word);
             if (!added)
             {
                 lines.push_back(current_line);
-                line curLine(meta_data.getSpaceWidth(), font_size, max_line_size);
+                line curLine(m_meta_data.getSpaceWidth(), m_font_size, m_max_line_size);
                 current_line = curLine;
                 current_line.add_word(current_word);
             }
-            word curWord(font_size);
+            word curWord(m_font_size);
             current_word = curWord;
             continue;
         }
-        font_char* _character = meta_data.getCharacter(ascii);
+        font_char* _character = m_meta_data.getCharacter(ascii);
         current_word.add_char(_character);
     }
     complete_structure(&lines, current_line, current_word);
@@ -41,7 +41,7 @@ void text_component::complete_structure(std::vector<line> *lines, line current_l
     if (!added)
     {
         lines->push_back(current_line);
-        line curLine(meta_data.getSpaceWidth(), font_size, max_line_size);
+        line curLine(m_meta_data.getSpaceWidth(), m_font_size, m_max_line_size);
         current_line = curLine;
         current_line.add_word(current_word);
     }
@@ -55,7 +55,7 @@ void text_component::create_quad_vert(std::vector<line> lines)
 
     for (line _line : lines)
     {
-        if (center_text)
+        if (m_center_text)
         {
             curser_x = (_line.get_max_length() - _line.get_line_length()) / 2;
         }
@@ -63,14 +63,14 @@ void text_component::create_quad_vert(std::vector<line> lines)
         {
             for (font_char* letter : _word.get_chars())
             {
-                add_vertices_for_char(curser_x, curser_y, *letter, font_size, &vertices);
-                add_mesh_info(&tex_coords, letter->get_x_tex_coord(), letter->get_y_tex_coord(), letter->get_x_max_tex_coord(), letter->get_y_max_tex_coord());
-                curser_x += letter->get_x_advance() * font_size;
+                add_vertices_for_char(curser_x, curser_y, *letter, m_font_size, &m_vertices);
+                add_mesh_info(&m_tex_coords, letter->get_x_tex_coord(), letter->get_y_tex_coord(), letter->get_x_max_tex_coord(), letter->get_y_max_tex_coord());
+                curser_x += letter->get_x_advance() * m_font_size;
             }
-            curser_x += meta_data.getSpaceWidth() * font_size;
+            curser_x += m_meta_data.getSpaceWidth() * m_font_size;
         }
         curser_x = 0;
-        curser_y += 0.03f * font_size;
+        curser_y += 0.03f * m_font_size;
     }
 }
 

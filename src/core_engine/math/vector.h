@@ -27,7 +27,7 @@ public:
         vec<T,D> result;
         for(unsigned int i = 0; i < D; i++)
         {
-            result[i] = values[i] > r[i] ? values[i] : r[i];
+            result[i] = m_values[i] > r[i] ? m_values[i] : r[i];
         }
 
         return result;
@@ -68,7 +68,7 @@ public:
     {
         vec<T, D> result;
         for(unsigned int i = 0; i < D; i++)
-            result[i] = values[i] + r[i];
+            result[i] = m_values[i] + r[i];
 
         return result;
     }
@@ -77,7 +77,7 @@ public:
     {
         vec<T, D> result;
         for(unsigned int i = 0; i < D; i++)
-            result[i] = values[i] - r[i];
+            result[i] = m_values[i] - r[i];
 
         return result;
     }
@@ -86,7 +86,7 @@ public:
     {
         vec<T, D> result;
         for(unsigned int i = 0; i < D; i++)
-            result[i] = values[i] * r;
+            result[i] = m_values[i] * r;
 
         return result;
     }
@@ -95,7 +95,7 @@ public:
     {
         vec<T, D> result;
         for(unsigned int i = 0; i < D; i++)
-            result[i] = values[i] / r;
+            result[i] = m_values[i] / r;
 
         return result;
     }
@@ -103,7 +103,7 @@ public:
     inline vec<T, D>& operator+=(const vec<T,D>& r)
     {
         for(unsigned int i = 0; i < D; i++)
-            (*this)[i] = values[i] + r[i];
+            (*this)[i] = m_values[i] + r[i];
 
         return *this;
     }
@@ -111,7 +111,7 @@ public:
     inline vec<T, D>& operator-=(const vec<T,D>& r)
     {
         for(unsigned int i = 0; i < D; i++)
-            (*this)[i] = values[i] - r[i];
+            (*this)[i] = m_values[i] - r[i];
 
         return *this;
     }
@@ -119,7 +119,7 @@ public:
     inline vec<T, D>& operator*=(const T& r)
     {
         for(unsigned int i = 0; i < D; i++)
-            (*this)[i] = values[i] * r;
+            (*this)[i] = m_values[i] * r;
 
         return *this;
     }
@@ -127,13 +127,13 @@ public:
     inline vec<T, D>& operator/=(const T& r)
     {
         for(unsigned int i = 0; i < D; i++)
-            (*this)[i] = values[i] / r;
+            (*this)[i] = m_values[i] / r;
 
         return *this;
     }
 
-    T& operator [] (unsigned int i) { return values[i]; }
-    T operator [] (unsigned int i) const { return values[i]; }
+    T& operator [] (unsigned int i) { return m_values[i]; }
+    T operator [] (unsigned int i) const { return m_values[i]; }
 
     inline bool operator==(const vec<T,D>& r) const
     {
@@ -149,23 +149,15 @@ public:
     {
         std::string result;
         for (unsigned int i = 0; i < D; i++)
-            result += std::to_string(r.values[i]) + " ";
+            result += std::to_string(r.m_values[i]) + " ";
 
         out <<  result << std::endl;
         return out;
     }
 
-    inline std::string toString() const
-    {
-        std::string result = "";
-        for (unsigned int i = 0; i < D; i++)
-            result += std::to_string(values[i]) + " ";
-
-        return result;
-    }
 protected:
 private:
-    T values[D];
+    T m_values[D];
 };
 
 template<typename T>

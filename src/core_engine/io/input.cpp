@@ -2,15 +2,15 @@
 #include "window.h"
 
 input::input(window* window) :
-	mouse_y(0),
-	mouse_x(0),
-	m_window(window)
+		m_mouse_y(0),
+		m_mouse_x(0),
+		m_window(window)
 {
-	memset(key_down, 0, KEYS * sizeof(bool));
-	memset(key_up, 0, KEYS * sizeof(bool));
+	memset(m_key_down, 0, KEYS * sizeof(bool));
+	memset(m_key_up, 0, KEYS * sizeof(bool));
 	
-	memset(mouse_down, 0, MOUSE_BUTTONS * sizeof(bool));
-	memset(mouse_up, 0, MOUSE_BUTTONS * sizeof(bool));
+	memset(m_mouse_down, 0, MOUSE_BUTTONS * sizeof(bool));
+	memset(m_mouse_up, 0, MOUSE_BUTTONS * sizeof(bool));
 }
 
 void input::set_cursor(bool show) const

@@ -38,11 +38,10 @@ public:
 
 private:
     GLuint load_cube_map(std::vector<std::string> file_names);
-    mesh* _mesh;
 
-    GLuint tex_loc;
-
-    std::string file_nmes[6] = {"right", "left", "top", "left", "back", "front"};
+    GLuint m_tex_loc;
+    simple_cube m_cube;
+    std::string m_file_names[6] = {"right", "left", "top", "bottom", "back", "front"};
 };
 
 /////////////////// GUI RENDERER ////////////////////
@@ -59,19 +58,19 @@ public:
     virtual void render() const;
 
 private:
-    mesh* _mesh;
-    texture* gui_tex;
-    int win_width, win_height;
+    mesh* m_mesh;
+    texture* m_gui_tex;
+    int m_win_width, m_win_height;
 
-    GLuint texture_id;
-    bool use_texture_class;
+    GLuint m_texture_id;
+    bool m_use_texture_class;
 };
 
 /////////////////// Post processor ////////////////////
 class post_processing_component : public entity_component
 {
 public:
-    post_processing_component(texture* target, mesh* Mesh) : tex(target), _mesh(Mesh)
+    post_processing_component(texture* target, mesh* Mesh) : m_tex(target), m_mesh(Mesh)
     {
 
     }
@@ -86,26 +85,26 @@ public:
     }
     virtual void set_all_uni(camera& cam)
     {
-        tex->bind(0);
+        m_tex->bind(0);
         get_shader()->set_uniform_1i("model_tex", 0);
     }
 
     virtual void render() const
     {
-        _mesh->draw();
+        m_mesh->draw();
     }
 
 
 private:
-    mesh* _mesh;
-    texture* tex;
+    mesh* m_mesh;
+    texture*m_tex;
 };
 
 /////////////////// guassian blur ////////////////////
 class blur_component : public entity_component
 {
 public:
-    blur_component(texture* target, mesh* Mesh, vec2f* blur) : tex(target), _mesh(Mesh), blur(blur)
+    blur_component(texture* target, mesh* Mesh, vec2f* blur) : m_tex(target), m_mesh(Mesh), m_blur(blur)
     {
 
     }
@@ -121,22 +120,22 @@ public:
     }
     virtual void set_all_uni(camera& cam)
     {
-        get_shader()->set_uniform_2f("blur", *blur);
+        get_shader()->set_uniform_2f("blur", *m_blur);
 
-        tex->bind(0);
+        m_tex->bind(0);
         get_shader()->set_uniform_1i("model_tex", 0);
     }
 
     virtual void render() const
     {
-        _mesh->draw();
+        m_mesh->draw();
     }
 
 
 private:
-    mesh* _mesh;
-    texture* tex;
-    vec2f* blur;
+    mesh* m_mesh;
+    texture* m_tex;
+    vec2f* m_blur;
 };
 
 #endif //GAME_ENGINE_COMPONENTS_H

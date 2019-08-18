@@ -8,18 +8,18 @@
 struct joint
 {
 public:
-    int id;
-    std::string name;
-    int parent_id;
-    mat4f animated_transform;
-    mat4f inverse_bind_transform;
-    std::vector<joint*> children;
+    int m_id;
+    std::string m_name;
+    int m_parent_id;
+    mat4f m_animated_transform;
+    mat4f m_inverse_bind_transform;
+    std::vector<joint*> m_children;
 
     void calc_inverse_bind(const mat4f& parent_bind_pose)
     {
-        mat4f bindTransform = parent_bind_pose * inverse_bind_transform;
+        mat4f bindTransform = parent_bind_pose * m_inverse_bind_transform;
 
-        for (joint* child : children)
+        for (joint* child : m_children)
         {
             child->calc_inverse_bind(bindTransform);
         }
@@ -30,29 +30,29 @@ struct joint_transform
 {
 public:
     joint_transform(const vec3f& pos, const quaternion& rot) :
-            pos(pos),
-            rot(rot)
+            m_pos(pos),
+            m_rot(rot)
     { }
 
     joint_transform() :
-            pos(vec3f()),
-            rot(quaternion())
+            m_pos(vec3f()),
+            m_rot(quaternion())
     { }
 
-    inline mat4f get_local_transform() const { return mat4f().init_translation(pos) * rot.to_rotation_matrix().transpose(); }
-    inline vec3f get_pos() const { return pos; }
-    inline quaternion get_rot() const { return rot; }
+    inline mat4f get_local_transform() const { return mat4f().init_translation(m_pos) * m_rot.to_rotation_matrix().transpose(); }
+    inline vec3f get_pos() const { return m_pos; }
+    inline quaternion get_rot() const { return m_rot; }
 
 private:
-    vec3f pos;
-    quaternion rot;
+    vec3f m_pos;
+    quaternion m_rot;
 };
 
 struct keyframe
 {
 public:
-    std::map<std::string, joint_transform>* poses;
-    float time_stamp;
+    std::map<std::string, joint_transform>* m_poses;
+    float m_time_stamp;
 };
 
 #endif //INC_3D_ENGINE_SKELETAL_ANIMATION_H

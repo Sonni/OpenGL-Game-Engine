@@ -31,8 +31,8 @@ private:
 		NUM_BUFFERS
 	};
 	
-	GLuint vao;
-	GLuint vab[NUM_BUFFERS];
+	GLuint m_vao;
+	GLuint m_vab[NUM_BUFFERS];
 	int m_drawCount;
     int count;
 };

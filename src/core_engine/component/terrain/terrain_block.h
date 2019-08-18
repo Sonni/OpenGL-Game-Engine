@@ -7,97 +7,51 @@
 
 class terrain_block {
 public:
-    terrain_block(std::vector<std::vector<float>> heights, int size, int grid_x, int grid_z, int num_blocks, int num_vert) : heights(heights), size(size), num_vertices(num_vert), grid_x(grid_x), grid_z(grid_z), num_blocks(num_blocks) {
-        for (int i = 0; i < MAX_LOD; i++) {
-            meshes.push_back(load_block(i+1));
-        }
-        selected_mesh = meshes.at(0);
-    }
+    int m_lod = 1;
+    int m_grid_x, m_grid_z;
+    int m_size;
+    int m_num_vertices;
+    float m_min_y = INT_MAX, m_max_y = INT_MIN;
 
-    bool wait = false;
-    void process_input(const input& input, float delta) {
 
-        if(input.get_key_down(input::KEY_1))
-            selected_mesh = meshes.at(0);
-        if(input.get_key_down(input::KEY_2))
-            selected_mesh = meshes.at(1);
-        if(input.get_key_down(input::KEY_3))
-            selected_mesh = meshes.at(2);
-        if(input.get_key_down(input::KEY_4))
-            selected_mesh = meshes.at(3);
+    std::vector<std::vector<float>>* m_heights;
+    bool m_use_lod = true;
 
-        if(input.get_key_down(input::KEY_K) && !wait) {
-            use_lod = !use_lod;
-            wait = true;
-        }
-        if(input.get_key_up(input::KEY_K)) {
-            wait = false;
-        }
-
-    }
-
-    // Returns true if LOD has been changed
-    bool update(const camera &cam) {
-        vec3f dist = cam.get_transform().get_pos() - vec3f(grid_x*size, 2.0f, grid_z*size);
-        if (use_lod) {
-            if (dist.length() < 30.0f) {
-                selected_mesh = meshes.at(0);
-                lod = 1;
-                return true;
-            }
-            else if (dist.length() < 60.0f) {
-                selected_mesh = meshes.at(1);
-                lod = 2;
-                return true;
-            }
-            else if (dist.length() < 90.0f) {
-                selected_mesh = meshes.at(2);
-                lod = 3;
-                return true;
-            }
-            else if (dist.length() < 120.0f) {
-                selected_mesh = meshes.at(3);
-                lod = 4;
-                return true;
-            }
-        }
-        return false;
-    }
-
-    void render() const {
-        if (render_block) selected_mesh->draw();
-        glDisable(GL_CULL_FACE);
-        if (left_seams != nullptr) left_seams->draw();
-        if (right_seams != nullptr) right_seams->draw();
-        if (top_seams != nullptr) top_seams->draw();
-        if (bottom_seams != nullptr) bottom_seams->draw();
-       // glEnable(GL_CULL_FACE);
-
-    }
-    int lod = 1;
-    int grid_x, grid_z;
-    int size;
-    int num_vertices;
-
-    std::vector<std::vector<float>> heights;
-    bool use_lod = true;
+    aabb m_view_box;
+    bool m_in_frustum = false;
+    bool m_render_block = true;
 
     // Data necessary for connecting seams
-    terrain_block *left = nullptr, *right = nullptr, *bottom = nullptr, *top = nullptr;
-    mesh *left_seams = nullptr, *right_seams = nullptr, *bottom_seams = nullptr, *top_seams = nullptr;
-    std::vector<std::vector<std::vector<vec3f>>> vertices;
+    terrain_block *m_left = nullptr, *m_right = nullptr, *m_bottom = nullptr, *m_top = nullptr;
+    mesh *m_left_seams = nullptr, *m_right_seams = nullptr, *m_bottom_seams = nullptr, *m_top_seams = nullptr;
+    std::vector<std::vector<std::vector<vec3f>>> m_vertices;
+    std::vector<std::vector<std::vector<vec3f>>> m_normals;
+    std::vector<std::vector<std::vector<vec2f>>> m_tex_coords;
 
-    bool render_block = true;
 
+    std::string m_left_seam_str, m_right_seam_str, m_top_seam_str, m_bottom_seam_str;
+
+
+    terrain_block(std::vector<std::vector<float>>* heights, int size, int grid_x, int grid_z, int num_blocks, int num_vert);
+
+    // Returns true if LOD has been changed
+    bool update(const camera &cam);
+    void render() const;
+    void process_input(const input& input, float delta);
 
 private:
-    int MAX_LOD = 4;
-    int num_blocks;
-    std::vector<mesh*> meshes;
-    mesh* selected_mesh;
+    int m_MAX_LOD = 4;
+    int m_num_blocks;
+    std::vector<mesh*> m_meshes;
+    mesh* m_selected_mesh;
+    float m_lod_start = 100.0f;
+    float m_lod_inc = 80.0f;
+    bool m_wait = false;
+
 
     mesh* load_block(const int LOD);
     float get_height(int x, int z);
+
 
 };
 

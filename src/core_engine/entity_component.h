@@ -10,7 +10,7 @@ class entity_component
 {
 public:
     entity_component() :
-			parent(0)
+			m_parent(0)
 	{}
 	virtual ~entity_component() {}
 
@@ -24,15 +24,15 @@ public:
 
 
 
-	void delete_component(entity_component *component)  {parent->delete_component(component);}
+	void delete_component(entity_component *component) { m_parent->delete_component(component); }
 
-	inline transform* get_transform()             { return parent->get_transform(); }
-	inline const transform& get_transform() const { return *parent->get_transform(); }
-	inline shader* get_shader() const {return parent->get_shader();}
+	inline transform* get_transform()             { return m_parent->get_transform(); }
+	inline const transform& get_transform() const { return *m_parent->get_transform(); }
+	inline shader* get_shader() const 			  { return m_parent->get_shader(); }
 
-	virtual void set_parent(entity* parent) { this->parent = parent; }
+	virtual void set_parent(entity* parent) { m_parent = parent; }
 private:
-	entity* parent;
+	entity* m_parent;
 
     entity_component(const entity_component& other) {}
 	void operator=(const entity_component& other) {}

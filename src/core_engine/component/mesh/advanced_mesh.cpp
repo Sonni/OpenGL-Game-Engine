@@ -1,17 +1,17 @@
 #include "advanced_mesh.h"
 
 advanced_mesh::advanced_mesh(mesh* _mesh, mat4f* shadowMap, texture* depth_map, const vec3f& ambient, physics_obj* phy_obj, const std::string& tex_name, const std::string& normal_name, const std::string& disp_name, const std::string& specular_name) :
-_mesh(_mesh)
-, s_ambientLight(ambient),
-phy_obj(phy_obj)
+m_mesh(_mesh)
+, m_s_ambientLight(ambient),
+m_phy_obj(phy_obj)
 {
-    tex = new texture(tex_name);
-    normal = new texture("normal/" + normal_name);
-    disp_map = new texture("disp/" + disp_name);
-    specular_map = new texture("specular/" + specular_name);
+    m_tex = new texture(tex_name);
+    m_normal = new texture("normal/" + normal_name);
+    m_disp_map = new texture("disp/" + disp_name);
+    m_specular_map = new texture("specular/" + specular_name);
 
-    this->shadow_mvp = shadowMap;
-    this->depth_map = depth_map;
+    this->m_shadow_mvp = shadowMap;
+    this->m_depth_map = depth_map;
 }
 
 void advanced_mesh::init()
@@ -39,13 +39,13 @@ void advanced_mesh::init()
 void advanced_mesh::set_all_uni(camera& cam)
 {
 
-    mat4f mvp = cam.get_view_projection() * get_transform()->get_transformation();
+    const mat4f mvp = cam.get_view_projection() * get_transform()->get_transformation();
 
     get_shader()->set_uniform_mat4f("mvp", mvp);
     get_shader()->set_uniform_mat4f("model", get_transform()->get_transformation());
     get_shader()->set_uniform_3f("base_color", vec3f(1, 1, 1));
 
-    get_shader()->set_uniform_3f("ambient_light", s_ambientLight);
+    get_shader()->set_uniform_3f("ambient_light", m_s_ambientLight);
 
     get_shader()->set_light();
 
@@ -54,48 +54,48 @@ void advanced_mesh::set_all_uni(camera& cam)
 
     get_shader()->set_uniform_3f("eye_pos", *cam.get_transform()->get_pos());
 
-    tex->bind(0);
+    m_tex->bind(0);
     get_shader()->set_uniform_1i("sampler", 0);
 
-    normal->bind(1);
+    m_normal->bind(1);
     get_shader()->set_uniform_1i("normal_map", 1);
 
-    disp_map->bind(2);
+    m_disp_map->bind(2);
     get_shader()->set_uniform_1i("disp_tex", 2);
 
-    get_shader()->set_uniform_mat4f("shadow_mvp", *shadow_mvp);
+    get_shader()->set_uniform_mat4f("shadow_mvp", *m_shadow_mvp);
 
-    depth_map->bind(3, true);
+    m_depth_map->bind(3, true);
     get_shader()->set_uniform_1i("shadow_tex", 3);
 
-    specular_map->bind(4);
+    m_specular_map->bind(4);
     get_shader()->set_uniform_1i("specu_tex", 4);
 }
 
 void advanced_mesh::update(float delta, const camera &cam)
 {
-    if (phy_obj != nullptr)
+    if (m_phy_obj != nullptr)
     {
-        phy_obj->get_collider()->set_pos(*get_transform()->get_pos());
+        m_phy_obj->get_collider()->set_pos(*get_transform()->get_pos());
 
-        if (cam.get_frustum().collider_in_frustum(phy_obj->get_collider())) {
-            draw = true;
+        if (cam.get_frustum().collider_in_frustum(m_phy_obj->get_collider())) {
+            m_draw = true;
         }
         else {
-            draw = false;
+            m_draw = false;
         }
     }
 }
 
 void advanced_mesh::render() const
 {
-    if (draw)
+    if (m_draw)
     {
         glDisable(GL_CULL_FACE);
         glEnable(GL_BLEND);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-        _mesh->draw();
+        m_mesh->draw();
 
         glDisable(GL_BLEND);
         glEnable(GL_CULL_FACE);

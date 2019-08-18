@@ -2,19 +2,16 @@
 #include "../../../shader/shader.h"
 
 mesh_component::mesh_component(mesh* _mesh, mat4f* shadowMap, texture* depth_map, physics_obj* phy_obj, const vec3f& ambient, const std::string& tex_file_name) :
-    ambient(ambient),
-    phy_obj(phy_obj)
+    m_ambient(ambient),
+    m_phy_obj(phy_obj)
 {
-    this->_mesh = _mesh;
-    this->shadow_mvp = shadowMap;
-    this->depth_map = depth_map;
-    tex = new texture(tex_file_name);
-
+    this->m_mesh = _mesh;
+    this->m_shadow_mvp = shadowMap;
+    this->m_depth_map = depth_map;
+    m_tex = new texture(tex_file_name);
 }
 
-mesh_component::~mesh_component()
-{
-}
+mesh_component::~mesh_component()  { }
 
 void mesh_component::init()
 {
@@ -42,10 +39,10 @@ void mesh_component::set_all_uni(camera& cam)
     get_shader()->set_uniform_mat4f("mvp", mvp);
     get_shader()->set_uniform_mat4f("model", get_transform()->get_transformation());
     get_shader()->set_uniform_3f("base_color", vec3f(1, 1, 1));
-    get_shader()->set_uniform_mat4f("shadow_mvp", *shadow_mvp);
+    get_shader()->set_uniform_mat4f("shadow_mvp", *m_shadow_mvp);
 
 
-    get_shader()->set_uniform_3f("ambient_light", ambient);
+    get_shader()->set_uniform_3f("ambient_light", m_ambient);
 
     get_shader()->set_light();
 
@@ -54,32 +51,32 @@ void mesh_component::set_all_uni(camera& cam)
 
     get_shader()->set_uniform_3f("eye_pos", *cam.get_transform()->get_pos());
 
-    tex->bind(0);
+    m_tex->bind(0);
     get_shader()->set_uniform_1i("sampler", 0);
 
-    depth_map->bind(1, true);
+    m_depth_map->bind(1, true);
     get_shader()->set_uniform_1i("shadow_tex", 1);
 }
 
 void mesh_component::update(float delta, const camera &cam)
 {
-    if (phy_obj != NULL)
+    if (m_phy_obj != NULL)
     {
-        phy_obj->get_collider()->set_pos(*get_transform()->get_pos());
+        m_phy_obj->get_collider()->set_pos(*get_transform()->get_pos());
 
-        if (cam.get_frustum().collider_in_frustum(phy_obj->get_collider())) {
-            draw = true;
+        if (cam.get_frustum().collider_in_frustum(m_phy_obj->get_collider())) {
+            m_draw = true;
         }
         else {
-            draw = false;
+            m_draw = false;
         }
     }
 }
 
 void mesh_component::render() const
 {
-    if (draw)
+    if (m_draw)
     {
-        _mesh->draw();
+        m_mesh->draw();
     }
 }

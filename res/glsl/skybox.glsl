@@ -6,12 +6,11 @@ out vec3 tex_coord;
 
 uniform mat4 view_projection;
 
-const float scale = 120;
 
 void main(void)
 {
-	gl_Position = view_projection * vec4(position * scale, 1.0);
-	tex_coord = position * scale;
+	gl_Position = view_projection * vec4(position, 1.0);
+	tex_coord = position;
 }
 
 //-END_OF_VS-
@@ -34,5 +33,6 @@ void main(void)
     float factor = (tex_coord.y - lowerLimit) / (upperLimit - lowerLimit);
     factor = clamp(factor, 0.0, 1.0);
 
-    color = mix(vec4(sky_color, 1.0), final_color, factor);
+    //color = mix(vec4(sky_color, 1.0), final_color, factor);
+    color = texture(cube_map, tex_coord);
 }

@@ -10,41 +10,41 @@ struct font_char
 public:
     font_char(int ascii, float x_tex_coord, float y_tex_coord, float x_tex_size, float y_tex_size, float x_offset, float y_offset, float x_size, float y_size, float x_advance)
     {
-        this->ascii = ascii;
-        this->x_tex_coord = x_tex_coord;
-        this->y_tex_coord = y_tex_coord;
-        this->x_offset = x_offset;
-        this->y_offset = y_offset;
-        this->x_size = x_size;
-        this->y_size = y_size;
-        this->x_max_tex_coord = x_tex_size + x_tex_coord;
-        this->y_max_tex_coord = y_tex_size + y_tex_coord;
-        this->x_advance = x_advance;
+        m_ascii = ascii;
+        m_x_tex_coord = x_tex_coord;
+        m_y_tex_coord = y_tex_coord;
+        m_x_offset = x_offset;
+        m_y_offset = y_offset;
+        m_x_size = x_size;
+        m_y_size = y_size;
+        m_x_max_tex_coord = x_tex_size + x_tex_coord;
+        m_y_max_tex_coord = y_tex_size + y_tex_coord;
+        m_x_advance = x_advance;
     }
 
-    int get_ascii() const { return ascii; }
+    int get_ascii() const { return m_ascii; }
 
-    float get_x_tex_coord() const { return x_tex_coord; }
-    float get_y_tex_coord() const { return y_tex_coord; }
+    float get_x_tex_coord() const { return m_x_tex_coord; }
+    float get_y_tex_coord() const { return m_y_tex_coord; }
 
-    float get_x_max_tex_coord() const { return x_max_tex_coord; }
-    float get_y_max_tex_coord() const { return y_max_tex_coord; }
+    float get_x_max_tex_coord() const { return m_x_max_tex_coord; }
+    float get_y_max_tex_coord() const { return m_y_max_tex_coord; }
 
-    float get_x_offset() const { return x_offset; }
-    float get_y_offset() const { return y_offset; }
+    float get_x_offset() const { return m_x_offset; }
+    float get_y_offset() const { return m_y_offset; }
 
-    float get_x_size() const { return x_size; }
-    float get_y_size() const { return y_size; }
+    float get_x_size() const { return m_x_size; }
+    float get_y_size() const { return m_y_size; }
 
-    float get_x_advance() const { return x_advance; }
+    float get_x_advance() const { return m_x_advance; }
 
 private:
-    int ascii;
-    float x_tex_coord, y_tex_coord;
-    float x_max_tex_coord, y_max_tex_coord;
-    float x_offset, y_offset;
-    float x_size, y_size;
-    float x_advance;
+    int m_ascii;
+    float m_x_tex_coord, m_y_tex_coord;
+    float m_x_max_tex_coord, m_y_max_tex_coord;
+    float m_x_offset, m_y_offset;
+    float m_x_size, m_y_size;
+    float m_x_advance;
 };
 
 class meta_file
@@ -52,32 +52,32 @@ class meta_file
 public:
     meta_file(const std::string& font_name);
 
-    float getSpaceWidth() const { return space_width; }
-    font_char* getCharacter(int ascii) { return meta_data[ascii]; }
+    float getSpaceWidth() const { return m_space_width; }
+    font_char* getCharacter(int ascii) { return m_meta_data[ascii]; }
 
 
 private:
-    const int PAD_TOP = 0;
-    const int PAD_LEFT = 1;
-    const int PAD_BOTTOM = 2;
-    const int PAD_RIGHT = 3;
-    const int ASCII_SPACE = 32;
+    const int m_PAD_TOP = 0;
+    const int m_PAD_LEFT = 1;
+    const int m_PAD_BOTTOM = 2;
+    const int m_PAD_RIGHT = 3;
+    const int m_ASCII_SPACE = 32;
 
-    const int DESIRED_PADDING = 3;
+    const int m_DESIRED_PADDING = 3;
 
-    float ratio;
+    float m_ratio;
 
-    float verticalPerPixelSize;
-    float horizontalPerPixelSize;
-    float space_width;
-    std::vector<int> padding;
-    int padding_width;
-    int padding_height;
+    float m_verticalPerPixelSize;
+    float m_horizontalPerPixelSize;
+    float m_space_width;
+    std::vector<int> m_padding;
+    int m_padding_width;
+    int m_padding_height;
 
-    std::map<int, font_char*> meta_data;
-    std::map<std::string, std::string> values;
+    std::map<int, font_char*> m_meta_data;
+    std::map<std::string, std::string> m_values;
 
-    std::ifstream file;
+    std::ifstream m_file;
 
     bool process_next_line();
 

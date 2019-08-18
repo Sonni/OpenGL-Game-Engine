@@ -47,28 +47,28 @@ public:
 
 	input(window* window);
 
-	inline bool get_key_down(int key_code) const { return key_down[key_code]; }
-	inline bool get_key_up(int key_code) const { return key_up[key_code]; }
-	inline bool get_mouse_down(int key_code) const { return mouse_down[key_code]; }
-	inline bool get_mouse_up(int key_code) const { return mouse_up[key_code]; }
-	inline vec2f get_mouse_pos() const { return vec2f((float) mouse_y, (float) mouse_x); }
+	inline bool get_key_down(int key_code) const { return m_key_down[key_code]; }
+	inline bool get_key_up(int key_code) const { return m_key_up[key_code]; }
+	inline bool get_mouse_down(int key_code) const { return m_mouse_down[key_code]; }
+	inline bool get_mouse_up(int key_code) const { return m_mouse_up[key_code]; }
+	inline vec2f get_mouse_pos() const { return vec2f((float) m_mouse_y, (float) m_mouse_x); }
 	
 	void set_cursor(bool show) const;
     void set_mouse_pos(const vec2f &pos) const;
 	
-	inline void set_key_down(int key_code, bool state) { key_down[key_code] = state; }
-	inline void set_key_up(int key_code, bool state) { key_up[key_code] = state; }
-	inline void set_mouse_down(int key_code, bool state) { mouse_down[key_code] = state; }
-	inline void set_mouse_up(int key_code, bool state) { mouse_up[key_code] = state; }
-	inline void set_mouse_y(int y) { mouse_y = y; }
-	inline void set_mouse_x(int x) { mouse_x = x; }
+	inline void set_key_down(int key_code, bool state) { m_key_down[key_code] = state; }
+	inline void set_key_up(int key_code, bool state) { m_key_up[key_code] = state; }
+	inline void set_mouse_down(int key_code, bool state) { m_mouse_down[key_code] = state; }
+	inline void set_mouse_up(int key_code, bool state) { m_mouse_up[key_code] = state; }
+	inline void set_mouse_y(int y) { m_mouse_y = y; }
+	inline void set_mouse_x(int x) { m_mouse_x = x; }
 
 private:
-	bool key_down[KEYS];
-	bool key_up[KEYS];
-	bool mouse_down[MOUSE_BUTTONS];
-	bool mouse_up[MOUSE_BUTTONS];
-	int mouse_y, mouse_x;
+	bool m_key_down[KEYS];
+	bool m_key_up[KEYS];
+	bool m_mouse_down[MOUSE_BUTTONS];
+	bool m_mouse_up[MOUSE_BUTTONS];
+	int m_mouse_y, m_mouse_x;
 	window* m_window;
 };
 

@@ -16,17 +16,17 @@ public:
     virtual void render() const;
 
 private:
-    GLint mvp_loc;
-    mat4f BIAS_MATRIX;
-    mat4f light_view_projection;
-    mat4f* shadow_mvp;
-    texture* depth_map;
+    GLint m_mvp_loc;
+    mat4f m_BIAS_MATRIX;
+    mat4f m_light_view_projection;
+    mat4f* m_shadow_mvp;
+    texture* m_depth_map;
 
-    std::vector<entity*>* entities;
+    std::vector<entity*>* m_entities;
 
-    float half_shadow_area;
-    int shadow_map_power_2;
-    mat4f orto_projection;
+    float m_half_shadow_area;
+    int m_shadow_map_power_2;
+    mat4f m_orto_projection;
 
 
     transform get_shadow_transform(const transform &cam_transform) const;

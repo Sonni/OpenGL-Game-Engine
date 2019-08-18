@@ -33,20 +33,20 @@ private:
 
     struct data
     {
-        unsigned int source_id;
-        unsigned int buffer_id;
-        char* buffer;
+        unsigned int m_source_id;
+        unsigned int m_buffer_id;
+        char* m_buffer;
         data(unsigned int si, unsigned int bi, char* buff) :
-                source_id(si),
-                buffer_id(bi),
-                buffer(buff)
+                m_source_id(si),
+                m_buffer_id(bi),
+                m_buffer(buff)
         {}
     };
 
-    std::vector<data> datas;
-    ALCcontext* context;
-    ALCdevice* device;
-    bool big_endian;
+    std::vector<data> m_datas;
+    ALCcontext* m_context;
+    ALCdevice* m_device;
+    bool m_big_endian;
 
     char* load_wav(const char *file_name, int &channels, int &sample_rate, int &samples_per_second, int &size);
     int convert_to_int(const char *data, int length);

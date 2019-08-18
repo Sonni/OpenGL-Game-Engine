@@ -18,23 +18,23 @@ public:
     virtual void update(float delta, const camera &cam);
     virtual void render() const;
 
-    inline physics_obj* get_physics_obj() const { return phy_obj; }
+    inline physics_obj* get_physics_obj() const { return m_phy_obj; }
 
 
 private:
-    vec3f s_ambientLight;
+    vec3f m_s_ambientLight;
 
-    texture* tex;
-    texture* normal;
-    texture* disp_map;
-    texture* specular_map;
+    texture* m_tex;
+    texture* m_normal;
+    texture* m_disp_map;
+    texture* m_specular_map;
 
-    mesh* _mesh;
-    physics_obj* phy_obj;
-    bool draw = true;
+    mesh* m_mesh;
+    physics_obj* m_phy_obj;
+    bool m_draw = true;
 
-    texture* depth_map;
-    mat4f* shadow_mvp;
+    texture* m_depth_map;
+    mat4f* m_shadow_mvp;
 };
 
 

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine
+# Install script for directory: /Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/sonni/Documents/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

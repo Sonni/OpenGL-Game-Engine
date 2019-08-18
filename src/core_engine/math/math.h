@@ -15,4 +15,5 @@ inline T _clamp(const T &a, const T &min, const T &max)
     else return a;
 }
 
+
 #endif //GAME_ENGINE_MATH_H

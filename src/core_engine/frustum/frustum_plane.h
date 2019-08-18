@@ -8,8 +8,8 @@ class frustum_plane
 {
 public:
 
-    vec3f normal, point;
-    float d;
+    vec3f m_normal, m_point;
+    float m_d;
 
 
     frustum_plane(const vec3f& v1, const vec3f& v2, const vec3f& v3);

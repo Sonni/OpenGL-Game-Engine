@@ -20,18 +20,18 @@ public:
     virtual void update(float delta, const camera &cam);
     virtual void render() const;
 
-    inline physics_obj* get_physics_obj() const { return phy_obj; }
+    inline physics_obj* get_physics_obj() const { return m_phy_obj; }
 
 private:
-    mesh* _mesh;
-    tna_model tna_model;
-    texture* tex;
-    physics_obj* phy_obj;
-    bool draw = true;
-    bool is_moving = false;
+    mesh* m_mesh;
+    tna_model m_tna_model;
+    texture* m_tex;
+    physics_obj* m_phy_obj;
+    bool m_draw = true;
+    bool m_is_moving = false;
 
-    texture* depth_map;
-    mat4f* shadow_mvp;
+    texture* m_depth_map;
+    mat4f* m_shadow_mvp;
 
     void set_joint_uniforms(joint* r) const;
 };

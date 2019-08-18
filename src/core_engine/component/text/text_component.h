@@ -12,21 +12,21 @@ class text_component : public entity_component
 {
 public:
     text_component(const std::string& text, const std::string& font_name, float fontSize, vec2f pos, float max_line_length, bool centered) :
-            meta_data(font_name)
+            m_meta_data(font_name)
     {
-        this->text_string = text;
-        this->font_size = fontSize;
-        this->max_line_size = max_line_length;
-        this->center_text = centered;
+        m_text_string = text;
+        m_font_size = fontSize;
+        m_max_line_size = max_line_length;
+        m_center_text = centered;
 
         create_text_mesh();
-        vertex_count = (int) (vertices.size() / 2);
-        tex = new texture("font/" + font_name + ".png");
+        m_vertex_count = (int) (m_vertices.size() / 2);
+        m_tex = new texture("font/" + font_name + ".png");
 
-        glGenVertexArrays(1, &vao_id);
-        glBindVertexArray(vao_id);
-        set_attribute(0, 2, vertices);
-        set_attribute(1, 2, tex_coords);
+        glGenVertexArrays(1, &m_vao_id);
+        glBindVertexArray(m_vao_id);
+        set_attribute(0, 2, m_vertices);
+        set_attribute(1, 2, m_tex_coords);
         glBindVertexArray(0);
     }
 
@@ -57,14 +57,14 @@ public:
         glDisable(GL_DEPTH_TEST);
         get_shader()->use_shader();
 
-        tex->bind(0);
+        m_tex->bind(0);
         get_shader()->set_uniform_1i("tex", 0);
 
-        glBindVertexArray(vao_id);
+        glBindVertexArray(m_vao_id);
         glEnableVertexAttribArray(0);
         glEnableVertexAttribArray(1);
 
-        glDrawArrays(GL_TRIANGLES, 0, vertex_count);
+        glDrawArrays(GL_TRIANGLES, 0, m_vertex_count);
         glDisableVertexAttribArray(0);
         glDisableVertexAttribArray(1);
         glBindVertexArray(0);
@@ -74,21 +74,21 @@ public:
     }
 
 private:
-    const int SPACE_ASCII = 32;
+    const int m_SPACE_ASCII = 32;
 
-    meta_file meta_data;
-    std::string text_string;
-    float font_size;
+    meta_file m_meta_data;
+    std::string m_text_string;
+    float m_font_size;
 
-    float max_line_size;
-    bool center_text = false;
-    int vertex_count;
+    float m_max_line_size;
+    bool m_center_text = false;
+    int m_vertex_count;
 
-    texture* tex;
-    GLuint vao_id;
+    texture* m_tex;
+    GLuint m_vao_id;
 
-    std::vector<float> vertices;
-    std::vector<float> tex_coords;
+    std::vector<float> m_vertices;
+    std::vector<float> m_tex_coords;
 
     void create_text_mesh();
     std::vector<line> create_structure();

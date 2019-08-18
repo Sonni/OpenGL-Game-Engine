@@ -15,12 +15,12 @@ public:
     float get_height(int x, int z) const;
 
 private:
-    const float AMPLITUDE = 20.0f;
-    const int OCTAVES = 5;
-    const float ROUGHNESS = 0.3f;
+    const float m_AMPLITUDE = 20.0f;
+    const int m_OCTAVES = 5;
+    const float m_ROUGHNESS = 0.3f;
 
-    int seed;
-    int x_offset, z_offset;
+    int m_seed;
+    int m_x_offset, m_z_offset;
 
     float get_interpolated_noise(float x, float z) const;
     float interpolate(float a, float b, float blend) const;

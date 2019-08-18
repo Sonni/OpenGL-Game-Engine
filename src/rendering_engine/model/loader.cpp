@@ -23,13 +23,13 @@ void Loader::load_joint_ids(const std::string &line, std::vector<int> &ids)
 
 bool set_children(joint* child, joint* parent)
 {
-    if (child->parent_id == parent->id)
+    if (child->m_parent_id == parent->m_id)
     {
-        parent->children.push_back(child);
+        parent->m_children.push_back(child);
 
         return true;
     }
-    for (joint* j : parent->children)
+    for (joint* j : parent->m_children)
     {
         if (set_children(child, j))
             return true;
@@ -53,12 +53,12 @@ void Loader::load_joints(const std::string &line, joint* root)
 
 
     joint* r = new joint();
-    r->inverse_bind_transform = m.transpose();
-    r->id = stoi(s[2]);
-    r->parent_id = stoi(s[4]);
-    r->name = s[0];
+    r->m_inverse_bind_transform = m.transpose();
+    r->m_id = stoi(s[2]);
+    r->m_parent_id = stoi(s[4]);
+    r->m_name = s[0];
 
-    if (r->parent_id == -1)
+    if (r->m_parent_id == -1)
     {
         *root = *r;
     }
@@ -74,7 +74,6 @@ void load_joint(std::string l, std::map<std::string, joint_transform>* m)
 
     std::string joint_name = s[1];
 
-
     (*m)[joint_name] = joint_transform(vec3f(stof(s[3]), stof(s[4]), stof(s[5])), quaternion(stof(s[7]), stof(s[8]), stof(s[9]), stof(s[10])));
 }
 
@@ -85,17 +84,15 @@ void Loader::load_keyframe(const std::string &line, std::vector<keyframe>& keyfr
     std::vector<std::string> s = util::split_string(l, ' ');
 
     keyframe k;
-    k.poses = new std::map<std::string, joint_transform>;
-    k.time_stamp = stof(s[0]);
+    k.m_poses = new std::map<std::string, joint_transform>;
+    k.m_time_stamp = stof(s[0]);
 
     std::vector<std::string> j = util::split_string(l, 'j');
 
     for (int i = 1; i < j.size(); i++)
     {
-        load_joint(j[i], k.poses);
+        load_joint(j[i], k.m_poses);
     }
 
     keyframes.push_back(k);
-
-
 }

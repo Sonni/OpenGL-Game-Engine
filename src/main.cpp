@@ -27,8 +27,8 @@ int main(int argc, char *argv[])
     mesh* hud_mesh = graphics_engine->get_hud_mesh();
 
     phong_light Phong_light;
-    Phong_light.s_pointLights.push_back(point_light(base_light(vec3f(1, 0, 0), 20.0f), attenuation(0, 0, 0.5), vec3f(30, 2, 30)));
-    Phong_light.s_spotLights.push_back(spot_light(point_light(base_light(vec3f(0,0,1), 40.0f), attenuation(0,0,0.05f), vec3f(30, 12, 30)), ToRadians(45.f), quaternion(vec3f(1,0,0), ToRadians(-60.0f)) * quaternion(vec3f(0,1,0), ToRadians(90.0f))));
+    Phong_light.m_pointLights.push_back(point_light(base_light(vec3f(1, 0, 0), 20.0f), attenuation(0, 0, 0.5), vec3f(30, 2, 30)));
+    Phong_light.m_spotLights.push_back(spot_light(point_light(base_light(vec3f(0,0,1), 40.0f), attenuation(0,0,0.05f), vec3f(30, 12, 30)), ToRadians(45.f), quaternion(vec3f(1,0,0), ToRadians(-60.0f)) * quaternion(vec3f(0,1,0), ToRadians(90.0f))));
     //////
 
     entity* character = _core_engine->create_mesh_phong("animation.glsl", vec3f(30, 45, 40), 1, &Phong_light, new animation_component("running_man", &shadow_mvp, &depth_map, p_player,  "", ""));
@@ -38,17 +38,17 @@ int main(int argc, char *argv[])
     perspective->init_perspective(ToRadians(70.0f), main_window->get_aspect(), 0.1f, 800.0f);
 
     frustum Frustum;
-    Frustum.create_frustum(65.0f, main_window->get_aspect(), 0.1f, 800.0);
+    Frustum.create_frustum(ToRadians(65.0f), main_window->get_aspect(), 0.1f, 800.0);
 
     entity* Camera = new entity(NULL, vec3f(10, 40, 10));
     Camera->add_component(new camera_component(*perspective));
     //Camera->add_component(new third_person(character->get_transform(), main_window->get_center()));
-    Camera->add_component(new free_look(main_window->get_center())); Camera->add_component(new free_move());
+    Camera->add_component(new free_look(main_window->get_center())); Camera->add_component(new free_move(50));
 
     camera* cam = new camera(*perspective, Camera->get_transform(), &Frustum);
 
-    entity* terrain1 = _core_engine->create_terrain("testTerrain.glsl", vec3f(0, 0, 0), 1, &Phong_light, new terrain_component(&shadow_mvp, &depth_map, 0, 0, "terrain/grass.png", "terrain/grass.png", "terrain/grass.png", "terrain/road.png", "terrain/blendmap.png", 2), &terrains);
-    //entity* terrain2 = _core_engine->create_terrain("testTerrain.glsl", vec3f(0, 0, 0), 1, &Phong_light, new terrain_component(&shadow_mvp, &depth_map, 0, 1, "terrain/empty.png", "terrain/grass.jpg", "terrain/flowers.jpg", "terrain/road.jpg", "terrain/blendmap.png", 1), &terrains);
+    entity* terrain1 = _core_engine->create_terrain("terrain_normal_map.glsl", vec3f(0, 0, 0), 1, &Phong_light, new terrain_component(0, 0, 512, "terrain/grass.png", "terrain/grass.png", "terrain/grass.png", "terrain/road.png", "terrain/blendmap.png", &shadow_mvp, &depth_map), &terrains);
+    //entity* terrain2 = _core_engine->create_terrain("testTerrain.glsl", vec3f(0, 0, 0), 1, &Phong_light, new terrain_component(&shadow_mvp, &depth_map, 0, 1, "terrain/empty.png", "terrain/grass.jpg", "terrain/flowers.jpg", "terrain/road.jpg", "terrain/blendmap.png"), &terrains);
 
 
     entity* game_text = _core_engine->create_mesh("text.glsl", vec3f(), 1, new text_component("3D Game Engine By Sonni", "arial", 3.0f, vec2f(0.0f, 0.0f), 1.0f, true));
@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
     _core_engine->set_camera(cam, Camera);
     _core_engine->set_frustum(&Frustum);
 
-    //_core_engine->add_entity(skybox);
+    _core_engine->add_entity(skybox);
     _core_engine->add_entity(terrain1);
     //_core_engine->add_entity(terrain2);
     /*_core_engine->add_entity(phong_mesh);
@@ -92,6 +92,13 @@ int main(int argc, char *argv[])
     _core_engine->add_water_reflect(terrain1);
     _core_engine->add_water_reflect(terrain2);
     _core_engine->add_water_reflect(skybox);*/
+
+    //_core_engine->add_water_reflect(terrain1);
+    _core_engine->add_water_reflect(skybox);
+    _core_engine->add_water_and_shadow(terrain1);
+
+
+    _core_engine->add_entity(Camera);
 
 
     _core_engine->run();

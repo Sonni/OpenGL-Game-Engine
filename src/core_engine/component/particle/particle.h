@@ -11,7 +11,7 @@ class particle
 public:
 
     particle(int num_of_rows, transform _transform, vec3f velocity, float gravityEffect, float lifeLength) :
-           num_of_rows(num_of_rows), _transform(_transform), velocity(velocity), gravity(gravityEffect), life_length(lifeLength)
+            m_num_of_rows(num_of_rows), m_transform(_transform), m_velocity(velocity), m_gravity(gravityEffect), m_life_length(lifeLength)
     { }
     ~particle() { }
 
@@ -20,22 +20,22 @@ public:
     void update(float delta, camera* cam);
 
 
-    inline float get_distance() const { return distance; }
-    inline bool get_is_dead() const { return is_dead; }
+    inline float get_distance() const { return m_distance; }
+    inline bool get_is_dead() const { return m_is_dead; }
 
 private:
-    vec3f velocity;
-    transform _transform;
-    float gravity;
-    float life_length;
-    float elapsed_time = 0;
-    bool is_dead = false;
+    vec3f m_velocity;
+    transform m_transform;
+    float m_gravity;
+    float m_life_length;
+    float m_elapsed_time = 0;
+    bool m_is_dead = false;
 
-    float distance = 0;
+    float m_distance = 0;
 
-    vec2f tex_offset1, tex_offset2;
-    float blend;
-    int num_of_rows;
+    vec2f m_tex_offset1, m_tex_offset2;
+    float m_blend;
+    int m_num_of_rows;
 
     void set_tex_offset(vec2f* offset, int index);
     void update_tex_coord_info();

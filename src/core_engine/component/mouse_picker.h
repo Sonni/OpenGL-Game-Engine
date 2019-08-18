@@ -12,7 +12,7 @@ class mouse_picker
 public:
 
     mouse_picker(mat4f& projection_mat) :
-            projection_mat(projection_mat)
+            m_projection_mat(projection_mat)
     { }
 
 
@@ -32,7 +32,7 @@ public:
 
 
 private:
-    mat4f& projection_mat;
+    mat4f& m_projection_mat;
 
     vec3f get_world_coords(const vec4f& eye_coords, mat4f& view_mat)
     {
@@ -46,7 +46,7 @@ private:
 
     vec4f get_eye_coords(const vec4f& clip_coords)
     {
-        mat4f inverted_projection_mat = projection_mat.invert();
+        mat4f inverted_projection_mat = m_projection_mat.invert();
         vec4f eye_coords = inverted_projection_mat.transform(clip_coords);
         return vec4f(eye_coords.get_x(), eye_coords.get_y(), -1.0f, 0.0f);
     }

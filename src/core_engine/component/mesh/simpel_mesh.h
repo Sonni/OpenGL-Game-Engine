@@ -18,15 +18,15 @@ public:
     virtual void render() const;
 
 private:
-    mesh* _mesh;
-    texture* tex;
-    texture* depth_map;
-    vec3f ambient;
+    mesh* m_mesh;
+    texture* m_tex;
+    texture* m_depth_map;
+    vec3f m_ambient;
 
-    physics_obj* phy_obj;
-    bool draw = true;
+    physics_obj* m_phy_obj;
+    bool m_draw = true;
 
-    mat4f* shadow_mvp;
+    mat4f* m_shadow_mvp;
 };
 
 

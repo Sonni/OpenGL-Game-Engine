@@ -2,29 +2,27 @@
 
 perlin_noise::perlin_noise()
 {
-    srand (time(NULL));
+    srand (time(nullptr));
 
-    this->seed = rand() % 1000000000 + 1;
+    m_seed = rand() % 1000000000 + 1;
 }
 
 perlin_noise::perlin_noise(int grid_x, int grid_z, int vertex_count, int seed)
 {
-    this->seed = seed;
-    x_offset = grid_x * (vertex_count-1);
-    z_offset = grid_z * (vertex_count-1);
-
-
+    m_seed = seed;
+    m_x_offset = grid_x * (vertex_count-1);
+    m_z_offset = grid_z * (vertex_count-1);
 }
 
 float perlin_noise::get_height(int x, int z) const
 {
     float total = 0;
-    float d = (float) pow(2, OCTAVES - 1);
-    for(int i = 0; i < OCTAVES; i++)
+    float d = (float) pow(2, m_OCTAVES - 1);
+    for(int i = 0; i < m_OCTAVES; i++)
     {
         float freq = (float) (pow(2, i) / d);
-        float amp = (float) pow(ROUGHNESS, i) * AMPLITUDE;
-        total += get_interpolated_noise((x + x_offset) * freq, (z + z_offset) * freq) * amp;
+        float amp = (float) pow(m_ROUGHNESS, i) * m_AMPLITUDE;
+        total += get_interpolated_noise((x + m_x_offset) * freq, (z + m_z_offset) * freq) * amp;
     }
     return total;
 }
@@ -61,7 +59,7 @@ float perlin_noise::get_smooth_noice(int x, int z) const
 
 float perlin_noise::get_noise(int x, int z) const
 {
-    srand (x * 52032 + z * 12413 + seed);
+    srand (x * 52032 + z * 12413 + m_seed);
 
     return (float) rand() / (float) (RAND_MAX) * 2.0f - 1.0f;
 }

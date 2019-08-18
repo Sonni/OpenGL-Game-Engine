@@ -1,78 +1,78 @@
 #include "particle_system.h"
 
 particle_system::particle_system(std::string tex_name, int num_of_rows, camera* cam, float pps, float speed, float gravityComplient, float lifeLength, float average_scale) :
-        num_of_rows(num_of_rows), cam(cam)
+        m_num_of_rows(num_of_rows), m_cam(cam)
 {
-    this->pps = pps;
-    this->average_speed = speed;
-    this->gravity = gravityComplient;
-    this->average_life_len = lifeLength;
-    this->average_scale = average_scale;
+    m_pps = pps;
+    m_average_speed = speed;
+    m_gravity = gravityComplient;
+    m_average_life_len = lifeLength;
+    m_average_scale = average_scale;
 
-    speed_offset = life_offset = scale_offset = 0;
-    direction_deviation = 0;
+    m_speed_offset = m_life_offset = m_scale_offset = 0;
+    m_direction_deviation = 0;
 
     set_direction(vec3f(0, 1, 0), 0.1f);
     set_life_error(0.1f);
     set_scale_error(0.4f);
     set_speed_error(0.8f);
 
-    tex = new texture("particle/" + tex_name);
+    m_tex = new texture("particle/" + tex_name);
 
 
     std::vector<float> verticies;
     verticies.push_back(-0.5f); verticies.push_back(0.5f); verticies.push_back(-0.5f); verticies.push_back(-0.5f);
     verticies.push_back(0.5f); verticies.push_back(0.5f); verticies.push_back(0.5f); verticies.push_back(-0.5f);
 
-    vertex_count = (int) (verticies.size() / 2);
+    m_vertex_count = (int) (verticies.size() / 2);
 
 
-    glGenVertexArrays(1, &vao_id);
-    glBindVertexArray(vao_id);
+    glGenVertexArrays(1, &m_vao_id);
+    glBindVertexArray(m_vao_id);
     set_attribute(0, 2, verticies);
     glBindVertexArray(0);
 
-    vbo = create_empty_vbo(INSTANCED_DATA_LENGTH * MAX_INSTANCES);
-    add_instanced_attribute(vao_id, vbo, 1, 4, INSTANCED_DATA_LENGTH, 0);
-    add_instanced_attribute(vao_id, vbo, 2, 4, INSTANCED_DATA_LENGTH, 4);
-    add_instanced_attribute(vao_id, vbo, 3, 4, INSTANCED_DATA_LENGTH, 8);
-    add_instanced_attribute(vao_id, vbo, 4, 4, INSTANCED_DATA_LENGTH, 12);
-    add_instanced_attribute(vao_id, vbo, 5, 4, INSTANCED_DATA_LENGTH, 16);
-    add_instanced_attribute(vao_id, vbo, 6, 1, INSTANCED_DATA_LENGTH, 20);
+    m_vbo = create_empty_vbo(m_INSTANCED_DATA_LENGTH * m_MAX_INSTANCES);
+    add_instanced_attribute(m_vao_id, m_vbo, 1, 4, m_INSTANCED_DATA_LENGTH, 0);
+    add_instanced_attribute(m_vao_id, m_vbo, 2, 4, m_INSTANCED_DATA_LENGTH, 4);
+    add_instanced_attribute(m_vao_id, m_vbo, 3, 4, m_INSTANCED_DATA_LENGTH, 8);
+    add_instanced_attribute(m_vao_id, m_vbo, 4, 4, m_INSTANCED_DATA_LENGTH, 12);
+    add_instanced_attribute(m_vao_id, m_vbo, 5, 4, m_INSTANCED_DATA_LENGTH, 16);
+    add_instanced_attribute(m_vao_id, m_vbo, 6, 1, m_INSTANCED_DATA_LENGTH, 20);
 }
 
 void particle_system::init()
 {
-    view_projection_loc = get_shader()->get_uni_location("view_projection");
-    tex_loc = get_shader()->get_uni_location("model_tex");
-    num_of_rows_loc = get_shader()->get_uni_location("num_rows");
+    m_view_projection_loc = get_shader()->get_uni_location("view_projection");
+    m_tex_loc = get_shader()->get_uni_location("model_tex");
+    m_num_of_rows_loc = get_shader()->get_uni_location("num_rows");
 }
 
 void particle_system::set_all_uni(camera& cam)
 {
-    if (draw)
+    if (m_draw)
     {
         std::vector<float> data;
 
-        insertion_sort(&particles);
+        insertion_sort(&m_particles);
 
-        for (unsigned int i = 0; i < particles.size(); i++) {
-            particles[i].set_all_uni(cam, &data);
+        for (unsigned int i = 0; i < m_particles.size(); i++) {
+            m_particles[i].set_all_uni(cam, &data);
         }
 
-        update_vbo(vbo, data);
+        update_vbo(m_vbo, data);
 
-        glUniformMatrix4fv(view_projection_loc, 1, GL_FALSE, &cam.get_view_projection()[0][0]);
-        glUniform1f(num_of_rows_loc, num_of_rows);
+        glUniformMatrix4fv(m_view_projection_loc, 1, GL_FALSE, &cam.get_view_projection()[0][0]);
+        glUniform1f(m_num_of_rows_loc, m_num_of_rows);
 
-        tex->bind(0);
-        glUniform1i(tex_loc, 0);
+        m_tex->bind(0);
+        glUniform1i(m_tex_loc, 0);
 
         glEnable(GL_BLEND);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         glDepthMask(GL_FALSE);
 
-        glBindVertexArray(vao_id);
+        glBindVertexArray(m_vao_id);
         glEnableVertexAttribArray(0);
         glEnableVertexAttribArray(1);
         glEnableVertexAttribArray(2);
@@ -81,7 +81,7 @@ void particle_system::set_all_uni(camera& cam)
         glEnableVertexAttribArray(5);
         glEnableVertexAttribArray(6);
 
-        glDrawArraysInstanced(GL_TRIANGLE_STRIP, 0, vertex_count, particles.size());
+        glDrawArraysInstanced(GL_TRIANGLE_STRIP, 0, m_vertex_count, m_particles.size());
 
         glDisableVertexAttribArray(0);
         glDisableVertexAttribArray(1);
@@ -101,18 +101,18 @@ void particle_system::set_all_uni(camera& cam)
 void particle_system::update(float delta, const camera &cam)
 {
     if (cam.get_frustum().sphere_in_frustum(sphere(*get_transform()->get_pos(), 40)))
-        draw = true;
+        m_draw = true;
     else
-        draw = false;
+        m_draw = false;
 
     generate_particles(*get_transform()->get_pos(), delta);
 
-    for (unsigned int i = 0; i < particles.size(); i++)
+    for (unsigned int i = 0; i < m_particles.size(); i++)
     {
-        particles[i].update(delta, this->cam);
-        if (particles[i].get_is_dead())
+        m_particles[i].update(delta, m_cam);
+        if (m_particles[i].get_is_dead())
         {
-            particles.erase(particles.begin()+i);
+            m_particles.erase(m_particles.begin()+i);
         }
     }
 }
@@ -157,7 +157,7 @@ void particle_system::set_attribute(GLuint attrib_num, int coord_size, std::vect
 
 void particle_system::generate_particles(const vec3f& system_pos, float delta)
 {
-    float num_particles = pps * delta;
+    float num_particles = m_pps * delta;
     int count = (int) ceil(num_particles);
 
     for (int i = 0; i < count; i++)
@@ -169,22 +169,22 @@ void particle_system::generate_particles(const vec3f& system_pos, float delta)
 void particle_system::emit_particle(vec3f center)
 {
     vec3f velocity;
-    if(direction != vec3f())
+    if(m_direction != vec3f())
     {
-        velocity = generate_rand_unit_vec_within_cone(direction, direction_deviation);
+        velocity = generate_rand_unit_vec_within_cone(m_direction, m_direction_deviation);
     }
     else
     {
         velocity = generate_rand_unit_vec();
     }
     velocity = velocity.normalized();
-    velocity.scale(generate_value(average_speed, speed_offset));
-    float scale = generate_value(average_scale, scale_offset);
-    float lifeLength = generate_value(average_life_len, life_offset);
+    velocity.scale(generate_value(m_average_speed, m_speed_offset));
+    float scale = generate_value(m_average_scale, m_scale_offset);
+    float lifeLength = generate_value(m_average_life_len, m_life_offset);
 
     transform t(center, quaternion(), scale);
-    particle p(num_of_rows, t, velocity, gravity, lifeLength);
-    particles.push_back(p);
+    particle p(m_num_of_rows, t, velocity, m_gravity, lifeLength);
+    m_particles.push_back(p);
 }
 
 float particle_system::generate_value(float average, float error_margin) const

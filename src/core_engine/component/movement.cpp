@@ -3,19 +3,19 @@
 /////////////////// FREE MOVE ////////////////////
 void free_move::process_input(const input& input, float delta)
 {
-    float movAmt = speed * delta;
+    float movAmt = m_speed * delta;
 
-    if(input.get_key_down(forward_key))
+    if(input.get_key_down(m_forward_key))
         move(get_transform()->get_rot()->get_forward(), movAmt);
-    if(input.get_key_down(back_key))
+    if(input.get_key_down(m_back_key))
         move(get_transform()->get_rot()->get_back(), movAmt);
-    if(input.get_key_down(left_key))
+    if(input.get_key_down(m_left_key))
         move(get_transform()->get_rot()->get_left(), movAmt);
-    if(input.get_key_down(right_key))
+    if(input.get_key_down(m_right_key))
         move(get_transform()->get_rot()->get_right(), movAmt);
 
     if(input.get_key_down(input.KEY_TAB))
-        speed = 35;
+        m_speed = 35;
 }
 
 void free_move::move(const vec3f &direction, float amt)
@@ -27,31 +27,31 @@ void free_move::move(const vec3f &direction, float amt)
 vec2f old_pos;
 void free_look::process_input(const input& input, float delta)
 {
-    if(input.get_key_down(unlock_mouse_key))
+    if(input.get_key_down(m_unlock_mouse_key))
     {
         input.set_cursor(true);
-        mouse_locked = false;
+        m_mouse_locked = false;
     }
 
-    if(mouse_locked)
+    if(m_mouse_locked)
     {
-        vec2f deltaPos = input.get_mouse_pos() - window_center;
+        vec2f deltaPos = input.get_mouse_pos() - m_window_center;
 
         bool rotY = deltaPos.get_x() != 0;
         bool rotX = deltaPos.get_y() != 0;
 
         if(rotY)
         {
-            get_transform()->rotate(vec3f(0, 1, 0), ToRadians(deltaPos.get_x() * sensitivity));
+            get_transform()->rotate(vec3f(0, 1, 0), ToRadians(deltaPos.get_x() * m_sensitivity));
         }
         if(rotX)
         {
-            get_transform()->rotate(get_transform()->get_rot()->get_right(), ToRadians(deltaPos.get_y() * sensitivity));
+            get_transform()->rotate(get_transform()->get_rot()->get_right(), ToRadians(deltaPos.get_y() * m_sensitivity));
         }
 
         if(rotY || rotX)
         {
-            input.set_mouse_pos(window_center);
+            input.set_mouse_pos(m_window_center);
         }
     }
 
@@ -61,8 +61,8 @@ void free_look::process_input(const input& input, float delta)
     if(input.get_mouse_down(input::MOUSE_LEFT_BUTTON))
     {
         input.set_cursor(false);
-        input.set_mouse_pos(window_center);
-        mouse_locked = true;
+        input.set_mouse_pos(m_window_center);
+        m_mouse_locked = true;
     }
 
 }
@@ -70,20 +70,16 @@ void free_look::process_input(const input& input, float delta)
 /////////////////// THIRD PERSON ////////////////////
 void third_person::update(float delta, const camera &cam)
 {
-    yaw = (float) atan2(get_transform()->get_rot()->get_forward().get_x(), get_transform()->get_rot()->get_forward().get_z());
+    m_yaw = (float) atan2(get_transform()->get_rot()->get_forward().get_x(), get_transform()->get_rot()->get_forward().get_z());
     float pitch = asinf(get_transform()->get_rot()->get_forward().get_y());
 
-    float tmpH = (float) (distance_from_target * cos((pitch)));
-    float tmpV = (float) (distance_from_target * sin((pitch)));
+    float tmpH = (float) (m_distance_from_target * cos((pitch)));
+    float tmpV = (float) (m_distance_from_target * sin((pitch)));
 
 
-    get_transform()->get_pos()->set_y(target->get_pos()->get_y() - tmpV + 2);
-    get_transform()->get_pos()->set_x((-tmpH * sin(yaw) + target->get_pos()->get_x()));
-    get_transform()->get_pos()->set_z((-tmpH * cos(yaw) + target->get_pos()->get_z()));
-
-
-
-
+    get_transform()->get_pos()->set_y(m_target->get_pos()->get_y() - tmpV + 2);
+    get_transform()->get_pos()->set_x((-tmpH * sin(m_yaw) + m_target->get_pos()->get_x()));
+    get_transform()->get_pos()->set_z((-tmpH * cos(m_yaw) + m_target->get_pos()->get_z()));
 }
 
 void third_person::process_input(const input& input, float delta)
@@ -92,10 +88,10 @@ void third_person::process_input(const input& input, float delta)
     if(input.get_mouse_up(input::MOUSE_LEFT_BUTTON))
     {
         //input.set_cursor(true);
-        mouse_locked = false;
+        m_mouse_locked = false;
     }
 
-    if(mouse_locked)
+    if(m_mouse_locked)
     {
         vec2f deltaPos = input.get_mouse_pos() - old_pos;
 
@@ -104,11 +100,11 @@ void third_person::process_input(const input& input, float delta)
 
         if(rotY)
         {
-            get_transform()->rotate(vec3f(0, 1, 0), deltaPos.get_x() * sensitivity * delta);
+            get_transform()->rotate(vec3f(0, 1, 0), deltaPos.get_x() * m_sensitivity * delta);
         }
         if(rotX)
         {
-            get_transform()->rotate(get_transform()->get_rot()->get_right(), deltaPos.get_y() * sensitivity * delta);
+            get_transform()->rotate(get_transform()->get_rot()->get_right(), deltaPos.get_y() * m_sensitivity * delta);
         }
 
         if(rotY || rotX)
@@ -125,7 +121,7 @@ void third_person::process_input(const input& input, float delta)
     {
         //input.set_cursor(false);
         //input.set_mouse_pos(window_center);
-        mouse_locked = true;
+        m_mouse_locked = true;
     }
 
 
@@ -133,12 +129,12 @@ void third_person::process_input(const input& input, float delta)
     if(input.get_key_down(input.KEY_W))
     {
         move_forward(moveSpeed, delta);
-        target->set_rot(quaternion(vec3f(0, 1, 0), yaw));
+        m_target->set_rot(quaternion(vec3f(0, 1, 0), m_yaw));
     }
     if(input.get_key_down(input.KEY_S))
     {
         move_forward(-moveSpeed, delta);
-        target->set_rot(quaternion(vec3f(0, 1, 0), yaw));
+        m_target->set_rot(quaternion(vec3f(0, 1, 0), m_yaw));
     }
     if(input.get_key_down(input.KEY_E))
         move_right(-moveSpeed, delta);
@@ -161,16 +157,16 @@ void third_person::process_input(const input& input, float delta)
         get_transform()->rotate(get_transform()->get_rot()->get_right(), -moveSpeed * 0.2f * delta);
 
     if(input.get_key_down(input.KEY_SPACE))
-        target->get_pos()->set_y(target->get_pos()->get_y() + moveSpeed * delta);
+        m_target->get_pos()->set_y(m_target->get_pos()->get_y() + moveSpeed * delta);
 
     if(input.get_key_down(input.KEY_V))
-        target->get_pos()->set_y(target->get_pos()->get_y() - moveSpeed * delta);
+        m_target->get_pos()->set_y(m_target->get_pos()->get_y() - moveSpeed * delta);
 
 
     if (input.get_key_down(input.KEY_1))
-        distance_from_target += 6.0 * delta;
+        m_distance_from_target += 6.0 * delta;
     if (input.get_key_down(input.KEY_2))
-        distance_from_target -= 6.0 * delta;
+        m_distance_from_target -= 6.0 * delta;
 
 
 }
@@ -178,16 +174,16 @@ void third_person::process_input(const input& input, float delta)
 void third_person::move_forward(float amt, float delta)
 {
     float distance = amt * delta;
-    float tmpX = (float) (distance * sin(yaw)) + target->get_pos()->get_x();
-    float tmpZ = (float) (distance * cos(yaw)) + target->get_pos()->get_z();
+    float tmpX = (float) (distance * sin(m_yaw)) + m_target->get_pos()->get_x();
+    float tmpZ = (float) (distance * cos(m_yaw)) + m_target->get_pos()->get_z();
 
-    float tmpY = target->get_pos()->get_y();
+    float tmpY = m_target->get_pos()->get_y();
 
 
-    target->get_pos()->set(tmpX, tmpY, tmpZ);
+    m_target->get_pos()->set(tmpX, tmpY, tmpZ);
 }
 
 void third_person::move_right(float amt, float delta)
 {
-    target->get_pos()->set(*target->get_pos() - (get_transform()->get_rot()->get_right() * amt * delta));
+    m_target->get_pos()->set(*m_target->get_pos() - (get_transform()->get_rot()->get_right() * amt * delta));
 }

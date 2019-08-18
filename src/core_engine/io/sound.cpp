@@ -88,7 +88,7 @@ char* sound::load_wav(const char *file_name, int &channels, int &sample_rate, in
 int sound::convert_to_int(const char *data, int length)
 {
 	int a = 0;
-	if (!big_endian)
+	if (!m_big_endian)
     {
         for (int i = 0; i < length; i++)
             ((char *) &a)[i] = data[i];
@@ -110,35 +110,35 @@ bool sound::is_big_endian()
 
 sound::sound()
 {
-	big_endian = is_big_endian();
-	device = alcOpenDevice(NULL);
-	if(device == NULL)
+	m_big_endian = is_big_endian();
+	m_device = alcOpenDevice(nullptr);
+	if(m_device == nullptr)
     {
 		std::cout << "couldn't open device" << std::endl;
-		context = NULL;
+		m_context = nullptr;
 		return;
 	}
-    
-	context = alcCreateContext(device, NULL);
-	if(context == NULL)
+
+	m_context = alcCreateContext(m_device, nullptr);
+	if(m_context == nullptr)
     {
 		std::cout << "couldn't open context" << std::endl;
 		return;
 	}
     
-	alcMakeContextCurrent(context);
+	alcMakeContextCurrent(m_context);
 }
 
 sound::~sound()
 {
-	for(int i = 0; i < datas.size(); i++)
+	for(int i = 0; i < m_datas.size(); i++)
     {
-        alDeleteSources(1, &datas[i].source_id);
-        alDeleteBuffers(1, &datas[i].buffer_id);
-        delete[] datas[i].buffer;
+        alDeleteSources(1, &m_datas[i].m_source_id);
+        alDeleteBuffers(1, &m_datas[i].m_buffer_id);
+        delete[] m_datas[i].m_buffer;
 	}
-	alcDestroyContext(context);
-	alcCloseDevice(device);
+	alcDestroyContext(m_context);
+	alcCloseDevice(m_device);
 }
 
 unsigned int sound::load(const char *file_name, float min_gain, float max_gain)
@@ -172,21 +172,21 @@ unsigned int sound::load(const char *file_name, float min_gain, float max_gain)
 	alSourcef(sourceId, AL_MIN_GAIN, min_gain);
 	alSourcef(sourceId, AL_MAX_GAIN, max_gain);
 	alSourcei(sourceId, AL_SOURCE_RELATIVE, AL_TRUE);
-	datas.push_back(data(sourceId, bufferId, bufferData));
+	m_datas.push_back(data(sourceId, bufferId, bufferData));
 	return sourceId;
 }
 
 void sound::delete_sound(unsigned int id)
 {
-    for (int i = 0; i < datas.size(); i++)
+    for (int i = 0; i < m_datas.size(); i++)
     {
-        if (datas[i].source_id == id)
+        if (m_datas[i].m_source_id == id)
         {
-            alSourcei(datas[i].source_id, AL_BUFFER, (ALint) NULL);
-            alDeleteBuffers(1, &datas[i].buffer_id);
-            delete[] datas[i].buffer;
-            alDeleteSources(1, &datas[i].source_id);
-            datas.erase(datas.begin() + i);
+            alSourcei(m_datas[i].m_source_id, AL_BUFFER, (ALint) NULL);
+            alDeleteBuffers(1, &m_datas[i].m_buffer_id);
+            delete[] m_datas[i].m_buffer;
+            alDeleteSources(1, &m_datas[i].m_source_id);
+			m_datas.erase(m_datas.begin() + i);
             return;
         }
     }

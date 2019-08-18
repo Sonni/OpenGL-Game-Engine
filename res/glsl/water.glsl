@@ -15,15 +15,15 @@ out vec3 from_light_vec;
 const float density = 0.012;
 const float gradient = 5.0;
 const vec3 light_pos = vec3(1000.0, 1000.0, -1000.0);
-const float tiling = 50.0;
+const float tiling = 0.2;
 
 void main()
 {
-    vec4 world_pos = model * vec4(position.x, 0, position.y, 1.0);
-    clip_space =  mvp * vec4(position.x, position.z, position.y, 1.0);
+    vec4 world_pos = model * vec4(position.x, 0, position.z, 1.0);
+    clip_space =  mvp * vec4(position.x, position.y, position.z, 1.0);
     gl_Position = clip_space;
 
-    tex_coord = vec2(position.x / 2.0 + 5.0, position.y / 2.0 + 0.5) * tiling;
+    tex_coord = vec2(position.x / 2.0 + 5.0, position.z / 2.0 + 0.5) * tiling;
     to_cam_vec = cam_pos - world_pos.xyz;
     from_light_vec = world_pos.xyz - light_pos;
 }
@@ -67,8 +67,8 @@ void main()
 	float water_dist = 2.0 * near * far / (far + near - (2.0 * depth - 1.0) * (far - near));
 	float water_depth = floor_dist - water_dist;
 
-	vec2 distorted_tex_coord = texture(dudv_tex, vec2(tex_coord.x + move_factor, tex_coord.y)).rg*0.1;
-	distorted_tex_coord = tex_coord + vec2(distorted_tex_coord.x, distorted_tex_coord.y+move_factor);
+	vec2 distorted_tex_coord = texture(dudv_tex, vec2(tex_coord.x + move_factor/15, tex_coord.y)).rg*0.1;
+	distorted_tex_coord = tex_coord + vec2(distorted_tex_coord.x, distorted_tex_coord.y+move_factor/15);
 	vec2 total_distortion = (texture(dudv_tex, distorted_tex_coord).rg * 2.0 - 1.0) * wave_strength * clamp(water_depth/20.0, 0.0, 1.0);
 
 	refract_tex_coord += total_distortion;

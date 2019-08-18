@@ -9,29 +9,31 @@ frustum::~frustum() {}
 
 void frustum::create_frustum(float angle, float ratio, float nearD, float farD)
 {
-    this->ratio = ratio;
-    this->angle = angle;
-    this->nearD = nearD;
-    this->farD = farD;
+    m_ratio = ratio;
+    m_angle = angle;
+    m_nearD = nearD;
+    m_farD = farD;
 
-    tang = (float)tan(angle * RADIAN * 0.5) ;
-    nh = nearD * tang;
-    nw = nh * ratio;
-    fh = farD  * tang;
-    fw = fh * ratio;
+
+
+    m_tang = tanf(angle / 2) ;
+    m_nh = nearD * m_tang;
+    m_nw = m_nh * ratio;
+    m_fh = farD  * m_tang;
+    m_fw = m_fh * ratio;
 }
 
 void frustum::create_frustum(float nearW, float nearH, float farW, float farH, float nearD, float farD)
 {
-    this->ratio = 1;
-    this->angle = 45;
-    this->nearD = nearD;
-    this->farD = farD;
+    m_ratio = 1;
+    m_angle = 45;
+    m_nearD = nearD;
+    m_farD = farD;
 
-    nh = nearH;
-    nw = nearW;
-    fh = farH;
-    fw = farW;
+    m_nh = nearH;
+    m_nw = nearW;
+    m_fh = farH;
+    m_fw = farW;
 }
 
 
@@ -40,39 +42,33 @@ void frustum::update_cam(const vec3f& pos, const vec3f& forward, const vec3f& up
     //nc = nearCenter, fc = farCenter
     vec3f dir, nc, fc, X, Y, Z;
 
-    dir = pos;
-    dir = dir.normalized();
-
     Z = forward;
     Z = Z.normalized();
-
 
     X = up * Z;
     X = X.normalized();
 
     Y = Z * X;
 
+    nc = pos - Z * m_nearD;
+    fc = pos - Z * m_farD;
 
-    nc = pos - Z * nearD;
-    fc = pos - Z * farD;
+    m_ntl = nc + Y * m_nh - X * m_nw;
+    m_ntr = nc + Y * m_nh + X * m_nw;
+    m_nbl = nc - Y * m_nh - X * m_nw;
+    m_nbr = nc - Y * m_nh + X * m_nw;
 
+    m_ftl = fc + Y * m_fh - X * m_fw;
+    m_ftr = fc + Y * m_fh + X * m_fw;
+    m_fbl = fc - Y * m_fh - X * m_fw;
+    m_fbr = fc - Y * m_fh + X * m_fw;
 
-    ntl = nc + Y * nh - X * nw;
-    ntr = nc + Y * nh + X * nw;
-    nbl = nc - Y * nh - X * nw;
-    nbr = nc - Y * nh + X * nw;
-
-    ftl = fc + Y * fh - X * fw;
-    ftr = fc + Y * fh + X * fw;
-    fbl = fc - Y * fh - X * fw;
-    fbr = fc - Y * fh + X * fw;
-
-    pl[TOP].set_points(ntr, ntl, ftl);
-    pl[BOTTOM].set_points(nbl, nbr, fbr);
-    pl[LEFT].set_points(ntl, nbl, fbl);
-    pl[RIGHT].set_points(nbr, ntr, fbr);
-    pl[NEARP].set_points(ntl, ntr, nbr);
-    pl[FARP].set_points(ftr, ftl, fbl);
+    m_planes[TOP].set_points(m_ntr, m_ntl, m_ftl);
+    m_planes[BOTTOM].set_points(m_nbl, m_nbr, m_fbr);
+    m_planes[LEFT].set_points(m_ntl, m_nbl, m_fbl);
+    m_planes[RIGHT].set_points(m_nbr, m_ntr, m_fbr);
+    m_planes[NEARP].set_points(m_ntl, m_ntr, m_nbr);
+    m_planes[FARP].set_points(m_ftr, m_ftl, m_fbl);
 }
 
 
@@ -80,7 +76,7 @@ int frustum::point_in_frustum(const vec3f& p) const
 {
     int result = INSIDE;
     for(int i = 0; i < 6; i++)
-        if (pl[i].distance(p) < 0)
+        if (m_planes[i].distance(p) < 0)
             return OUTSIDE;
     return(result);
 }
@@ -92,7 +88,7 @@ int frustum::sphere_in_frustum(const sphere& s) const
     float distance;
 
     for(int i = 0; i < 6; i++) {
-        distance = pl[i].distance(s.get_center());
+        distance = m_planes[i].distance(s.get_center());
         if (distance < -s.get_radius())
             return OUTSIDE;
         else if (distance < s.get_radius())
@@ -104,9 +100,7 @@ int frustum::sphere_in_frustum(const sphere& s) const
 
 int frustum::aabb_in_frustum(const aabb& b) const
 {
-
-	int result = OUTSIDE;
-	vec3f min = b.get_min_extents();
+    vec3f min = b.get_min_extents();
     vec3f max = b.get_max_extents();
 
     vec3f z(max.get_x(), min.get_y(), min.get_z());
@@ -128,43 +122,14 @@ int frustum::aabb_in_frustum(const aabb& b) const
     if (point_in_frustum(m) == INSIDE) return INSIDE;
 
 
-	return(result);
-}
+    if (point_left_of_plane(b.get_min_extents(), m_planes[LEFT]) && point_left_of_plane(b.get_max_extents(), m_planes[RIGHT])) return INSIDE;
+    if (point_left_of_plane(b.get_max_extents(), m_planes[LEFT]) && point_left_of_plane(b.get_min_extents(), m_planes[RIGHT])) return INSIDE;
 
-void frustum::draw_planes()
-{
-    /*
-    glBegin(GL_QUADS);
+    if (point_left_of_plane(b.get_min_extents(), m_planes[TOP]) && point_left_of_plane(b.get_max_extents(), m_planes[BOTTOM])) return INSIDE;
+    if (point_left_of_plane(b.get_max_extents(), m_planes[TOP]) && point_left_of_plane(b.get_min_extents(), m_planes[BOTTOM])) return INSIDE;
 
-    //top plane
-    glVertex3f(ntr.get_x(), ntr.get_y(), ntr.get_z());
-    glVertex3f(ntl.get_x(), ntl.get_y(), ntl.get_z());
-    glVertex3f(ftl.get_x(), ftl.get_y(), ftl.get_z());
+    if (point_left_of_plane(b.get_min_extents(), m_planes[NEARP]) && point_left_of_plane(b.get_max_extents(), m_planes[FARP])) return INSIDE;
+    if (point_left_of_plane(b.get_max_extents(), m_planes[NEARP]) && point_left_of_plane(b.get_min_extents(), m_planes[FARP])) return INSIDE;
 
-    //bottom plane
-    glVertex3f(nbl.get_x(), nbl.get_y(), nbl.get_z());
-    glVertex3f(nbr.get_x(), nbr.get_y(), nbr.get_z());
-    glVertex3f(fbr.get_x(), fbr.get_y(), fbr.get_z());
-
-    //left plane
-    glVertex3f(ntl.get_x(), ntl.get_y(), ntl.get_z());
-    glVertex3f(nbl.get_x(), nbl.get_y(), nbl.get_z());
-    glVertex3f(fbl.get_x(), fbl.get_y(), fbl.get_z());
-
-    // right plane
-    glVertex3f(nbr.get_x(), nbr.get_y(), nbr.get_z());
-    glVertex3f(ntr.get_x(), ntr.get_y(), ntr.get_z());
-    glVertex3f(fbr.get_x(), fbr.get_y(), fbr.get_z());
-
-    //near plane
-    glVertex3f(ntl.get_x(), ntl.get_y(), ntl.get_z());
-    glVertex3f(ntr.get_x(), ntr.get_y(), ntr.get_z());
-    glVertex3f(nbr.get_x(), nbr.get_y(), nbr.get_z());
-
-    //far plane
-    glVertex3f(ftr.get_x(), ftr.get_y(), ftr.get_z());
-    glVertex3f(ftl.get_x(), ftl.get_y(), ftl.get_z());
-    glVertex3f(fbl.get_x(), fbl.get_y(), fbl.get_z());
-
-    glEnd();*/
+	return OUTSIDE;
 }

@@ -13,11 +13,9 @@ class camera;
 class entity
 {
 public:
-    entity(shader *shader = NULL, const vec3f& pos = vec3f(0, 0, 0), const quaternion& rot = quaternion(0, 0, 0, 1), float scale = 1.0f) :
-            _transform(pos, rot, scale)
-    {
-        shader_program = shader;
-    }
+    entity(shader *shader = nullptr, const vec3f& pos = vec3f(0, 0, 0), const quaternion& rot = quaternion(0, 0, 0, 1), float scale = 1.0f) :
+            m_transform(pos, rot, scale), m_shader_program(shader)
+    { }
 
     virtual ~entity();
 
@@ -28,18 +26,15 @@ public:
     void update(float delta, const camera &cam);
     void render() const;
 
-
-
     void delete_component(entity_component *component);
 
-
-    inline shader* get_shader() {return shader_program;}
-    inline transform* get_transform() { return &_transform; }
+    inline shader* get_shader() {return m_shader_program;}
+    inline transform* get_transform() { return &m_transform; }
 protected:
 private:
-    std::vector<entity_component*> components;
-    transform _transform;
-    shader* shader_program;
+    std::vector<entity_component*> m_components;
+    transform m_transform;
+    shader* m_shader_program;
 
 
 };

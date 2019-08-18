@@ -25,17 +25,17 @@ public:
     void set_frustum(frustum *f);
 
 private:
-    window* _window;
-    rendering_engine* renderingEngine;
-    physics_engine* physicsEngine;
-    std::vector<entity*> entities;
-    std::vector<entity*> phy_obj;
+    window* m_window;
+    rendering_engine* m_renderingEngine;
+    physics_engine* m_physicsEngine;
+    std::vector<entity*> m_entities;
+    std::vector<entity*> m_phy_obj;
 
-    std::vector<entity*> waterDraws;
-    std::vector<entity*> shadowDraws;
-    camera* cam;
-    frustum* Frustum;
-    entity* Camera;
+    std::vector<entity*> m_waterDraws;
+    std::vector<entity*> m_shadowDraws;
+    camera* m_cam;
+    frustum* m_Frustum;
+    entity* m_Camera;
 
     void setup_reflection(camera* cam, water_fbo* wfb, float height_of_water, float y_distance);
     void setup_refraction(camera* cam, water_fbo* wfb, float height_of_water, float y_distance, quaternion old_cam_rot);

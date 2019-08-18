@@ -7,18 +7,19 @@
 #include "../../../rendering_engine/model/mesh.h"
 #include "terrain_block.h"
 #include "../../../physics_engine/collider/sphere.h"
+#include "quad_tree.h"
 
 
 class terrain_component : public entity_component
 {
 public:
 
-    terrain_component(mat4f* shadowMap, texture* depth_map, int _grid_x, int _grid_z, const std::string& background, const std::string& r, const std::string& g, const std::string& b, const std::string& blendmap, const int lod);
+    terrain_component(int grid_x, int grid_z, int size, const std::string& background, const std::string& r, const std::string& g, const std::string& b, const std::string& blendmap, mat4f* shadowMap, texture* depth_map);
     void operator=(const terrain_component& terrain) {}
 
     ~terrain_component()
     {
-        delete _sphere;
+        delete m_heights;
     }
 
     virtual void init();
@@ -28,47 +29,46 @@ public:
 
     virtual void set_all_uni(camera& cam);
 
-    sphere* get_sphere() const { return _sphere; }
-    const sphere& get_sphere() { return *_sphere; }
-
     float barry_centric(const vec3f& p1, const vec3f& p2, const vec3f& p3, const vec2f& pos) const;
     float get_terrain_y(float world_x, float world_z);
 private:
 
-    const int SIZE = 100;
-    int num_vertices = 4; //256
-    int lod = 1;
-    float max_y, min_y;
-    sphere* _sphere;
-    bool draw = true;
-    bool draw_line_mode = true;
+    int m_size = 512;
+    int m_num_vertices = 4; //256
+    bool m_draw = true;
+    bool m_draw_line_mode = true;
 
-    int grid_x, grid_z;
-    std::vector<std::vector<float>> heights;
+    int m_grid_x, m_grid_z;
+    std::vector<std::vector<float>>* m_heights;
 
-    std::vector<texture*> shadows;
-    texture* cur;
+    std::vector<std::vector<terrain_block*>> m_blocks;
 
-    std::vector<std::vector<terrain_block*>> blocks;
+    texture* m_background;
+    texture* m_r_tex, *m_g_tex, *m_b_tex;
+    texture* m_blend_map;
+    texture* m_normal_map;
 
-    texture* background;
-    texture* r_tex;
-    texture* g_tex;
-    texture* b_tex;
-    texture* blend_map;
+    texture* m_depth_map;
+    mat4f* m_shadow_mvp;
 
-    texture* depth_map;
-    mat4f* shadow_mvp;
+    quad_tree m_tree;
 
 
+    void split_terrain(int num_split, int num_vertices);
     void load_raw_heights(const std::string &path);
-    void load_noise_heights(const int vertices);
-    void load_height_map();
-    void setup_viewbox();
-    void setup_caustic();
-    void update_caustic();
+    std::vector<std::vector<float>>* load_noise_heights(int num_vertices, unsigned int seed);
+    std::vector<std::vector<float>>* load_height_map();
     void connect_seams(terrain_block* block);
 
+    bool is_equal(float a, float b, float epsilon)
+    {
+        return fabs(a - b) < epsilon;
+    }
+
+    void save_image(int w, int h, int channels_num);
+
+    void connect_rest(terrain_block* block, terrain_block* adjacent, mesh** seams, std::string name, bool norm_indices, bool is_vertical,
+                                         int a, int b);
 };
 
 #endif

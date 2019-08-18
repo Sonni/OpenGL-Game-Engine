@@ -18,42 +18,42 @@ public:
     virtual void set_all_uni(camera& cam);
     virtual void update(float delta, const camera &cam);
 
-    inline void set_speed_error(float error) { speed_offset = error * average_speed; }
-    inline void set_life_error(float error) { life_offset = error * average_life_len; }
-    inline void set_scale_error(float error) { scale_offset = error * average_scale; }
+    inline void set_speed_error(float error) { m_speed_offset = error * m_average_speed; }
+    inline void set_life_error(float error) { m_life_offset = error * m_average_life_len; }
+    inline void set_scale_error(float error) { m_scale_offset = error * m_average_scale; }
     inline void set_direction(vec3f direction, float deviation)
     {
-        this->direction = vec3f(direction);
-        this->direction_deviation = (float) (deviation * MATH_PI);
+        m_direction = vec3f(direction);
+        m_direction_deviation = (float) (deviation * MATH_PI);
     }
 
 private:
-    const int MAX_INSTANCES = 10000;
-    const int INSTANCED_DATA_LENGTH = 21;
+    const int m_MAX_INSTANCES = 10000;
+    const int m_INSTANCED_DATA_LENGTH = 21;
 
-    float pps, average_speed, gravity, average_life_len, average_scale;
+    float m_pps, m_average_speed, m_gravity, m_average_life_len, m_average_scale;
 
-    float speed_offset, life_offset, scale_offset;
-    float direction_deviation;
+    float m_speed_offset, m_life_offset, m_scale_offset;
+    float m_direction_deviation;
 
-    bool draw = true;
+    bool m_draw = true;
 
-    vec3f direction;
+    vec3f m_direction;
 
-    texture* tex;
+    texture* m_tex;
 
-    std::vector<particle> particles;
-    camera* cam;
+    std::vector<particle> m_particles;
+    camera* m_cam;
 
-    GLuint vao_id;
-    GLuint vbo;
+    GLuint m_vao_id;
+    GLuint m_vbo;
 
-    GLint view_projection_loc;
-    GLint tex_loc;
-    GLint num_of_rows_loc;
+    GLint m_view_projection_loc;
+    GLint m_tex_loc;
+    GLint m_num_of_rows_loc;
 
-    int vertex_count;
-    int num_of_rows;
+    int m_vertex_count;
+    int m_num_of_rows;
 
     GLuint create_empty_vbo(int float_count) const;
     void update_vbo(GLuint vbo, std::vector<float> data) const;
