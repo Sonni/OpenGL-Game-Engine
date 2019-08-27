@@ -1,5 +1,5 @@
-#include "input.h"
-#include "window.h"
+#include "input.hpp"
+#include "window.hpp"
 
 input::input(window* window) :
 		m_mouse_y(0),

@@ -1,4 +1,4 @@
-#include "frustum_plane.h"
+#include "frustum_plane.hpp"
 
 frustum_plane::frustum_plane(const vec3f& v1,  const vec3f& v2,  const vec3f& v3)
 {

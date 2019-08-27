@@ -1,4 +1,4 @@
-#include "sphere.h"
+#include "sphere.hpp"
 
 intersect_data sphere::intersect_sphere(const sphere &other) const
 {

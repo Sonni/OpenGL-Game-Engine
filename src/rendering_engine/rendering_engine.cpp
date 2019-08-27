@@ -1,5 +1,5 @@
-#include "rendering_engine.h"
-#include "../shader/shader.h"
+#include "rendering_engine.hpp"
+#include "../rendering_engine/shader/shader.hpp"
 
 
 rendering_engine::rendering_engine()
@@ -17,7 +17,7 @@ rendering_engine::rendering_engine()
 
 void rendering_engine::render(camera* cam, std::vector<entity*> entities) const
 {
-    glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+    glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glEnable(GL_DEPTH_TEST);
 

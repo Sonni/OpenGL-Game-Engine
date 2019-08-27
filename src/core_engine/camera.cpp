@@ -1,4 +1,4 @@
-#include "camera.h"
+#include "camera.hpp"
 
 mat4f camera::get_view_projection() const
 {

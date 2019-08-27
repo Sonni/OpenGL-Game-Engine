@@ -1,5 +1,5 @@
-#include "terrain_block.h"
-#include "../../../utils/logger.h"
+#include "terrain_block.hpp"
+#include "../../../utils/logger.hpp"
 
 terrain_block::terrain_block(std::vector<std::vector<float>>* heights, int size, int grid_x, int grid_z, int num_blocks, int num_vert) : m_heights(heights), m_size(size), m_num_vertices(num_vert), m_grid_x(grid_x), m_grid_z(grid_z), m_num_blocks(num_blocks),
     m_left_seam_str("LeftSeam" + std::to_string(grid_x) + "," + std::to_string(grid_z)),
@@ -202,25 +202,31 @@ float terrain_block::get_height(int x, int z)
         return (*m_heights)[xm+m_num_vertices - 1][zm+m_num_vertices - 1];
 
     if (x < 0)
-        if (m_grid_x != 0)
-            return (*m_heights)[xm-2][zm+z];
-        else
-            return (*m_heights)[xm][zm+z];
+    {
+        if (m_grid_x != 0) return (*m_heights)[xm - 2][zm + z];
+        else return (*m_heights)[xm][zm + z];
+    }
     if (x >= m_num_vertices)
-        if (xm+m_num_vertices+1 < m_heights->size())
-            return (*m_heights)[xm+m_num_vertices+1][zm+z];
+    {
+        if (xm + m_num_vertices + 1 < m_heights->size())
+            return (*m_heights)[xm + m_num_vertices + 1][zm + z];
         else
-            return (*m_heights)[xm+m_num_vertices - 1][zm+z];
+            return (*m_heights)[xm + m_num_vertices - 1][zm + z];
+    }
     if (z < 0)
+    {
         if (m_grid_z != 0)
-            return (*m_heights)[xm+x][zm-2];
+            return (*m_heights)[xm + x][zm - 2];
         else
-            return (*m_heights)[xm+x][zm];
+            return (*m_heights)[xm + x][zm];
+    }
     if (z >= m_num_vertices)
-        if (zm+m_num_vertices + 1 < m_heights->size())
-            return (*m_heights)[xm+x][zm+m_num_vertices + 1];
+    {
+        if (zm + m_num_vertices + 1 < m_heights->size())
+            return (*m_heights)[xm + x][zm + m_num_vertices + 1];
         else
-            return (*m_heights)[xm+x][zm+m_num_vertices - 1];
+            return (*m_heights)[xm + x][zm + m_num_vertices - 1];
+    }
 
     return (*m_heights)[xm+x][zm+z];
 }

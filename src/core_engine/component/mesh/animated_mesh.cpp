@@ -1,4 +1,4 @@
-#include "animated_mesh.h"
+#include "animated_mesh.hpp"
 
 animation_component::animation_component(const std::string& file_name, mat4f* shadowMap, texture* depth_map, physics_obj* phy_obj, const std::string& tex_file_name, const std::string& normal_map) :
         m_tna_model(file_name),

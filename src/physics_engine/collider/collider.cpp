@@ -1,6 +1,6 @@
-#include "collider.h"
-#include "sphere.h"
-#include "aabb.h"
+#include "collider.hpp"
+#include "sphere.hpp"
+#include "aabb.hpp"
 
 intersect_data collider::intersect(const collider &other) const
 {

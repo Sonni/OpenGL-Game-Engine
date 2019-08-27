@@ -1,4 +1,4 @@
-#include "particle.h"
+#include "particle.hpp"
 
 void particle::set_all_uni(camera& cam, std::vector<float>* data)
 {

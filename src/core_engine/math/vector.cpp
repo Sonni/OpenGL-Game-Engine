@@ -1,5 +1,5 @@
-#include "vector.h"
-#include "quaternion.h"
+#include "vector.hpp"
+#include "quaternion.hpp"
 
 vec3f vec3f::rotate(const quaternion &rotation) const
 {

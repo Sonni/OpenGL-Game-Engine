@@ -83,115 +83,133 @@
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/camera.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/camera.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/camera.hpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/2d/chat_box.cpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/2d/chat_box.hpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/2d/gui.cpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/2d/gui.hpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/2d/text/meta_file.cpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/2d/text/meta_file.hpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/2d/text/text.cpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/2d/text/text.hpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/2d/text/text_component.cpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/2d/text/text_component.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/components.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/components.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/components.hpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/light_scatter.cpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/light_scatter.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/mesh/advanced_mesh.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/mesh/advanced_mesh.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/mesh/advanced_mesh.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/mesh/animated_mesh.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/mesh/animated_mesh.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/mesh/animated_mesh.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/mesh/simpel_mesh.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/mesh/simpel_mesh.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/mesh/simpel_mesh.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/mouse_picker.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/mouse_picker.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/mouse_picker.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/movement.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/movement.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/movement.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/particle/particle.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/particle/particle.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/particle/particle.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/particle/particle_system.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/particle/particle_system.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/particle/particle_system.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/shadow/shadow.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/shadow/shadow.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/shadow/shadow.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/terrain/perlin_noise.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/terrain/perlin_noise.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/terrain/perlin_noise.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/terrain/quad_tree.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/terrain/quad_tree.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/terrain/quad_tree.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/terrain/terrain.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/terrain/terrain.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/terrain/terrain.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/terrain/terrain_block.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/terrain/terrain_block.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/terrain/terrain_block.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/test/chaser.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/test/chaser.h">
-			<Option target="3D_Engine"/>
-		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/meta_file.cpp">
-			<Option target="3D_Engine"/>
-		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/meta_file.h">
-			<Option target="3D_Engine"/>
-		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text.cpp">
-			<Option target="3D_Engine"/>
-		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text.h">
-			<Option target="3D_Engine"/>
-		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text_component.cpp">
-			<Option target="3D_Engine"/>
-		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/text/text_component.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/test/chaser.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/water/water.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/water/water.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/water/water.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/component/water/water_fbo.cpp">
@@ -203,178 +221,214 @@
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/core_engine.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/core_engine.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/core_engine.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity.hpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity_component.cpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/entity_component.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/frustum/frustum.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/frustum/frustum.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/frustum/frustum.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/frustum/frustum_plane.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/frustum/frustum_plane.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/frustum/frustum_plane.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/input.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/sound.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/sound.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/sound.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/window.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/window.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/io/window.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/math.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/matrix.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/quaternion.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/math/vector.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/transform.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/util/util.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/util/util.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/core_engine/util/util.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/main.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/network/client/old/TCPClient.cpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/network/client/old/TCPClient.h">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/network/shared/TCPConnection.cpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/network/shared/TCPConnection.h">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/network/shared/UDPConnection.cpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/network/shared/UDPConnection.h">
+			<Option target="3D_Engine"/>
+		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/aabb.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/aabb.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/aabb.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/collider.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/collider.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/collider.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/plane.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/plane.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/plane.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/sphere.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/sphere.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/collider/sphere.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/intersect_data.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/intersect_data.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/intersect_data.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/physics_engine.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/physics_engine.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/physics_engine.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/physics_obj.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/physics_obj.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/physics_engine/physics_obj.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/light/lighting.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/light/lighting.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/light/lighting.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/light/phong_light.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/light/phong_light.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/light/phong_light.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/indexed_model.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/indexed_model.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/indexed_model.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/loader.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/loader.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/loader.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/mesh.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/mesh.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/mesh.hpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/obj_loader.cpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/obj_loader.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/skeletal_animation.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/skeletal_animation.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/skeletal_animation.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/tna_loader.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/tna_loader.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/model/tna_loader.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/rendering_engine.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/rendering_engine.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/rendering_engine.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/simple_objects.cpp">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/shader/material.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/simple_objects.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/shader/material.hpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/shader/shader.cpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/shader/shader.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/stb_image.c">
@@ -386,19 +440,31 @@
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/texture.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/texture.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/rendering_engine/texture.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/shader/shader.cpp">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/todo/fbo.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/shader/shader.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/todo/fbo.hpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/todo/simple_objects.cpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/todo/simple_objects.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/utils/logger.cpp">
 			<Option target="3D_Engine"/>
 		</Unit>
-		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/utils/logger.h">
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/utils/logger.hpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/utils/shared.cpp">
+			<Option target="3D_Engine"/>
+		</Unit>
+		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/src/utils/shared.hpp">
 			<Option target="3D_Engine"/>
 		</Unit>
 		<Unit filename="/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/CMakeLists.txt">

@@ -1,4 +1,4 @@
-#include "aabb.h"
+#include "aabb.hpp"
 
 intersect_data aabb::intersect_aabb(aabb &other) const
 {

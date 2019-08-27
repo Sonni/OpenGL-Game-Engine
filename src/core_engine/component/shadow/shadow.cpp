@@ -1,5 +1,5 @@
-#include "shadow.h"
-#include "../../io/window.h"
+#include "shadow.hpp"
+#include "../../io/window.hpp"
 
 shadow_component::shadow_component(std::vector<entity*>* entities, texture* depth_map, mat4f* shadow_mvp, int shadowMapSizeAsPowerOf2, float shadowArea):
         m_half_shadow_area(shadowArea / 2.0f),

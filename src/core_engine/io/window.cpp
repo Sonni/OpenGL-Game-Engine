@@ -1,9 +1,9 @@
-#include "window.h"
+#include "window.hpp"
 #include <GL/glew.h>
 
 window::window(int width, int height, const std::string& title) :
-		m_width(WIN_WIDTH),
-		m_height(WIN_HEIGHT),
+		m_width(width),
+		m_height(height),
 		m_old_height(WIN_HEIGHT),
 		m_old_width(WIN_WIDTH),
 		m_title(title),

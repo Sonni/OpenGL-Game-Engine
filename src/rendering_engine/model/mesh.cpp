@@ -1,6 +1,7 @@
-#include "mesh.h"
+#include "mesh.hpp"
 #include <cassert>
-#include "tna_loader.h"
+#include "tna_loader.hpp"
+
 
 std::map<std::string, mesh_data*> mesh::s_resourceMap;
 
@@ -80,10 +81,19 @@ mesh_data::~mesh_data()
 	glDeleteVertexArrays(1, &m_vao);
 }
 
+
+
 void mesh_data::draw() const
 {
-	glBindVertexArray(m_vao);
 
+	glBindVertexArray(m_vao);
+    if (!g_draw_tex) {
+        for (int i = 0; i < 10; i++) {
+            glActiveTexture(GL_TEXTURE0+i);
+            glBindTexture(GL_TEXTURE_2D, 0);
+        }
+
+    }
     glDrawElements(GL_TRIANGLES, m_drawCount, GL_UNSIGNED_INT, 0);
 }
 
@@ -160,5 +170,6 @@ mesh::~mesh()
 
 void mesh::draw() const
 {
+
     m_meshData->draw();
 }

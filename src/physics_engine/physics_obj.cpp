@@ -1,4 +1,4 @@
-#include "physics_obj.h"
+#include "physics_obj.hpp"
 
 physics_obj::physics_obj(const physics_obj& other) :
         velocity(other.velocity),

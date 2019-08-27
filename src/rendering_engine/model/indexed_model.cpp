@@ -1,4 +1,4 @@
-#include "indexed_model.h"
+#include "indexed_model.hpp"
 
 bool indexed_model::is_valid() const
 {

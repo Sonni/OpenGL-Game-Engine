@@ -1,11 +1,11 @@
-#include "terrain.h"
+#include "terrain.hpp"
 #include "../../../rendering_engine/stb_image.h"
-#include "../../../shader/shader.h"
-#include "../../util/util.h"
+#include "../../../rendering_engine/shader/shader.hpp"
+#include "../../util/util.hpp"
 #include <sstream>
-#include "../../../utils/logger.h"
-#include "perlin_noise.h"
-#include "../../../rendering_engine/simple_objects.h"
+#include "../../../utils/logger.hpp"
+#include "perlin_noise.hpp"
+#include "../../../todo/simple_objects.hpp"
 
 #include "../../../rendering_engine/stb_image_write.h"
 
@@ -46,6 +46,8 @@ void terrain_component::save_image(int w, int h, int channels_num)
     stbi_write_png("normal_map35.png", m_blocks.size() * m_blocks[0][0]->m_normals[0].size(),m_blocks.size() * m_blocks[0][0]->m_normals[0].size(), channels_num, data, 0);
 }
 
+simple_sphere sphere;
+
 terrain_component::terrain_component(int grid_x, int grid_z, int size, const std::string& background, const std::string& r, const std::string& g, const std::string& b, const std::string& blendmap, mat4f* shadowMap, texture* depth_map) :
         m_grid_x(grid_x), m_grid_z(grid_z), m_size(size),
         m_background(new texture(background)),
@@ -60,6 +62,7 @@ terrain_component::terrain_component(int grid_x, int grid_z, int size, const std
 
     split_terrain(num_split, num_vertices);
     m_tree = quad_tree(m_blocks);
+    sphere = simple_sphere(vec3f(100, 100, 100), 5, "spheres");
 }
 
 void terrain_component::split_terrain(int num_split, int num_vertices)
@@ -135,24 +138,12 @@ void terrain_component::set_all_uni(camera& cam)
 
     get_shader()->set_uniform_3f("sun_pos", vec3f(10000, 10000, -1000));
 
-
-    m_background->bind(0);
-    get_shader()->set_uniform_1i("background_tex", 0);
-
-    m_r_tex->bind(1);
-    get_shader()->set_uniform_1i("r_tex", 1);
-
-    m_g_tex->bind(2);
-    get_shader()->set_uniform_1i("g_tex", 2);
-
-    m_b_tex->bind(3);
-    get_shader()->set_uniform_1i("b_tex", 3);
-
-    m_blend_map->bind(4);
-    get_shader()->set_uniform_1i("blend_tex", 4);
-
-    m_normal_map->bind(5);
-    get_shader()->set_uniform_1i("normal_map", 5);
+    get_shader()->set_sampler_2d("background_tex", m_background, 0);
+    get_shader()->set_sampler_2d("r_tex", m_r_tex, 1);
+    get_shader()->set_sampler_2d("g_tex", m_g_tex, 2);
+    get_shader()->set_sampler_2d("b_tex", m_b_tex, 3);
+    get_shader()->set_sampler_2d("blend_tex", m_blend_map, 4);
+    get_shader()->set_sampler_2d("normal_map", m_normal_map, 5);
 }
 
 bool key_was_up = true;
@@ -174,8 +165,6 @@ void terrain_component::process_input(const input& input, float delta)
 
 }
 
-float move_factor = 0;
-float cur_tex = 0;
 void terrain_component::update(float delta, const camera &cam)
 {
     get_transform()->set_pos(vec3f(m_grid_x * m_size, 0, m_grid_z * m_size));
@@ -196,6 +185,9 @@ void terrain_component::render() const
 {
     if (m_draw)
     {
+        glDisable(GL_CULL_FACE);
+
+        //sphere.render();
         if (m_draw_line_mode)
             glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
         for (std::vector<terrain_block*> t_blocks : m_blocks)

@@ -1,5 +1,6 @@
-#include "entity.h"
-#include "entity_component.h"
+#include "entity.hpp"
+#include "entity_component.hpp"
+#include "../rendering_engine/shader/shader.hpp"
 
 entity::~entity()
 {
@@ -34,6 +35,7 @@ void entity::set_all_uni(camera& cam)
 {
     for(unsigned int i = 0; i < m_components.size(); i++)
     {
+        m_components[i]->get_shader()->set_all_uni();
         m_components[i]->set_all_uni(cam);
     }
 }

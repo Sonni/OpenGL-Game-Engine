@@ -1,5 +1,5 @@
-#include "simpel_mesh.h"
-#include "../../../shader/shader.h"
+#include "simpel_mesh.hpp"
+#include "../../../rendering_engine/shader/shader.hpp"
 
 mesh_component::mesh_component(mesh* _mesh, mat4f* shadowMap, texture* depth_map, physics_obj* phy_obj, const vec3f& ambient, const std::string& tex_file_name) :
     m_ambient(ambient),
@@ -75,8 +75,5 @@ void mesh_component::update(float delta, const camera &cam)
 
 void mesh_component::render() const
 {
-    if (m_draw)
-    {
         m_mesh->draw();
-    }
 }

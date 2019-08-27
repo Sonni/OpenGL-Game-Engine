@@ -1,4 +1,4 @@
-#include "sound.h"
+#include "sound.hpp"
 
 char* sound::load_wav(const char *file_name, int &channels, int &sample_rate, int &samples_per_second, int &size)
 {

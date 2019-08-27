@@ -1,4 +1,4 @@
-#include "particle_system.h"
+#include "particle_system.hpp"
 
 particle_system::particle_system(std::string tex_name, int num_of_rows, camera* cam, float pps, float speed, float gravityComplient, float lifeLength, float average_scale) :
         m_num_of_rows(num_of_rows), m_cam(cam)

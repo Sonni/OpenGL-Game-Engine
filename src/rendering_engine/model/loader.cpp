@@ -1,5 +1,5 @@
-#include "loader.h"
-#include "../../core_engine/util/util.h"
+#include "loader.hpp"
+#include "../../core_engine/util/util.hpp"
 
 void Loader::load_weights(const std::string &line, std::vector<float> &weightsRef)
 {

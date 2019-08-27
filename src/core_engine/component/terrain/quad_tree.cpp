@@ -1,4 +1,4 @@
-#include "quad_tree.h"
+#include "quad_tree.hpp"
 
 quad_tree::quad_tree(std::vector<std::vector<terrain_block*>> blocks) {
     m_root = build_tree(blocks.size() / 2, blocks.size() / 2, blocks.size() / 2, blocks);

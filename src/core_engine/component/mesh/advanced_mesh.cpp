@@ -1,4 +1,4 @@
-#include "advanced_mesh.h"
+#include "advanced_mesh.hpp"
 
 advanced_mesh::advanced_mesh(mesh* _mesh, mat4f* shadowMap, texture* depth_map, const vec3f& ambient, physics_obj* phy_obj, const std::string& tex_name, const std::string& normal_name, const std::string& disp_name, const std::string& specular_name) :
 m_mesh(_mesh)
@@ -8,7 +8,7 @@ m_phy_obj(phy_obj)
     m_tex = new texture(tex_name);
     m_normal = new texture("normal/" + normal_name);
     m_disp_map = new texture("disp/" + disp_name);
-    m_specular_map = new texture("specular/" + specular_name);
+    m_specular_map = new texture(specular_name);
 
     this->m_shadow_mvp = shadowMap;
     this->m_depth_map = depth_map;
@@ -49,8 +49,8 @@ void advanced_mesh::set_all_uni(camera& cam)
 
     get_shader()->set_light();
 
-    get_shader()->set_uniform_1f("specular_intensity", 1.0f);
-    get_shader()->set_uniform_1f("specular_power", 8.0f);
+    get_shader()->set_uniform_1f("specular_intensity", 0.2f);
+    get_shader()->set_uniform_1f("specular_power", 0.7f);
 
     get_shader()->set_uniform_3f("eye_pos", *cam.get_transform()->get_pos());
 
@@ -63,13 +63,15 @@ void advanced_mesh::set_all_uni(camera& cam)
     m_disp_map->bind(2);
     get_shader()->set_uniform_1i("disp_tex", 2);
 
+    m_specular_map->bind(3);
+    get_shader()->set_uniform_1i("specu_tex", 3);
+
     get_shader()->set_uniform_mat4f("shadow_mvp", *m_shadow_mvp);
 
-    m_depth_map->bind(3, true);
-    get_shader()->set_uniform_1i("shadow_tex", 3);
+    m_depth_map->bind(4, true);
+    get_shader()->set_uniform_1i("shadow_tex", 4);
 
-    m_specular_map->bind(4);
-    get_shader()->set_uniform_1i("specu_tex", 4);
+
 }
 
 void advanced_mesh::update(float delta, const camera &cam)
@@ -87,10 +89,9 @@ void advanced_mesh::update(float delta, const camera &cam)
     }
 }
 
+
 void advanced_mesh::render() const
 {
-    if (m_draw)
-    {
         glDisable(GL_CULL_FACE);
         glEnable(GL_BLEND);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
@@ -99,5 +100,4 @@ void advanced_mesh::render() const
 
         glDisable(GL_BLEND);
         glEnable(GL_CULL_FACE);
-    }
 }

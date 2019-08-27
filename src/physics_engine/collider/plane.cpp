@@ -1,4 +1,4 @@
-#include "plane.h"
+#include "plane.hpp"
 
 plane plane::normalize() const
 {

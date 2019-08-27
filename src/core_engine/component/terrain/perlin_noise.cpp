@@ -1,4 +1,4 @@
-#include "perlin_noise.h"
+#include "perlin_noise.hpp"
 
 perlin_noise::perlin_noise()
 {

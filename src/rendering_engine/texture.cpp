@@ -1,7 +1,7 @@
 #include <cassert>
-#include "texture.h"
+#include "texture.hpp"
 #include "stb_image.h"
-#include "../core_engine/math/math.h"
+#include "../core_engine/math/math.hpp"
 
 std::map<std::string, texture_data*> texture::s_resourceMap;
 

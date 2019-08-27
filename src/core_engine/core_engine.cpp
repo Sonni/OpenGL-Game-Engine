@@ -1,11 +1,14 @@
-#include "core_engine.h"
-#include "component/water/water.h"
-#include "component/shadow/shadow.h"
+#include "core_engine.hpp"
+#include "component/water/water.hpp"
+#include "component/shadow/shadow.hpp"
 
 #define STB_IMAGE_WRITE_IMPLEMENTATION
 #include "../rendering_engine/stb_image_write.h"
-
+#include "component/light_scatter.hpp"
+#include "../utils/shared.hpp"
 #include <thread>
+//#include "../network/client/old/TCPClient.h"
+
 
 int save_screenshot(const char *filename)
 {
@@ -90,6 +93,11 @@ void core_engine::add_water_reflect(entity *Entity)
     m_waterDraws.push_back(Entity);
 }
 
+void core_engine::add_scatter(entity *Entity)
+{
+    m_scatters.push_back(Entity);
+}
+
 void core_engine::set_camera(camera *cam, entity *Camera)
 {
     m_cam = cam;
@@ -101,6 +109,8 @@ void core_engine::set_frustum(frustum *f)
 {
     m_Frustum = f;
 }
+
+extern bool g_draw_tex;
 
 bool core_engine::run()
 {
@@ -116,6 +126,10 @@ bool core_engine::run()
     texture post_processing(m_window->WIN_WIDTH, m_window->WIN_HEIGHT, 0, GL_TEXTURE_2D, GL_LINEAR, GL_RGBA, GL_RGBA, true, GL_COLOR_ATTACHMENT0);
     mesh* hud_mesh = m_renderingEngine->get_hud_mesh();
 
+    water_fbo light_scatter_fbo;
+    entity* light_scatter = new entity(new shader("light_scatter.glsl"));
+    light_scatter->add_component(new light_scatter_component(&light_scatter_fbo));
+
     //////
 
 
@@ -130,8 +144,8 @@ bool core_engine::run()
 
 
 
-    entity* water = create_mesh("water_waves.glsl", vec3f(0, -20000, 0), 1, water_comp);
-    //add_entity(water);
+    entity* water = create_mesh("water/water_waves.glsl", vec3f(0, -2000, 0), 1, water_comp);
+    add_entity(water);
 
 
 
@@ -145,7 +159,7 @@ bool core_engine::run()
     //physics_objs.push_back(new physics_obj(new aabb(vec3f(0, 0, 0), vec3f(s, s, s)), monkey2->get_transform()));
 
 
-    /* if (SDLNet_Init() == -1)
+     /*if (SDLNet_Init() == -1)
      {
          printf("SDLNet_Init: %s\n", SDLNet_GetError());
          exit(2);
@@ -240,19 +254,48 @@ bool core_engine::run()
             ///////////////////
 
             /// Render water
-            //water_comp->render_reflect_refract();
+            water_comp->render_reflect_refract();
             /////////////////////////////////////////////////////////////////////////////
+
+
+            /// Light scatter
+            light_scatter_fbo.bind_reflect_fbo();
+
+            // TODO Change to lower resolution, aka viewport
+            glDisable(GL_TEXTURE_2D);
+            g_draw_tex = false;
+            m_renderingEngine->render(m_cam, m_scatters);
+            g_draw_tex = true;
+            glEnable(GL_TEXTURE_2D);
+
+
+            ////////////////
+
 
             /// Render scene
             post_processing.bind_as_render_target();
             m_renderingEngine->render(m_cam, m_entities);
+
             ////////////
 
+            glClear(GL_DEPTH_BUFFER_BIT);
+            glEnable(GL_BLEND);
+            glBlendFunc(GL_SRC_ALPHA, GL_ONE);
+
+            glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
+            glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
+
+            light_scatter->get_shader()->use_shader();
+            light_scatter->set_all_uni(*m_cam);
+            light_scatter->render();
+
+
+            glDisable(GL_BLEND);
 
             ///Render post processed tex to window
             m_window->bind_as_render_targets();
 
-            glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+            glClearColor(0.2f, 0.2f, 0.2f, 0.0f);
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
             glEnable(GL_DEPTH_TEST);
 

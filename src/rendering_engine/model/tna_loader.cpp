@@ -1,5 +1,5 @@
-#include "tna_loader.h"
-#include "../../core_engine/util/util.h"
+#include "tna_loader.hpp"
+#include "../../core_engine/util/util.hpp"
 #include <fstream>
 
 
@@ -67,6 +67,7 @@ tna_model::tna_model(const std::string& file_name)
                 default: break;
             };
         }
+        file.close();
     }
     else
     {

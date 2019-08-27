@@ -9,7 +9,7 @@ C_DEFINES =
 
 C_INCLUDES = -I/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/include 
 
-CXX_FLAGS = -O0 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -F/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/frameworks  -std=gnu++11
+CXX_FLAGS = -O0 -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk   -F/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/frameworks  -std=gnu++1z
 
 CXX_DEFINES = 
 

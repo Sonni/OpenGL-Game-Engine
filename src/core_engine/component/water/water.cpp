@@ -1,4 +1,4 @@
-#include "water.h"
+#include "water.hpp"
 
 // TODO update AABB to be generated from get_transform() – change entity to invoke a specific
 // function on entity_component when it just have been added to the entity.
@@ -17,18 +17,18 @@ m_cam(cam), m_waterDraws(waterDraws)
 
 void water_component::init()
 {
-    m_model_loc = get_shader()->get_uni_location("model");
-    m_mvp_loc = get_shader()->get_uni_location("mvp");
+    get_shader()->add_uniform("model");
+    get_shader()->add_uniform("mvp");
 
-    m_dudv_loc = get_shader()->get_uni_location("dudv_tex");
-    m_normal_loc = get_shader()->get_uni_location("normal_tex");
+    get_shader()->add_uniform("dudv_tex");
+    get_shader()->add_uniform("normal_tex");
 
-    m_move_factor_loc = get_shader()->get_uni_location("move_factor");
+    get_shader()->add_uniform("move_factor");
 
-    m_refrac_loc = get_shader()->get_uni_location("refraction_tex");
-    m_reflec_loc = get_shader()->get_uni_location("reflection_tex");
-    m_depth_loc = get_shader()->get_uni_location("depth_tex");
-    m_cam_pos_loc = get_shader()->get_uni_location("cam_pos");
+    get_shader()->add_uniform("refraction_tex");
+    get_shader()->add_uniform("reflection_tex");
+    get_shader()->add_uniform("depth_tex");
+    get_shader()->add_uniform("cam_pos");
 
 
     // new stuff
@@ -56,43 +56,43 @@ void water_component::set_all_uni(camera& cam)
 {
     mat4f mvp_matrix = cam.get_view_projection() * get_transform()->get_transformation();
 
-    glUniformMatrix4fv(m_model_loc, 1, GL_FALSE, &get_transform()->get_transformation()[0][0]);
-    glUniformMatrix4fv(m_mvp_loc, 1, GL_FALSE, &mvp_matrix[0][0]);
+    get_shader()->set_uniform_mat4f("model", get_transform()->get_transformation());
+    get_shader()->set_uniform_mat4f("mvp", mvp_matrix);
 
-    glUniform3f(m_cam_pos_loc, cam.get_transform()->get_pos()->get_x(), cam.get_transform()->get_pos()->get_y(), cam.get_transform()->get_pos()->get_z());
+    get_shader()->set_uniform_3f("cam_pos", *cam.get_transform()->get_pos());
 
-    m_dudv_tex->bind(0);
-    glUniform1i(m_dudv_loc, 0);
+    get_shader()->set_sampler_2d("dudv_tex", m_dudv_tex, 0);
 
-    m_normal_tex->bind(1);
-    glUniform1i(m_normal_loc, 1);
+    get_shader()->set_sampler_2d("normal_tex", m_normal_tex, 1);
 
     glActiveTexture(GL_TEXTURE0 + 2);
     glBindTexture(GL_TEXTURE_2D, m_wfb->get_reflect_tex());
-    glUniform1i(m_reflec_loc, 2);
+    glUniform1i(get_shader()->get_uniform("reflection_tex"), 2);
 
     glActiveTexture(GL_TEXTURE0 + 3);
     glBindTexture(GL_TEXTURE_2D, m_wfb->get_refract_tex());
-    glUniform1i(m_refrac_loc, 3);
+    glUniform1i(get_shader()->get_uniform("refraction_tex"), 3);
 
     glActiveTexture(GL_TEXTURE0 + 4);
     glBindTexture(GL_TEXTURE_2D, m_wfb->get_refract_depth_tex());
-    glUniform1i(m_depth_loc, 4);
+    glUniform1i(get_shader()->get_uniform("depth_tex"), 4);
 
-    m_moveFactor += 0.02f ;
-
+    m_moveFactor += 0.02f;
     //m_moveFactor = fmodf(m_moveFactor, 1.0f);
-    glUniform1f(m_move_factor_loc, m_moveFactor);
+    get_shader()->set_uniform_1f("move_factor", m_moveFactor);
 
     // New stuff
 
     get_shader()->set_uniform_1i("numWaves", 4);
     for (int i = 0; i < 4; ++i) {
         float amplitude = 10.0f / (i + 1);
-        get_shader()->set_uniform_1f("amplitude[" + std::to_string(i) + "]", amplitude);
+        //get_shader()->set_uniform_1f("amplitude[" + std::to_string(i) + "]", amplitude);
+        get_material()->set_float("amplitude[" + std::to_string(i) + "]", amplitude);
+
 
         float wavelength = 60 * M_PI / (i + 1);
-        get_shader()->set_uniform_1f("wavelength[" + std::to_string(i) + "]", wavelength);
+        //get_shader()->set_uniform_1f("wavelength[" + std::to_string(i) + "]", wavelength);
+        get_material()->set_float("wavelength[" + std::to_string(i) + "]", wavelength);
 
         float speed = 10.0f + 2*i;
         get_shader()->set_uniform_1f("speed[" + std::to_string(i) + "]", speed);
