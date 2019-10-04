@@ -9,6 +9,8 @@
 #include <thread>
 //#include "../network/client/old/TCPClient.h"
 
+extern core_engine *g_core_engine;
+
 
 int save_screenshot(const char *filename)
 {
@@ -40,6 +42,7 @@ core_engine::core_engine(window* Window, rendering_engine* renderingEngine, phys
     m_window = Window;
     m_renderingEngine = renderingEngine;
     m_physicsEngine = physicsEngine;
+    g_core_engine = this;
 }
 
 

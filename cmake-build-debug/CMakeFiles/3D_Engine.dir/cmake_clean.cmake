@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "3D_Engine"
+  "3D_Engine.pdb"
   "CMakeFiles/3D_Engine.dir/src/core_engine/camera.cpp.o"
   "CMakeFiles/3D_Engine.dir/src/core_engine/component/2d/chat_box.cpp.o"
   "CMakeFiles/3D_Engine.dir/src/core_engine/component/2d/gui.cpp.o"
@@ -47,6 +49,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/3D_Engine.dir/src/physics_engine/intersect_data.cpp.o"
   "CMakeFiles/3D_Engine.dir/src/physics_engine/physics_engine.cpp.o"
   "CMakeFiles/3D_Engine.dir/src/physics_engine/physics_obj.cpp.o"
+  "CMakeFiles/3D_Engine.dir/src/rendering_engine/fbo.cpp.o"
   "CMakeFiles/3D_Engine.dir/src/rendering_engine/light/lighting.cpp.o"
   "CMakeFiles/3D_Engine.dir/src/rendering_engine/light/phong_light.cpp.o"
   "CMakeFiles/3D_Engine.dir/src/rendering_engine/model/indexed_model.cpp.o"
@@ -64,8 +67,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/3D_Engine.dir/src/todo/simple_objects.cpp.o"
   "CMakeFiles/3D_Engine.dir/src/utils/logger.cpp.o"
   "CMakeFiles/3D_Engine.dir/src/utils/shared.cpp.o"
-  "3D_Engine.pdb"
-  "3D_Engine"
 )
 
 # Per-language clean rules from dependency scanning.

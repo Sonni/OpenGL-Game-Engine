@@ -25,6 +25,8 @@ public:
     void set_camera(camera *cam, entity *Camera);
     void set_frustum(frustum *f);
 
+    window* get_window() const { return m_window; }
+
 private:
     window* m_window;
     rendering_engine* m_renderingEngine;

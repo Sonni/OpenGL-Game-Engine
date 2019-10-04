@@ -21,7 +21,7 @@ endif()
 
 INCLUDE_DIRECTORIES(${CMAKE_SOURCE_DIR}/include/)
 file(GLOB_RECURSE SOURCES "${CMAKE_SOURCE_DIR}/src/*.c*")
-add_executable(${NAME} ${SOURCES})
+add_executable(${NAME} ${SOURCES} src/rendering_engine/fbo.cpp src/rendering_engine/fbo.hpp)
 
 IF(APPLE)
     macro(ADD_FRAMEWORK fwname)

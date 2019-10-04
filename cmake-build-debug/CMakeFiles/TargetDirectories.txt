@@ -1,3 +1,3 @@
-/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/Sonni/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles/3D_Engine.dir
+/Users/sonnijensen/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/sonnijensen/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/sonnijensen/Documents/Workspace/JetBrains/CLion/OpenGL-Game-Engine/cmake-build-debug/CMakeFiles/3D_Engine.dir
